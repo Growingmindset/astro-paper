@@ -9,6 +9,14 @@ export const SITE = {
   postPerIndex: 4,
   postPerPage: 4,
   scheduledPostMargin: 15 * 60 * 1000,
+  showArchives: true,
+  showBackButton: true,
+  editPost: {
+    enabled: true,
+    text: "Edit page",
+    url: "https://github.com/Growingmindset/astro-paper/edit/main/",
+  },
+  dynamicOgImage: true,
 };
 
 export const LOCALE = {
