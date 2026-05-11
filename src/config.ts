@@ -1,20 +1,19 @@
-import type { Site, Config } from "./types";
-
-export const SITE: Site = {
+export const SITE = {
   website: "https://rudygalan.com/",
   author: "Rudy Galan",
+  profile: "https://rudygalan.com/",
   desc: "Integrated OS: Systems-oriented builds in Physics, Engineering, and Business Logic.",
   title: "Rudy Galan",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
   postPerPage: 4,
-  scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
+  scheduledPostMargin: 15 * 60 * 1000,
 };
 
 export const LOCALE = {
-  lang: "en", 
-  langTag: ["en-EN"], 
+  lang: "en",
+  langTag: ["en-EN"],
 } as const;
 
 export const LOGO_IMAGE = {
@@ -26,7 +25,6 @@ export const LOGO_IMAGE = {
 
 export const SOCIALS = [];
 
-// THIS IS YOUR NAVIGATION (THE TABS)
 export const NAV_ITEMS = [
   {
     href: "/posts",
