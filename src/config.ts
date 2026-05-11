@@ -17,6 +17,9 @@ export const SITE = {
     url: "https://github.com/Growingmindset/astro-paper/edit/main/",
   },
   dynamicOgImage: true,
+  dir: "ltr",
+  lang: "en",
+  timezone: "America/Chicago",
 };
 
 export const LOCALE = {
