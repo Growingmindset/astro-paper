@@ -1,23 +1,47 @@
-export const SITE = {
-  website: "https://rudygalan.com", 
+import type { Site, Config } from "./types";
+
+export const SITE: Site = {
+  website: "https://rudygalan.com/",
   author: "Rudy Galan",
-  profile: "https://rudygalan.com/",
   desc: "Integrated OS: Systems-oriented builds in Physics, Engineering, and Business Logic.",
-  title: "Rudy Galan",,
+  title: "Rudy Galan",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
   postPerPage: 4,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
-  showArchives: true,
-  showBackButton: true, // show back button in post detail
-  editPost: {
-    enabled: true,
-    text: "Edit page",
-    url: "https://github.com/satnaing/astro-paper/edit/main/",
-  },
-  dynamicOgImage: true,
-  dir: "ltr", // "rtl" | "auto"
-  lang: "en", // html lang code. Set this empty and default will be "en"
-  timezone: "America/Chicago", // Default global timezone (IANA format) https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+};
+
+export const LOCALE = {
+  lang: "en", 
+  langTag: ["en-EN"], 
 } as const;
+
+export const LOGO_IMAGE = {
+  enable: false,
+  svg: true,
+  width: 216,
+  height: 46,
+};
+
+export const SOCIALS = [];
+
+// THIS IS YOUR NAVIGATION (THE TABS)
+export const NAV_ITEMS = [
+  {
+    href: "/posts",
+    linkText: "The Lab",
+  },
+  {
+    href: "/archives",
+    linkText: "The Archive",
+  },
+  {
+    href: "/tags",
+    linkText: "Tags",
+  },
+  {
+    href: "/about",
+    linkText: "The Library",
+  },
+];
