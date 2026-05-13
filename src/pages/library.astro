@@ -1,1 +1,51 @@
+---
+// src/pages/library.astro
 
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Card from "@/components/Card.astro";
+import { getCollection } from "astro:content";
+import getSortedPosts from "@/utils/getSortedPosts";
+import { SITE } from "@/config";
+
+// 1. Fetch all blog posts and sort them by date
+const posts = await getCollection("blog");
+const sortedPosts = getSortedPosts(posts);
+
+// 2. Filter the posts: Keep only those with the "library" tag
+const libraryPosts = sortedPosts.filter(
+  (post) => post.data.tags && post.data.tags.includes("library")
+);
+---
+
+<Layout title={`The Library | ${SITE.title}`}>
+  {/* Passing activeNav tells the header to put the squiggly line under this link */}
+  <Header activeNav="library" />
+  
+  <main id="main-content">
+    <section class="pt-8 pb-12 border-b border-border text-center">
+      <h1 class="text-4xl font-bold">The Library</h1>
+      <p class="mt-4 text-xl text-muted-foreground">
+        Curated resources, book notes, and deep dives.
+      </p>
+    </section>
+
+    <section class="pt-8 pb-16 max-w-4xl mx-auto px-4">
+      <ul class="space-y-6">
+        {/* Render posts if they exist, otherwise show a friendly empty state message */}
+        {libraryPosts.length > 0 ? (
+          libraryPosts.map((post) => (
+            <li><Card variant="h3" {...post} /></li>
+          ))
+        ) : (
+          <div class="text-center text-muted-foreground italic">
+            No items in the library yet. Start adding posts tagged with "library"!
+          </div>
+        )}
+      </ul>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>
