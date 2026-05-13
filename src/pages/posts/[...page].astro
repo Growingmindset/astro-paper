@@ -15,11 +15,9 @@ const livingDocs = sortedPosts.filter((post) =>
 );
 
 const regularPosts = sortedPosts.filter(
-  (post) => !(post.id.includes("2026-human-machine-log") || post.id.includes("2026-portfolio-log"))
-);
----
-
-export const prerender = true;
+export async function getStaticPaths() {
+  return [{}];
+}
 
 <Layout title={`The Lab | ${SITE.title}`}>
   <Header />
