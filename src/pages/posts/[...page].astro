@@ -1,32 +1,72 @@
 ---
-import type { GetStaticPaths } from "astro";
-import { getCollection } from "astro:content";
-import Main from "@/layouts/Main.astro";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Card from "@/components/Card.astro";
-import Pagination from "@/components/Pagination.astro";
+import { getCollection } from "astro:content";
 import getSortedPosts from "@/utils/getSortedPosts";
 import { SITE } from "@/config";
 
-export const getStaticPaths = (async ({ paginate }) => {
-  const posts = await getCollection("blog", ({ data }) => !data.draft);
-  return paginate(getSortedPosts(posts), { pageSize: SITE.postPerPage });
-}) satisfies GetStaticPaths;
+const posts = await getCollection("blog");
+const sortedPosts = getSortedPosts(posts);
 
-const { page } = Astro.props;
+// Living Documents (highlighted at the top)
+const livingDocs = sortedPosts.filter((post) =>
+  ["2026-human-machine-log", "2026-portfolio-log"].includes(post.slug)
+);
+
+// All other posts
+const regularPosts = sortedPosts.filter(
+  (post) => !["2026-human-machine-log", "2026-portfolio-log"].includes(post.slug)
+);
 ---
 
-<Layout title={`Posts | ${SITE.title}`}>
+<Layout title={`The Lab | ${SITE.title}`}>
   <Header />
-  <Main pageTitle="Posts" pageDesc="All the articles I've posted.">
-    <ul>
-      {page.data.map(data => <Card {...data} />)}
-    </ul>
-  </Main>
+  <main id="main-content" class="app-layout">
+    <!-- The Lab Header -->
+    <section class="pt-8 pb-12 border-b border-border">
+      <div class="max-w-3xl mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold tracking-tight">The Lab</h1>
+        <p class="mt-4 text-xl text-muted-foreground">
+          Active systems in motion.<br />
+          Living documents and ongoing experiments.
+        </p>
+        <p class="mt-2 text-sm text-muted-foreground">
+          This is where the real work happens — updated continuously.
+        </p>
+      </div>
+    </section>
 
-  <Pagination {page} />
+    <!-- Living Documents -->
+    {
+      livingDocs.length > 0 && (
+        <section class="pt-12 pb-8">
+          <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-2xl font-semibold mb-6">Living Documents</h2>
+            <div class="grid gap-6 md:grid-cols-2">
+              {livingDocs.map((post) => (
+                <Card variant="h3" {...post} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )
+    }
 
-  <Footer noMarginTop={page.lastPage > 1} />
+    <!-- All Other Posts -->
+    <section class="pt-8 pb-16">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-2xl font-semibold mb-6">All Posts</h2>
+        <ul class="space-y-6">
+          {regularPosts.map((post) => (
+            <li>
+              <Card variant="h3" {...post} />
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  </main>
+  <Footer />
 </Layout>
