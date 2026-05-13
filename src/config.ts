@@ -20,7 +20,7 @@ export const SITE = {
   dir: "ltr",
   lang: "en",
   timezone: "America/Chicago",
-};
+} as const;
 
 export const LOCALE = {
   lang: "en",
@@ -36,7 +36,7 @@ export const LOGO_IMAGE = {
 
 export const SOCIALS = [];
 
-export const navLinks: NavLinks = [
+export const navLinks = [
   { href: "/posts", linkText: "The Lab", active: true },
   { href: "/tags/library", linkText: "The Library", active: true },
   { href: "/tags/archive", linkText: "The Archive", active: true },
