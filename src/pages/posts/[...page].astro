@@ -12,14 +12,12 @@ const sortedPosts = getSortedPosts(posts);
 
 // Living Documents - using post.slug (after getSortedPosts)
 const livingDocs = sortedPosts.filter((post) =>
-  ["2026-human-machine-log", "2026-portfolio-log"].includes(post.slug)
+  post.id.includes("2026-human-machine-log") || post.id.includes("2026-portfolio-log")
 );
 
-// All other posts
 const regularPosts = sortedPosts.filter(
-  (post) => !["2026-human-machine-log", "2026-portfolio-log"].includes(post.slug)
+  (post) => !(post.id.includes("2026-human-machine-log") || post.id.includes("2026-portfolio-log"))
 );
----
 
 <Layout title={`The Lab | ${SITE.title}`}>
   <Header />
