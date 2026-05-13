@@ -38,6 +38,6 @@ export const SOCIALS = [];
 
 export const navLinks = [
   { href: "/posts", linkText: "The Lab", active: true },
-  { href: "/tags/library", linkText: "The Library", active: true },
-  { href: "/tags/archive", linkText: "The Archive", active: true },
+  { href: "/library", linkText: "The Library", active: true }, // <-- Updated path
+  { href: "/archive", linkText: "The Archive", active: true }, // <-- Updated path
 ];
