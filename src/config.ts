@@ -46,11 +46,11 @@ export const NAV_ITEMS = [
     linkText: "The Archive",
   },
   {
-    href: "/tags",
-    linkText: "Tags",
-  },
-  {
     href: "/about",
     linkText: "The Library",
+  },
+  {
+    href: "/tags",
+    linkText: "Tags",
   },
 ];
