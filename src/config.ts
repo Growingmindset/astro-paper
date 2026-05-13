@@ -36,21 +36,9 @@ export const LOGO_IMAGE = {
 
 export const SOCIALS = [];
 
-export const NAV_ITEMS = [
-  {
-    href: "/posts",
-    linkText: "The Lab",
-  },
-  {
-    href: "/archives",
-    linkText: "The Archive",
-  },
-  {
-    href: "/about",
-    linkText: "The Library",
-  },
-  {
-    href: "/tags",
-    linkText: "Tags",
-  },
+export const navLinks: NavLinks = [
+  { href: "/posts", linkText: "The Lab", active: true },
+  { href: "/tags/library", linkText: "The Library", active: true },
+  { href: "/tags/archive", linkText: "The Archive", active: true },
+  { href: "/about", linkText: "About", active: true },
 ];
