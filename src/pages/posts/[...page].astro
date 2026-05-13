@@ -10,7 +10,7 @@ import { SITE } from "@/config";
 const posts = await getCollection("blog");
 const sortedPosts = getSortedPosts(posts);
 
-// Living Documents (highlighted at the top)
+// Living Documents - using post.slug (after getSortedPosts)
 const livingDocs = sortedPosts.filter((post) =>
   ["2026-human-machine-log", "2026-portfolio-log"].includes(post.slug)
 );
