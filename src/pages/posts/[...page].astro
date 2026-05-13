@@ -7,11 +7,9 @@ import { getCollection } from "astro:content";
 import getSortedPosts from "@/utils/getSortedPosts";
 import { SITE } from "@/config";
 
-// 1. Fetch and sort posts
 const posts = await getCollection("blog");
 const sortedPosts = getSortedPosts(posts);
 
-// 2. Filter logic for different sections
 const livingDocs = sortedPosts.filter((post) =>
   post.id.includes("2026-human-machine-log") || post.id.includes("2026-portfolio-log")
 );
@@ -20,7 +18,6 @@ const regularPosts = sortedPosts.filter(
   (post) => !(post.id.includes("2026-human-machine-log") || post.id.includes("2026-portfolio-log"))
 );
 
-// 3. Define the paths for this dynamic route
 export async function getStaticPaths() {
   return [{ params: { page: undefined } }];
 }
@@ -41,9 +38,7 @@ export async function getStaticPaths() {
         <section class="pt-12 pb-8 max-w-4xl mx-auto px-4">
           <h2 class="text-2xl font-semibold mb-6">Living Documents</h2>
           <div class="grid gap-6 md:grid-cols-2">
-            {livingDocs.map((post) => (
-              <Card href={`/posts/${post.slug}/`} frontmatter={post.data} />
-            ))}
+            {livingDocs.map((post) => <Card variant="h3" {...post} />)}
           </div>
         </section>
       )
@@ -53,9 +48,7 @@ export async function getStaticPaths() {
       <h2 class="text-2xl font-semibold mb-6">All Posts</h2>
       <ul class="space-y-6">
         {regularPosts.map((post) => (
-          <li>
-            <Card href={`/posts/${post.slug}/`} frontmatter={post.data} />
-          </li>
+          <li><Card variant="h3" {...post} /></li>
         ))}
       </ul>
     </section>
