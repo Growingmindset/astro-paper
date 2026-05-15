@@ -126,20 +126,21 @@ const isActive = (path: string) => {
 
     if (!menuBtn || !menuItems || !menuIcon || !closeIcon) return;
 
-    // Remove existing event listeners to prevent duplicates
-    const newMenuBtn = menuBtn.cloneNode(true);
-    menuBtn.parentNode?.replaceChild(newMenuBtn, menuBtn);
+    // Use a standard function to avoid duplicate attachments on view transitions
+    const handleMenuClick = () => {
+      const openMenu = menuBtn.getAttribute("aria-expanded") === "true";
 
-    newMenuBtn.addEventListener("click", () => {
-      const openMenu = newMenuBtn.getAttribute("aria-expanded") === "true";
-
-      newMenuBtn.setAttribute("aria-expanded", openMenu ? "false" : "true");
-      newMenuBtn.setAttribute("aria-label", openMenu ? "Open Menu" : "Close Menu");
+      menuBtn.setAttribute("aria-expanded", openMenu ? "false" : "true");
+      menuBtn.setAttribute("aria-label", openMenu ? "Open Menu" : "Close Menu");
 
       menuItems.classList.toggle("hidden");
       menuIcon.classList.toggle("hidden");
       closeIcon.classList.toggle("hidden");
-    });
+    };
+
+    // Remove existing listener if it exists, then add it fresh
+    menuBtn.removeEventListener("click", handleMenuClick);
+    menuBtn.addEventListener("click", handleMenuClick);
   }
 
   toggleNav();
