@@ -7,8 +7,8 @@ tags:
   - library
   - book-notes
   - philosophy
-featured: false
-draft: true
+featured: true
+draft: false
 ---
 
 ## The Core Thesis
