@@ -4,26 +4,22 @@ import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import LinkButton from "@/components/LinkButton.astro";
-import Hr from "@/components/Hr.astro";
 import Card from "@/components/Card.astro";
-import Socials from "@/components/Socials.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
-import { SITE, SOCIALS } from "@/config";
+import { SITE } from "@/config";
 
 const posts = await getCollection("blog");
 
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured).slice(0, SITE.postPerIndex);
-
-const socialCount = SOCIALS.filter(social => social.active).length;
 ---
 
 <Layout>
   <Header />
   <main id="main-content">
     <section id="hero" class="pb-6 pt-8">
-      <h1 class="my-4 text-3xl font-bold sm:my-8 sm:text-5xl">Rudy Galan</h1>
+      <h1 class="my-4 text-3xl font-bold sm:my-8 sm:text-5xl">{SITE.title}</h1>
       <a
         target="_blank"
         href="/rss.xml"
@@ -52,18 +48,9 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         Explore <LinkButton href="/posts" class="underline decoration-dashed underline-offset-4 hover:text-accent">The Lab</LinkButton> for active builds, 
         or read first-principles essays in <LinkButton href="/library" class="underline decoration-dashed underline-offset-4 hover:text-accent">The Library</LinkButton>.
       </p>
-
-      {
-        socialCount > 0 && (
-          <div class="mt-4 flex flex-col sm:flex-row sm:items-center">
-            <div class="mb-1 mr-2 whitespace-nowrap sm:mb-0">Social Links:</div>
-            <Socials />
-          </div>
-        )
-      }
     </section>
 
-    <Hr />
+    <hr class="my-6 border-dashed border-border" />
 
     {
       featuredPosts.length > 0 && (
@@ -72,14 +59,11 @@ const socialCount = SOCIALS.filter(social => social.active).length;
             <h2 class="text-2xl font-semibold tracking-wide">Featured Systems</h2>
             <ul>
               {featuredPosts.map(post => (
-                <Card
-                  href={`/posts/${post.slug}/`}
-                  frontmatter={post.data}
-                />
+                <Card {...post} />
               ))}
             </ul>
           </section>
-          {recentPosts.length > 0 && <Hr />}
+          {recentPosts.length > 0 && <hr class="my-6 border-dashed border-border" />}
         </>
       )
     }
@@ -90,10 +74,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           <h2 class="text-2xl font-semibold tracking-wide">Recent Deployments</h2>
           <ul>
             {recentPosts.map(post => (
-              <Card
-                href={`/posts/${post.slug}/`}
-                frontmatter={post.data}
-              />
+              <Card {...post} />
             ))}
           </ul>
         </section>
