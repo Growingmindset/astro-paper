@@ -19,15 +19,15 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured).slice(0, SI
   <Header />
   <main id="main-content">
     <section id="hero" class="pb-6 pt-8">
-      <h1 class="my-4 text-3xl font-bold sm:my-8 sm:text-5xl">{SITE.title}</h1>
+      <h1 class="my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl">{SITE.title}</h1>
       <a
         target="_blank"
         href="/rss.xml"
-        class="rss-link"
+        class="rss-link mb-6 inline-block"
         aria-label="rss feed"
         title="RSS Feed"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" class="mb-1 h-6 w-6 scale-110 sm:mb-2 sm:scale-125">
+        <svg xmlns="http://www.w3.org/2000/svg" class="mb-2 h-6 w-6 scale-110 fill-muted sm:mb-3 sm:scale-125">
           <path d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"></path>
           <path d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"></path>
           <circle cx="6" cy="18" r="2"></circle>
@@ -44,7 +44,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured).slice(0, SI
         Documenting the raw engineering behind the Human Machine, financial architecture, and programmatic systems.
       </p>
       
-      <p class="mt-4">
+      <p class="my-2 mt-4">
         Explore <LinkButton href="/posts" class="underline decoration-dashed underline-offset-4 hover:text-accent">The Lab</LinkButton> for active builds, 
         or read first-principles essays in <LinkButton href="/library" class="underline decoration-dashed underline-offset-4 hover:text-accent">The Library</LinkButton>.
       </p>
@@ -93,22 +93,3 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured).slice(0, SI
 
   <Footer />
 </Layout>
-
-<style>
-  /* Hero Section Styling */
-  #hero {
-    @apply pb-6 pt-8;
-  }
-  #hero h1 {
-    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
-  }
-  #hero .rss-link {
-    @apply mb-6;
-  }
-  #hero .rss-icon {
-    @apply mb-2 h-6 w-6 scale-110 fill-muted sm:mb-3 sm:scale-125;
-  }
-  #hero p {
-    @apply my-2;
-  }
-</style>
