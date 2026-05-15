@@ -8,6 +8,7 @@ draft: false
 tags:
   - lab
   - finance
+  - living-document
 description: "Continuous tracking of stock portfolio iterations and macroeconomic observations."
 ---
 
