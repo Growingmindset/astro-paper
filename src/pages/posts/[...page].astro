@@ -10,13 +10,23 @@ import { SITE } from "@/config";
 const posts = await getCollection("blog");
 const sortedPosts = getSortedPosts(posts);
 
-const livingDocs = sortedPosts.filter((post) =>
-  post.id.includes("2026-human-machine-log") || post.id.includes("2026-portfolio-log")
-);
+// 1. Get ALL posts meant for The Lab (exclude library and archive)
+const labPosts = sortedPosts.filter((post) => {
+  const tags = post.data.tags || [];
+  return tags.includes("lab") || (!tags.includes("library") && !tags.includes("archive"));
+});
 
-const regularPosts = sortedPosts.filter(
-  (post) => !(post.id.includes("2026-human-machine-log") || post.id.includes("2026-portfolio-log"))
-);
+// 2. Separate into Living Documents (Top Section)
+const livingDocs = labPosts.filter((post) => {
+  const tags = post.data.tags || [];
+  return tags.includes("living-document");
+});
+
+// 3. Separate into Regular Posts (Bottom Section)
+const regularPosts = labPosts.filter((post) => {
+  const tags = post.data.tags || [];
+  return !tags.includes("living-document");
+});
 
 export async function getStaticPaths() {
   return [{ params: { page: undefined } }];
@@ -26,12 +36,12 @@ export async function getStaticPaths() {
 <Layout title={`The Lab | ${SITE.title}`}>
   <Header />
   <main id="main-content">
- <section class="pt-8 pb-12 border-b border-border text-center">
-  <h1 class="text-4xl font-bold">The Lab</h1>
-  <p class="mt-4 text-xl text-muted-foreground">
-    The Active Grind & Builds. A "Build-in-Public" workspace revealing the raw engineering behind the Human Machine, financial logic, and programmatic systems.
-  </p>
-</section>
+    <section class="pt-8 pb-12 border-b border-border text-center">
+      <h1 class="text-4xl font-bold">The Lab</h1>
+      <p class="mt-4 text-xl text-muted-foreground">
+        The Active Grind & Builds. A "Build-in-Public" workspace revealing the raw engineering behind the Human Machine, financial logic, and programmatic systems.
+      </p>
+    </section>
 
     {
       livingDocs.length > 0 && (
