@@ -3,35 +3,44 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+![Rudy Galan - Professional Headshot](public/headshot.jpg)
+*Style note: A modern portrait with clean lighting.*
 
-![Astro Paper](public/astropaper-og.jpg)
+## The Intersection of Systems, Science, and Craft
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+I am a San Antonio-based builder, student, and operator driven by a singular focus: understanding how complex systems work—and finding leverage points to optimize them. My background bridges the high-pressure precision of elite hospitality, the rigorous logic of technical science, and the calculated risk of strategic investment.
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+---
 
-## Features
+## Professional Craft & Hospitality
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
+With over 12 years in the hospitality industry, I currently manage the craft behind the bar at Tejas Lounge. For me, mixology has never been just about service; it’s an exercise in chemistry, workflow efficiency, and sensory architecture. I specialize in advanced techniques like fat-washing spirits and aging eggnog, applying a methodical, first-principles approach to flavor development and recipe engineering.
 
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
+![Rudy working at Tejas Lounge](public/action-shot.jpg)
+*Action Shot: Dynamic photo of you working behind the bar.*
 
-and so much more.
+---
 
-## Show your support
+## Engineering & Physics
 
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
+My academic path is rooted in a desire to decode the physical world. Currently completing core coursework in **Electrical Engineering** with a planned transition to a bachelor’s degree in **Physics**, I treat the classroom as a laboratory for analytical problem-solving. Whether I am optimizing structural cost-efficiencies in bridge design simulations or calculating circuit behaviors, I thrive on breaking complex, macro-level problems down into their most fundamental truths.
 
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
+---
 
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
+## Strategy, Real Estate & "The Rotation"
 
-Kyay zuu! 🙏🏼
+Outside of the classroom and the lounge, I execute on data-driven investment strategies. My approach to the stock market and real estate—specifically "house hacking" and sourcing wholesale/pocket listings in San Antonio's Southside—is governed by the exact same systems-based logic I apply to engineering. 
+
+Currently, my primary focus is **The Rotation**: a long-term project to build a modular brand accelerator and listening bar concept. It is the ultimate convergence of my background—combining curated physical environments, high-level hospitality, and scalable business infrastructure.
+
+![The Rotation Concept Graphic](public/rotation-logo.jpg)
+
+---
+
+## The Operating System
+
+Every project I take on is guided by a core psychological profile: **Learning, Command, and Analysis.** I look at the world through a lens of inputs, processes, and outputs. Everything is a system waiting to be optimized. 
+
+### Connect with Me
+- [LinkedIn](https://www.linkedin.com/in/your-profile)
+- [Email Me](mailto:your-email@example.com)
