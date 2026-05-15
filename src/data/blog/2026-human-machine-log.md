@@ -6,6 +6,7 @@ pubDatetime: 2026-01-01T00:00:00Z
 tags:
   - lab
   - living-document
+  - fitness
 featured: true
 draft: false
 ---
