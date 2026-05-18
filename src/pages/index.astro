@@ -17,8 +17,8 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured).slice(0, SI
 
 <Layout>
   <Header />
-<main id="main-content" class="app-layout">
-   <section id="hero" class="pb-6 pt-8">
+  <main id="main-content" class="app-layout">
+    <section id="hero" class="pb-6 pt-8">
       <h1 class="my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl">{SITE.title}</h1>
       <a
         target="_blank"
@@ -51,10 +51,10 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured).slice(0, SI
 
     <hr class="my-6 border-dashed border-border" />
 
-<section class="my-8 rounded-lg border border-skin-line bg-skin-card px-6 py-8 shadow-sm">
+    <section class="my-8 rounded-lg border border-skin-line bg-skin-card px-6 py-8 shadow-sm">
       <h2 class="mb-2 text-2xl font-semibold tracking-wide text-skin-base">Subscribe to the OS</h2>
       <p class="mb-6 text-skin-base">
-        Receive direct transmissions of new physical builds, market frameworks, and system logs. Zero spam.
+        Direct transmissions of new physical builds, market frameworks, and system logs. One high-signal update, deployed every Sunday.
       </p>
       
       <form
@@ -80,6 +80,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured).slice(0, SI
         </button>
       </form>
     </section>
+
     {
       featuredPosts.length > 0 && (
         <>
