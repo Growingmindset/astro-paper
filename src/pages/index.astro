@@ -52,6 +52,35 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured).slice(0, SI
 
     <hr class="my-6 border-dashed border-border" />
 
+<section class="my-8 rounded-lg border border-skin-line bg-skin-card px-6 py-8 shadow-sm">
+      <h2 class="mb-2 text-2xl font-semibold tracking-wide text-skin-base">Subscribe to the OS</h2>
+      <p class="mb-6 text-skin-base">
+        Receive direct transmissions of new physical builds, market frameworks, and system logs. Zero spam.
+      </p>
+      
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/galan"
+        method="post"
+        target="popupwindow"
+        onsubmit="window.open('https://buttondown.com/api/emails/embed-subscribe/galan', 'popupwindow')"
+        class="flex flex-col gap-3 sm:flex-row"
+      >
+        <input
+          type="email"
+          name="email"
+          id="bd-email"
+          placeholder="Enter your email address"
+          required
+          class="w-full rounded border border-skin-fill border-opacity-40 bg-skin-fill px-4 py-2 text-skin-base focus:border-skin-accent focus:outline-none sm:w-2/3"
+        />
+        <button
+          type="submit"
+          class="w-full rounded bg-skin-accent px-4 py-2 font-semibold text-skin-inverted transition-colors hover:bg-skin-accent/80 sm:w-1/3"
+        >
+          Initialize
+        </button>
+      </form>
+    </section>
     {
       featuredPosts.length > 0 && (
         <>
