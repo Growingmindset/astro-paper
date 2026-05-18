@@ -10,56 +10,28 @@ import { SITE } from "@/config";
 const posts = await getCollection("blog");
 const sortedPosts = getSortedPosts(posts);
 
-// 1. Get ALL posts meant for The Lab (exclude library and archive)
-const labPosts = sortedPosts.filter((post) => {
+// Hard Firewall: Strictly filter for posts that contain the 'library' tag
+const libraryPosts = sortedPosts.filter((post) => {
   const tags = post.data.tags || [];
-  return tags.includes("lab") || (!tags.includes("library") && !tags.includes("archive"));
+  return tags.includes("library");
 });
-
-// 2. Separate into Living Documents (Top Section)
-const livingDocs = labPosts.filter((post) => {
-  const tags = post.data.tags || [];
-  return tags.includes("living-document");
-});
-
-// 3. Separate into Regular Posts (Bottom Section)
-const regularPosts = labPosts.filter((post) => {
-  const tags = post.data.tags || [];
-  return !tags.includes("living-document");
-});
-
-export async function getStaticPaths() {
-  return [{ params: { page: undefined } }];
-}
 ---
 
-<Layout title={`The Lab | ${SITE.title}`}>
-  <Header />
+<Layout title={`The Library | ${SITE.title}`}>
+  <Header activeNav="library" />
   <main id="main-content" class="app-layout">
     <section class="pt-8 pb-12 border-b border-border text-center">
-      <h1 class="text-4xl font-bold">The Lab</h1>
+      <h1 class="text-4xl font-bold">The Library</h1>
       <p class="mt-4 text-xl text-muted-foreground">
-        Active system deployments. A living workspace documenting the raw mechanics of capital allocation, the Human Machine, and programmatic logic.
+        First-Principles Philosophy. Discrete essays, book deconstructions, and cognitive frameworks exploring the intersection of human psychology and physical systems.
       </p>
     </section>
 
     {
-      livingDocs.length > 0 && (
-        <section class="pt-12 pb-8 max-w-4xl mx-auto px-4">
-          <h2 class="text-2xl font-semibold mb-6">Living Documents</h2>
-          <div class="grid gap-6 md:grid-cols-2">
-            {livingDocs.map((post) => <Card {...post} />)}
-          </div>
-        </section>
-      )
-    }
-
-    {
-      regularPosts.length > 0 && (
+      libraryPosts.length > 0 && (
         <section class="pt-8 pb-16 max-w-4xl mx-auto px-4">
-          <h2 class="text-2xl font-semibold mb-6">System Logs</h2>
           <ul class="space-y-6">
-            {regularPosts.map((post) => (
+            {libraryPosts.map((post) => (
               <li><Card {...post} /></li>
             ))}
           </ul>
