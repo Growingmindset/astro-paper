@@ -47,4 +47,25 @@ export async function getStaticPaths() {
       livingDocs.length > 0 && (
         <section class="pt-12 pb-8 max-w-4xl mx-auto px-4">
           <h2 class="text-2xl font-semibold mb-6">Living Documents</h2>
-          <div class
+          <div class="grid gap-6 md:grid-cols-2">
+            {livingDocs.map((post) => <Card variant="h3" {...post} />)}
+          </div>
+        </section>
+      )
+    }
+
+    {
+      regularPosts.length > 0 && (
+        <section class="pt-8 pb-16 max-w-4xl mx-auto px-4">
+          <h2 class="text-2xl font-semibold mb-6">System Logs</h2>
+          <ul class="space-y-6">
+            {regularPosts.map((post) => (
+              <li><Card variant="h3" {...post} /></li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+  </main>
+  <Footer />
+</Layout>
