@@ -22,9 +22,9 @@ To build these systems, you must understand the fundamental rules governing them
 Strategic ambition requires capital. Rather than taking on institutional debt, I operate a leveraged cash-flow engine to bootstrap my architecture.
 
 **Operational Cash Flow & Human Systems**
-I leverage 12 years of hospitality experience executing behind the bar at the Tejas Lounge. While the baseline mechanics of mixology are straightforward, the true value of the environment lies in human psychology. The bar is an active laboratory for observing behavioral inputs, analyzing the pushes and pulls of communication, and understanding how unique personalities process information. More importantly, it is a deliberate, high-yield capital generation vehicle that fully funds my university coursework and active investments.
+I leverage 12 years of hospitality experience executing behind the bar at Grand Hyatt Hotel. While the baseline mechanics of mixology are straightforward, the true value of the environment lies in human psychology. The bar is an active laboratory for observing behavioral inputs, analyzing the pushes and pulls of communication, and understanding how unique personalities process information. More importantly, it is a deliberate, high-yield capital generation vehicle that fully funds my university coursework and active investments.
 
-![Rudy working at Tejas Lounge](/action-shot.jpg)
+![Rudy thinking](/action-shot.jpg)
 
 **Real Estate Mechanics & Market Logic**
 I deploy my operational profits into targeted acquisitions. I utilize a strict "Buy Box" in San Antonio, targeting value-add properties for future equity and cash flow. In the equities market, I manually manage a personal portfolio focused on macroeconomic indicators and technology.
@@ -42,7 +42,7 @@ While I mastered the mechanics of the "Human Machine," I audited the medical and
 
 Every project I take on is guided by a core psychological profile: **Learning, Command, and Analysis.** I look at the physical world through a lens of inputs, processes, and outputs—and I apply that exact same framework to human behavior. 
 
-By actively studying behavioral psychology and personality matrices, I treat social environments as complex systems. Whether I am negotiating a real estate acquisition or calibrating the environment at the Tejas Lounge, understanding the precise psychological "pushes and pulls" of an individual is the ultimate operational leverage.
+By actively studying behavioral psychology and personality matrices, I treat social environments as complex systems. Whether I am negotiating a real estate acquisition or calibrating the environment at the Grand Hyatt, understanding the precise psychological "pushes and pulls" of an individual is the ultimate operational leverage.
 
 Currently on the horizon is **The Rotation**: a long-term project to build a modular brand accelerator and listening bar concept. It remains fully blueprinted and positioned as a future deployment—the ultimate convergence of curated physical environments, high-level hospitality, and scalable business infrastructure.
 
