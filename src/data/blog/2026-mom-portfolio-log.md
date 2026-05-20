@@ -31,19 +31,25 @@ She had $3,000 in her account, which I am now merging into the system I was alre
 
 ---
 
-## 2. Portfolio Allocation (System View)
+## 2. System Metrics & Sector Exposure
+*Instead of tracking basic stock/cash ratios, this dashboard tracks our exposure to specific economic sectors and the growing passive income engine.*
 
-![Mom's Portfolio Allocation](/mom-portfolio-allocation.png)
-*(Note: Visual updated quarterly. Currently holding ~20% in cash to deploy systematically into market dips.)*
+### Capital Allocation
+- **Total Account Value:** $5,004.21
+- **Cash (Dry Powder):** ~60.00% *($3,000 unspent seed capital)*
+- **Equities Position:** ~40.00% *($2,004.21 deployed in market)*
 
-### Key Metrics
-- **Total Account Value:** ~$5,000 Level *(Includes new $3k seed injection)*
-- **Cash Position:** 20.00% *(Dry powder fueled by automated deposits)*
-- **Equities Position:** 80.00%
-- **YTD Performance vs SPY:** +6.55% vs +8.62%
+### Sector Exposure *(% of Deployed Capital)*
+- **Tech / Software:** 51.61% *(ORCL, ADBE, CRM)*
+- **Consumer Defensive:** 13.95% *(KMB, TAP)*
+- **Financial Tech:** 6.56% *(PYPL)*
+- **Est. Dividend Yield:** ~1.4% *(The passive compounding engine)*
 
-![YTD Performance Chart](/mom-ytd-performance.png)
-*(Note: Cumulative rate of return from Jan 1 to current update.)*
+### YTD Performance
+- **Portfolio vs SPY:** +6.55% vs +8.62%
+
+<img src="/mom-ytd-performance.png" alt="YTD Performance Chart" width="100%" style="border-radius: 8px; margin-top: 15px; margin-bottom: 5px;" />
+*(Note: Cumulative rate of return from Jan 1 to current update. Image scales dynamically for mobile viewing.)*
 
 ---
 
@@ -63,7 +69,7 @@ She had $3,000 in her account, which I am now merging into the system I was alre
 
 | Ticker | Asset Class | Execution | Thesis / Catalyst |
 | :--- | :--- | :--- | :--- |
-| **System** | Cash Flow | Initial Seed | $3,000 foundational capital injection to establish the portfolio base. |
+| **System** | Cash Flow | Initial Seed | $3,000 foundational capital injection added to dry powder reserves. |
 | **System** | Cash Flow | Recurring | Steady $200 automated transfer. The engine of the portfolio. |
 | **KMB** | Consumer Defensive | Buy (April) | Establishing a high-yield, recession-proof anchor. |
 | **TAP** | Consumer Defensive | Buy (April) | Value play in a deeply entrenched, resilient sector. |
@@ -76,11 +82,11 @@ She had $3,000 in her account, which I am now merging into the system I was alre
 *(Operating Rule: DO NOT delete old entries. Stack your newest quarterly review directly below this line.)*
 
 **System Changelog:**
-* *v2026.05 (May 19, 2026):* Foundational dashboard deployed. Initial $3,000 seed recorded. YTD performance mapped. 
+* *v2026.05 (May 19, 2026):* Foundational dashboard deployed. Initial $3,000 seed added to cash reserves. Mobile layout optimization applied.
 
 > **Q2 Review (May 2026):**
 > **Performance Snapshot:** Portfolio +6.55% YTD | SPY +8.62% YTD 
 > 
-> The system is operating exactly as designed. The slight underperformance versus the S&P 500 (+6.55% vs +8.62%) is mathematically expected and entirely acceptable right now. This is because the portfolio is sitting on roughly **20% cash** as the automated $200 transfers stack up. Cash drags down relative performance in a bull market, but it provides absolute safety and ammunition. 
+> The system is operating exactly as designed. The slight underperformance versus the S&P 500 (+6.55% vs +8.62%) is mathematically expected and entirely acceptable right now. This is because the portfolio is sitting on roughly **60% cash** following the recent $3,000 seed injection, on top of the automated $200 transfers. Cash drags down relative performance in a bull market, but it provides absolute safety and ammunition. 
 >
 > The heavy lifting here is being done by our enterprise tech anchors (Oracle, Adobe, Salesforce), mimicking the high-conviction logic of my primary portfolio. However, to ensure this account remains lower-maintenance and defensive, recent capital deployments have been explicitly directed toward foundational consumer staples: Kimberly-Clark (KMB) and Molson Coors (TAP). These act as the portfolio's shock-absorbers. The primary objective moving forward is to simply let the initial seed and $200 recurring deposits accumulate, waiting for asymmetric, high-yield value deals to present themselves.
