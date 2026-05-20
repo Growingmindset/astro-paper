@@ -15,9 +15,6 @@ draft: false
 **Objective:** Outperform the S&P 500 baseline through a concentrated, first-principles approach to asset allocation.  
 **Strategy:** Active Satellite (Highly concentrated, high-conviction individual equity positions).  
 **Update Cadence (SOP):** Monthly. 
-* **Sections 1-5 (Live Dashboard):** Overwrite old data, tables, and images with current metrics. Thesis only changes upon major macro shifts.
-* **Section 6 (Historical Log):** DO NOT delete past entries. Stack new monthly/quarterly reviews on top of older ones to build a chronological timeline.
-
 ---
 
 ## 1. Macro Market Thesis (Live Dashboard)
