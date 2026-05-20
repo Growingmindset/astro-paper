@@ -15,8 +15,6 @@ draft: false
 **Objective:** This portfolio acts as a proof-of-concept that first-principles systems scale perfectly to accounts of any size.
 **Strategy:** Grow a small portfolio into a big one.
 **Update Cadence (SOP):** Quarterly.
-* **Sections 1-4 (Live Dashboard):** Overwrite old data, tables, and images.
-* **Section 5 (Historical Log):** DO NOT delete past entries. Stack new reviews to build a chronological timeline.
 
 > **The Systemic Engine:** The power of this portfolio does not come from daily trading. It comes from an initial **$3,000 seed injection**, permanently fueled by automated, recurring **$200/month capital injections**. In a smaller account, your savings rate is your highest ROI asset. The goal here is to funnel that steady cash into impenetrable fortresses based on the 10% rule (Invest 10% of your income).
 
