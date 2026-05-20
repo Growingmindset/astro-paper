@@ -32,6 +32,8 @@ She had $3,000 in her account, which I am now merging into the system I was alre
 ## 2. System Metrics & Sector Exposure
 *Tracking precise capital distribution and structural sector exposure for the growing portfolio.*
 
+*Last Updated: May 20, 2026*
+
 ### Capital Allocation
 - **Total Account Value:** $5,004.21
 - **Cash (Dry Powder):** ~60.00% *($3,000 unspent seed capital)*
@@ -80,7 +82,7 @@ She had $3,000 in her account, which I am now merging into the system I was alre
 *(Operating Rule: DO NOT delete old entries. Stack your newest quarterly review directly below this line.)*
 
 **System Changelog:**
-* *v2026.05 (May 19, 2026):* Initial $3,000 seed added to cash reserves. 
+* *v2026.05 (May 20, 2026):* Initial $3,000 seed added to cash reserves. 
 
 > **Q2 Review (May 2026):**
 > **Performance Snapshot:** Portfolio +6.55% YTD | SPY +8.62% YTD 
