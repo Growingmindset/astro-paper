@@ -1,17 +1,104 @@
 ---
-author: Rudy Galan
-pubDatetime: 2026-05-13T12:00:00Z
 title: "Financial Architecture: 2026 Portfolio & Market Thesis"
-postSlug: financial-architecture-log-2026
-featured: true
-draft: false
+description: "Continuous tracking of stock portfolio iterations, asset allocation, and macroeconomic observations."
+pubDatetime: 2026-05-19T00:00:00Z
 tags:
   - lab
-  - finance
   - living-document
-description: "Continuous tracking of stock portfolio iterations and macroeconomic observations."
+  - finance
+featured: true
+draft: false
 ---
 
-This is a living document documenting my first-principles approach to wealth building and market participation.
+# 2026 Financial Architecture
+
+**Objective:** Outperform the S&P 500 baseline through a concentrated, first-principles approach to asset allocation.  
+**Strategy:** Active Satellite (Highly concentrated, high-conviction individual equity positions).  
+**Update Cadence:** Quarterly, or upon major macroeconomic shifts.
 
 ---
+
+## 1. Macro Market Thesis (Current Read)
+
+### Core Economic Indicators (Live Tracker)
+*A high-signal dashboard of the leading indicators dictating current capital flow.*
+
+| Metric | Prior Read | Current Read | Delta | Status | Implication |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Fed Funds Target Rate** | 3.50-3.75% | 3.50-3.75% | 0 bps | Paused (Held) | Baseline cost of capital. The anchor for all market liquidity. |
+| **CPI (Inflation)** | 3.3% | 3.8% | +50 bps | Watch (Accelerating) | Measures pressure on consumer discretionary spending. |
+| **ISM Manufacturing PMI** | 52.7 | 52.7 | 0.0 pts | Expansion | Above 50 = Expansion. Below 50 = Contraction. |
+| **ISM New Orders** | 53.5 | 54.1 | +0.6 pts | Bullish | >50 indicates manufacturing expansion in the next 3-6 months. |
+| **ISM Prices Paid** | 78.3 | 84.6 | +6.3 pts | Up (Debasement) | Rising = Debasement (Gold/Silver bullish). Falling = Bearish. |
+| **Total Nonfarm Payrolls** | 185k | 115k | -37.8% | Weak (Cooling) | 80% of workforce. More jobs = more household spending. |
+| **PPI: Corrugated Boxes** | 425.956 | 425.151 | -0.2% | Down (Slight) | Physical goods ship in boxes. The ultimate truth-teller of economic velocity. |
+
+> **Current Insight:**  The macro environment is currently defined by dual disruptors: the proliferation of AI and geopolitical instability in the Middle East. The core question is consumer resilience—will sustained premiums in energy and gas prices erode discretionary spending? 
+>
+> To answer this, we look past the news cycle and rely on hard data. CPI and labor force metrics are essential, but the true north is the grandfather of them all: the ISM Manufacturing PMI. The ISM acts as a leading indicator for Total Nonfarm Payrolls (NFP). Since nonfarm workers make up 80% of the U.S. workforce, predicting the NFP effectively predicts the pulse of the economy. More jobs equal more household income, leading to economic expansion, fluctuating bond yields, and shifts in the dollar's strength. The ISM reveals the employment reality *before* the actual data drops.
+>
+> Understanding the ISM is an exercise in reading momentum. Expressed as a percentage, an ISM reading above 50 signals economic expansion—more money flowing through the system. Below 50 indicates contraction and tightened wallets. It acts like a Russian doll: anything below 42.3 is an extreme contraction, but hovering just above that means the economy is expanding, albeit at a slower, riskier pace. Nested within this is the "ISM New Orders" index. When New Orders cross above 50, manufacturing is telegraphing an expansion in the next 3 to 6 months. Optimally, a fully bullish economy fires on both cylinders. As of this writing, both are above 50, indicating a rise in the next 3-to-9 month period.
+>
+> When assessing a strong PMI, we must isolate "Prices Paid." If prices paid are rising, it signals currency debasement. Capital naturally flows into dollar hedges like gold and silver, driving positive price action. Conversely, a strong ISM paired with contracting prices paid is broadly bearish for precious metals. This macro flow extends directly into cryptocurrencies. Historically, Bitcoin has never boomed without the PMI in an expansionary phase. Regardless of what the technical charts say, Bitcoin's limited history shows a strong reliance on a healthy PMI. 
+>
+> Back in the equity markets, the ISM boasts a ~78% correlation with future Earnings Per Share (EPS). While GDP tells you the history of the last quarter, the ISM tells you the future of the next three to four months. This brings me to the ISM's cousin: the Producer Price Index (PPI). Because producers pass costs down to consumers, the PPI offers raw insight into business velocity. My favorite underlying metric here is the corrugated shipping container index. Physical goods ship in boxes. If box demand is up, the economy is booming; if it slows down, contraction is imminent. Politicians or news anchors may spin a different narrative, but if you want the truth in data, follow the boxes.
+> 
+> Furthermore, 2026 is a midterm election year. A century of historical data suggests that post-October, the market generates strong upward momentum. Despite the cliché "this time is different" unknowns, historical probabilities favor a Q4 rally. 
+>
+> Finally, we are witnessing a Holyfield vs. Tyson heavyweight fight between traditional SaaS and generative AI. As end-users leverage AI to build custom solutions, untested software names will face extinction, while entrenched incumbents (like Microsoft) will solidify their moats. This paradigm shift dictates my current capital allocation.
+
+---
+
+## 2. Portfolio Allocation (System View)
+
+![Current Portfolio Allocation](/portfolio-allocation.png)
+*(Note: Allocation by percentage. Visual updated quarterly. Portfolio contains ~50 total positions; tracking is restricted to macro movement and heavyweights.)*
+
+### Key Metrics
+- **Cash Position:** 2.86% *(Dry powder)*
+- **Core (ETFs/Safe):** 0.00%
+- **Satellite (Individual Stocks):** 97.14%
+- **YTD Performance vs SPY:** +17.76% vs +8.62%
+
+![YTD Performance Chart](/ytd-performance-may2026.png)
+*(Note: Cumulative rate of return from Jan 1 to current update.)*
+---
+
+## 3. The Heavyweights (Top 5 Holdings)
+*In a wide portfolio, the heaviest weightings dictate the system's outcome. These are the current anchors.*
+
+1. **INTC (Intel):** 26.71% weight
+2. **HUM (Humana):** 5.37% weight
+3. **UPS:** 4.47% weight
+4. **MO (Altria):** 3.96% weight
+5. **NVO (Novo-Nordisk):** 3.56% weight
+
+---
+
+## 4. 2026 Deployments (Recent Capital Flow)
+*Where new cash is actively being deployed this year and the immediate logic behind it.*
+
+| Ticker | Asset Class | Execution | Thesis / Catalyst |
+| :--- | :--- | :--- | :--- |
+| **MCD** | Consumer Defensive | New Buy (05/15/2026) | Expanding defensive moat; highly resilient cash flow in high-inflation environments. |
+| **MSFT** | Tech / Software | New Buy (04/10/2026) | Unrivaled SaaS infrastructure and enterprise AI integration momentum. |
+| **FISV** | Financial Tech | Add (03/16/2026) | Undervalued legacy fintech footprint with sticky enterprise contracts. |
+| **ORCL** | Tech / Cloud | New Buy (03/05/2026) | Capturing aggressive momentum in database architecture and cloud computing shifts. |
+
+---
+
+## 5. The Watchlist (Names to Watch)
+*Assets currently under analysis for future deployment, pending specific price targets or macro triggers.*
+
+| Ticker | Sector | Target Trigger | Thesis / Observation |
+| :--- | :--- | :--- | :--- |
+| **KMB** | Consumer Defensive | Pending Value Entry | Observing for rotational value as a defensive anchor against consumer weakness. |
+| **TAP** | Consumer Defensive | Pending Value Entry | Lukewarm sector placement; monitoring for favorable entry point as a recession-resistant asset. |
+
+---
+
+## 6. Execution & Systems Reflection
+> **Quarterly Review:**
+> Intel was a big hitter as the government's backing caught up to it, climbing from my average buy price of ~$21 to the lower $100's. This marks a massive rotation from other chip companies and sectors. I maintain a hold because it could go higher and I view it as a primary long-term anchor. I added McDonald's due to its value—being down on the year by a significant margin—but also to balance out my portfolio's volatility. With Sweetgreen (SG) serving as a risky, high-beta play, McDonald's provides much-needed gravitational balance in the food sector. It also proves to be a strong value buy in the face of a potentially weakening consumer grappling with short-term pains at the pump (though leading indicators show resilience, aside from the slight dip in corrugated boxes). 
+>
+> My deployments into Microsoft and Oracle (MSFT, ORCL) were executed because the software sector as a whole was beaten down. I believe both of these incumbents are here to stay long-term and provide significant structural value. Though I allocated funds to these positions, I did so with the intent and expectation of them potentially bleeding further. Even though they have rallied since my entry, I am preserving dry powder to deploy aggressively if and when they retrace. I am also currently monitoring Kimberly-Clark (KMB) and Molson Coors (TAP). I am pausing on new buys right now, as parts of the market are stretched while others are in a lukewarm territory. My ultimate aim is asymmetric value. With midterms expected to historically boost the economy, my priority is building cash reserves until a definitive, high-margin-of-safety deal presents itself.
