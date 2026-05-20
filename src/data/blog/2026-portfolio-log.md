@@ -25,6 +25,8 @@ draft: false
 ### Core Economic Indicators (Live Tracker)
 *A high-signal dashboard of the leading indicators dictating current capital flow.*
 
+<div style="width: 100%; overflow-x: auto;">
+
 | Metric | Prior Read | Current Read | Delta | Status | Implication |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Fed Funds Target Rate** | 3.50-3.75% | 3.50-3.75% | 0 bps | Paused (Held) | Baseline cost of capital. The anchor for all market liquidity. |
@@ -34,6 +36,8 @@ draft: false
 | **ISM Prices Paid** | 78.3 | 84.6 | +6.3 pts | Up (Debasement) | Rising = Debasement (Gold/Silver bullish). Falling = Bearish. |
 | **Total Nonfarm Payrolls** | 185k | 115k | -37.8% | Weak (Cooling) | 80% of workforce. More jobs = more household spending. |
 | **PPI: Corrugated Boxes** | 425.956 | 425.151 | -0.2% | Down (Slight) | Physical goods ship in boxes. The ultimate truth-teller of economic velocity. |
+
+</div>
 
 > **Current Insight:** The macro environment is currently defined by dual disruptors: the proliferation of AI and geopolitical instability in the Middle East. The core question is consumer resilience—will sustained premiums in energy and gas prices erode discretionary spending? 
 >
@@ -51,28 +55,29 @@ draft: false
 
 ---
 
-## 2. System Metrics & Portfolio Concentration
-*Replacing static pie charts with a high-signal breakdown of capital distribution and strategic market tilts.*
+## 2. System Metrics & Sector Exposure
+*Tracking precise capital distribution, concentration risk, and structural sector exposure.*
 
-### Capital Allocation
+### Capital Allocation & Risk
 - **Cash Position:** 2.86% *(Dry powder)*
-- **Core (ETFs/Safe):** 0.00%
-- **Satellite (Individual Stocks):** 97.14% *(~50 total positions)*
-
-### Concentration Risk & Distribution
 - **Top 5 Heavyweights:** 44.08% of portfolio *(High-conviction anchors)*
-- **Remaining ~45 Positions:** 53.06% of portfolio *(Long-tail distribution)*
+- **Long-Tail Positions:** 53.06% of portfolio *(~45 remaining assets)*
 
-### Current Strategic Tilts
-- **Semiconductors / Hardware:** Overweight *(Anchored by INTC rotation)*
-- **Enterprise SaaS & AI:** Accumulating *(Scaling MSFT, ORCL LIKE stocks.)*
-- **Consumer Defensive:** Balancing *(Holding MO, accumulating for stability, amongst chips, ai, software craze)*
+### Sector Exposure (Deployed Capital)
+- **Information Technology:** 34.0% *(Overweight: Anchored by INTC rotation & scaling SaaS/AI)*
+- **Health Care:** 17.6%
+- **Consumer Discretionary:** 16.5%
+- **Consumer Staples:** 15.1% *(Balancing: Holding MO, accumulating for stability amongst chip/software craze)*
+- **Industrials:** 7.7%
+- **Comm Services:** 5.5%
+- **Financials:** 2.8%
+- **Real Estate:** 0.8%
 
 ### YTD Performance
 - **Portfolio vs SPY:** +17.76% vs +8.62%
 
 <img src="/ytd-performance-may2026.png" alt="YTD Performance Chart" width="100%" style="border-radius: 8px; margin-top: 15px; margin-bottom: 5px;" />
-*(Note: Cumulative rate of return from Jan 1 to current update. Image scales dynamically for mobile viewing.)*
+*(Note: Cumulative rate of return from Jan 1 to current update.)*
 
 ---
 
@@ -113,8 +118,7 @@ draft: false
 *(Operating Rule: DO NOT delete old entries. Stack your newest monthly/quarterly review directly below this line.)*
 
 **System Changelog:**
-* *v2026.05 (May 19, 2026):* Core macro dashboard synced. Q2 review added. Watchlist updated with KMB and TAP. Mobile layout optimization applied.
-
+* * (May 19, 2026):* 
 > **Q2 Review (May 2026):**
 > **Performance Snapshot:** Portfolio +17.76% YTD | SPY +8.62% YTD 
 > 
