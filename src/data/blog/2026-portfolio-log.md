@@ -14,11 +14,13 @@ draft: false
 
 **Objective:** Outperform the S&P 500 baseline through a concentrated, first-principles approach to asset allocation.  
 **Strategy:** Active Satellite (Highly concentrated, high-conviction individual equity positions).  
-**Update Cadence:** Quarterly, or upon major macroeconomic shifts.
+**Update Cadence (SOP):** Monthly. 
+* **Sections 1-5 (Live Dashboard):** Overwrite old data, tables, and images with current metrics. Thesis only changes upon major macro shifts.
+* **Section 6 (Historical Log):** DO NOT delete past entries. Stack new monthly/quarterly reviews on top of older ones to build a chronological timeline.
 
 ---
 
-## 1. Macro Market Thesis (Current Read)
+## 1. Macro Market Thesis (Live Dashboard)
 
 ### Core Economic Indicators (Live Tracker)
 *A high-signal dashboard of the leading indicators dictating current capital flow.*
@@ -33,15 +35,15 @@ draft: false
 | **Total Nonfarm Payrolls** | 185k | 115k | -37.8% | Weak (Cooling) | 80% of workforce. More jobs = more household spending. |
 | **PPI: Corrugated Boxes** | 425.956 | 425.151 | -0.2% | Down (Slight) | Physical goods ship in boxes. The ultimate truth-teller of economic velocity. |
 
-> **Current Insight:**  The macro environment is currently defined by dual disruptors: the proliferation of AI and geopolitical instability in the Middle East. The core question is consumer resilience—will sustained premiums in energy and gas prices erode discretionary spending? 
+> **Current Insight:** The macro environment is currently defined by dual disruptors: the proliferation of AI and geopolitical instability in the Middle East. The core question is consumer resilience—will sustained premiums in energy and gas prices erode discretionary spending? 
 >
-> To answer this, we look past the news cycle and rely on hard data. CPI and labor force metrics are essential, but the true north is the grandfather of them all: the ISM Manufacturing PMI. The ISM acts as a leading indicator for Total Nonfarm Payrolls (NFP). Since nonfarm workers make up 80% of the U.S. workforce, predicting the NFP effectively predicts the pulse of the economy. More jobs equal more household income, leading to economic expansion, fluctuating bond yields, and shifts in the dollar's strength. The ISM reveals the employment reality *before* the actual data drops.
+> To answer this, we look past the news cycle and rely on hard data. **CPI** and labor force metrics are essential, but the true north is the grandfather of them all: the **ISM Manufacturing PMI**. The ISM acts as a leading indicator for **Total Nonfarm Payrolls (NFP)**. Since nonfarm workers make up 80% of the U.S. workforce, predicting the NFP effectively predicts the pulse of the economy. More jobs equal more household income, leading to economic expansion, fluctuating bond yields, and shifts in the dollar's strength. The ISM reveals the employment reality *before* the actual data drops.
 >
-> Understanding the ISM is an exercise in reading momentum. Expressed as a percentage, an ISM reading above 50 signals economic expansion—more money flowing through the system. Below 50 indicates contraction and tightened wallets. It acts like a Russian doll: anything below 42.3 is an extreme contraction, but hovering just above that means the economy is expanding, albeit at a slower, riskier pace. Nested within this is the "ISM New Orders" index. When New Orders cross above 50, manufacturing is telegraphing an expansion in the next 3 to 6 months. Optimally, a fully bullish economy fires on both cylinders. As of this writing, both are above 50, indicating a rise in the next 3-to-9 month period.
+> Understanding the ISM is an exercise in reading momentum. Expressed as a percentage, an ISM reading above 50 signals economic expansion—more money flowing through the system. Below 50 indicates contraction and tightened wallets. It acts like a Russian doll: anything below 42.3 is an extreme contraction, but hovering just above that means the economy is expanding, albeit at a slower, riskier pace. Nested within this is the "**ISM New Orders**" index. When New Orders cross above 50, manufacturing is telegraphing an expansion in the next 3 to 6 months. Optimally, a fully bullish economy fires on both cylinders. As of this writing, both are above 50, indicating a rise in the next 3-to-9 month period.
 >
-> When assessing a strong PMI, we must isolate "Prices Paid." If prices paid are rising, it signals currency debasement. Capital naturally flows into dollar hedges like gold and silver, driving positive price action. Conversely, a strong ISM paired with contracting prices paid is broadly bearish for precious metals. This macro flow extends directly into cryptocurrencies. Historically, Bitcoin has never boomed without the PMI in an expansionary phase. Regardless of what the technical charts say, Bitcoin's limited history shows a strong reliance on a healthy PMI. 
+> When assessing a strong PMI, we must isolate "**Prices Paid**." If prices paid are rising, it signals currency debasement. Capital naturally flows into dollar hedges like gold and silver, driving positive price action. Conversely, a strong ISM paired with contracting prices paid is broadly bearish for precious metals. This macro flow extends directly into cryptocurrencies. Historically, Bitcoin has never boomed without the PMI in an expansionary phase. Regardless of what the technical charts say, Bitcoin's limited history shows a strong reliance on a healthy PMI. 
 >
-> Back in the equity markets, the ISM boasts a ~78% correlation with future Earnings Per Share (EPS). While GDP tells you the history of the last quarter, the ISM tells you the future of the next three to four months. This brings me to the ISM's cousin: the Producer Price Index (PPI). Because producers pass costs down to consumers, the PPI offers raw insight into business velocity. My favorite underlying metric here is the corrugated shipping container index. Physical goods ship in boxes. If box demand is up, the economy is booming; if it slows down, contraction is imminent. Politicians or news anchors may spin a different narrative, but if you want the truth in data, follow the boxes.
+> Back in the equity markets, the ISM boasts a ~78% correlation with future **Earnings Per Share (EPS)**. While **Gross Domestic Product (GDP)** tells you the history of the last quarter, the ISM tells you the future of the next three to four months. This brings me to the ISM's cousin: the **Producer Price Index (PPI)**. Because producers pass costs down to consumers, the PPI offers raw insight into business velocity. My favorite underlying metric here is the **corrugated shipping container index**. Physical goods ship in boxes. If box demand is up, the economy is booming; if it slows down, contraction is imminent. Politicians or news anchors may spin a different narrative, but if you want the truth in data, follow the boxes.
 > 
 > Furthermore, 2026 is a midterm election year. A century of historical data suggests that post-October, the market generates strong upward momentum. Despite the cliché "this time is different" unknowns, historical probabilities favor a Q4 rally. 
 >
@@ -62,6 +64,7 @@ draft: false
 
 ![YTD Performance Chart](/ytd-performance-may2026.png)
 *(Note: Cumulative rate of return from Jan 1 to current update.)*
+
 ---
 
 ## 3. The Heavyweights (Top 5 Holdings)
@@ -92,13 +95,15 @@ draft: false
 
 | Ticker | Sector | Target Trigger | Thesis / Observation |
 | :--- | :--- | :--- | :--- |
-| **KMB** | Consumer Defensive | Pending Value Entry | Observing for rotational value as a defensive anchor against consumer weakness. |
-| **TAP** | Consumer Defensive | Pending Value Entry | Lukewarm sector placement; monitoring for favorable entry point as a recession-resistant asset. |
+| **KMB** | Consumer Defensive | Pending Value Entry | High dividend, but solid name. Much $$ is going to chip associated stocks, it will rotate back, one day.|
+| **TAP** | Consumer Defensive | Pending Value Entry | Alcohol is never going away. There is pain in risk. Can you see a world without alcohol? Me neither.|
 
 ---
 
-## 6. Execution & Systems Reflection
-> **Quarterly Review:**
+## 6. Execution & Systems Reflection (Historical Log)
+*(Operating Rule: DO NOT delete old entries. Stack your newest monthly/quarterly review directly below this line.)*
+
+> **Q2 Review (May 2026):**
 > Intel was a big hitter as the government's backing caught up to it, climbing from my average buy price of ~$21 to the lower $100's. This marks a massive rotation from other chip companies and sectors. I maintain a hold because it could go higher and I view it as a primary long-term anchor. I added McDonald's due to its value—being down on the year by a significant margin—but also to balance out my portfolio's volatility. With Sweetgreen (SG) serving as a risky, high-beta play, McDonald's provides much-needed gravitational balance in the food sector. It also proves to be a strong value buy in the face of a potentially weakening consumer grappling with short-term pains at the pump (though leading indicators show resilience, aside from the slight dip in corrugated boxes). 
 >
 > My deployments into Microsoft and Oracle (MSFT, ORCL) were executed because the software sector as a whole was beaten down. I believe both of these incumbents are here to stay long-term and provide significant structural value. Though I allocated funds to these positions, I did so with the intent and expectation of them potentially bleeding further. Even though they have rallied since my entry, I am preserving dry powder to deploy aggressively if and when they retrace. I am also currently monitoring Kimberly-Clark (KMB) and Molson Coors (TAP). I am pausing on new buys right now, as parts of the market are stretched while others are in a lukewarm territory. My ultimate aim is asymmetric value. With midterms expected to historically boost the economy, my priority is building cash reserves until a definitive, high-margin-of-safety deal presents itself.
