@@ -103,6 +103,9 @@ draft: false
 ## 6. Execution & Systems Reflection (Historical Log)
 *(Operating Rule: DO NOT delete old entries. Stack your newest monthly/quarterly review directly below this line.)*
 
+**System Changelog:**
+* *v2026.05 (May 19, 2026):* Core macro dashboard synced. Q2 review added. Watchlist updated with KMB and TAP. 
+
 > **Q2 Review (May 2026):**
 > **Performance Snapshot:** Portfolio +17.76% YTD | SPY +8.62% YTD 
 > 
