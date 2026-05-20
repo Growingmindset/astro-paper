@@ -165,12 +165,11 @@ draft: false
 *System Parameters:* Complete central nervous system rest. Execute the Top 2 ROI Breathing Movements to reinforce the stack. Hydrate.
 
 ### Current Block Systems Reflection
-> **Phase 2 Ongoing Insight:** > *Staying hydrated is going to be pivotal as I will be eating a little less. With work schedule, etc. the breathing exercises not only help posture, but put the body into a
-> parasympathetic state. The whole goal of this program is to keep athleticism, drop weight, protect muscle/strength while also getting enough recovery to do all of that + workload. *
+> **Phase 2 Ongoing Insight:** > *Staying hydrated is going to be pivotal as I will be eating a little less. With work schedule, etc. the breathing exercises not only help posture, but put the body into a parasympathetic state. The whole goal of this program is to keep athleticism, drop weight, protect muscle/strength while also getting enough recovery to do all of that + workload.*
 
 ---
 
 ## 4. Key Metrics (End of Block Targets)
 - **Bodyweight:** Target stabilization at 163 (Current: 172 as of 5/20/26)
 - **Structural Markers:** Unrestricted deep squat resting position, proper pelvic stacking without forced lumbar extension.
-
+- **End of block notes:**: 
