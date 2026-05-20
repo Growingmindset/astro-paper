@@ -3,7 +3,7 @@ title: "Mom's small account management"
 description: "Demonstrating systemic wealth building for smaller accounts. Anyone can do it."
 pubDatetime: 2026-05-19T00:00:00Z
 tags:
-  - library
+  - lab
   - living-document
   - finance
 featured: false
