@@ -51,19 +51,28 @@ draft: false
 
 ---
 
-## 2. Portfolio Allocation (System View)
+## 2. System Metrics & Portfolio Concentration
+*Replacing static pie charts with a high-signal breakdown of capital distribution and strategic market tilts.*
 
-![Current Portfolio Allocation](/portfolio-allocation.png)
-*(Note: Allocation by percentage. Visual updated quarterly. Portfolio contains ~50 total positions; tracking is restricted to macro movement and heavyweights.)*
-
-### Key Metrics
+### Capital Allocation
 - **Cash Position:** 2.86% *(Dry powder)*
 - **Core (ETFs/Safe):** 0.00%
-- **Satellite (Individual Stocks):** 97.14%
-- **YTD Performance vs SPY:** +17.76% vs +8.62%
+- **Satellite (Individual Stocks):** 97.14% *(~50 total positions)*
 
-![YTD Performance Chart](/ytd-performance-may2026.png)
-*(Note: Cumulative rate of return from Jan 1 to current update.)*
+### Concentration Risk & Distribution
+- **Top 5 Heavyweights:** 44.08% of portfolio *(High-conviction anchors)*
+- **Remaining ~45 Positions:** 53.06% of portfolio *(Long-tail distribution)*
+
+### Current Strategic Tilts
+- **Semiconductors / Hardware:** Overweight *(Anchored by INTC rotation)*
+- **Enterprise SaaS & AI:** Accumulating *(Scaling MSFT, ORCL LIKE stocks.)*
+- **Consumer Defensive:** Balancing *(Holding MO, accumulating for stability, amongst chips, ai, software craze)*
+
+### YTD Performance
+- **Portfolio vs SPY:** +17.76% vs +8.62%
+
+<img src="/ytd-performance-may2026.png" alt="YTD Performance Chart" width="100%" style="border-radius: 8px; margin-top: 15px; margin-bottom: 5px;" />
+*(Note: Cumulative rate of return from Jan 1 to current update. Image scales dynamically for mobile viewing.)*
 
 ---
 
@@ -104,7 +113,7 @@ draft: false
 *(Operating Rule: DO NOT delete old entries. Stack your newest monthly/quarterly review directly below this line.)*
 
 **System Changelog:**
-* *v2026.05 (May 19, 2026):* Core macro dashboard synced. Q2 review added. Watchlist updated with KMB and TAP. 
+* *v2026.05 (May 19, 2026):* Core macro dashboard synced. Q2 review added. Watchlist updated with KMB and TAP. Mobile layout optimization applied.
 
 > **Q2 Review (May 2026):**
 > **Performance Snapshot:** Portfolio +17.76% YTD | SPY +8.62% YTD 
