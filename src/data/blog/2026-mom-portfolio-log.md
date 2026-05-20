@@ -32,7 +32,7 @@ She had $3,000 in her account, which I am now merging into the system I was alre
 ---
 
 ## 2. System Metrics & Sector Exposure
-*Instead of tracking basic stock/cash ratios, this dashboard tracks our exposure to specific economic sectors and the growing passive income engine.*
+*Tracking precise capital distribution and structural sector exposure for the growing portfolio.*
 
 ### Capital Allocation
 - **Total Account Value:** $5,004.21
@@ -40,16 +40,16 @@ She had $3,000 in her account, which I am now merging into the system I was alre
 - **Equities Position:** ~40.00% *($2,004.21 deployed in market)*
 
 ### Sector Exposure *(% of Deployed Capital)*
-- **Tech / Software:** 51.61% *(ORCL, ADBE, CRM)*
-- **Consumer Defensive:** 13.95% *(KMB, TAP)*
-- **Financial Tech:** 6.56% *(PYPL)*
+- **Information Technology:** 69.3% *(Anchored by ORCL, ADBE, CRM, MSFT)*
+- **Consumer Staples:** 22.5% *(Defensive anchors: KMB, TAP)*
+- **Financials:** 8.2% *(PYPL)*
 - **Est. Dividend Yield:** ~1.4% *(The passive compounding engine)*
 
 ### YTD Performance
 - **Portfolio vs SPY:** +6.55% vs +8.62%
 
 <img src="/mom-ytd-performance.png" alt="YTD Performance Chart" width="100%" style="border-radius: 8px; margin-top: 15px; margin-bottom: 5px;" />
-*(Note: Cumulative rate of return from Jan 1 to current update. Image scales dynamically for mobile viewing.)*
+*(Note: Cumulative rate of return from Jan 1 to current update.)*
 
 ---
 
@@ -82,7 +82,7 @@ She had $3,000 in her account, which I am now merging into the system I was alre
 *(Operating Rule: DO NOT delete old entries. Stack your newest quarterly review directly below this line.)*
 
 **System Changelog:**
-* *v2026.05 (May 19, 2026):* Foundational dashboard deployed. Initial $3,000 seed added to cash reserves. Mobile layout optimization applied.
+* *v2026.05 (May 19, 2026):* Initial $3,000 seed added to cash reserves. 
 
 > **Q2 Review (May 2026):**
 > **Performance Snapshot:** Portfolio +6.55% YTD | SPY +8.62% YTD 
