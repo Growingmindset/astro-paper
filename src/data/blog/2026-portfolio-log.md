@@ -15,9 +15,13 @@ draft: false
 **Objective:** Outperform the S&P 500 baseline through a concentrated, first-principles approach to asset allocation.  
 **Strategy:** Active Satellite (Highly concentrated, high-conviction individual equity positions).  
 **Update Cadence (SOP):** Monthly. 
+
+
 ---
 
 ## 1. Macro Market Thesis (Live Dashboard)
+
+*Last Updated: May 20, 2026*
 
 ### Core Economic Indicators (Live Tracker)
 *A high-signal dashboard of the leading indicators dictating current capital flow.*
@@ -74,7 +78,7 @@ draft: false
 - **Portfolio vs SPY:** +17.76% vs +8.62%
 
 <img src="/ytd-performance-may2026.png" alt="YTD Performance Chart" width="100%" style="border-radius: 8px; margin-top: 15px; margin-bottom: 5px;" />
-*(Note: Cumulative rate of return from Jan 1 to current update.)*
+*(Note: Cumulative rate of return from Jan 1 to current update. Image scales dynamically for mobile viewing.)*
 
 ---
 
@@ -115,7 +119,8 @@ draft: false
 *(Operating Rule: DO NOT delete old entries. Stack your newest monthly/quarterly review directly below this line.)*
 
 **System Changelog:**
-* * (May 19, 2026):* 
+* *v2026.05 (May 20, 2026):* Core macro dashboard synced. Q2 review added. Watchlist updated with KMB and TAP. Mobile layout optimization applied.
+
 > **Q2 Review (May 2026):**
 > **Performance Snapshot:** Portfolio +17.76% YTD | SPY +8.62% YTD 
 > 
