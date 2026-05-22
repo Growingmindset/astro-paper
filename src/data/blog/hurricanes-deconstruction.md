@@ -14,7 +14,7 @@ draft: false
 # Hurricanes: A Memoir
 **Author:** Rick Ross | **Read Date:** May, 2026 | **Rating:** [7.5/10]
 
-> **The 1-Sentence Thesis:** When luck is met with hard work, good things happen.
+> **The 1-Sentence Thesis:** Success is the by-product of maintaining high-velocity, but sustainable ambition within a high risk environment. Where, "luck" is the reward for surviving long enough for your work to compound. 
 
 ---
 
@@ -27,7 +27,7 @@ When hard work & luck come together, it can change your life. Some argue that ha
 
 ## 2. Cognitive Frameworks (The Operating System)
 
-* **Framework 1: [Networking]** - From an early age Rick Ross had many friends, I'd argue it was one of his reasons for wanting to be successful—to take care of the people around him. He leveraged these relationships to work for him, but he didn't just take, he also gave back which built loyalty. Up until the end of the book he kept the same loyalists by his side. This is a telling measure of how he treats his people.
+* **Framework 1: [Networking]** - Ross treated people not only as friends, but as essential infrastructure. From an early age Rick Ross had many friends, I'd argue it was one of his reasons for wanting to be successful—to take care of the people around him. He leveraged these relationships to work for him, but he didn't just take, he also gave back which built loyalty. Up until the end of the book he kept the same loyalists by his side. This is a telling measure of how he treats his people.
 * **Framework 2: [Extraversion]** - To be an artist and want to perform in front of people, you want the spotlight—it's how they get paid, but his extraversion also showed in other areas of his life. From being around his friends all the time, to just trying to get something done on the book in the studio, it seems like he was always around people. When he went to prison, he was put in solitary confinement which brought another level out of him; the same thing happened in 2020 with COVID when the world shut down. He leveraged his alone time and curated something. So although he was an extrovert, it seems like he started realizing the value of cutting off forms of sensation to push himself to the next level. The key behind it is balance. How can you build in front of nobody and expect to be rewarded? Perhaps being too intrinsically motivated could provide diminishing returns.
 
 ---
