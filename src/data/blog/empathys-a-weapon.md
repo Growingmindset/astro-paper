@@ -1,6 +1,6 @@
 ---
 author: Rudy Galan
-pubDatetime: 2025-03-08T12:00:00Z
+pubDatetime: 2026-05-22T12:00:00Z
 title: "Empathy's a Weapon, Standards Are Armor"
 postSlug: empathys-a-weapon-standards-armor
 featured: false
