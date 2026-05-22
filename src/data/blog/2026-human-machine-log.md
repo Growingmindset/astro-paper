@@ -97,7 +97,7 @@ draft: false
 | **B1. Offset DB Bulgarian Split Squat**| 3 sets x 6 / side | Hold DB in hand opposite of front leg to force functional sacral rotation. |
 | **B2. Standing Calf Raise** | 3 sets (12/10/8) | Keep ribs stacked over pelvis. Prevent lumbar hyperextension. |
 | **C1. Leg Press (Pyramid)** | 3 sets (10/8/6) | Maintain full foot contact against sled. Inhale down, pursed-lip exhale up. |
-| **C2. Lateral Sled Drag** | 3 sets (10/8/6) | Drag sideways. Violently compresses the lateral Wide ISA (Frontal plane). |
+| **C2. Lateral Sled Drag** | 3 sets (20yards | Drag sideways. Violently compresses the lateral Wide ISA (Frontal plane). |
 | **Cardio: Steep Hill Sprints** | 5 rounds | 30s max sprint / 90s walk down. Forward lean protects lumbar spine. |
 
 #### Day 2: Upper Body Strength & Hypertrophy
