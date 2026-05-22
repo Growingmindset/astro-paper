@@ -48,6 +48,30 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured).slice(0, SI
       </p>
     </section>
 
+    <section id="operator-profile" class="my-6 grid grid-cols-1 gap-6 items-center border-t border-dashed border-border pt-8 sm:grid-cols-3">
+      <div class="flex justify-center sm:col-span-1">
+        <img 
+          src="/headshot.jpg" 
+          alt="Rudy Galan, professional operator and systems builder in San Antonio, Texas" 
+          class="w-48 h-48 rounded-full object-cover border-2 border-skin-line bg-skin-card shadow-sm sm:w-full sm:h-auto sm:aspect-square sm:rounded-lg"
+        />
+      </div>
+      <div class="sm:col-span-2 flex flex-col justify-center">
+        <h3 class="text-xl font-semibold text-skin-base mb-2">Meet the Operator</h3>
+        <p class="text-sm leading-relaxed text-skin-base opacity-90">
+          I approach infrastructure from first principles. With over a decade of high-volume frontline execution combined with an academic background in the physical sciences, I design and build systems at the intersection of technical architecture, quantitative behavioral finance, and clean energy.
+        </p>
+        <p class="text-sm mt-3">
+          <LinkButton href="/about" class="text-skin-accent font-medium hover:underline inline-flex items-center gap-1">
+            Read the full brief
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </LinkButton>
+        </p>
+      </div>
+    </section>
+
     <hr class="my-6 border-dashed border-border" />
 
     <section class="my-8 rounded-lg border border-skin-line bg-skin-card px-6 py-8 shadow-sm">
