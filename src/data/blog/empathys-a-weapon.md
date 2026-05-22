@@ -3,12 +3,12 @@ author: Rudy Galan
 pubDatetime: 2025-03-08T12:00:00Z
 title: "Empathy's a Weapon, Standards Are Armor"
 postSlug: empathys-a-weapon-standards-armor
-featured: true
+featured: false
 draft: false
 tags:
   - human-systems
   - operational-grit
-  - Library
+  - library
 description: "Why high-level execution requires separating emotional empathy from baseline operational standards."
 ---
 
