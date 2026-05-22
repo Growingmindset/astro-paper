@@ -4,7 +4,7 @@ title: "About"
 ---
 
 <div align="center">
-<img src="/headshot.jpg?v=3" alt="Rudy Galan" width="250" style="border-radius: 50%; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 2rem;" />
+<img src="/headshot.jpg?v=3" alt="Rudy Galan, systems builder and operator based in San Antonio, Texas" width="250" style="border-radius: 50%; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 2rem;" />
 </div>
 
 > *"Everything is a system waiting to be optimized."*
@@ -22,9 +22,9 @@ To build these systems, you must understand the fundamental rules governing them
 Strategic ambition requires capital. Rather than taking on institutional debt, I operate a leveraged cash-flow engine to bootstrap my architecture.
 
 **Operational Cash Flow & Human Systems**
-I leverage 12 years of hospitality experience executing behind the bar at Grand Hyatt Hotel. While the baseline mechanics of mixology are straightforward, the true value of the environment lies in human psychology. The bar is an active laboratory for observing behavioral inputs, analyzing the pushes and pulls of communication, and understanding how unique personalities process information. More importantly, it is a deliberate, high-yield capital generation vehicle that fully funds my university coursework and active investments.
+I leverage 12 years of hospitality experience executing behind the bar at the Grand Hyatt Hotel. While the baseline mechanics of mixology are straightforward, the true value of the environment lies in human psychology. The bar is an active laboratory for observing behavioral inputs, analyzing the pushes and pulls of communication, and understanding how unique personalities process information. More importantly, it is a deliberate, high-yield capital generation vehicle that fully funds my university coursework and active investments.
 
-![Rudy thinking](/action-shot.jpg)
+![Rudy Galan analyzing system architectures at the Grand Hyatt bar](/action-shot.jpg)
 
 **Real Estate Mechanics & Market Logic**
 I deploy my operational profits into targeted acquisitions. I utilize a strict "Buy Box" in San Antonio, targeting value-add properties for future equity and cash flow. In the equities market, I manually manage a personal portfolio focused on macroeconomic indicators and technology.
@@ -46,10 +46,11 @@ By actively studying behavioral psychology and personality matrices, I treat soc
 
 Currently on the horizon is **The Rotation**: a long-term project to build a modular brand accelerator and listening bar concept. It remains fully blueprinted and positioned as a future deployment—the ultimate convergence of curated physical environments, high-level hospitality, and scalable business infrastructure.
 
-![The Rotation Concept Graphic](/rotation-logo.jpg)
+![The Rotation concept brand identity logo for modular business infrastructure](/rotation-logo.jpg)
 
 ---
 
 ### Connect with Rudy
-- [LinkedIn](https://www.linkedin.com/in/rudy-galan-89262a40b/)
-- [Direct Email](mailto:growingstateofmind@gmail.com)
+- [Follow the Build-in-Public Journey on X (Twitter)](https://x.com/Rudygalan)
+- [LinkedIn Professional Network](https://www.linkedin.com/in/rudy-galan-89262a40b/)
+- [Direct Email Transmission](mailto:growingstateofmind@gmail.com)
