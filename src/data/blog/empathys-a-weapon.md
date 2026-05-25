@@ -6,8 +6,7 @@ postSlug: empathys-a-weapon-standards-armor
 featured: false
 draft: false
 tags:
-  - essays
-  - human-systems
+  - transmissions
 description: "Why high-level execution requires separating emotional empathy from baseline operational standards."
 ---
 
