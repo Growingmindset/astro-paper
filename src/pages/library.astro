@@ -58,7 +58,7 @@ const libraryPosts = sortedPosts.filter(post =>
           
           return (
             <li class="post-item mb-6" data-category={mainCategory}>
-              <Card href={`/posts/${post.slug}`} frontmatter={post.data} />
+              <Card {...post} />
             </li>
           );
         })}
@@ -91,13 +91,16 @@ const libraryPosts = sortedPosts.filter(post =>
         const filterValue = btn.getAttribute('data-filter');
 
         postItems.forEach(item => {
+          // Explicitly cast the element to satisfy the TypeScript compiler
+          const el = item as HTMLElement;
+          
           if (filterValue === 'all') {
-            item.style.display = 'block';
+            el.style.display = 'block';
           } else {
-            if (item.getAttribute('data-category') === filterValue) {
-              item.style.display = 'block';
+            if (el.getAttribute('data-category') === filterValue) {
+              el.style.display = 'block';
             } else {
-              item.style.display = 'none';
+              el.style.display = 'none';
             }
           }
         });
