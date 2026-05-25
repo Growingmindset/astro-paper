@@ -11,10 +11,10 @@ import { SITE } from "@/config";
 const posts = await getCollection("blog", ({ data }) => !data.draft);
 const sortedPosts = getSortedPosts(posts);
 
-// 2. Define the 4 Master Categories
-const libraryTags = ["essays", "deconstructions", "academia", "frameworks"];
+// 2. The 5 Master Categories (Grok's scalable architecture)
+const libraryTags = ["transmissions", "deconstructions", "meditations", "academic-systems", "frameworks"];
 
-// 3. Filter out any posts that don't belong in the Library
+// 3. Filter to only Library posts
 const libraryPosts = sortedPosts.filter(post => 
   post.data.tags.some(tag => libraryTags.includes(tag))
 );
@@ -28,36 +28,38 @@ const libraryPosts = sortedPosts.filter(post =>
     <section class="pt-8 pb-6 text-center">
       <h1 class="text-3xl font-bold tracking-wider sm:text-4xl mb-4">The Library</h1>
       <p class="text-skin-base opacity-90 max-w-2xl mx-auto leading-relaxed">
-        First-principles thinking. Essays, book deconstructions, academic systems work, and operational frameworks exploring the mechanics of human behavior, physical infrastructure, and capital generation.
+        First-principles thinking. Essays, deconstructions, philosophical meditations, academic systems, and cognitive frameworks exploring human behavior, operational excellence, and long-term compounding.
       </p>
     </section>
 
     <section class="flex flex-wrap justify-center gap-3 mb-10 border-b border-dashed border-border pb-6">
-      <button class="filter-btn active px-4 py-2 text-sm font-medium border border-skin-line rounded bg-skin-accent text-skin-inverted transition-colors" data-filter="all">
+      <button class="lib-filter-btn active px-4 py-2 text-sm font-medium border border-skin-line rounded bg-skin-accent text-skin-inverted transition-colors" data-filter="all">
         All
       </button>
-      <button class="filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="essays">
-        Essays & Meditations
+      <button class="lib-filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="transmissions">
+        Transmissions
       </button>
-      <button class="filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="deconstructions">
-        Book Deconstructions
+      <button class="lib-filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="deconstructions">
+        Deconstructions
       </button>
-      <button class="filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="academia">
+      <button class="lib-filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="meditations">
+        Meditations
+      </button>
+      <button class="lib-filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="academic-systems">
         Academic Systems
       </button>
-      <button class="filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="frameworks">
-        Operational Tools
+      <button class="lib-filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="frameworks">
+        Frameworks
       </button>
     </section>
 
-    <section>
+    <section id="library-feed">
       <ul>
         {libraryPosts.map(post => {
-          // Identify the master category for the HTML data attribute
           const mainCategory = post.data.tags.find(tag => libraryTags.includes(tag)) || "other";
-          
           return (
-            <li class="post-item mb-6" data-category={mainCategory}>
+            /* UNIQUE CLASS: .library-post-item guarantees we don't accidentally select elements on The Lab page */
+            <li class="library-post-item mb-6 block" data-category={mainCategory}>
               <Card {...post} />
             </li>
           );
@@ -71,18 +73,20 @@ const libraryPosts = sortedPosts.filter(post =>
 </Layout>
 
 <script>
+  // This hook ensures the script runs properly when Astro's View Transitions swap the page
   document.addEventListener('astro:page-load', () => {
-    // 1. Strict Isolation: Only run if we are inside the Library container
+    
+    // 1. Strict Isolation: If we aren't on the Library page, stop immediately.
     const container = document.getElementById('library-container');
     if (!container) return; 
 
-    // 2. Select elements strictly within this specific page
-    const filterBtns = container.querySelectorAll('button.filter-btn');
-    const postItems = container.querySelectorAll('li.post-item');
+    // 2. Select ONLY the buttons and posts inside this specific container
+    const filterBtns = container.querySelectorAll('button.lib-filter-btn');
+    const postItems = container.querySelectorAll('li.library-post-item');
 
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        // Reset all buttons to inactive
+        // Reset visual state of all buttons
         filterBtns.forEach(b => {
           b.classList.remove('bg-skin-accent', 'text-skin-inverted');
           b.classList.add('hover:bg-skin-card', 'text-skin-base');
@@ -92,14 +96,17 @@ const libraryPosts = sortedPosts.filter(post =>
         btn.classList.add('bg-skin-accent', 'text-skin-inverted');
         btn.classList.remove('hover:bg-skin-card', 'text-skin-base');
 
-        // Execute the filter using Tailwind's native 'hidden' class
         const filterValue = btn.getAttribute('data-filter');
 
+        // Apply filtering safely
         postItems.forEach(item => {
-          if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-            item.classList.remove('hidden');
+          const el = item as HTMLElement;
+          const category = el.getAttribute('data-category');
+          
+          if (filterValue === 'all' || category === filterValue) {
+            el.style.display = 'block';
           } else {
-            item.classList.add('hidden');
+            el.style.display = 'none';
           }
         });
       });
