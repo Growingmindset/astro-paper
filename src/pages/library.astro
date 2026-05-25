@@ -29,7 +29,8 @@ const libraryPosts = sortedPosts.filter(post =>
       </p>
     </section>
 
-    <library-filters>
+    <div id="library-filters">
+      
       <section class="flex flex-wrap justify-center gap-3 mb-10 border-b border-dashed border-border pb-6">
         <button class="filter-btn active px-4 py-2 text-sm font-medium border border-skin-line rounded bg-skin-accent text-skin-inverted transition-colors" data-filter="all">
           All
@@ -56,7 +57,6 @@ const libraryPosts = sortedPosts.filter(post =>
           {libraryPosts.map(post => {
             const mainCategory = post.data.tags?.find(tag => libraryTags.includes(tag)) || "other";
             return (
-              /* Removed the "block" class to prevent Tailwind CSS conflicts */
               <li class="lib-post-item mb-6" data-category={mainCategory}>
                 <Card {...post} />
               </li>
@@ -65,52 +65,49 @@ const libraryPosts = sortedPosts.filter(post =>
         </ul>
       </section>
 
-    </library-filters>
+    </div>
    
   </main>
 
   <Footer />
 </Layout>
 
-<script>
-  class LibraryFilters extends HTMLElement {
-    connectedCallback() {
-      const filterButtons = this.querySelectorAll(".filter-btn");
-      const postItems = this.querySelectorAll(".lib-post-item");
+<script is:inline>
+  // CRITICAL: Must use astro:page-load to survive View Transitions, not DOMContentLoaded
+  document.addEventListener('astro:page-load', () => {
+    const container = document.getElementById("library-filters");
+    if (!container) return;
 
-      filterButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          
-          // 1. Reset all buttons
-          filterButtons.forEach((btn) => {
-            btn.classList.remove("bg-skin-accent", "text-skin-inverted");
-            btn.classList.add("text-skin-base", "hover:bg-skin-card");
-          });
+    const filterButtons = container.querySelectorAll(".filter-btn");
+    const postItems = container.querySelectorAll(".lib-post-item");
 
-          // 2. Activate clicked button
-          button.classList.add("bg-skin-accent", "text-skin-inverted");
-          button.classList.remove("text-skin-base", "hover:bg-skin-card");
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        
+        // Reset all buttons
+        filterButtons.forEach((btn) => {
+          btn.classList.remove("bg-skin-accent", "text-skin-inverted");
+          btn.classList.add("text-skin-base", "hover:bg-skin-card");
+        });
 
-          const filterValue = button.getAttribute("data-filter");
+        // Activate clicked button
+        button.classList.add("bg-skin-accent", "text-skin-inverted");
+        button.classList.remove("text-skin-base", "hover:bg-skin-card");
 
-          // 3. Filter posts using !important to overpower any conflicting Tailwind CSS
-          postItems.forEach((post) => {
-            const category = post.getAttribute("data-category");
+        const filterValue = button.getAttribute("data-filter");
+        console.log("Filter Executed:", filterValue); // Debug check
 
-            if (filterValue === "all" || category === filterValue) {
-              post.style.setProperty("display", "block", "important");
-            } else {
-              post.style.setProperty("display", "none", "important");
-            }
-          });
+        // Filter posts using Tailwind's native 'hidden' class
+        postItems.forEach((post) => {
+          const category = post.getAttribute("data-category");
+
+          if (filterValue === "all" || category === filterValue) {
+            post.classList.remove("hidden");
+          } else {
+            post.classList.add("hidden");
+          }
         });
       });
-    }
-  }
-
-  // CRITICAL FIX: Prevent Astro View Transitions from crashing the script
-  // Only define the element if the browser hasn't already registered it
-  if (!customElements.get("library-filters")) {
-    customElements.define("library-filters", LibraryFilters);
-  }
+    });
+  });
 </script>
