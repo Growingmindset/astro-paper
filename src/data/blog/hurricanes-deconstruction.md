@@ -4,8 +4,6 @@ description: "Extracting the core philosophies and cognitive frameworks from Hur
 pubDatetime: 2026-05-20T00:00:00Z
 tags:
   - deconstructions
-  - audio-audit
-  - strategy
 featured: false
 draft: false
 ---
