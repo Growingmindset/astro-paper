@@ -1,6 +1,3 @@
----
-author: Rudy Galan
-pubDatetime: 2026-05-22T12:00:00Z
 # Empathy's a Weapon, Standards Are Armor
 ---
 title: Empathy's a Weapon, Standards Are Armor
@@ -8,6 +5,7 @@ pubDate: 2026-05-22
 tags:
   - transmissions
   - human-systems     # optional secondary tag
+---
 ---
 description: "Why high-level execution requires separating emotional empathy from baseline operational standards."
 ---
