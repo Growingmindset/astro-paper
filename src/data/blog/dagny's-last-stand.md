@@ -1,13 +1,9 @@
+# Dagny’s Last Stand
 ---
-author: Rudy Galan
-pubDatetime: 2026-05-21T14:24:00Z
-title: "Dagny’s Last Stand: Ayn Rand’s Vision in a Collapsing World"
-postSlug: dagnys-last-stand-ayn-rand
-featured: true
-draft: false
+title: Dagny’s Last Stand: Ayn Rand’s Vision in a Collapsing World
+pubDate: 2026-05-21
 tags:
-  - deconstructions
-description: "A reflection on Atlas Shrugged, the burden of competence, and knowing when to execute an operational strike."
+  - meditations
 ---
 
 When the World’s Minds Walk Away
