@@ -70,46 +70,47 @@ const libraryPosts = sortedPosts.filter(post =>
   <Footer />
 </Layout>
 
-<script>
-  function setupFilters() {
+<script is:inline>
+  function setupLibraryFilters() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const postItems = document.querySelectorAll('.post-item');
 
-    if (!filterBtns.length) return; // Exit if not on the library page
+    // Exit if elements don't exist on this page
+    if (filterBtns.length === 0) return;
 
     filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        // 1. Reset all buttons to inactive state
+      // Using onclick prevents duplicate listeners if Astro reloads the page
+      btn.onclick = function() {
+        // 1. Reset all buttons to inactive styling
         filterBtns.forEach(b => {
           b.classList.remove('bg-skin-accent', 'text-skin-inverted');
           b.classList.add('hover:bg-skin-card', 'text-skin-base');
         });
 
         // 2. Highlight the clicked button
-        btn.classList.add('bg-skin-accent', 'text-skin-inverted');
-        btn.classList.remove('hover:bg-skin-card', 'text-skin-base');
+        this.classList.add('bg-skin-accent', 'text-skin-inverted');
+        this.classList.remove('hover:bg-skin-card', 'text-skin-base');
 
-        // 3. Execute the filter
-        const filterValue = btn.getAttribute('data-filter');
+        // 3. Execute the filter logic
+        const filterValue = this.getAttribute('data-filter');
 
         postItems.forEach(item => {
-          // In vanilla JS, we can set styles directly without TypeScript casting
-          const el = item as HTMLElement; 
-          
-          if (filterValue === 'all') {
-            el.style.display = 'block';
+          if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+            item.style.display = 'block';
           } else {
-            if (el.getAttribute('data-category') === filterValue) {
-              el.style.display = 'block';
-            } else {
-              el.style.display = 'none';
-            }
+            item.style.display = 'none';
           }
         });
-      });
+      };
     });
   }
 
-  // Hook into Astro's View Transitions lifecycle
-  document.addEventListener('astro:page-load', setupFilters);
+  // 1. Run immediately for direct page loads
+  setupLibraryFilters();
+  
+  // 2. Run on standard DOM load
+  document.addEventListener('DOMContentLoaded', setupLibraryFilters);
+  
+  // 3. Run on Astro's internal page transition routing
+  document.addEventListener('astro:page-load', setupLibraryFilters);
 </script>
