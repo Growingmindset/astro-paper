@@ -71,9 +71,11 @@ const libraryPosts = sortedPosts.filter(post =>
 </Layout>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  function setupFilters() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const postItems = document.querySelectorAll('.post-item');
+
+    if (!filterBtns.length) return; // Exit if not on the library page
 
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -91,8 +93,8 @@ const libraryPosts = sortedPosts.filter(post =>
         const filterValue = btn.getAttribute('data-filter');
 
         postItems.forEach(item => {
-          // Explicitly cast the element to satisfy the TypeScript compiler
-          const el = item as HTMLElement;
+          // In vanilla JS, we can set styles directly without TypeScript casting
+          const el = item as HTMLElement; 
           
           if (filterValue === 'all') {
             el.style.display = 'block';
@@ -106,5 +108,8 @@ const libraryPosts = sortedPosts.filter(post =>
         });
       });
     });
-  });
+  }
+
+  // Hook into Astro's View Transitions lifecycle
+  document.addEventListener('astro:page-load', setupFilters);
 </script>
