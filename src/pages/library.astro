@@ -81,26 +81,26 @@ const libraryPosts = sortedPosts.filter(post =>
       filterButtons.forEach((button) => {
         button.addEventListener("click", () => {
           
-          // Reset all buttons
+          // 1. Reset all buttons
           filterButtons.forEach((btn) => {
             btn.classList.remove("bg-skin-accent", "text-skin-inverted");
             btn.classList.add("text-skin-base", "hover:bg-skin-card");
           });
 
-          // Activate clicked button
+          // 2. Activate clicked button
           button.classList.add("bg-skin-accent", "text-skin-inverted");
           button.classList.remove("text-skin-base", "hover:bg-skin-card");
 
           const filterValue = button.getAttribute("data-filter");
 
-          // COMPILER & CSS SAFE FIX: Use setAttribute to force display styles
+          // 3. Filter posts using !important to overpower any conflicting Tailwind CSS
           postItems.forEach((post) => {
             const category = post.getAttribute("data-category");
 
             if (filterValue === "all" || category === filterValue) {
-              post.setAttribute("style", "display: block;");
+              post.style.setProperty("display", "block", "important");
             } else {
-              post.setAttribute("style", "display: none;");
+              post.style.setProperty("display", "none", "important");
             }
           });
         });
@@ -108,5 +108,9 @@ const libraryPosts = sortedPosts.filter(post =>
     }
   }
 
-  customElements.define("library-filters", LibraryFilters);
+  // CRITICAL FIX: Prevent Astro View Transitions from crashing the script
+  // Only define the element if the browser hasn't already registered it
+  if (!customElements.get("library-filters")) {
+    customElements.define("library-filters", LibraryFilters);
+  }
 </script>
