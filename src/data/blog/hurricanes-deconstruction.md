@@ -1,11 +1,12 @@
 ---
-title: "Deconstruction: Hurricanes by Rick Ross"
-description: "Extracting the core philosophies and cognitive frameworks from Hurricanes."
-pubDatetime: 2026-05-20T00:00:00Z
+# Deconstruction: Hurricanes by Rick Ross
+---
+title: Deconstruction: Hurricanes by Rick Ross
+pubDate: 2026-05-19
 tags:
   - deconstructions
-featured: false
-draft: false
+  - audio-audit       # future-proof for music audits
+---
 ---
 
 # Hurricanes: A Memoir
