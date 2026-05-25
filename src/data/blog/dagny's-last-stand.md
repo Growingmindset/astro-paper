@@ -1,9 +1,14 @@
-# Dagny’s Last Stand
 ---
-title: Dagny’s Last Stand: Ayn Rand’s Vision in a Collapsing World
-pubDate: 2026-05-21
+author: Rudy Galan
+pubDatetime: 2026-05-19T10:00:00Z
+title: "Deconstruction: Hurricanes by Rick Ross"
+postSlug: deconstruction-hurricanes-rick-ross
+featured: false
+draft: false
 tags:
-  - meditations
+  - deconstructions
+  - audio-audit
+description: "Extracting the core philosophies and cognitive frameworks from Hurricanes."
 ---
 
 When the World’s Minds Walk Away
