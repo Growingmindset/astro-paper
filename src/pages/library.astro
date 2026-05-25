@@ -57,7 +57,7 @@ const libraryPosts = sortedPosts.filter(post =>
           {libraryPosts.map(post => {
             const mainCategory = post.data.tags?.find(tag => libraryTags.includes(tag)) || "other";
             return (
-              <li class="lib-post-item mb-6 block" data-category={mainCategory}>
+              <li class="lib-post-item mb-6" data-category={mainCategory}>
                 <Card {...post} />
               </li>
             );
@@ -73,37 +73,35 @@ const libraryPosts = sortedPosts.filter(post =>
 </Layout>
 
 <script>
-  // Define the Web Component
   class LibraryFilters extends HTMLElement {
-    // connectedCallback runs natively the second the element enters the DOM
     connectedCallback() {
-      const filterBtns = this.querySelectorAll('button.filter-btn');
-      const postItems = this.querySelectorAll('li.lib-post-item');
+      const filterButtons = this.querySelectorAll(".filter-btn");
+      const postItems = this.querySelectorAll(".lib-post-item");
 
-      filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
           
-          // Reset visual state
-          filterBtns.forEach(b => {
-            b.classList.remove('bg-skin-accent', 'text-skin-inverted');
-            b.classList.add('hover:bg-skin-card', 'text-skin-base');
+          // Reset all buttons
+          filterButtons.forEach((btn) => {
+            btn.classList.remove("bg-skin-accent", "text-skin-inverted");
+            btn.classList.add("text-skin-base", "hover:bg-skin-card");
           });
 
-          // Highlight clicked
-          btn.classList.add('bg-skin-accent', 'text-skin-inverted');
-          btn.classList.remove('hover:bg-skin-card', 'text-skin-base');
+          // Activate clicked button
+          button.classList.add("bg-skin-accent", "text-skin-inverted");
+          button.classList.remove("text-skin-base", "hover:bg-skin-card");
 
-          const filterValue = btn.getAttribute('data-filter');
+          // Get selected filter using dataset
+          const filterValue = button.dataset.filter;
 
-          // Apply filter logic
-          postItems.forEach(item => {
-            const el = item as HTMLElement;
-            const category = el.getAttribute('data-category');
-            
-            if (filterValue === 'all' || category === filterValue) {
-              el.style.display = 'block';
+          // Filter posts using Tailwind's native 'hidden' class
+          postItems.forEach((post) => {
+            const category = post.dataset.category;
+
+            if (filterValue === "all" || category === filterValue) {
+              post.classList.remove("hidden");
             } else {
-              el.style.display = 'none';
+              post.classList.add("hidden");
             }
           });
         });
@@ -111,6 +109,5 @@ const libraryPosts = sortedPosts.filter(post =>
     }
   }
 
-  // Register the component with the browser
-  customElements.define('library-filters', LibraryFilters);
+  customElements.define("library-filters", LibraryFilters);
 </script>
