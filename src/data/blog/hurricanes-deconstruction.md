@@ -3,10 +3,9 @@ title: "Deconstruction: Hurricanes by Rick Ross"
 description: "Extracting the core philosophies and cognitive frameworks from Hurricanes."
 pubDatetime: 2026-05-20T00:00:00Z
 tags:
-  - library
-  - book-deconstruction
-  - rick-ross
-  - philosophy
+  - deconstructions
+  - audio-audit
+  - strategy
 featured: false
 draft: false
 ---
