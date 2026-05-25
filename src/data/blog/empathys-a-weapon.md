@@ -1,14 +1,15 @@
-# Empathy's a Weapon, Standards Are Armor
 ---
-title: Empathy's a Weapon, Standards Are Armor
-pubDate: 2026-05-22
+author: Rudy Galan
+pubDatetime: 2026-05-22T12:00:00Z
+title: "Empathy's a Weapon, Standards Are Armor"
+postSlug: empathys-a-weapon-standards-armor
+featured: false
+draft: false
 tags:
   - transmissions
-  - human-systems     # optional secondary tag
----
+  - human-systems
 description: "Why high-level execution requires separating emotional empathy from baseline operational standards."
 ---
-
 Standards. Seems like nobody wants to be held to one these days. Tell someone, “This is the standard I hold you to, and I won’t accept less,” and they act like it’s a personal attack. But standards are respect. I expect you to be X because I believe in my gut you’re capable of it. When you don’t, you’re robbing yourself—and me, if I’m the one expecting it. Word salad? 🥗 Yeah, maybe. It’s how I roll.
 
 So what’s the standard for being in your life? Relationships, friendships, even acquaintances—yep, acquaintances. If yours are drug dealers or that crowd, raise the bar. Probably some childhood trauma behind that, common in those circles, I guess. My standard for acquaintances in 2025? Couldn’t be that crew. Sure, they might be family, but family’s only cool if they’re adding something positive. I’ve got no business mixing with anything less. Real family wouldn’t drag you down anyway—that’s respect.
