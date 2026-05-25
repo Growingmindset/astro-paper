@@ -6,9 +6,8 @@ postSlug: empathys-a-weapon-standards-armor
 featured: false
 draft: false
 tags:
+  - essays
   - human-systems
-  - operational-grit
-  - library
 description: "Why high-level execution requires separating emotional empathy from baseline operational standards."
 ---
 
