@@ -7,14 +7,11 @@ import Card from "@/components/Card.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
 import { SITE } from "@/config";
 
-// 1. Fetch and sort all active posts
 const posts = await getCollection("blog", ({ data }) => !data.draft);
 const sortedPosts = getSortedPosts(posts);
 
-// 2. Final 5 Master Categories
 const libraryTags = ["transmissions", "deconstructions", "meditations", "academic-systems", "frameworks"];
 
-// 3. Only show Library posts
 const libraryPosts = sortedPosts.filter(post =>
   post.data.tags?.some(tag => libraryTags.includes(tag))
 );
@@ -23,7 +20,7 @@ const libraryPosts = sortedPosts.filter(post =>
 <Layout title={`The Library | ${SITE.title}`}>
   <Header activeNav="library" />
 
-  <main id="library-container" class="mx-auto w-full max-w-3xl px-4 pb-12">
+  <main class="mx-auto w-full max-w-3xl px-4 pb-12">
     
     <section class="pt-8 pb-6 text-center">
       <h1 class="text-3xl font-bold tracking-wider sm:text-4xl mb-4">The Library</h1>
@@ -32,87 +29,88 @@ const libraryPosts = sortedPosts.filter(post =>
       </p>
     </section>
 
-    <section class="flex flex-wrap justify-center gap-3 mb-10 border-b border-dashed border-border pb-6">
-      <button class="filter-btn active px-4 py-2 text-sm font-medium border border-skin-line rounded bg-skin-accent text-skin-inverted transition-colors" data-filter="all">
-        All
-      </button>
-      <button class="filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="transmissions">
-        Transmissions
-      </button>
-      <button class="filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="deconstructions">
-        Deconstructions
-      </button>
-      <button class="filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="meditations">
-        Meditations
-      </button>
-      <button class="filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="academic-systems">
-        Academic Systems
-      </button>
-      <button class="filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="frameworks">
-        Frameworks
-      </button>
-    </section>
+    <library-filters>
+      
+      <section class="flex flex-wrap justify-center gap-3 mb-10 border-b border-dashed border-border pb-6">
+        <button class="filter-btn active px-4 py-2 text-sm font-medium border border-skin-line rounded bg-skin-accent text-skin-inverted transition-colors" data-filter="all">
+          All
+        </button>
+        <button class="filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="transmissions">
+          Transmissions
+        </button>
+        <button class="filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="deconstructions">
+          Deconstructions
+        </button>
+        <button class="filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="meditations">
+          Meditations
+        </button>
+        <button class="filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="academic-systems">
+          Academic Systems
+        </button>
+        <button class="filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="frameworks">
+          Frameworks
+        </button>
+      </section>
 
-    <section>
-      <ul>
-        {libraryPosts.map(post => {
-          const mainCategory = post.data.tags?.find(tag => libraryTags.includes(tag)) || "other";
-          return (
-            /* UNIQUE CLASS: .lib-post-item guarantees zero bleeding to The Lab */
-            <li class="lib-post-item mb-6" data-category={mainCategory}>
-              <Card {...post} />
-            </li>
-          );
-        })}
-      </ul>
-    </section>
+      <section>
+        <ul>
+          {libraryPosts.map(post => {
+            const mainCategory = post.data.tags?.find(tag => libraryTags.includes(tag)) || "other";
+            return (
+              <li class="lib-post-item mb-6 block" data-category={mainCategory}>
+                <Card {...post} />
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+
+    </library-filters>
    
   </main>
 
   <Footer />
 </Layout>
 
-<script is:inline>
-  function initLibraryFilters() {
-    const container = document.getElementById('library-container');
-    if (!container) return;
+<script>
+  // Define the Web Component
+  class LibraryFilters extends HTMLElement {
+    // connectedCallback runs natively the second the element enters the DOM
+    connectedCallback() {
+      const filterBtns = this.querySelectorAll('button.filter-btn');
+      const postItems = this.querySelectorAll('li.lib-post-item');
 
-    const filterBtns = container.querySelectorAll('button.filter-btn');
-    // Isolate targeting to our unique library class
-    const postItems = container.querySelectorAll('li.lib-post-item');
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          
+          // Reset visual state
+          filterBtns.forEach(b => {
+            b.classList.remove('bg-skin-accent', 'text-skin-inverted');
+            b.classList.add('hover:bg-skin-card', 'text-skin-base');
+          });
 
-    if (filterBtns.length === 0) return;
+          // Highlight clicked
+          btn.classList.add('bg-skin-accent', 'text-skin-inverted');
+          btn.classList.remove('hover:bg-skin-card', 'text-skin-base');
 
-    filterBtns.forEach(btn => {
-      // Overwriting onclick prevents duplicate firing on View Transitions
-      btn.onclick = function() {
-        // Reset all buttons
-        filterBtns.forEach(b => {
-          b.classList.remove('bg-skin-accent', 'text-skin-inverted');
-          b.classList.add('hover:bg-skin-card', 'text-skin-base');
+          const filterValue = btn.getAttribute('data-filter');
+
+          // Apply filter logic
+          postItems.forEach(item => {
+            const el = item as HTMLElement;
+            const category = el.getAttribute('data-category');
+            
+            if (filterValue === 'all' || category === filterValue) {
+              el.style.display = 'block';
+            } else {
+              el.style.display = 'none';
+            }
+          });
         });
-
-        // Activate clicked button
-        this.classList.add('bg-skin-accent', 'text-skin-inverted');
-        this.classList.remove('hover:bg-skin-card', 'text-skin-base');
-
-        const filterValue = this.getAttribute('data-filter');
-
-        // Apply display styles directly
-        postItems.forEach(item => {
-          const category = item.getAttribute('data-category');
-          if (filterValue === 'all' || category === filterValue) {
-            item.style.display = 'block';
-          } else {
-            item.style.display = 'none';
-          }
-        });
-      };
-    });
+      });
+    }
   }
 
-  // 1. Run immediately for standard page loads
-  initLibraryFilters();
-  // 2. Hook into Astro's SPA routing
-  document.addEventListener('astro:page-load', initLibraryFilters);
+  // Register the component with the browser
+  customElements.define('library-filters', LibraryFilters);
 </script>
