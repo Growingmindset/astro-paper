@@ -11,18 +11,18 @@ import { SITE } from "@/config";
 const posts = await getCollection("blog", ({ data }) => !data.draft);
 const sortedPosts = getSortedPosts(posts);
 
-// 2. The 5 Master Categories (Grok's scalable architecture)
+// 2. Final 5 Master Categories
 const libraryTags = ["transmissions", "deconstructions", "meditations", "academic-systems", "frameworks"];
 
-// 3. Filter to only Library posts
-const libraryPosts = sortedPosts.filter(post => 
-  post.data.tags.some(tag => libraryTags.includes(tag))
+// 3. Only show Library posts
+const libraryPosts = sortedPosts.filter(post =>
+  post.data.tags?.some(tag => libraryTags.includes(tag))
 );
 ---
 
 <Layout title={`The Library | ${SITE.title}`}>
   <Header activeNav="library" />
-  
+
   <main id="library-container" class="mx-auto w-full max-w-3xl px-4 pb-12">
     
     <section class="pt-8 pb-6 text-center">
@@ -32,81 +32,74 @@ const libraryPosts = sortedPosts.filter(post =>
       </p>
     </section>
 
+    <!-- Filter Tabs -->
     <section class="flex flex-wrap justify-center gap-3 mb-10 border-b border-dashed border-border pb-6">
-      <button class="lib-filter-btn active px-4 py-2 text-sm font-medium border border-skin-line rounded bg-skin-accent text-skin-inverted transition-colors" data-filter="all">
+      <button class="filter-btn active px-4 py-2 text-sm font-medium border border-skin-line rounded bg-skin-accent text-skin-inverted transition-colors" data-filter="all">
         All
       </button>
-      <button class="lib-filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="transmissions">
+      <button class="filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="transmissions">
         Transmissions
       </button>
-      <button class="lib-filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="deconstructions">
+      <button class="filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="deconstructions">
         Deconstructions
       </button>
-      <button class="lib-filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="meditations">
+      <button class="filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="meditations">
         Meditations
       </button>
-      <button class="lib-filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="academic-systems">
+      <button class="filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="academic-systems">
         Academic Systems
       </button>
-      <button class="lib-filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="frameworks">
+      <button class="filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="frameworks">
         Frameworks
       </button>
     </section>
 
-    <section id="library-feed">
+    <!-- Posts -->
+    <section>
       <ul>
         {libraryPosts.map(post => {
-          const mainCategory = post.data.tags.find(tag => libraryTags.includes(tag)) || "other";
+          const mainCategory = post.data.tags?.find(tag => libraryTags.includes(tag)) || "other";
           return (
-            /* UNIQUE CLASS: .library-post-item guarantees we don't accidentally select elements on The Lab page */
-            <li class="library-post-item mb-6 block" data-category={mainCategory}>
+            <li class="post-item mb-6" data-category={mainCategory}>
               <Card {...post} />
             </li>
           );
         })}
       </ul>
     </section>
-    
+   
   </main>
-  
+
   <Footer />
 </Layout>
 
 <script>
-  // This hook ensures the script runs properly when Astro's View Transitions swap the page
   document.addEventListener('astro:page-load', () => {
-    
-    // 1. Strict Isolation: If we aren't on the Library page, stop immediately.
     const container = document.getElementById('library-container');
-    if (!container) return; 
+    if (!container) return;
 
-    // 2. Select ONLY the buttons and posts inside this specific container
-    const filterBtns = container.querySelectorAll('button.lib-filter-btn');
-    const postItems = container.querySelectorAll('li.library-post-item');
+    const filterBtns = container.querySelectorAll('button.filter-btn');
+    const postItems = container.querySelectorAll('li.post-item');
 
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        // Reset visual state of all buttons
+        // Reset all buttons
         filterBtns.forEach(b => {
           b.classList.remove('bg-skin-accent', 'text-skin-inverted');
           b.classList.add('hover:bg-skin-card', 'text-skin-base');
         });
 
-        // Highlight the clicked button
+        // Activate clicked button
         btn.classList.add('bg-skin-accent', 'text-skin-inverted');
         btn.classList.remove('hover:bg-skin-card', 'text-skin-base');
 
         const filterValue = btn.getAttribute('data-filter');
 
-        // Apply filtering safely
         postItems.forEach(item => {
-          const el = item as HTMLElement;
-          const category = el.getAttribute('data-category');
-          
-          if (filterValue === 'all' || category === filterValue) {
-            el.style.display = 'block';
+          if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+            item.classList.remove('hidden');
           } else {
-            el.style.display = 'none';
+            item.classList.add('hidden');
           }
         });
       });
