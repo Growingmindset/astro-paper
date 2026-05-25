@@ -57,7 +57,7 @@ const libraryPosts = sortedPosts.filter(post =>
           {libraryPosts.map(post => {
             const mainCategory = post.data.tags?.find(tag => libraryTags.includes(tag)) || "other";
             return (
-              <li class="lib-post-item mb-6" data-category={mainCategory}>
+              <li class="lib-post-item mb-6 block" data-category={mainCategory}>
                 <Card {...post} />
               </li>
             );
@@ -91,12 +91,13 @@ const libraryPosts = sortedPosts.filter(post =>
           button.classList.add("bg-skin-accent", "text-skin-inverted");
           button.classList.remove("text-skin-base", "hover:bg-skin-card");
 
-          // Get selected filter using dataset
-          const filterValue = button.dataset.filter;
+          // COMPILER FIX: Use getAttribute instead of dataset
+          const filterValue = button.getAttribute("data-filter");
 
           // Filter posts using Tailwind's native 'hidden' class
           postItems.forEach((post) => {
-            const category = post.dataset.category;
+            // COMPILER FIX: Use getAttribute instead of dataset
+            const category = post.getAttribute("data-category");
 
             if (filterValue === "all" || category === filterValue) {
               post.classList.remove("hidden");
