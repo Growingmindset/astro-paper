@@ -6,7 +6,6 @@ tags:
   - transmissions
   - human-systems     # optional secondary tag
 ---
----
 description: "Why high-level execution requires separating emotional empathy from baseline operational standards."
 ---
 
