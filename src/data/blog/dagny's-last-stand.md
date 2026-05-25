@@ -7,7 +7,6 @@ featured: true
 draft: false
 tags:
   - deconstructions
-  - philosophy
 description: "A reflection on Atlas Shrugged, the burden of competence, and knowing when to execute an operational strike."
 ---
 
