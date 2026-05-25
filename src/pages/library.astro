@@ -30,7 +30,6 @@ const libraryPosts = sortedPosts.filter(post =>
     </section>
 
     <library-filters>
-      
       <section class="flex flex-wrap justify-center gap-3 mb-10 border-b border-dashed border-border pb-6">
         <button class="filter-btn active px-4 py-2 text-sm font-medium border border-skin-line rounded bg-skin-accent text-skin-inverted transition-colors" data-filter="all">
           All
@@ -57,7 +56,8 @@ const libraryPosts = sortedPosts.filter(post =>
           {libraryPosts.map(post => {
             const mainCategory = post.data.tags?.find(tag => libraryTags.includes(tag)) || "other";
             return (
-              <li class="lib-post-item mb-6 block" data-category={mainCategory}>
+              /* Removed the "block" class to prevent Tailwind CSS conflicts */
+              <li class="lib-post-item mb-6" data-category={mainCategory}>
                 <Card {...post} />
               </li>
             );
@@ -91,18 +91,16 @@ const libraryPosts = sortedPosts.filter(post =>
           button.classList.add("bg-skin-accent", "text-skin-inverted");
           button.classList.remove("text-skin-base", "hover:bg-skin-card");
 
-          // COMPILER FIX: Use getAttribute instead of dataset
           const filterValue = button.getAttribute("data-filter");
 
-          // Filter posts using Tailwind's native 'hidden' class
+          // COMPILER & CSS SAFE FIX: Use setAttribute to force display styles
           postItems.forEach((post) => {
-            // COMPILER FIX: Use getAttribute instead of dataset
             const category = post.getAttribute("data-category");
 
             if (filterValue === "all" || category === filterValue) {
-              post.classList.remove("hidden");
+              post.setAttribute("style", "display: block;");
             } else {
-              post.classList.add("hidden");
+              post.setAttribute("style", "display: none;");
             }
           });
         });
