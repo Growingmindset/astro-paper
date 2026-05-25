@@ -32,7 +32,6 @@ const libraryPosts = sortedPosts.filter(post =>
       </p>
     </section>
 
-    <!-- Filter Tabs -->
     <section class="flex flex-wrap justify-center gap-3 mb-10 border-b border-dashed border-border pb-6">
       <button class="filter-btn active px-4 py-2 text-sm font-medium border border-skin-line rounded bg-skin-accent text-skin-inverted transition-colors" data-filter="all">
         All
@@ -54,13 +53,13 @@ const libraryPosts = sortedPosts.filter(post =>
       </button>
     </section>
 
-    <!-- Posts -->
     <section>
       <ul>
         {libraryPosts.map(post => {
           const mainCategory = post.data.tags?.find(tag => libraryTags.includes(tag)) || "other";
           return (
-            <li class="post-item mb-6" data-category={mainCategory}>
+            /* UNIQUE CLASS: .lib-post-item guarantees zero bleeding to The Lab */
+            <li class="lib-post-item mb-6" data-category={mainCategory}>
               <Card {...post} />
             </li>
           );
@@ -73,16 +72,20 @@ const libraryPosts = sortedPosts.filter(post =>
   <Footer />
 </Layout>
 
-<script>
-  document.addEventListener('astro:page-load', () => {
+<script is:inline>
+  function initLibraryFilters() {
     const container = document.getElementById('library-container');
     if (!container) return;
 
     const filterBtns = container.querySelectorAll('button.filter-btn');
-    const postItems = container.querySelectorAll('li.post-item');
+    // Isolate targeting to our unique library class
+    const postItems = container.querySelectorAll('li.lib-post-item');
+
+    if (filterBtns.length === 0) return;
 
     filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
+      // Overwriting onclick prevents duplicate firing on View Transitions
+      btn.onclick = function() {
         // Reset all buttons
         filterBtns.forEach(b => {
           b.classList.remove('bg-skin-accent', 'text-skin-inverted');
@@ -90,19 +93,26 @@ const libraryPosts = sortedPosts.filter(post =>
         });
 
         // Activate clicked button
-        btn.classList.add('bg-skin-accent', 'text-skin-inverted');
-        btn.classList.remove('hover:bg-skin-card', 'text-skin-base');
+        this.classList.add('bg-skin-accent', 'text-skin-inverted');
+        this.classList.remove('hover:bg-skin-card', 'text-skin-base');
 
-        const filterValue = btn.getAttribute('data-filter');
+        const filterValue = this.getAttribute('data-filter');
 
+        // Apply display styles directly
         postItems.forEach(item => {
-          if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-            item.classList.remove('hidden');
+          const category = item.getAttribute('data-category');
+          if (filterValue === 'all' || category === filterValue) {
+            item.style.display = 'block';
           } else {
-            item.classList.add('hidden');
+            item.style.display = 'none';
           }
         });
-      });
+      };
     });
-  });
+  }
+
+  // 1. Run immediately for standard page loads
+  initLibraryFilters();
+  // 2. Hook into Astro's SPA routing
+  document.addEventListener('astro:page-load', initLibraryFilters);
 </script>
