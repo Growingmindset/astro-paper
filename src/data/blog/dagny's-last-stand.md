@@ -6,9 +6,8 @@ postSlug: dagnys-last-stand-ayn-rand
 featured: true
 draft: false
 tags:
-  - human-systems
-  - operational-grit
-  - library
+  - deconstructions
+  - philosophy
 description: "A reflection on Atlas Shrugged, the burden of competence, and knowing when to execute an operational strike."
 ---
 
