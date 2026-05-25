@@ -23,7 +23,7 @@ const libraryPosts = sortedPosts.filter(post =>
 <Layout title={`The Library | ${SITE.title}`}>
   <Header activeNav="library" />
   
-  <main id="main-content" class="mx-auto w-full max-w-3xl px-4 pb-12">
+  <main id="library-container" class="mx-auto w-full max-w-3xl px-4 pb-12">
     
     <section class="pt-8 pb-6 text-center">
       <h1 class="text-3xl font-bold tracking-wider sm:text-4xl mb-4">The Library</h1>
@@ -50,7 +50,7 @@ const libraryPosts = sortedPosts.filter(post =>
       </button>
     </section>
 
-    <section id="library-feed">
+    <section>
       <ul>
         {libraryPosts.map(post => {
           // Identify the master category for the HTML data attribute
@@ -70,47 +70,39 @@ const libraryPosts = sortedPosts.filter(post =>
   <Footer />
 </Layout>
 
-<script is:inline>
-  function setupLibraryFilters() {
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const postItems = document.querySelectorAll('.post-item');
+<script>
+  document.addEventListener('astro:page-load', () => {
+    // 1. Strict Isolation: Only run if we are inside the Library container
+    const container = document.getElementById('library-container');
+    if (!container) return; 
 
-    // Exit if elements don't exist on this page
-    if (filterBtns.length === 0) return;
+    // 2. Select elements strictly within this specific page
+    const filterBtns = container.querySelectorAll('button.filter-btn');
+    const postItems = container.querySelectorAll('li.post-item');
 
     filterBtns.forEach(btn => {
-      // Using onclick prevents duplicate listeners if Astro reloads the page
-      btn.onclick = function() {
-        // 1. Reset all buttons to inactive styling
+      btn.addEventListener('click', () => {
+        // Reset all buttons to inactive
         filterBtns.forEach(b => {
           b.classList.remove('bg-skin-accent', 'text-skin-inverted');
           b.classList.add('hover:bg-skin-card', 'text-skin-base');
         });
 
-        // 2. Highlight the clicked button
-        this.classList.add('bg-skin-accent', 'text-skin-inverted');
-        this.classList.remove('hover:bg-skin-card', 'text-skin-base');
+        // Highlight the clicked button
+        btn.classList.add('bg-skin-accent', 'text-skin-inverted');
+        btn.classList.remove('hover:bg-skin-card', 'text-skin-base');
 
-        // 3. Execute the filter logic
-        const filterValue = this.getAttribute('data-filter');
+        // Execute the filter using Tailwind's native 'hidden' class
+        const filterValue = btn.getAttribute('data-filter');
 
         postItems.forEach(item => {
           if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-            item.style.display = 'block';
+            item.classList.remove('hidden');
           } else {
-            item.style.display = 'none';
+            item.classList.add('hidden');
           }
         });
-      };
+      });
     });
-  }
-
-  // 1. Run immediately for direct page loads
-  setupLibraryFilters();
-  
-  // 2. Run on standard DOM load
-  document.addEventListener('DOMContentLoaded', setupLibraryFilters);
-  
-  // 3. Run on Astro's internal page transition routing
-  document.addEventListener('astro:page-load', setupLibraryFilters);
+  });
 </script>
