@@ -1,12 +1,14 @@
 ---
-# Deconstruction: Hurricanes by Rick Ross
----
-title: Deconstruction: Hurricanes by Rick Ross
-pubDate: 2026-05-19
+author: Rudy Galan
+pubDatetime: 2026-05-19T10:00:00Z
+title: "Deconstruction: Hurricanes by Rick Ross"
+postSlug: deconstruction-hurricanes-rick-ross
+featured: false
+draft: false
 tags:
   - deconstructions
-  - audio-audit       # future-proof for music audits
----
+  - audio-audit
+description: "Extracting the core philosophies and cognitive frameworks from Hurricanes."
 ---
 
 # Hurricanes: A Memoir
