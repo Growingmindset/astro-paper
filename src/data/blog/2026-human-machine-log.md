@@ -13,14 +13,14 @@ draft: false
 
 # 2026 Human Machine Log
 
-**Protocol:** Biomechanical Stacking + Structural Prep + Progressive Hypertrophy + Energy Systems  
-**Philosophy:** Compound interest through deliberate, long-horizon programming.  
-**Update Cadence:** Every major program block (12 weeks)
+**Protocol:** Biomechanics, Structural Prep, Progressive overload, Energy Systems & Nutrition 
+**Philosophy:** Health is much like compound interest...the longer you do it, the more you get out of it. 
+**Update Cadence:** Every 12-15 weeks 
 
 ---
 
 ## 1. Nutritional Architecture
-**Objective:** High-ROI tracking with minimal friction. Focus on metabolic baselines and reliable system inputs.
+**Objective:** Intuitive tracking to increase strength, keep/gain muscle and cut fat by using mostly intuition of longterm implications of inputs
 
 ### Macro Baselines
 - **Target Intake:** Deficit of 200-400 calories. 2,100 - 2,300 kcal / day *(Autoregulated based on daily expenditure)*
@@ -29,7 +29,7 @@ draft: false
 
 ### Core System Inputs
 *Primary fuel sources optimized for high protein, operational efficiency, and sustainable digestion.*
-- **Primary Proteins:** Roasted chicken preparations, lean ground beef, greek yogurt.
+- **Primary Proteins:** Roasted chicken preparations, lean ground beef, frozen lightly breaded chicken, greek yogurt.
 - **Complex Carbohydrates & Fiber:** Traditional Middle Eastern staples (lentils, chickpeas, bulgur), jasmine rice, russet potatoes.
 - **Fats:** Olive oil, whole eggs, almonds.
 - **Hacks:** Greek yogurt, frozen fruit, microwavable/airfryer items to cut down on time needed. 
@@ -324,4 +324,4 @@ draft: false
 
 ## 4. Key Metrics (End of Block Targets)
 - **Bodyweight:** Target stabilization at 163 (Current: 172 as of 5/20/26)
-- **Structural Markers:** Unrestricted deep squat resting position, proper pelvic stacking without forced lumbar extension, elimination of lower ribcage flare via ZOA restoration.
+- **Structural Markers:** Unrestricted deep squat resting position, proper pelvic stacking without forced lumbar extension, elimination of lower ribcage flare.
