@@ -12,7 +12,7 @@ const tagsInUse = new Set(posts.flatMap(post => post.data.tags || []));
 // 2. The 3-Pillar Master Taxonomy
 const categories = [
   {
-    id: "transmissions", // Backend tag remains 'transmissions' to save you from rewriting URLs
+    id: "transmissions",
     name: "Essays & Observations",
     description: "Original philosophies, tactical baselines, and thoughts on human nature.",
     exists: tagsInUse.has("transmissions")
@@ -48,9 +48,21 @@ const activeCategories = categories.filter(cat => cat.exists);
     </section>
 
     <section class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-6">
-      {activeCategories.map(cat => (
-        <a href={`/tags/${cat.id}/`} class="group block p-6 bg-skin-card border border-skin-line rounded-xl hover:border-skin-accent transition-all duration-300 hover:shadow-md hover:-translate-y-1">
-          <h2 class="text-xl font-bold mb-2 group-hover:text-skin-accent transition-colors">
-            {cat.name} <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
-          </h2>
-          <p class="text-sm text
+      {activeCategories.map((cat) => {
+        return (
+          <a href={`/tags/${cat.id}/`} class="group block p-6 bg-skin-card border border-skin-line rounded-xl hover:border-skin-accent transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+            <h2 class="text-xl font-bold mb-2 group-hover:text-skin-accent transition-colors">
+              {cat.name} <span class="inline-block transition-transform group-hover:translate-x-1">&rarr;</span>
+            </h2>
+            <p class="text-sm text-skin-base opacity-80 leading-relaxed">
+              {cat.description}
+            </p>
+          </a>
+        );
+      })}
+    </section>
+
+  </main>
+
+  <Footer />
+</Layout>
