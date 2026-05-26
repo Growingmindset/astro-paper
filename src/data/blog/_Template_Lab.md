@@ -1,20 +1,12 @@
 ---
 author: Rudy Galan
-title: "[Post Title]"
-description: "[1-2 sentence high-level summary of this system/build]"
-pubDatetime: 2026-05-14T00:00:00Z
-tags:
-  - lab
-  - systems
+pubDatetime: 2026-05-25T12:00:00Z
+title: "MACRO_SYSTEM_NAME_HERE"
+postSlug: custom-url-slug-here
 featured: false
 draft: true
+tags:
+  - living-document
+  - category-here (e.g., physical-health, finance)
+description: "A living document tracking macro-level data for [Topic]."
 ---
-
-## The Build / The Logic
-*Explain the mechanics of what you are building or testing.*
-
-## Key Metrics / Data
-*Show the proof. What are the inputs and outputs?*
-
-## Systems Insight
-> *What did you learn? What is the high-ROI takeaway for the next iteration?*
