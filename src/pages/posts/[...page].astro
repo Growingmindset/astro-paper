@@ -7,27 +7,32 @@ import { getCollection } from "astro:content";
 import getSortedPosts from "@/utils/getSortedPosts";
 import { SITE } from "@/config";
 
-// 1. Fetch posts, excluding drafts
+// 1. Fulfill Astro's requirement for dynamic routes
+export async function getStaticPaths() {
+  return [{ params: { page: undefined } }];
+}
+
+// 2. Fetch posts, excluding drafts
 const posts = await getCollection("blog", ({ data }) => !data.draft);
 const sortedPosts = getSortedPosts(posts);
 
-// 2. Define the exact tags used in The Library
+// 3. Define the exact tags used in The Library
 const libraryTags = ["transmissions", "deconstructions", "academic-systems"];
 
-// 3. The Firewall: Filter OUT any post that belongs to The Library
+// 4. The Firewall: Filter OUT any post that belongs to The Library
 const labPosts = sortedPosts.filter((post) => {
   const tags = post.data.tags || [];
   const isLibraryPost = tags.some(tag => libraryTags.includes(tag));
   return !isLibraryPost;
 });
 
-// 4. Separate into Living Documents (Top Section)
+// 5. Separate into Living Documents (Top Section)
 const livingDocs = labPosts.filter((post) => {
   const tags = post.data.tags || [];
   return tags.includes("living-document");
 });
 
-// 5. Separate into Regular Posts / System Logs (Bottom Section)
+// 6. Separate into Regular Posts / System Logs (Bottom Section)
 const regularPosts = labPosts.filter((post) => {
   const tags = post.data.tags || [];
   return !tags.includes("living-document");
