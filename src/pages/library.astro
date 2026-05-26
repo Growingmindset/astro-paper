@@ -3,25 +3,48 @@ import { getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
-import Card from "@/components/Card.astro";
-import getSortedPosts from "@/utils/getSortedPosts";
 import { SITE } from "@/config";
 
+// 1. Fetch posts to see which categories currently have content
 const posts = await getCollection("blog", ({ data }) => !data.draft);
-const sortedPosts = getSortedPosts(posts);
+const tagsInUse = new Set(posts.flatMap(post => post.data.tags || []));
 
-const libraryTags = ["transmissions", "deconstructions", "meditations", "academic-systems", "frameworks"];
+// 2. Define the Master Taxonomy
+const categories = [
+  {
+    id: "transmissions",
+    name: "Transmissions",
+    description: "Core essays, high-signal field notes, and tactical observations on human nature.",
+    exists: tagsInUse.has("transmissions")
+  },
+  {
+    id: "deconstructions",
+    name: "Deconstructions",
+    description: "Audits of other people's systems. Book reviews, music discographies, and historical events.",
+    exists: tagsInUse.has("deconstructions")
+  },
+  {
+    id: "meditations",
+    name: "Meditations",
+    description: "Deep, internal philosophical writing and first-principles thinking.",
+    exists: tagsInUse.has("meditations")
+  },
+  {
+    id: "academic-systems",
+    name: "Academic Systems",
+    description: "Hard university coursework translated into real-world mechanics (Calculus, Physics).",
+    exists: tagsInUse.has("academic-systems")
+  },
+  {
+    id: "frameworks",
+    name: "Frameworks",
+    description: "Operational tools, calculators, and the actual blueprints used to run daily systems.",
+    exists: tagsInUse.has("frameworks")
+  }
+];
 
-const libraryPosts = sortedPosts.filter(post =>
-  post.data.tags?.some(tag => libraryTags.includes(tag))
-);
-
-// INTELLIGENT SAFETY CHECKS: Only render links if the content actually exists
-const hasTransmissions = libraryPosts.some(p => p.data.tags?.includes("transmissions"));
-const hasDeconstructions = libraryPosts.some(p => p.data.tags?.includes("deconstructions"));
-const hasMeditations = libraryPosts.some(p => p.data.tags?.includes("meditations"));
-const hasAcademia = libraryPosts.some(p => p.data.tags?.includes("academic-systems"));
-const hasFrameworks = libraryPosts.some(p => p.data.tags?.includes("frameworks"));
+// 3. Only show categories that actually have posts to prevent dead 404 links
+const activeCategories = categories.filter(cat => cat.exists);
 ---
 
 <Layout title={`The Library | ${SITE.title}`}>
@@ -29,130 +52,27 @@ const hasFrameworks = libraryPosts.some(p => p.data.tags?.includes("frameworks")
 
   <main class="mx-auto w-full max-w-3xl px-4 pb-12">
     
-    <section class="pt-8 pb-6 text-center">
+    <section class="pt-8 pb-10 text-center">
       <h1 class="text-3xl font-bold tracking-wider sm:text-4xl mb-4">The Library</h1>
-      <p class="text-skin-base opacity-90 max-w-2xl mx-auto leading-relaxed mb-8">
+      <p class="text-skin-base opacity-90 max-w-2xl mx-auto leading-relaxed">
         First-principles thinking. Essays, deconstructions, philosophical meditations, academic systems, and cognitive frameworks exploring human behavior, operational excellence, and long-term compounding.
       </p>
-
-      <div class="max-w-2xl mx-auto bg-skin-card border border-skin-line rounded-2xl p-6 mb-10 text-left">
-        <p class="uppercase text-xs tracking-widest text-skin-base opacity-70 mb-2">New here?</p>
-        <h2 class="text-xl font-bold mb-4">Start Here</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-          
-          {hasTransmissions && (
-            <a href="/tags/transmissions/" class="block p-3 border border-skin-line hover:bg-skin-accent hover:text-skin-inverted hover:border-transparent rounded-xl transition-all duration-200">
-              <span class="font-bold">→ Transmissions</span> <br/> <span class="opacity-80 text-xs font-normal">Core essays & observations</span>
-            </a>
-          )}
-          
-          {hasDeconstructions && (
-            <a href="/tags/deconstructions/" class="block p-3 border border-skin-line hover:bg-skin-accent hover:text-skin-inverted hover:border-transparent rounded-xl transition-all duration-200">
-              <span class="font-bold">→ Deconstructions</span> <br/> <span class="opacity-80 text-xs font-normal">Books, audio & system audits</span>
-            </a>
-          )}
-
-          {hasMeditations && (
-            <a href="/tags/meditations/" class="block p-3 border border-skin-line hover:bg-skin-accent hover:text-skin-inverted hover:border-transparent rounded-xl transition-all duration-200">
-              <span class="font-bold">→ Meditations</span> <br/> <span class="opacity-80 text-xs font-normal">Philosophical baseline thinking</span>
-            </a>
-          )}
-
-          {hasAcademia && (
-            <a href="/tags/academic-systems/" class="block p-3 border border-skin-line hover:bg-skin-accent hover:text-skin-inverted hover:border-transparent rounded-xl transition-all duration-200">
-              <span class="font-bold">→ Academic Systems</span> <br/> <span class="opacity-80 text-xs font-normal">University coursework & math</span>
-            </a>
-          )}
-
-          {hasFrameworks && (
-            <a href="/tags/frameworks/" class="block p-3 border border-skin-line hover:bg-skin-accent hover:text-skin-inverted hover:border-transparent rounded-xl transition-all duration-200">
-              <span class="font-bold">→ Frameworks</span> <br/> <span class="opacity-80 text-xs font-normal">Operational models & tools</span>
-            </a>
-          )}
-
-        </div>
-      </div>
     </section>
 
-    <div id="library-filters">
-      
-      <section class="flex flex-wrap justify-center gap-3 mb-10 border-b border-dashed border-border pb-6">
-        <button class="filter-btn active px-5 py-2.5 text-sm font-medium rounded-xl border border-transparent bg-skin-accent text-skin-inverted shadow-sm transition-all duration-200" data-filter="all">
-          All
-        </button>
-        <button class="filter-btn px-5 py-2.5 text-sm font-medium border border-skin-line rounded-xl hover:bg-skin-card hover:border-skin-line transition-all duration-200 text-skin-base" data-filter="transmissions">
-          Transmissions
-        </button>
-        <button class="filter-btn px-5 py-2.5 text-sm font-medium border border-skin-line rounded-xl hover:bg-skin-card hover:border-skin-line transition-all duration-200 text-skin-base" data-filter="deconstructions">
-          Deconstructions
-        </button>
-        <button class="filter-btn px-5 py-2.5 text-sm font-medium border border-skin-line rounded-xl hover:bg-skin-card hover:border-skin-line transition-all duration-200 text-skin-base" data-filter="meditations">
-          Meditations
-        </button>
-        <button class="filter-btn px-5 py-2.5 text-sm font-medium border border-skin-line rounded-xl hover:bg-skin-card hover:border-skin-line transition-all duration-200 text-skin-base" data-filter="academic-systems">
-          Academic Systems
-        </button>
-        <button class="filter-btn px-5 py-2.5 text-sm font-medium border border-skin-line rounded-xl hover:bg-skin-card hover:border-skin-line transition-all duration-200 text-skin-base" data-filter="frameworks">
-          Frameworks
-        </button>
-      </section>
+    <section class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-6">
+      {activeCategories.map(cat => (
+        <a href={`/tags/${cat.id}/`} class="group block p-6 bg-skin-card border border-skin-line rounded-xl hover:border-skin-accent transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+          <h2 class="text-xl font-bold mb-2 group-hover:text-skin-accent transition-colors">
+            {cat.name} <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
+          </h2>
+          <p class="text-sm text-skin-base opacity-80 leading-relaxed">
+            {cat.description}
+          </p>
+        </a>
+      ))}
+    </section>
 
-      <section>
-        <ul class="space-y-8">
-          {libraryPosts.map((post) => {
-            const postLibraryTags = post.data.tags?.filter(tag => libraryTags.includes(tag)) || [];
-            return (
-              <li class="lib-post-item" data-tags={postLibraryTags.join(" ")}>
-                <Card {...post} />
-              </li>
-            );
-          })}
-        </ul>
-      </section>
-
-    </div>
-   
   </main>
 
   <Footer />
 </Layout>
-
-<script is:inline>
-  document.addEventListener('astro:page-load', () => {
-    const container = document.getElementById("library-filters");
-    if (!container) return;
-
-    const filterButtons = container.querySelectorAll(".filter-btn");
-    const postItems = container.querySelectorAll(".lib-post-item");
-
-    function applyFilter(filterValue) {
-      postItems.forEach((post) => {
-        const tagsStr = post.getAttribute("data-tags") || "";
-        const postTags = tagsStr.trim().split(/\s+/).filter(Boolean);
-
-        if (filterValue === "all" || postTags.includes(filterValue)) {
-          post.classList.remove("hidden");
-        } else {
-          post.classList.add("hidden");
-        }
-      });
-    }
-
-    filterButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        filterButtons.forEach(btn => {
-          btn.classList.remove("active", "bg-skin-accent", "text-skin-inverted", "border-transparent", "shadow-sm");
-          btn.classList.add("border-skin-line", "text-skin-base", "hover:bg-skin-card");
-        });
-
-        button.classList.add("active", "bg-skin-accent", "text-skin-inverted", "border-transparent", "shadow-sm");
-        button.classList.remove("border-skin-line", "text-skin-base", "hover:bg-skin-card");
-
-        const filterValue = button.getAttribute("data-filter");
-        applyFilter(filterValue);
-      });
-    });
-
-    applyFilter("all");
-  });
-</script>
