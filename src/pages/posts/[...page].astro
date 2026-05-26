@@ -7,48 +7,50 @@ import { getCollection } from "astro:content";
 import getSortedPosts from "@/utils/getSortedPosts";
 import { SITE } from "@/config";
 
-const posts = await getCollection("blog");
+// 1. Fetch posts, excluding drafts
+const posts = await getCollection("blog", ({ data }) => !data.draft);
 const sortedPosts = getSortedPosts(posts);
 
-// 1. Get ALL posts meant for The Lab (exclude library and archive)
+// 2. Define the exact tags used in The Library
+const libraryTags = ["transmissions", "deconstructions", "academic-systems"];
+
+// 3. The Firewall: Filter OUT any post that belongs to The Library
 const labPosts = sortedPosts.filter((post) => {
   const tags = post.data.tags || [];
-  return tags.includes("lab") || (!tags.includes("library") && !tags.includes("archive"));
+  const isLibraryPost = tags.some(tag => libraryTags.includes(tag));
+  return !isLibraryPost;
 });
 
-// 2. Separate into Living Documents (Top Section)
+// 4. Separate into Living Documents (Top Section)
 const livingDocs = labPosts.filter((post) => {
   const tags = post.data.tags || [];
   return tags.includes("living-document");
 });
 
-// 3. Separate into Regular Posts (Bottom Section)
+// 5. Separate into Regular Posts / System Logs (Bottom Section)
 const regularPosts = labPosts.filter((post) => {
   const tags = post.data.tags || [];
   return !tags.includes("living-document");
 });
-
-export async function getStaticPaths() {
-  return [{ params: { page: undefined } }];
-}
 ---
 
 <Layout title={`The Lab | ${SITE.title}`}>
-  <Header />
+  <Header activeNav="posts" />
+  
   <main id="main-content" class="app-layout">
-    <section class="pt-8 pb-12 border-b border-border text-center">
-      <h1 class="text-4xl font-bold">The Lab</h1>
-      <p class="mt-4 text-xl text-muted-foreground">
+    <section class="pt-8 pb-10 border-b border-dashed border-border text-center">
+      <h1 class="text-3xl font-bold tracking-wider sm:text-4xl mb-4">The Lab</h1>
+      <p class="text-skin-base opacity-90 max-w-2xl mx-auto leading-relaxed">
         Active system deployments. A living workspace documenting the raw mechanics of capital allocation, the Human Machine, and programmatic logic.
       </p>
     </section>
 
     {
       livingDocs.length > 0 && (
-        <section class="pt-12 pb-8 max-w-4xl mx-auto px-4">
-          <h2 class="text-2xl font-semibold mb-6">Living Documents</h2>
+        <section class="pt-12 pb-8 max-w-4xl mx-auto">
+          <h2 class="text-2xl font-bold tracking-wide text-skin-accent mb-6">Living Documents</h2>
           <div class="grid gap-6 md:grid-cols-2">
-            {livingDocs.map((post) => <Card variant="h3" {...post} />)}
+            {livingDocs.map((post) => <Card {...post} />)}
           </div>
         </section>
       )
@@ -56,16 +58,17 @@ export async function getStaticPaths() {
 
     {
       regularPosts.length > 0 && (
-        <section class="pt-8 pb-16 max-w-4xl mx-auto px-4">
-          <h2 class="text-2xl font-semibold mb-6">System Logs</h2>
-          <ul class="space-y-6">
+        <section class="pt-8 pb-16 max-w-4xl mx-auto">
+          <h2 class="text-2xl font-bold tracking-wide text-skin-accent mb-6">System Logs</h2>
+          <ul class="space-y-6 border-l-2 border-skin-line border-opacity-50 pl-2">
             {regularPosts.map((post) => (
-              <li><Card variant="h3" {...post} /></li>
+              <li class="block"><Card {...post} /></li>
             ))}
           </ul>
         </section>
       )
     }
   </main>
+  
   <Footer />
 </Layout>
