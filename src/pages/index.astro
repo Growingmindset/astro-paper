@@ -8,11 +8,21 @@ import Card from "@/components/Card.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
 import { SITE } from "@/config";
 
-const posts = await getCollection("blog");
-
+// 1. Fetch all published posts (excluding drafts)
+const posts = await getCollection("blog", ({ data }) => !data.draft);
 const sortedPosts = getSortedPosts(posts);
-const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
-const recentPosts = sortedPosts.filter(({ data }) => !data.featured).slice(0, SITE.postPerIndex);
+
+// 2. Define the tags reserved EXCLUSIVELY for The Library
+const libraryTags = ["transmissions", "deconstructions", "academic-systems"];
+
+// 3. The Firewall: Filter OUT any post that contains a Library tag
+const labPosts = sortedPosts.filter(post => 
+  !post.data.tags?.some(tag => libraryTags.includes(tag))
+);
+
+// 4. Feed ONLY the remaining operator logs into your Featured and Recent sections
+const featuredPosts = labPosts.filter(({ data }) => data.featured);
+const recentPosts = labPosts.filter(({ data }) => !data.featured).slice(0, SITE.postPerIndex);
 ---
 
 <Layout>
