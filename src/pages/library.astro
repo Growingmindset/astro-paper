@@ -31,33 +31,51 @@ const libraryPosts = sortedPosts.filter(post =>
 
     <div id="library-filters">
       
+      <!-- TABS -->
       <section class="flex flex-wrap justify-center gap-3 mb-10 border-b border-dashed border-border pb-6">
-        <button class="filter-btn active px-4 py-2 text-sm font-medium border border-skin-line rounded bg-skin-accent text-skin-inverted transition-colors" data-filter="all">
+        <button 
+          class="filter-btn active px-5 py-2.5 text-sm font-medium rounded-xl border border-transparent bg-skin-accent text-skin-inverted shadow-sm transition-all duration-200"
+          data-filter="all">
           All
         </button>
-        <button class="filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="transmissions">
+        <button 
+          class="filter-btn px-5 py-2.5 text-sm font-medium border border-skin-line rounded-xl hover:bg-skin-card hover:border-skin-line transition-all duration-200 text-skin-base"
+          data-filter="transmissions">
           Transmissions
         </button>
-        <button class="filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="deconstructions">
+        <button 
+          class="filter-btn px-5 py-2.5 text-sm font-medium border border-skin-line rounded-xl hover:bg-skin-card hover:border-skin-line transition-all duration-200 text-skin-base"
+          data-filter="deconstructions">
           Deconstructions
         </button>
-        <button class="filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="meditations">
+        <button 
+          class="filter-btn px-5 py-2.5 text-sm font-medium border border-skin-line rounded-xl hover:bg-skin-card hover:border-skin-line transition-all duration-200 text-skin-base"
+          data-filter="meditations">
           Meditations
         </button>
-        <button class="filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="academic-systems">
+        <button 
+          class="filter-btn px-5 py-2.5 text-sm font-medium border border-skin-line rounded-xl hover:bg-skin-card hover:border-skin-line transition-all duration-200 text-skin-base"
+          data-filter="academic-systems">
           Academic Systems
         </button>
-        <button class="filter-btn px-4 py-2 text-sm font-medium border border-skin-line rounded hover:bg-skin-card transition-colors text-skin-base" data-filter="frameworks">
+        <button 
+          class="filter-btn px-5 py-2.5 text-sm font-medium border border-skin-line rounded-xl hover:bg-skin-card hover:border-skin-line transition-all duration-200 text-skin-base"
+          data-filter="frameworks">
           Frameworks
         </button>
       </section>
 
+      <!-- POSTS -->
       <section>
-        <ul>
-          {libraryPosts.map(post => {
-            const mainCategory = post.data.tags?.find(tag => libraryTags.includes(tag)) || "other";
+        <ul class="space-y-8">
+          {libraryPosts.map((post) => {
+            // Get ALL library tags this post has (supports multiple tags)
+            const postLibraryTags = post.data.tags?.filter(tag => libraryTags.includes(tag)) || [];
             return (
-              <li class="lib-post-item mb-6" data-category={mainCategory}>
+              <li 
+                class="lib-post-item" 
+                data-tags={postLibraryTags.join(" ")}
+              >
                 <Card {...post} />
               </li>
             );
@@ -73,7 +91,6 @@ const libraryPosts = sortedPosts.filter(post =>
 </Layout>
 
 <script is:inline>
-  // CRITICAL: Must use astro:page-load to survive View Transitions, not DOMContentLoaded
   document.addEventListener('astro:page-load', () => {
     const container = document.getElementById("library-filters");
     if (!container) return;
@@ -81,33 +98,38 @@ const libraryPosts = sortedPosts.filter(post =>
     const filterButtons = container.querySelectorAll(".filter-btn");
     const postItems = container.querySelectorAll(".lib-post-item");
 
+    // Helper function
+    function applyFilter(filterValue) {
+      postItems.forEach((post) => {
+        const tagsStr = post.getAttribute("data-tags") || "";
+        const postTags = tagsStr.trim().split(/\s+/).filter(Boolean);
+
+        if (filterValue === "all" || postTags.includes(filterValue)) {
+          post.classList.remove("hidden");
+        } else {
+          post.classList.add("hidden");
+        }
+      });
+    }
+
     filterButtons.forEach((button) => {
       button.addEventListener("click", () => {
-        
-        // Reset all buttons
-        filterButtons.forEach((btn) => {
-          btn.classList.remove("bg-skin-accent", "text-skin-inverted");
-          btn.classList.add("text-skin-base", "hover:bg-skin-card");
+        // 1. Reset all buttons
+        filterButtons.forEach(btn => {
+          btn.classList.remove("active", "bg-skin-accent", "text-skin-inverted", "border-transparent", "shadow-sm");
+          btn.classList.add("border-skin-line", "text-skin-base", "hover:bg-skin-card");
         });
 
-        // Activate clicked button
-        button.classList.add("bg-skin-accent", "text-skin-inverted");
-        button.classList.remove("text-skin-base", "hover:bg-skin-card");
+        // 2. Activate clicked button
+        button.classList.add("active", "bg-skin-accent", "text-skin-inverted", "border-transparent", "shadow-sm");
+        button.classList.remove("border-skin-line", "text-skin-base", "hover:bg-skin-card");
 
         const filterValue = button.getAttribute("data-filter");
-        console.log("Filter Executed:", filterValue); // Debug check
-
-        // Filter posts using Tailwind's native 'hidden' class
-        postItems.forEach((post) => {
-          const category = post.getAttribute("data-category");
-
-          if (filterValue === "all" || category === filterValue) {
-            post.classList.remove("hidden");
-          } else {
-            post.classList.add("hidden");
-          }
-        });
+        applyFilter(filterValue);
       });
     });
+
+    // Show everything on initial load
+    applyFilter("all");
   });
 </script>
