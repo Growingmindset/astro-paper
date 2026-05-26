@@ -9,7 +9,7 @@ import { SITE } from "@/config";
 const posts = await getCollection("blog", ({ data }) => !data.draft);
 const tagsInUse = new Set(posts.flatMap(post => post.data.tags || []));
 
-// 2. Define the Master Taxonomy
+// 2. The 4-Pillar Master Taxonomy
 const categories = [
   {
     id: "transmissions",
@@ -26,7 +26,7 @@ const categories = [
   {
     id: "meditations",
     name: "Meditations",
-    description: "Deep, internal philosophical writing and first-principles thinking.",
+    description: "Deep, internal philosophical writing and physical baselines of the Human Machine.",
     exists: tagsInUse.has("meditations")
   },
   {
@@ -34,12 +34,6 @@ const categories = [
     name: "Academic Systems",
     description: "Hard university coursework translated into real-world mechanics (Calculus, Physics).",
     exists: tagsInUse.has("academic-systems")
-  },
-  {
-    id: "frameworks",
-    name: "Frameworks",
-    description: "Operational tools, calculators, and the actual blueprints used to run daily systems.",
-    exists: tagsInUse.has("frameworks")
   }
 ];
 
@@ -55,7 +49,7 @@ const activeCategories = categories.filter(cat => cat.exists);
     <section class="pt-8 pb-10 text-center">
       <h1 class="text-3xl font-bold tracking-wider sm:text-4xl mb-4">The Library</h1>
       <p class="text-skin-base opacity-90 max-w-2xl mx-auto leading-relaxed">
-        First-principles thinking. Essays, deconstructions, philosophical meditations, academic systems, and cognitive frameworks exploring human behavior, operational excellence, and long-term compounding.
+        First-principles thinking. Essays, deconstructions, philosophical meditations, and academic systems exploring human behavior, operational excellence, and physical infrastructure.
       </p>
     </section>
 
