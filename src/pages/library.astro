@@ -10,12 +10,18 @@ import { SITE } from "@/config";
 const posts = await getCollection("blog", ({ data }) => !data.draft);
 const sortedPosts = getSortedPosts(posts);
 
-// Pre-sort the posts into their respective categories
-const transmissions = sortedPosts.filter(post => post.data.tags?.includes("transmissions"));
-const deconstructions = sortedPosts.filter(post => post.data.tags?.includes("deconstructions"));
-const meditations = sortedPosts.filter(post => post.data.tags?.includes("meditations"));
-const academia = sortedPosts.filter(post => post.data.tags?.includes("academic-systems"));
-const frameworks = sortedPosts.filter(post => post.data.tags?.includes("frameworks"));
+const libraryTags = ["transmissions", "deconstructions", "meditations", "academic-systems", "frameworks"];
+
+const libraryPosts = sortedPosts.filter(post =>
+  post.data.tags?.some(tag => libraryTags.includes(tag))
+);
+
+// INTELLIGENT SAFETY CHECKS: Only render links if the content actually exists
+const hasTransmissions = libraryPosts.some(p => p.data.tags?.includes("transmissions"));
+const hasDeconstructions = libraryPosts.some(p => p.data.tags?.includes("deconstructions"));
+const hasMeditations = libraryPosts.some(p => p.data.tags?.includes("meditations"));
+const hasAcademia = libraryPosts.some(p => p.data.tags?.includes("academic-systems"));
+const hasFrameworks = libraryPosts.some(p => p.data.tags?.includes("frameworks"));
 ---
 
 <Layout title={`The Library | ${SITE.title}`}>
@@ -23,59 +29,86 @@ const frameworks = sortedPosts.filter(post => post.data.tags?.includes("framewor
 
   <main class="mx-auto w-full max-w-3xl px-4 pb-12">
     
-    <section class="pt-8 pb-10 text-center border-b border-dashed border-border">
+    <section class="pt-8 pb-6 text-center">
       <h1 class="text-3xl font-bold tracking-wider sm:text-4xl mb-4">The Library</h1>
-      <p class="text-skin-base opacity-90 max-w-2xl mx-auto leading-relaxed">
+      <p class="text-skin-base opacity-90 max-w-2xl mx-auto leading-relaxed mb-8">
         First-principles thinking. Essays, deconstructions, philosophical meditations, academic systems, and cognitive frameworks exploring human behavior, operational excellence, and long-term compounding.
       </p>
+
+      <div class="max-w-2xl mx-auto bg-skin-card border border-skin-line rounded-2xl p-6 mb-10 text-left">
+        <p class="uppercase text-xs tracking-widest text-skin-base opacity-70 mb-2">New here?</p>
+        <h2 class="text-xl font-bold mb-4">Start Here</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+          
+          {hasTransmissions && (
+            <a href="/tags/transmissions/" class="block p-3 border border-skin-line hover:bg-skin-accent hover:text-skin-inverted hover:border-transparent rounded-xl transition-all duration-200">
+              <span class="font-bold">→ Transmissions</span> <br/> <span class="opacity-80 text-xs font-normal">Core essays & observations</span>
+            </a>
+          )}
+          
+          {hasDeconstructions && (
+            <a href="/tags/deconstructions/" class="block p-3 border border-skin-line hover:bg-skin-accent hover:text-skin-inverted hover:border-transparent rounded-xl transition-all duration-200">
+              <span class="font-bold">→ Deconstructions</span> <br/> <span class="opacity-80 text-xs font-normal">Books, audio & system audits</span>
+            </a>
+          )}
+
+          {hasMeditations && (
+            <a href="/tags/meditations/" class="block p-3 border border-skin-line hover:bg-skin-accent hover:text-skin-inverted hover:border-transparent rounded-xl transition-all duration-200">
+              <span class="font-bold">→ Meditations</span> <br/> <span class="opacity-80 text-xs font-normal">Philosophical baseline thinking</span>
+            </a>
+          )}
+
+          {hasAcademia && (
+            <a href="/tags/academic-systems/" class="block p-3 border border-skin-line hover:bg-skin-accent hover:text-skin-inverted hover:border-transparent rounded-xl transition-all duration-200">
+              <span class="font-bold">→ Academic Systems</span> <br/> <span class="opacity-80 text-xs font-normal">University coursework & math</span>
+            </a>
+          )}
+
+          {hasFrameworks && (
+            <a href="/tags/frameworks/" class="block p-3 border border-skin-line hover:bg-skin-accent hover:text-skin-inverted hover:border-transparent rounded-xl transition-all duration-200">
+              <span class="font-bold">→ Frameworks</span> <br/> <span class="opacity-80 text-xs font-normal">Operational models & tools</span>
+            </a>
+          )}
+
+        </div>
+      </div>
     </section>
 
-    <div class="mt-8 space-y-12">
+    <div id="library-filters">
       
-      {transmissions.length > 0 && (
-        <section>
-          <h2 class="text-2xl font-bold tracking-wide text-skin-accent mb-6">Transmissions</h2>
-          <ul class="space-y-6 pl-2 border-l-2 border-skin-line border-opacity-50">
-            {transmissions.map(post => <li class="block"><Card {...post} /></li>)}
-          </ul>
-        </section>
-      )}
+      <section class="flex flex-wrap justify-center gap-3 mb-10 border-b border-dashed border-border pb-6">
+        <button class="filter-btn active px-5 py-2.5 text-sm font-medium rounded-xl border border-transparent bg-skin-accent text-skin-inverted shadow-sm transition-all duration-200" data-filter="all">
+          All
+        </button>
+        <button class="filter-btn px-5 py-2.5 text-sm font-medium border border-skin-line rounded-xl hover:bg-skin-card hover:border-skin-line transition-all duration-200 text-skin-base" data-filter="transmissions">
+          Transmissions
+        </button>
+        <button class="filter-btn px-5 py-2.5 text-sm font-medium border border-skin-line rounded-xl hover:bg-skin-card hover:border-skin-line transition-all duration-200 text-skin-base" data-filter="deconstructions">
+          Deconstructions
+        </button>
+        <button class="filter-btn px-5 py-2.5 text-sm font-medium border border-skin-line rounded-xl hover:bg-skin-card hover:border-skin-line transition-all duration-200 text-skin-base" data-filter="meditations">
+          Meditations
+        </button>
+        <button class="filter-btn px-5 py-2.5 text-sm font-medium border border-skin-line rounded-xl hover:bg-skin-card hover:border-skin-line transition-all duration-200 text-skin-base" data-filter="academic-systems">
+          Academic Systems
+        </button>
+        <button class="filter-btn px-5 py-2.5 text-sm font-medium border border-skin-line rounded-xl hover:bg-skin-card hover:border-skin-line transition-all duration-200 text-skin-base" data-filter="frameworks">
+          Frameworks
+        </button>
+      </section>
 
-      {deconstructions.length > 0 && (
-        <section>
-          <h2 class="text-2xl font-bold tracking-wide text-skin-accent mb-6">Deconstructions</h2>
-          <ul class="space-y-6 pl-2 border-l-2 border-skin-line border-opacity-50">
-            {deconstructions.map(post => <li class="block"><Card {...post} /></li>)}
-          </ul>
-        </section>
-      )}
-
-      {meditations.length > 0 && (
-        <section>
-          <h2 class="text-2xl font-bold tracking-wide text-skin-accent mb-6">Meditations</h2>
-          <ul class="space-y-6 pl-2 border-l-2 border-skin-line border-opacity-50">
-            {meditations.map(post => <li class="block"><Card {...post} /></li>)}
-          </ul>
-        </section>
-      )}
-
-      {academia.length > 0 && (
-        <section>
-          <h2 class="text-2xl font-bold tracking-wide text-skin-accent mb-6">Academic Systems</h2>
-          <ul class="space-y-6 pl-2 border-l-2 border-skin-line border-opacity-50">
-            {academia.map(post => <li class="block"><Card {...post} /></li>)}
-          </ul>
-        </section>
-      )}
-
-      {frameworks.length > 0 && (
-        <section>
-          <h2 class="text-2xl font-bold tracking-wide text-skin-accent mb-6">Operational Frameworks</h2>
-          <ul class="space-y-6 pl-2 border-l-2 border-skin-line border-opacity-50">
-            {frameworks.map(post => <li class="block"><Card {...post} /></li>)}
-          </ul>
-        </section>
-      )}
+      <section>
+        <ul class="space-y-8">
+          {libraryPosts.map((post) => {
+            const postLibraryTags = post.data.tags?.filter(tag => libraryTags.includes(tag)) || [];
+            return (
+              <li class="lib-post-item" data-tags={postLibraryTags.join(" ")}>
+                <Card {...post} />
+              </li>
+            );
+          })}
+        </ul>
+      </section>
 
     </div>
    
@@ -83,3 +116,43 @@ const frameworks = sortedPosts.filter(post => post.data.tags?.includes("framewor
 
   <Footer />
 </Layout>
+
+<script is:inline>
+  document.addEventListener('astro:page-load', () => {
+    const container = document.getElementById("library-filters");
+    if (!container) return;
+
+    const filterButtons = container.querySelectorAll(".filter-btn");
+    const postItems = container.querySelectorAll(".lib-post-item");
+
+    function applyFilter(filterValue) {
+      postItems.forEach((post) => {
+        const tagsStr = post.getAttribute("data-tags") || "";
+        const postTags = tagsStr.trim().split(/\s+/).filter(Boolean);
+
+        if (filterValue === "all" || postTags.includes(filterValue)) {
+          post.classList.remove("hidden");
+        } else {
+          post.classList.add("hidden");
+        }
+      });
+    }
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        filterButtons.forEach(btn => {
+          btn.classList.remove("active", "bg-skin-accent", "text-skin-inverted", "border-transparent", "shadow-sm");
+          btn.classList.add("border-skin-line", "text-skin-base", "hover:bg-skin-card");
+        });
+
+        button.classList.add("active", "bg-skin-accent", "text-skin-inverted", "border-transparent", "shadow-sm");
+        button.classList.remove("border-skin-line", "text-skin-base", "hover:bg-skin-card");
+
+        const filterValue = button.getAttribute("data-filter");
+        applyFilter(filterValue);
+      });
+    });
+
+    applyFilter("all");
+  });
+</script>
