@@ -9,30 +9,24 @@ import { SITE } from "@/config";
 const posts = await getCollection("blog", ({ data }) => !data.draft);
 const tagsInUse = new Set(posts.flatMap(post => post.data.tags || []));
 
-// 2. The 4-Pillar Master Taxonomy
+// 2. The 3-Pillar Master Taxonomy
 const categories = [
   {
-    id: "transmissions",
-    name: "Transmissions",
-    description: "Core essays, high-signal field notes, and tactical observations on human nature.",
+    id: "transmissions", // Backend tag remains 'transmissions' to save you from rewriting URLs
+    name: "Essays & Observations",
+    description: "Original philosophies, tactical baselines, and thoughts on human nature.",
     exists: tagsInUse.has("transmissions")
   },
   {
     id: "deconstructions",
     name: "Deconstructions",
-    description: "Audits of other people's systems. Book reviews, music discographies, and historical events.",
+    description: "Audits of other systems, book reviews, and historical teardowns.",
     exists: tagsInUse.has("deconstructions")
-  },
-  {
-    id: "meditations",
-    name: "Meditations",
-    description: "Deep, internal philosophical writing and physical baselines of the Human Machine.",
-    exists: tagsInUse.has("meditations")
   },
   {
     id: "academic-systems",
     name: "Academic Systems",
-    description: "Hard university coursework translated into real-world mechanics (Calculus, Physics).",
+    description: "Living university coursework translated into real-world mechanics.",
     exists: tagsInUse.has("academic-systems")
   }
 ];
@@ -49,7 +43,7 @@ const activeCategories = categories.filter(cat => cat.exists);
     <section class="pt-8 pb-10 text-center">
       <h1 class="text-3xl font-bold tracking-wider sm:text-4xl mb-4">The Library</h1>
       <p class="text-skin-base opacity-90 max-w-2xl mx-auto leading-relaxed">
-        First-principles thinking. Essays, deconstructions, philosophical meditations, and academic systems exploring human behavior, operational excellence, and physical infrastructure.
+        First-principles thinking. Essays, observations, deconstructions, and academic systems exploring human behavior, operational excellence, and physical infrastructure.
       </p>
     </section>
 
@@ -59,14 +53,4 @@ const activeCategories = categories.filter(cat => cat.exists);
           <h2 class="text-xl font-bold mb-2 group-hover:text-skin-accent transition-colors">
             {cat.name} <span class="inline-block transition-transform group-hover:translate-x-1">→</span>
           </h2>
-          <p class="text-sm text-skin-base opacity-80 leading-relaxed">
-            {cat.description}
-          </p>
-        </a>
-      ))}
-    </section>
-
-  </main>
-
-  <Footer />
-</Layout>
+          <p class="text-sm text
