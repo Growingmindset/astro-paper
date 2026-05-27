@@ -27,8 +27,8 @@ draft: false
 - **Protein Floor:** 180g / day *(Non-negotiable requirement)*
 - **Hydration:** 2 Liters / day + Sodium/Potassium electrolytes pre-training
 
-### Core System Inputs
-*Primary fuel sources optimized for high protein, operational efficiency, and sustainable digestion.*
+### Core Staples
+*Primary fuel sources optimized for high protein, nutrient efficiency*
 - **Primary Proteins:** Roasted chicken preparations, lean ground beef, frozen lightly breaded chicken, greek yogurt.
 - **Complex Carbohydrates & Fiber:** Traditional Middle Eastern staples (lentils, chickpeas, bulgur), jasmine rice, russet potatoes.
 - **Fats:** Olive oil, whole eggs, almonds.
@@ -41,10 +41,8 @@ draft: false
 
 ---
 
-## 2. Biomechanical Architecture (Wide ISA / Swayback Correction)
+## 2. Biomechanical Architecture Daily Reset (CNS & Structural Restoration)
 *Systemic goal: Restore the "stack" (thorax over pelvis), drive posterior expansion to reclaim flexion/internal rotation, and establish a proper Zone of Apposition (ZOA) to close the lower ribcage.*
-
-### Daily Reset (CNS & Structural Restoration)
 *Execute the corresponding block's movements daily, minimum 3X. Do not force tension; let breathing mechanics naturally alter your thorax and pelvis.*
 
 #### Block 1 Daily Reset (Weeks 1–6): Passive Restoration
@@ -58,12 +56,12 @@ draft: false
 2. **FFE Split Squat Iso-Hold:** *(Progressed from Top-Leg IR).* Front foot elevated on 2" plate. Hold rack/wall for balance. Drop to bottom of split squat. Actively shift zipper toward lead leg. Heavy pressure on inside heel/base of big toe. Hold statically. Inhale into back of hips, exhale pursed lips. **Volume:** 5 breath cycles/side.
 3. **Bear Crawl Hover w/ Deep Breathing:** *(Progressed from Rockback).* On hands and knees. Push floor away to spread shoulder blades. Lift knees exactly 1 inch off floor. Hold statically, looking straight down. Inhale into lower back to maintain expansion, exhale heavily through pursed lips. **Volume:** 5 breath cycles *(or 2 sets of 3 if form breaks).*
 
-### Modular Pre-Performance Systems
+### Pre-Performance PT
 *Movements 4-7 are integrated strategically directly into your training days as designated below.*
-- **4. 90/90 Hip Lift with Overhead Reach:** Hips/knees at 90° with feet flat on wall. Dig heels in, pull down to engage hamstrings (tailbone floats, low back flat). Reach arms overhead. Nasal inhale, long open-mouth sigh (fog a mirror), drop ribs. Pause 3s. **Volume:** 5 breath cycles.
-- **5. Serratus Wall Slide with Foam Roller:** Roller on wall at eye level. Forearms on roller. Staggered stance. Exhale to drop ribs, push roller up wall. Inhale at top to expand space between shoulder blades. **Volume:** 10 reps.
-- **6. Low Cable Reaches (0°–60°):** Face chest-height cable stack. Fist-bump grip. Keep chest parallel (do not orient thorax). Exhale through pursed lips, reach handles low and forward. Hold reach on inhale to expand posterior thorax. **Volume:** 5 breath cycles.
-- **7. 1-Arm Kneeling Pulldown w/ Sidebend:** Kneel at high cable. Single D-handle. Keep elbow tucked strictly to side. Pull down while side-bending torso toward working arm to maximize bucket-handle dynamics. **Volume:** 5 breath cycles/side.
+- **4. 90/90 Hip Lift with Overhead Reach:** **Volume:** 5 breath cycles.
+- **5. Serratus Wall Slide with Foam Roller:** **Volume:** 10 reps.
+- **6. Low Cable Reaches (0°–60°):** **Volume:** 5 breath cycles.
+- **7. 1-Arm Kneeling Pulldown w/ Sidebend:** **Volume:** 5 breath cycles/side.
 
 ---
 
@@ -77,14 +75,14 @@ draft: false
 
 ### BLOCK 1: WEEKS 1–6 (BASE INTEGRATION & HARDWARE RESET)
 
-#### Block 1 Warm-Up Reference Matrix
+#### Block 1 Warm-Up Reference 
 - **Lower Body (Days 1 & 4):** Modified 90/90 Hip Switches (10 reps total, lean torso far away from trail leg) | Spiderman Lunge w/ T-Spine Rotation (5/side, back knee soft to bypass tight rectus femoris) | Narrow-Stance Goblet Squat Prying (10 reps, high squat hold, inhale into lower back).
 - **Upper Body (Days 2 & 5):** Quadruped Thoracic Rotation (8/side, hand behind head, exhale on up-rotation) | Scapular Push-Ups (10 reps, full protraction at top) | Low Band Pull-Aparts (15 reps, execute at belly-button height).
 - **Core & Arm (Days 3 & 6):** Bear Crawl (10 yds forward/reverse, knees 1 inch off floor) | Modified Inchworms (5 reps, deeply bent knees to bypass straight leg raise limit) | KB Around-the-Worlds (10/direction, strict vertical stack).
 
 ---
 
-#### Day 1: Lower Body Quad Architecture
+#### Day 1: Lower Body 
 - **PT Primer:** Movement 4 — 90/90 Hip Lift with Overhead Reach (5 breath cycles)
 - **Warm-Up:** Lower Body Warm-Up Block
 - **System Parameters:** A block is heavy compound. B/C blocks are supersets (75-90s rest).
