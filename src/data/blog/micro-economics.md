@@ -6,8 +6,12 @@ postSlug: microeconomics
 featured: false
 draft: false
 tags:
+tags:
   - academic-systems
   - living-document
+  - microeconomics
+  - MIT-14.01
+  - alamo-colleges-2302
 description: "Establishing the digital repository for university-level coursework in microeconomics"
 ---
 ## System Status
