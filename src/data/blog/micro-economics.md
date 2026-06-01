@@ -6,7 +6,6 @@ postSlug: microeconomics
 featured: false
 draft: false
 tags:
-tags:
   - academic-systems
   - living-document
   - microeconomics
