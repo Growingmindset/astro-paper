@@ -61,7 +61,7 @@ To understand the sheer momentum of this engineered takeover, look at the scalin
 
 ![The Rise of No Kings: 14 Months of Global Escalation](../../assets/images/global-escalation.webp)
 
-> **Field Verification Log:** [Nationwide 'No Kings' demonstrations draw millions to streets](https://www.youtube.com/watch?v=hHcPN2ln-Vw) — Documented operational footprint of the centralized mobilization network during peak execution phase.
+> [Nationwide 'No Kings' demonstrations draw millions to streets](https://www.youtube.com/watch?v=hHcPN2ln-Vw) — Footprint of the centralized mobilization network during peak execution phase.
 
 ## Legal Structures Enabling Anonymous Capital Flows
 
@@ -120,7 +120,7 @@ As I hold as a standard for my own inner circle: I do not care what your stance 
 
 ---
 
-### System Inputs & Raw Data (Audit Ledger)
+### Raw Data 
 * **The Sixteen Thirty Fund & Berger Action Fund:** Financial disclosures verify that Swiss billionaire Hansjörg Wyss utilizes the 501(c)(4) Berger Action Fund to route hundreds of millions of dollars into the Sixteen Thirty Fund, a central hub for undisclosed progressive political spending.
 * **Open Society Policy Center (Action Fund):** George Soros utilizes this 501(c)(4) lobbying group to funnel hundreds of millions into progressive super PACs and state-level initiatives.
 * **Indivisible's Architecture:** The Indivisible movement originated as a 23-page document written by former Democratic staffers to reverse-engineer Tea Party tactics, eventually scaling into a heavily funded 501(c)(3) and 501(c)(4) corporate structure.
