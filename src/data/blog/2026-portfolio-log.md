@@ -21,7 +21,7 @@ draft: false
 
 ## 1. Macro Market Thesis (Live Dashboard)
 
-*Last Updated: May 20, 2026*
+*Last Updated: June 2, 2026*
 
 ### Core Economic Indicators (Live Tracker)
 *A high-signal dashboard of the leading indicators dictating current capital flow.*
