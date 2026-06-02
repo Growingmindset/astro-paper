@@ -32,9 +32,9 @@ draft: false
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Fed Funds Target Rate** | 3.50-3.75% | 3.50-3.75% | 0 bps | Paused (Held) | Baseline cost of capital. The anchor for all market liquidity. |
 | **CPI (Inflation)** | 3.3% | 3.8% | +50 bps | Watch (Accelerating) | Measures pressure on consumer discretionary spending. |
-| **ISM Manufacturing PMI** | 52.7 | 52.7 | 0.0 pts | Expansion | Above 50 = Expansion. Below 50 = Contraction. |
-| **ISM New Orders** | 53.5 | 54.1 | +0.6 pts | Bullish | >50 indicates manufacturing expansion in the next 3-6 months. |
-| **ISM Prices Paid** | 78.3 | 84.6 | +6.3 pts | Up (Debasement) | Rising = Debasement (Gold/Silver bullish). Falling = Bearish. |
+| **ISM Manufacturing PMI** | 52.7 | 54.0 | +1.3 pts | Expansion | Above 50 = Expansion. Below 50 = Contraction. |
+| **ISM New Orders** | 54.1 | 56.8 | +2.7 pts | Bullish | >50 indicates manufacturing expansion in the next 3-6 months. |
+| **ISM Prices Paid** | 84.6 | 82.1 | -2.5 pts | Up (Debasement) | Rising = Debasement (Gold/Silver bullish). Falling = Bearish. |
 | **Total Nonfarm Payrolls** | 185k | 115k | -37.8% | Weak (Cooling) | 80% of workforce. More jobs = more household spending. |
 | **PPI: Corrugated Boxes** | 425.956 | 425.151 | -0.2% | Down (Slight) | Physical goods ship in boxes. The ultimate truth-teller of economic velocity. |
 
