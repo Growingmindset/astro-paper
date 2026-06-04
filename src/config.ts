@@ -2,8 +2,8 @@ export const SITE = {
   website: "https://rudygalan.com/",
   author: "Rudy Galan",
   profile: "https://rudygalan.com/",
-  desc: "Integrated OS: Systems-oriented builds in Physics, Engineering, and Business Logic.",
-  title: "Rudy Galan",
+  desc: "Systems, blueprints, and analysis from first principles.",
+  title: "Rudy Galan Portal",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
@@ -40,5 +40,5 @@ export const navLinks = [
   { href: "/posts", linkText: "The Lab", active: true },
   { href: "/library", linkText: "The Library", active: true }, // <-- Updated path
   { href: "/archive", linkText: "The Archive", active: true }, // <-- Updated path
-  { href: "/about", linkText: "About", active: true }, //added this like
+  { href: "/about", linkText: "Profile", active: true }, //added this like
 ];
