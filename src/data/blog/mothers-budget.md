@@ -1,7 +1,7 @@
 ---
 author: Rudy Galan
 pubDatetime: 2026-06-04T12:00:00Z
-title: "Mother's Budget"
+title: "Mother's Budget: The Thermodynamics of Capital"
 postSlug: mothers-budget
 featured: false
 draft: false
