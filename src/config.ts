@@ -37,8 +37,8 @@ export const LOGO_IMAGE = {
 export const SOCIALS = [];
 
 export const navLinks = [
-  { href: "/posts", linkText: "The Lab", active: true },
-  { href: "/library", linkText: "The Library", active: true }, // <-- Updated path
-  { href: "/archive", linkText: "The Archive", active: true }, // <-- Updated path
+  { href: "/posts", linkText: "Lab", active: true },
+  { href: "/library", linkText: "Library", active: true }, // <-- Updated path
+  { href: "/archive", linkText: "Archive", active: true }, // <-- Updated path
   { href: "/about", linkText: "Profile", active: true }, //added this like
 ];
