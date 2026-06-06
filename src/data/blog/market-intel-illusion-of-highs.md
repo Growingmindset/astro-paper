@@ -1,6 +1,6 @@
 ---
 author: Rudy Galan
-pubDatetime: 2026-06-01T08:00:00Z
+pubDatetime: 2026-06-06T08:00:00Z
 title: "Market Intel: The Illusion of Highs"
 postSlug: market-intel-illusion-of-highs
 featured: false
