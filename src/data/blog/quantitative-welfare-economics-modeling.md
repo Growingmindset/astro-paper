@@ -32,11 +32,11 @@ When the market is left to its own accord, the supply and demand will dictate th
 ![Unconstrained Market Equilibrium](../../assets/images/market-equilibrium.png)
 
 ### Quantitative Breakdown:
-* **Equilibrium Vector:** ($Q^* = 8$, $P^*$ = $8)
+* **Equilibrium Vector:** (Q* = 8, P* = $8)
 * **Consumer Surplus (CS):** Bounded by the maximum demand intercept ($12) and market price ($8).
-    $$CS = \frac{(12 - 8) \times 8}{2} = 16$$
+    CS = [(12 - 8) × 8] / 2 = 16
 * **Producer Surplus (PS):** Bounded by market price ($8) and the baseline supply intercept ($2).
-    $$PS = \frac{(8 - 2) \times 8}{2} = 24$$
+    PS = [(8 - 2) × 8] / 2 = 24
 * **System Friction (DWL):** **0**. Total potential utility is maximized at **40**.
 
 ---
@@ -48,27 +48,27 @@ Imposing a legal minimum price above the equilibrium price restricts consumer pa
 ![Price Floor Market Distortion](../../assets/images/price-floor-surplus.png)
 
 ### Quantitative Breakdown:
-* **Throttled Quantity:** At **$10**, $Q_d = 4$ and $Q_s = 10.67$. The system bottlenecks at actual units sold = **4**.
+* **Throttled Quantity:** At **$10**, Qd = 4 and Qs = 10.67. The system bottlenecks at actual units sold = **4**.
 * **Welfare Realignment:**
-    * **CS (Triangle):** $\frac{(12 - 10) \times 4}{2} = 4$
-    * **PS (Trapezoid):** Rectangle $[(10 - 5) \times 4 = 20]$ + Triangle $[\frac{(5 - 2) \times 4}{2} = 6] = 26$
-* **Systemic Leakage (Deadweight Loss):** $$DWL = \frac{(10 - 5) \times (8 - 4)}{2} = 10$$
+    * **CS (Triangle):** [(12 - 10) × 4] / 2 = 4
+    * **PS (Trapezoid):** Rectangle [(10 - 5) × 4 = 20] + Triangle [[(5 - 2) × 4] / 2 = 6] = 26
+* **Systemic Leakage (Deadweight Loss):** DWL = [(10 - 5) × (8 - 4)] / 2 = 10
 
 ---
 
 ## 4. Model 03: Low Artificial Boundary (Price Ceiling = $5)
 
-Imposing a legal maximum price below equilibrium restricts manufacturer capability and generates structural supply depletion (a market shortage). In this case the customer wants to buy as much possible because it's a bargain, but the company has no incentive to produce more. The producing cannot keep up with the demand, therefore a shortage is created, max scarcity, but low price. If its a low price, yet you can't get it, is it even worth it? *pictures a care package dropped in a third world country and people swarming the package because they havent eaten in days* The food was free. 
+Imposing a legal maximum price below equilibrium restricts manufacturer capability and generates structural supply depletion (a market shortage). In this case the customer wants to buy as much possible because it's a bargain, but the company has no incentive to produce more. The producing cannot keep up with the demand, therefore a shortage is created, max scarcity, but low price. If its a low price, yet you can't get it, is it even worth it? *pictures a care package dropped in a third world country and people swarming the package because they havent eaten in days*. The food was "free". 
 
 ![Price Ceiling Market Distortion](../../assets/images/price-ceiling-shortage.png)
 
 ### Quantitative Breakdown:
-* **Throttled Quantity:** At **$5**, $Q_s = 3$ and $Q_d = 10$. The system bottlenecks at actual units sold = **3**.
+* **Throttled Quantity:** At **$5**, Qs = 3 and Qd = 10. The system bottlenecks at actual units sold = **3**.
 * **Welfare Realignment:**
-    * **CS (Trapezoid):** Rectangle $[(7.8 - 5) \times 3 = 8.4]$ + Triangle $[\frac{(9 - 7.8) \times 3}{2} = 1.8] = 10.2$
-    * **PS (Triangle):** $\frac{(5 - 2) \times 3}{2} = 4.5$
+    * **CS (Trapezoid):** Rectangle [(7.8 - 5) × 3 = 8.4] + Triangle [[(9 - 7.8) × 3] / 2 = 1.8] = 10.2
+    * **PS (Triangle):** [(5 - 2) × 3] / 2 = 4.5
 * **Systemic Leakage (Deadweight Loss):**
-    $$DWL = \frac{(7.8 - 5) \times (5 - 3)}{2} = 2.8$$
+    DWL = [(7.8 - 5) × (5 - 3)] / 2 = 2.8
 
 ---
 
