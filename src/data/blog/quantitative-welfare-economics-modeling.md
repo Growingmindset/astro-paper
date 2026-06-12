@@ -32,11 +32,11 @@ When the market is left to its own accord, the supply and demand will dictate th
 ![Unconstrained Market Equilibrium](../../assets/images/market-equilibrium.png)
 
 ### Quantitative Breakdown:
-* **Equilibrium Vector:** $(Q^* = 8, P^* = \$8)$
-* **Consumer Surplus (CS):** Bounded by the maximum demand intercept $(\$12)$ and market price $(\$8)$.
-    $$\text{CS} = \frac{(12 - 8) \times 8}{2} = 16$$
-* **Producer Surplus (PS):** Bounded by market price $(\$8)$ and the baseline supply intercept $(\$2)$.
-    $$\text{PS} = \frac{(8 - 2) \times 8}{2} = 24$$
+* **Equilibrium Vector:** ($Q^* = 8$, $P^*$ = $8)
+* **Consumer Surplus (CS):** Bounded by the maximum demand intercept ($12) and market price ($8).
+    $$CS = \frac{(12 - 8) \times 8}{2} = 16$$
+* **Producer Surplus (PS):** Bounded by market price ($8) and the baseline supply intercept ($2).
+    $$PS = \frac{(8 - 2) \times 8}{2} = 24$$
 * **System Friction (DWL):** **0**. Total potential utility is maximized at **40**.
 
 ---
@@ -51,8 +51,8 @@ Imposing a legal minimum price above the equilibrium price restricts consumer pa
 * **Throttled Quantity:** At **$10**, $Q_d = 4$ and $Q_s = 10.67$. The system bottlenecks at actual units sold = **4**.
 * **Welfare Realignment:**
     * **CS (Triangle):** $\frac{(12 - 10) \times 4}{2} = 4$
-    * **PS (Trapezoid):** $\text{Rectangle } [ (10 - 5) \times 4 = 20 ] + \text{Triangle } [ \frac{(5 - 2) \times 4}{2} = 6 ] = 26$
-* **Systemic Leakage (Deadweight Loss):** $$\text{DWL} = \frac{(10 - 5) \times (8 - 4)}{2} = 10$$
+    * **PS (Trapezoid):** Rectangle $[(10 - 5) \times 4 = 20]$ + Triangle $[\frac{(5 - 2) \times 4}{2} = 6] = 26$
+* **Systemic Leakage (Deadweight Loss):** $$DWL = \frac{(10 - 5) \times (8 - 4)}{2} = 10$$
 
 ---
 
@@ -65,10 +65,10 @@ Imposing a legal maximum price below equilibrium restricts manufacturer capabili
 ### Quantitative Breakdown:
 * **Throttled Quantity:** At **$5**, $Q_s = 3$ and $Q_d = 10$. The system bottlenecks at actual units sold = **3**.
 * **Welfare Realignment:**
-    * **CS (Trapezoid):** $\text{Rectangle } [ (7.8 - 5) \times 3 = 8.4 ] + \text{Triangle } [ \frac{(9 - 7.8) \times 3}{2} = 1.8 ] = 10.2$
+    * **CS (Trapezoid):** Rectangle $[(7.8 - 5) \times 3 = 8.4]$ + Triangle $[\frac{(9 - 7.8) \times 3}{2} = 1.8] = 10.2$
     * **PS (Triangle):** $\frac{(5 - 2) \times 3}{2} = 4.5$
 * **Systemic Leakage (Deadweight Loss):**
-    $$\text{DWL} = \frac{(7.8 - 5) \times (5 - 3)}{2} = 2.8$$
+    $$DWL = \frac{(7.8 - 5) \times (5 - 3)}{2} = 2.8$$
 
 ---
 
