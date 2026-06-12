@@ -22,7 +22,7 @@ This analysis models a closed microeconomic market system to map resource optimi
 
 When a market is unconstrained, it optimizes naturally where marginal benefit (Demand) equals marginal cost (Supply). 
 
-<img src="/assets/economics-welfare/market-equilibrium.png" alt="Unconstrained Market Equilibrium" width="100%" />
+![Unconstrained Market Equilibrium](../../assets/images/market-equilibrium.png)
 
 ### Quantitative Breakdown:
 *   **Equilibrium Vector:** $(Q^* = 8, P^* = \$8)$
@@ -38,7 +38,7 @@ When a market is unconstrained, it optimizes naturally where marginal benefit (D
 
 Imposing a legal minimum price above the equilibrium price restricts consumer participation and creates structural asset accumulation (a market surplus).
 
-<img src="/assets/economics-welfare/price-floor-surplus.png" alt="Price Floor Market Distortion" width="100%" />
+![Price Floor Market Distortion](../../assets/images/price-floor-surplus.png)
 
 ### Quantitative Breakdown:
 *   **Throttled Quantity:** At $\$10$, $Q_d = 4$ and $Q_s = 10.67$. The system bottlenecks at actual units sold = **$4$**.
@@ -54,7 +54,7 @@ Imposing a legal minimum price above the equilibrium price restricts consumer pa
 
 Imposing a legal maximum price below equilibrium restricts manufacturer capability and generates structural supply depletion (a market shortage).
 
-<img src="/assets/economics-welfare/price-ceiling-shortage.png" alt="Price Ceiling Market Distortion" width="100%" />
+![Price Ceiling Market Distortion](../../assets/images/price-ceiling-shortage.png)
 
 ### Quantitative Breakdown:
 *   **Throttled Quantity:** At $\$5$, $Q_s = 3$ and $Q_d = 10$. The system bottlenecks at actual units sold = **$3$**.
