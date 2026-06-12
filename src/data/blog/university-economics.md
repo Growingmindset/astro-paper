@@ -12,7 +12,7 @@ tags:
 description: "Establishing the digital repository for university-level coursework in microeconomics"
 ---
 
-  ## Alamo Colleges 2302 Modules
+  ## Microeconomics
 * [Module 01: The Thermodynamics of Markets — Modeling Constraints and Systemic Leakage](/posts/quantitative-welfare-economics-modeling)  
   *First-principles analysis of price controls, deadweight loss, and systemic friction using geometric models.*
 
