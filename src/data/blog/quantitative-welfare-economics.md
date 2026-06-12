@@ -4,13 +4,13 @@ pubDatetime: 2026-06-11T14:35:00Z
 title: "The Physics of Price Controls: Modeling Systemic Friction in Markets"
 postSlug: quantitative-welfare-economics-modeling
 featured: true
-draft: true
+draft: false
 tags:
   - systems-logic
-  - economics
-  - quantitative-modeling
+  - microeconomics
 description: "A first-principles geometric and mathematical evaluation of consumer surplus, producer surplus, and deadweight loss under boundary constraints."
 ---
+**Part of the Alamo Colleges 2302 Economics Track — Module 01**
 
 ## 1. Executive Summary: The Physics of Human Incentives
 
