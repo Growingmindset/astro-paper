@@ -1,12 +1,11 @@
 ---
 author: Rudy Galan
-pubDatetime: 2026-06-11T14:35:00Z
+pubDatetime: "2026-06-11T14:35:00Z"
 title: "The Physics of Price Controls: Modeling Systemic Friction in Markets"
 postSlug: quantitative-welfare-economics-modeling
-featured: true
+featured: false
 draft: false
 tags:
-  - systems-logic
   - microeconomics
 description: "A first-principles geometric and mathematical evaluation of consumer surplus, producer surplus, and deadweight loss under boundary constraints."
 ---
