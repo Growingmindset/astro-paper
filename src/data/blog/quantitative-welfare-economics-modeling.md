@@ -1,6 +1,6 @@
 ---
 author: Rudy Galan
-pubDatetime: "2026-06-11T14:35:00Z"
+pubDatetime: 2026-06-11T14:35:00.000Z
 title: "The Physics of Price Controls: Modeling Systemic Friction in Markets"
 postSlug: quantitative-welfare-economics-modeling
 featured: false
