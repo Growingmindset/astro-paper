@@ -1,7 +1,7 @@
 ---
 author: Rudy Galan
 pubDatetime: 2026-06-11T14:35:00Z
-title: "The Thermodynamics of Markets: Modeling Constraints and Systemic Leakage"
+title: "The Physics of Price Controls: Modeling Systemic Friction in Markets"
 postSlug: quantitative-welfare-economics-modeling
 featured: true
 draft: true
