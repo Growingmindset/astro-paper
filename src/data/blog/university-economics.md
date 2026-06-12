@@ -2,7 +2,7 @@
 author: Rudy Galan
 pubDatetime: 2026-05-25T12:00:00Z
 title: "University Economics"
-postSlug: microeconomics
+postSlug: university-economics
 featured: false
 draft: false
 tags:
