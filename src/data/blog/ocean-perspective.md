@@ -1,6 +1,6 @@
 ---
 author: Rudy Galan
-pubDatetime: "2026-06-18T12:00:00Z"
+pubDatetime: 2026-06-18T12:00:00Z
 title: "The Ocean's Perspective"
 postSlug: ocean-perspective
 featured: false
