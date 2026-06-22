@@ -1,4 +1,3 @@
-
 ---
 author: Rudy Galan
 title: "Upper Body + Accessory Protocols (Day 2 & 5)"
