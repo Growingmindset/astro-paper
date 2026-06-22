@@ -1,4 +1,3 @@
-
 ---
 author: Rudy Galan
 title: "Lower Body Protocols (Day 1 & 4)"
@@ -10,7 +9,6 @@ tags:
   - training-protocols
 draft: false
 ---
-
 # Lower Body Protocols (Day 1 & 4)
 
 **Phase 2 — 12-Week Multi-Phasial Hardware Reset**
