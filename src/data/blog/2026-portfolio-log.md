@@ -60,69 +60,36 @@ draft: false
 *Tracking precise capital distribution, concentration risk, and structural sector exposure.*
 
 ### Capital Allocation & Risk
-- **Cash Position:** 2.86% *(Dry powder)*
-- **Top 5 Heavyweights:** 44.08% of portfolio *(High-conviction anchors)*
-- **Long-Tail Positions:** 53.06% of portfolio *(~45 remaining assets)*
-
-### Sector Exposure (Deployed Capital)
-- **Information Technology:** 34.0% *(Overweight: Anchored by INTC rotation & scaling SaaS/AI)*
-- **Health Care:** 17.6%
-- **Consumer Discretionary:** 16.5%
-- **Consumer Staples:** 15.1% *(Balancing: Holding MO, accumulating for stability amongst chip/software craze)*
-- **Industrials:** 7.7%
-- **Comm Services:** 5.5%
-- **Financials:** 2.8%
-- **Real Estate:** 0.8%
+- **Cash Position:** 12.86% *(Dry powder) cover call boost+monthly deposits*
 
 ### YTD Performance
-- **Portfolio vs SPY:** +17.76% vs +8.62%
-
 <img src="/ytd-performance.png" alt="YTD Performance Chart" width="100%" style="border-radius: 8px; margin-top: 15px; margin-bottom: 5px;" />
 *(Note: Cumulative rate of return from Jan 1 to current update. Image scales dynamically for mobile viewing.)*
 
 ---
 
-## 3. The Heavyweights (Top 5 Holdings)
-*In a wide portfolio, the heaviest weightings dictate the system's outcome. These are the current anchors.*
 
-1. **INTC (Intel):** 26.71% weight
-2. **HUM (Humana):** 5.37% weight
-3. **UPS:** 4.47% weight
-4. **MO (Altria):** 3.96% weight
-5. **NVO (Novo-Nordisk):** 3.56% weight
-
----
 
 ## 4. 2026 Deployments (Recent Capital Flow)
 *Where new cash is actively being deployed this year and the immediate logic behind it.*
 
-| Ticker | Asset Class | Execution | Thesis / Catalyst |
+| Ticker | Asset Class                  | Execution                          | Thesis / Catalyst |
 | :--- | :--- | :--- | :--- |
-| **MCD** | Consumer Defensive | New Buy (05/15/2026) | Expanding defensive moat; highly resilient cash flow in high-inflation environments. |
-| **MSFT** | Tech / Software | New Buy (04/10/2026) | Unrivaled SaaS infrastructure and enterprise AI integration momentum. |
-| **FISV** | Financial Tech | Add (03/16/2026) | Undervalued legacy fintech footprint with sticky enterprise contracts. |
-| **ORCL** | Tech / Cloud | New Buy (03/05/2026) | Capturing aggressive momentum in database architecture and cloud computing shifts. |
+| **INTC** | Technology (Semiconductors) | **Sold 3x Dec 2028 $200 Calls** (06/22/2026) | Collected **$17,382.64** in premium on long-dated calls while staying long semiconductor recovery. |
+| **MSFT** | Technology (Software)       | **Buy** (06/17/2026) @ $378.10     | Dominant cloud and AI infrastructure leader with durable pricing power and enterprise stickiness. |
+| **INTU** | Technology (Software)       | **Buy** (06/17/2026) @ $269.59     | High-quality small business software compounder with strong recurring revenue and AI tailwinds. |
+| **INTU** | Technology (Software)       | **Buy** (06/10/2026) @ $285.89     | Adding to fintech software leader at reasonable valuation. |
+| **KMB**  | Consumer Staples            | **Buy** (06/04/2026) @ $95.67      | Defensive staple with pricing power and resilient cash flow in uncertain macro environment. |
+| **MSFT** | Technology (Software)       | **Buy** (04/10/2026) @ $371.41     | Core long-term holding in cloud + AI infrastructure with unmatched enterprise distribution. |
+| **FISV** | Financials (Fintech)        | **Add** (03/16/2026) @ $57.03      | Undervalued legacy fintech with sticky enterprise contracts and improving execution. |
+| **ORCL** | Technology (Cloud)          | **Buy** (03/05/2026) @$153.5       | Benefiting from aggressive shift toward database and cloud infrastructure modernization. |
 
----
-
-## 5. The Watchlist (Names to Watch)
-*Assets currently under analysis for future deployment, pending specific price targets or macro triggers.*
-
-| Ticker | Sector | Target Trigger | Thesis / Observation |
-| :--- | :--- | :--- | :--- |
-| **KMB** | Consumer Defensive | Pending Value Entry | High dividend, but solid name. Much $$ is going to chip associated stocks, it will rotate back, one day.|
-| **TAP** | Consumer Defensive | Pending Value Entry | Alcohol is never going away. There is pain in risk. Can you see a world without alcohol? Me neither.|
 
 ---
 
 ## 6. Execution & Systems Reflection (Historical Log)
-*(Operating Rule: DO NOT delete old entries. Stack your newest monthly/quarterly review directly below this line.)*
-
-**System Changelog:**
-* *v2026.05 (May 20, 2026):* Core macro dashboard synced. Q2 review added. Watchlist updated with KMB and TAP. Mobile layout optimization applied.
 
 > **Q2 Review (May 2026):**
-> **Performance Snapshot:** Portfolio +17.76% YTD | SPY +8.62% YTD 
 > 
 > Intel was a big hitter as the government's backing caught up to it, climbing from my average buy price of ~$21 to the lower $100's. This marks a massive rotation from other chip companies and sectors. I maintain a hold because it could go higher and I view it as a primary long-term anchor. I added McDonald's due to its value—being down on the year by a significant margin—but also to balance out my portfolio's volatility. With Sweetgreen (SG) serving as a risky, high-beta play, McDonald's provides much-needed gravitational balance in the food sector. It also proves to be a strong value buy in the face of a potentially weakening consumer grappling with short-term pains at the pump (though leading indicators show resilience, aside from the slight dip in corrugated boxes). 
 >
