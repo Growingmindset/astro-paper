@@ -77,7 +77,7 @@ draft: false
 ### YTD Performance
 - **Portfolio vs SPY:** +17.76% vs +8.62%
 
-<img src="/ytd-performance-may2026.png" alt="YTD Performance Chart" width="100%" style="border-radius: 8px; margin-top: 15px; margin-bottom: 5px;" />
+<img src="/ytd-performance.png" alt="YTD Performance Chart" width="100%" style="border-radius: 8px; margin-top: 15px; margin-bottom: 5px;" />
 *(Note: Cumulative rate of return from Jan 1 to current update. Image scales dynamically for mobile viewing.)*
 
 ---
