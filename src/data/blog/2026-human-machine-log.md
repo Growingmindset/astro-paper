@@ -21,40 +21,54 @@ draft: false
 
 ## 1. Nutritional Architecture
 **Objective:** Intuitive tracking to increase strength, keep/gain muscle and cut fat by using mostly intuition of longterm implications of inputs
-
-### Macro Baselines
-- **Target Intake:** Deficit of 200-400 calories. 2,100 - 2,300 kcal / day *(Autoregulated based on daily expenditure)*
-- **Protein Floor:** 180g / day *(Non-negotiable requirement)*
-- **Hydration:** 2 Liters / day + Sodium/Potassium electrolytes pre-training
-
-### Core Staples
-*Primary fuel sources optimized for high protein, nutrient efficiency*
-- **Primary Proteins:** Roasted chicken preparations, lean ground beef, frozen lightly breaded chicken, greek yogurt.
-- **Complex Carbohydrates & Fiber:** Traditional Middle Eastern staples (lentils, chickpeas, bulgur), jasmine rice, russet potatoes.
-- **Fats:** Olive oil, whole eggs, almonds.
-- **Hacks:** Greek yogurt, frozen fruit, microwavable/airfryer items to cut down on time needed. 
   
 ### Nutritional Systems Reflection
 > **Current Insight:** Be prepared to be a little hungry. Remember, you're not starving. It's okay to be a little hungry after a meal, before sleep, etc. You will have another meal. 
 >
-> Keeping a relatively healthy diet based on loose fittings of the Mediterranean diet keeps energy levels in check, fullness, and needed fat. Lower carbs are likely, so eat them before workouts if you can to keep a high intensity. Salads before meals, eating before going out, skipping nights of drinking, lower calorie drinks like Martinis or light beer if so. Just be conservative in all of your actions when concerning energy intake.  
+> Keeping a relatively healthy diet based on loose fittings of the Mediterranean diet keeps energy levels in check, fullness, and needed fat. Lower carbs are likely, so eat them before workouts if you can to keep a high intensity. Salads before meals, eating before going out, skipping nights of drinking, lower calorie drinks like Martinis or light beer if so. Just be conservative in all of your actions when concerning energy intake.
+>
+> 6.22.26 *update*
+> I've been strapped for time so i'm trying out a new diet I can operate with on the fly. Including bread that doesnt expire quick, canned chilies, canned oysters, canned sardines, beef bone broth, whole grain crackers. Frozen salmon, chicken, lean beef staples stayed the same. A bigger change i've made is in my breakfast. Instead of eating so 3-5 eggs, im going 1-2 whole eggs with half a cup of egg whites. It hasnt been that bad for far, down around 8lbs. 
 
 ---
+### Current Block Systems Reflection
+> **Version 1.0 Insight:** Getting back to the foundations.  All of those aches and pains come from doing movement out of my ranges of motion. Zeroing in on a baseline of cardio, improving my ranges of motion, and taking into consideration my structural biases. A plus is the breathing exercises will allow me to be more parasympathetic, while the weights may be conservative on the front end, this is part of a year long program in which they will get more agressive as force production increase and ranges of motion improves. Weeks are future guidance, not set in stone;theyre more for goal setting, if im not there when I get there then I will stay the same and keep working. 
 
-## 2. Biomechanical Architecture Daily Reset (CNS & Structural Restoration)
-*Systemic goal: Restore the "stack" (thorax over pelvis), drive posterior expansion to reclaim flexion/internal rotation, and establish a proper Zone of Apposition (ZOA) to close the lower ribcage.*
-*Execute the corresponding block's movements daily, minimum 3X. Do not force tension; let breathing mechanics naturally alter your thorax and pelvis.*
+# Daily Home Reset — 3-Movement Passive Yielding Protocol
 
-#### Block 1 Daily Reset (Weeks 1–6): Passive Restoration
-1. **Sidelying Stack:** Side-lying, head supported (neutral neck). Reach top arm forward/up to 110° flexion. Look straight ahead. Inhale slowly through nose. Exhale slowly through pursed lips to engage obliques and close the Wide ISA. **Volume:** 5 breath cycles/side.
-2. **Sidelying 90/90 with Top-Leg IR:** Side-lying, knees/hips at 90°. Slide top knee slightly past bottom knee. Keeping knees glued, lift top foot toward ceiling to drive hip internal rotation. Breathe normally, pulling lower ribs away from shirt on exhale. **Volume:** 5 breath cycles/side.
-3. **Quadruped Rockback (Frog Position):** On hands and knees. Drop to forearms. Push floor away with elbows. Slowly rock hips back toward heels until a gentle stretch is felt in lower back/sacrum. Inhale into lower back. Exhale through pursed lips. **Volume:** 5 breath cycles.
+**Version 1.0** | **June 22, 2026** | **Frequency:** Daily | **Duration:** ~15–20 minutes
 
-#### Block 2 Reset (Weeks 7–12): Active Gravity Loading
-*Gravity is now the resistance. Maintain the "stack" under increased axial load.*
-1. **Seated Wall-Supported Reaches:** *(Progressed from Sidelying Stack).* Sit on floor, back flat against wall, knees slightly bent to keep sacrum flush. Reach arms forward/down (0°–60°). Inhale silently, pushing upper/lower back into wall. Exhale through pursed lips, keeping ribs pinned to wall. **Volume:** 5 breath cycles.
-2. **FFE Split Squat Iso-Hold:** *(Progressed from Top-Leg IR).* Front foot elevated on 2" plate. Hold rack/wall for balance. Drop to bottom of split squat. Actively shift zipper toward lead leg. Heavy pressure on inside heel/base of big toe. Hold statically. Inhale into back of hips, exhale pursed lips. **Volume:** 5 breath cycles/side.
-3. **Bear Crawl Hover w/ Deep Breathing:** *(Progressed from Rockback).* On hands and knees. Push floor away to spread shoulder blades. Lift knees exactly 1 inch off floor. Hold statically, looking straight down. Inhale into lower back to maintain expansion, exhale heavily through pursed lips. **Volume:** 5 breath cycles *(or 2 sets of 3 if form breaks).*
+This daily reset uses only single-leg ramps (wedges), two yoga blocks, a head cushion, and a chair or couch. Perform **2 sets of 5 breath cycles** per movement. The protocol progressively builds sagittal clearing, thoracic decompression, and pelvic floor integration while respecting shoulder and hip constraints.
+
+## Movement 1: Sagittal Clearing & Sacral Counternutation
+
+**Purpose:** Restore deep squat positioning and allow the arches to collapse while protecting shoulder limits in later phases.
+
+| Phase       | Weeks | Exercise Variation                  | Key Constraint / Execution |
+|-------------|-------|-------------------------------------|----------------------------|
+| Base        | 1–4   | Supported Deep Squat Breathing on Wedges | Place heels on single-leg ramps. Hold a stable doorway or heavy furniture. Sink deep and let the arches collapse toward the floor. |
+| Progression | 5–8   | Wall Squat                         | Waistband area on the wall. Stay heavy on your heels and use your feet to push your back into the wall. |
+| Advanced    | 9–12  | Wall Squat 120 Reach Pump (Modified) | Perform the wall squat while reaching arms forward. **Strict Modification:** Reach must remain below 60° due to the 0° shoulder limit. Do not force the 120° reach. |
+
+## Movement 2: T5-T8 Posterior Thorax Decompression
+
+**Purpose:** Decompress the mid-thoracic spine and restore posterior expansion while combating swayback bias.
+
+| Phase       | Weeks | Exercise Variation                  | Key Constraint / Execution |
+|-------------|-------|-------------------------------------|----------------------------|
+| Base        | 1–4   | Sidelying 2 Block Decompression    | Lie on your side. Place one yoga block strictly under the lower ribcage and the second under the top of the pelvis. **Cue:** "Melt down into position. Slow 4 to 6 count quiet inhales through the nose." |
+| Progression | 5–8   | Sidelying Armbar Hold              | Remove blocks. Hold a heavy household item (e.g., jug) in the top hand. Chest facing the wall. Reach to the ceiling on the exhale. |
+| Advanced    | 9–12  | Copenhagen Adduction Armbar Level 2 | Place the top leg on a chair/couch. Weight strictly on hand and bottom outside knee to combat Swayback gravity bias. |
+
+## Movement 3: Pelvic Floor / Lower Abdominal Integration
+
+**Purpose:** Restore pelvic tuck capacity and integrate breath with lower abdominal control while respecting hip flexion limits.
+
+| Phase       | Weeks | Exercise Variation                  | Key Constraint / Execution |
+|-------------|-------|-------------------------------------|----------------------------|
+| Base        | 1–4   | Hook Lying Tilt with Ball Squeeze  | Lie flat with head on cushion. Knees bent, feet flat. Place a cushion or ball between the knees. **Cue:** "Curl the hips up without engaging your abs. Silent in through the nose, long soft exhale to make ab wall smaller." |
+| Progression | 5–8   | Feet Elevated Hook Lying Tilt      | Elevate the feet onto a chair or couch. Elevating the feet removes gravity’s demand on the 40° SLR limitation, making the pelvic tuck physically accessible. |
+| Advanced    | 9–12  | Supine 90/90 Arm Reach             | Hips at 90° to flatten the waistband and drop the Swayback pelvis. Straighten the knees to keep the waistband flat. Take a slow 4–8 count exhale and reach forward (**capped at 60°**). |
 
 ### Pre-Performance PT
 *Movements 4-7 are integrated strategically directly into your training days as designated below.*
@@ -82,244 +96,335 @@ draft: false
 
 ---
 
-#### Day 1: Lower Body 
-- **PT Primer:** Movement 4 — 90/90 Hip Lift with Overhead Reach (5 breath cycles)
-- **Warm-Up:** Lower Body Warm-Up Block
-- **System Parameters:** A block is heavy compound. B/C blocks are supersets (75-90s rest).
-- **Mechanical Tempo:** **2010** for A block; standard controlled tempo for B & C blocks.
+# Leg Day A — Primary Force Production
 
-| Exercise | Target Volume | Form Cues & Biomechanical Intent |
-| :--- | :--- | :--- |
-| **0. Plyo: Box Jumps** | 3 sets x 5 reps | Step-down only. Concentric power; completely bypass landing impact. |
-| **A1. Heels Elevated Front Squat** | 3 sets (10/8/6) | Limit depth to 60° to prevent sacral nutation/butt-wink patterns. |
-| **B1. Offset DB Bulgarian Split Squat**| 3 sets x 6 / side | Hold DB in hand opposite of front leg to force functional sacral rotation. |
-| **B2. Standing Calf Raise** | 3 sets (12/10/8) | Keep ribs stacked over pelvis. Prevent lumbar hyperextension. |
-| **C1. Leg Press (Pyramid)** | 3 sets (10/8/6) | Maintain full foot contact against sled. Inhale down, pursed-lip exhale up. |
-| **C2. Lateral Sled Drag** | 3 sets (20yards | Drag sideways. Violently compresses the lateral Wide ISA (Frontal plane). |
-| **Cardio: Steep Hill Sprints** | 5 rounds | 30s max sprint / 90s walk down. Forward lean protects lumbar spine. |
+**Version 1.0** | **June 22, 2026** | **Mesocycle:** 12-Week Primary Force Development | **Approx. Duration:** 55 minutes
 
-#### Day 2: Upper Body Strength & Hypertrophy
-- **PT Primer:** Movement 5 — Serratus Wall Slide with Foam Roller (10 reps)
-- **Warm-Up:** Upper Body Warm-Up Block
-- **System Parameters:** A/B blocks are supersets (75-90s rest). C block is a continuous giant set (90s rest after full round).
-- **Mechanical Tempo:** **2010** global pacing.
+This protocol develops primary lower-body force production while protecting proximal hamstring tendon capacity and respecting scapulohumeral rhythm limits (0° shoulder). Time-boxed blocks support efficient execution. Progression follows a 4-week neural → velocity → loaded model.
 
-| Exercise | Target Volume | Form Cues & Biomechanical Intent |
-| :--- | :--- | :--- |
-| **0. Plyo: Kneeling Med Ball Chest Pass**| 3 sets x 5 reps | Horizontal power output. Replaces overhead slams to respect 0° flexion block. |
-| **A1. Close-Grip Bench Press** | 3 sets (10/8/6) | Horizontal force production. Wide ISAs are genetically optimized here. |
-| **A2. Band Pull-Aparts** | 3 sets x 15-20 reps | Pull strictly to lower chest level. |
-| **B1. Dumbbell Row** | 3 sets (10/8/6) | Chest parallel to floor. Do not allow shoulder blade to dump forward. |
-| **B2. Low Incline DB Press (15-30°)** | 3 sets (10/8/6) | Keeps humerus safely within the restriction-free 0-60° reach zone. |
-| **C1. Flat Machine Press** | 3 sets (10/8/6) | Replaces machine incline. Keep chest parallel, do not puff/flare chest. |
-| **C2. 1-Arm Lat Pulldown w/ Sidebend** | 3 sets (10/8/6) / side| Keep elbow tucked. Sidebend to actively restore bucket-handle dynamics. |
-| **C3. DB Lateral Raise** | 3 sets (10/8/6) | Stop movement strictly at 90°. Do not engage upper traps/shrug. |
-| **C4. Cable Tricep Pushdowns** | 3 sets to Failure | Vertical downward force prevents anterior thorax hyper-compression. |
-| **Cardio: SkiErg Sprints** | 6 rounds | 30s sprint / 60s rest. Match downward pull with hard pursed-lip exhale. |
+## Block A: Breathing Reset (3 min)
 
-#### Day 3: Core Architecture & Anaerobic Capacity
-- **PT Primer:** Movement 6 — Low Cable Reaches (0°–60°) (5 breath cycles)
-- **Warm-Up:** Core & Arm Warm-Up Block
-- **System Parameters:** Sequential circuits (Minimal rest between movements, 60s rest after full circuit loop).
-- **Mechanical Tempo:** **2011** (2s eccentric, 1s isometric hold at peak contraction).
+**Purpose:** Downregulate and prime diaphragmatic function plus gentle shoulder mobility before high CNS demand.
 
-| Exercise | Target Volume | Form Cues & Biomechanical Intent |
-| :--- | :--- | :--- |
-| **0. Plyo: Extensive Pogo Jumps** | 3 sets x 15 seconds| Elastic bounce strictly off mid-foot/calves. Maintain core stack. |
-| **A1. Heavy Suitcase Carry** | 3 sets x 45 sec / side| Offset load drives lateral compression. Maintain vertical posture. |
-| **A2. Bear Crawl Hold** | 3 sets x 30 sec | Knees hovering 1 inch. Force air into upper back to expand spine. |
-| **A3. Dead Bug (Pursed-Lip Exhale)** | 3 sets x 10 / side | Exhale completely on extension to drop ribs. Bypasses rigid bracing. |
-| **B1. Bird Dog** | 3 sets x 6 reps / side | Reach fist-bump style. Do not hyperextend the lumbar spine. |
-| **B2. Offset Racked KB Carry** | 3 sets x 45 sec / side| Hold single KB in front rack. Breathe behind the abdominal shield. |
-| **B3. Swiss Ball Core Rollout** | 3 sets x 10 reps | Stop before lower back sags. Execute pursed-lip exhale on extension. |
-| **Cardio: Heavy Sled Pushes** | 4x10m, 3x20m, 2x30m, 1x40m| Pyramid distance. Full recovery between reps. Eliminates eccentric load. |
+- **Supine 90/90 Arm Reach** — 2 × 5 breaths  
+  **Constraint:** Reach strictly capped at 60° to avoid violent impingement of the 0° shoulder limit.  
+  **Focus:** Full exhale and ribcage expansion without forcing end range.
 
-#### Day 4: Posterior Chain & Lower Body Hypertrophy
-- **PT Primer:** Movement 4 — 90/90 Hip Lift with Overhead Reach (5 breath cycles)
-- **Warm-Up:** Lower Body Warm-Up Block
-- **System Parameters:** A block is heavy compound. B/C blocks are supersets (75-90s rest). C1 increases load linearly.
-- **Mechanical Tempo:** **2010** global pacing.
+## Block B: Active Warm-Up (5 min)
 
-| Exercise | Target Volume | Form Cues & Biomechanical Intent |
-| :--- | :--- | :--- |
-| **0. Plyo: Box Jumps** | 3 sets x 5 reps | Concentric explosion focus. Step-down cleanly off box. |
-| **A1. Trap Bar Deadlift (High Handle)** | 3 sets x 15 reps | Hips back, chest down (anterior expansion), knees soft. Look 7ft ahead. |
-| **B1. Offset DB RDL (Single Leg)** | 3 sets x 6 reps / side | DB in opposite hand of working leg to drive sacral rotational dynamics. |
-| **B2. Seated Calf Raise** | 3 sets x 15 reps | Controlled tempo. Maximize stretch at the bottom point. |
-| **C1. DB Goblet Squat (Ramped)** | 3 sets (10/8/6) | Heels highly elevated on plates. Limit depth strictly to 0-60°. |
-| **C2. Seated Hamstring Curls** | 3 sets x 15 reps | Locks pelvis, pre-stretches proximal hamstring to train mechanical yielding.|
-| **Cardio: LISS / Zone 2** | 30-45 minutes | 130-140 BPM baseline. Incline treadmill or bike. Strict nasal breathing. |
+**Purpose:** Activate posterior chain, hip adductors/abductors, and dynamic stability.
 
-#### Day 5: Upper Body Push/Pull & Giant Set
-- **PT Primer:** Movement 7 — 1-Arm Kneeling Pulldown w/ Sidebend (5 breath cycles/side)
-- **Warm-Up:** Upper Body Warm-Up Block
-- **System Parameters:** A/B blocks are heavy supersets (45s tight rest). C block is a continuous giant set.
-- **Mechanical Tempo:** **2010** pacing.
+- **Dynamic FFE Split Squat** (weightless) — 2 × 8/side  
+  **Cue:** "Shift the zipper toward the lead leg. Find the medial heel on the descent."
 
-| Exercise | Target Volume | Form Cues & Biomechanical Intent |
-| :--- | :--- | :--- |
-| **0. Plyo: Kneeling Med Ball Pass** | 3 sets x 5 reps | Pure horizontal power production. |
-| **A1. Half-Kneeling Landmine Press** | 5 sets x 8 reps | High reach limit (max 110-130°). Synchronize forward reach with exhale.|
-| **A2. Dumbbell Row** | 5 sets x 8 reps | Keep the chest strictly parallel to the floor. |
-| **B1. Horizontal Inverted Row** | 5 sets x 8 reps | Barbell or TRX system. Prevents forced lumbar hyperextension under load.|
-| **B2. Dumbbell Floor Press** | 5 sets x 8 reps | Floor limits shoulder extension and provides tactile feedback for the stack.|
-| **C1. Low Incline DB Press (15-30°)** | 3 sets (10/8/6) | Replaces Machine Shoulder Press to match mechanics. |
-| **C2. Seated Cable Row (Neutral)** | 3 sets (10/8/6) | Reach forward on inhale, pull back on slow pursed-lip exhale. |
-| **C3. Bent Over T-Raise** | 3 sets (10/8/6) | Light load. Focus strictly on localized upper back contraction. |
-| **C4. Dumbbell Shrug** | 3 sets (10/8/6) | Focus on vertical travel. Do not crane neck forward. |
-| **Cardio: SkiErg Metcon** | 3 rounds | 1min fast output / 1min active rest tracking. |
+- **Copenhagen Adduction Level 1 with Abduction Reach** — 2 × 5 breaths/side
 
-#### Day 6: Core Architecture & Arm Hypertrophy
-- **PT Primer:** Movement 6 — Low Cable Reaches (0°–60°) (5 breath cycles)
-- **Warm-Up:** Core & Arm Warm-Up Block
-- **System Parameters:** A block is a core circuit loop. B and C blocks are arm supersets. D block is a high-density finisher.
-- **Mechanical Tempo:** Controlled standard pacing.
+## Block C: CNS Primer (5 min)
 
-| Exercise | Target Volume | Form Cues & Biomechanical Intent |
-| :--- | :--- | :--- |
-| **0. Plyo: Extensive Pogo Jumps** | 3 sets x 15 seconds| Bouncing off mid-foot. Connective tissue elasticity focus. |
-| **A1. Suitcase Carry** | 3 sets x 40m / side | Offset lateral compression framework. |
-| **A2. Medicine Ball Side Toss** | 3 sets x 6 reps / side | Rotational power generation for targeted anteroposterior expansion. |
-| **A3. Swiss Ball Core Rollout** | 3 sets x 6 reps | Execute long pursed-lip exhale on the forward rollout phase. |
-| **B1. EZ Bar Curl (21s)** | 3 sets x 21 reps | Keep elbows pinned strictly to the flanks. |
-| **B2. Cable Tricep Pushdown** | 3 sets x 20 reps | Horizontal/downward force vector orientation. |
-| **C1. Dumbbell Spider Curl** | 3 sets x 20 reps | Torso chest-supported on an incline bench matrix. |
-| **C2. Double D CG Push-Down** | 3 sets x 20 reps | Full extension squeeze. |
-| **D1. Incline DB Curl (Low Incline)**| 7 sets x 10 reps | Fascial high-density finisher. |
-| **D2. Cable Tricep Kickbacks** | 7 sets x 10 reps | Protects anterior shoulder capsule. Safely replaces bench dips. |
-| **Cardio: Zone 2 Baseline** | 25 minutes | 130-140 BPM tracking. Keep conversational pace baseline. |
+**Purpose:** High-velocity rate of force development priming. Total volume: 3 sets × 3–5 quality reps. Step down individually where noted to protect proximal hamstrings.
+
+| Phase          | Weeks | Exercise Variation                     | Equipment / Load       | Execution Notes |
+|----------------|-------|----------------------------------------|------------------------|-----------------|
+| Neural Base    | 1–4   | Seated Box Jump to Low Box            | 18" box               | Step down individually. Prioritize clean concentric power. |
+| Velocity Build | 5–8   | Seated Box Jump to High Box           | Higher box            | Maintain seated initiation. Explosive intent. |
+| Loaded Power   | 9–12  | Seated Box Jump + Offset DB Hold      | High box + moderate DB| Offset hold adds anti-rotation and unilateral stability demand. |
+
+## Block D: A-Block Strength (15 min)
+
+**Purpose:** Heavy axial loading for maximal bilateral force expression and bracing under load.
+
+- **Heavy Belt Squats** — 4 × 4–6  
+  **Cue:** "Weight pulls straight down; decompress the lower back."
+
+## Block E: Yielding Accessories (12 min)
+
+**Purpose:** Develop eccentric/yielding strength, unilateral stability, and tissue resilience.
+
+- **B-Stance Heavy DB RDL** — 3 × 8–12  
+  **Cue:** "80% weight on front leg, hinge until hamstring catches."
+
+- **Foam Roller Split Squat** — 3 × 8–12 / side
+
+## Block F: HIIT Cardio Finisher (15 min)
+
+**Purpose:** Alactic power + aerobic development via sled locomotion. Strict 1:3 work-to-rest ratio.
+
+| Phase       | Weeks | Protocol                    | Work Parameters            | Focus |
+|-------------|-------|-----------------------------|----------------------------|-------|
+| Base        | 1–4   | Slow Heavy Sled March      | Controlled heavy load     | Postural integrity + steady drive |
+| Power       | 5–8   | Continuous Sled Push       | 45-second pushes          | Sustained power output |
+| Peak        | 9–12  | High-Low Sled Sprints      | Alternating high/low efforts| Peak velocity + recovery management |
+
+# Day 2: Upper Body — Horizontal Constraint Bias
+
+**Version 1.0** | **June 22, 2026** | **Mesocycle:** 12-Week Primary Force Development | **Approx. Duration:** 55 minutes
+
+This protocol develops horizontal pressing and pulling capacity while protecting shoulder extension limits and restoring scapulothoracic rhythm. Emphasis is placed on controlled reach planes and thoracic mobility to support long-term shoulder health and force expression.
+
+## Block A: Breathing Reset (3 min)
+
+**Purpose:** Decompress the thoracic spine and reset diaphragmatic function prior to upper body loading.
+
+- **Sidelying 2 Block Decompression** — 2 × 5 breaths
+
+## Block B: Active Warm-Up (5 min)
+
+**Purpose:** Restore thoracic rotation and scapular control under minimal load.
+
+- **Quadruped Thoracic Rotation** — 2 × 8/side
+- **Scapular Push-ups** — 2 × 10
+
+## Block C: CNS Primer (5 min)
+
+**Purpose:** High-velocity horizontal power priming with strict shoulder constraint management. Total volume: 3 sets × 3–5 quality reps.
+
+| Phase          | Weeks | Exercise Variation                          | Key Constraint / Execution |
+|----------------|-------|---------------------------------------------|----------------------------|
+| Neural Base    | 1–4   | Tall Kneeling Chest Pass to Wall + Iso-Hold | Hold the extended 0°–60° reach plane to protect the shoulder limit. |
+| Velocity Build | 5–8   | Half-Kneeling Chest Pass                    | Maintain tall posture and controlled finish. |
+| Loaded Power   | 9–12  | Open Half-Kneeling Chest Pass               | Increase degrees of freedom while preserving scapular positioning. |
+
+## Block D: A-Block Strength (15 min)
+
+**Purpose:** Heavy horizontal pressing under a protected shoulder extension range.
+
+- **Heavy Dumbbell Floor Press** — 4 × 4–6  
+  **Cue:** "Let the floor protect the shoulder extension."
+
+## Block E: Yielding Accessories (12 min)
+
+**Purpose:** Develop unilateral pulling strength with thoracic sidebending and scapular retraction capacity.
+
+- **1-Arm Kneeling Cable Pulldown w/ Sidebend** — 3 × 8–12  
+  **Cue:** "Sidebend toward pulling arm to restore buckethandle dynamics."
+
+- **Chest-Supported T-Bar Row** — 3 × 8–12
+
+## Block F: HIIT Cardio Finisher (15 min)
+
+**Purpose:** Upper body power endurance and conditioning with strict work-to-rest ratio (1:4). Kneeling variations remove lower body compensation early in the mesocycle.
+
+| Phase       | Weeks | Protocol                    | Work Parameters          | Focus / Constraint |
+|-------------|-------|-----------------------------|--------------------------|--------------------|
+| Base        | 1–4   | Tall Kneeling SkiErg       | Controlled rhythm       | Kneeling removes foot and hip restrictions. |
+| Power       | 5–8   | Standing Hinge SkiErg      | Sustained hinge pattern | Maintain hip hinge integrity. |
+| Peak        | 9–12  | Alternating/Staggered SkiErg | High-output alternation | Increase coordination demand under fatigue. |
+
+# Day 3: Full Body — Cardio Dominant (Metabolic & Yielding)
+
+**Version 1.0** | **June 22, 2026** | **Mesocycle:** 12-Week Primary Force Development | **Approx. Duration:** 60–75 minutes
+
+This protocol prioritizes metabolic conditioning and yielding strength through full-body patterns. Emphasis is placed on lateral stability, rotational control, and nasal-breathing aerobic work to build tissue resilience and work capacity.
+
+## Block A: Breathing Reset (3 min)
+
+**Purpose:** Establish diaphragmatic positioning and anterior core decompression before metabolic demand.
+
+- **Decline Quadruped on Elbows** — 2 × 5 breaths
+
+## Block B: Active Warm-Up (5 min)
+
+**Purpose:** Activate hip mobility, thoracic rotation, and adductor control under dynamic load.
+
+- **Spiderman Lunge w/ T-Spine Rotation** — 2 × 8/side
+- **Copenhagen Adduction Hold - ER Arm Wrist Tip** — 2 × 8/side
+
+## Block C: CNS Primer (5 min)
+
+**Purpose:** Lateral power and yielding development. Total volume: 3 sets × 3–5 quality reps. Later phases increase demand on pronation and internal rotation control.
+
+| Phase          | Weeks | Exercise Variation                  | Key Constraint / Execution |
+|----------------|-------|-------------------------------------|----------------------------|
+| Neural Base    | 1–4   | Goblet Lateral Squat Shifts        | Controlled shifts with upright torso. |
+| Velocity Build | 5–8   | Flat Ground Lateral Bound to Stick | Stick the landing with control. |
+| Loaded Yielding| 9–12  | Slanted Lateral Bound and Stick    | Land violently onto the downward wedge to strictly enforce pronation and internal rotation yielding. |
+
+## Block D: A-Block Strength (12 min)
+
+**Purpose:** Heavy posterior chain yielding under reverse locomotion.
+
+- **Heavy Reverse Sled Drags** — 3 × 6  
+  **Focus:** Maintain upright posture and controlled eccentric loading through the hips and hamstrings.
+
+## Block E: Yielding Accessories (10 min)
+
+**Purpose:** Unilateral lower body yielding combined with rotational core pulling.
+
+- **Low Cable Reach Reverse Lunge** — 3 × 10/side
+- **Low Oblique Sit 1 Arm Pulldown** — 3 × 10/side
+
+## Block F: LISS Cardio Finisher (30–45 min)
+
+**Purpose:** Build aerobic base and work capacity under strict nasal breathing. Load and terrain progress to increase metabolic and yielding demand.
+
+| Phase          | Weeks | Protocol                          | Parameters                     | Focus |
+|----------------|-------|-----------------------------------|--------------------------------|-------|
+| Base           | 1–4   | Strict Nasal Incline Hike        | 12–15% incline                | Nasal breathing only. |
+| Loaded Aerobic | 5–8   | Heavy Pack Incline Hike          | 20–40 lb vest, 12–15% incline | Anterior load engages ventral cavity to counteract wide ISA. |
+| Peak Yielding  | 9–12  | Steep Hill Sprints               | Transition to HIIT structure  | Violent yielding on downward phase; maintain nasal breathing where possible. |
+
+# Day 4: Leg Day B — Asymmetrical Eccentric Bias
+
+**Version 1.0** | **June 22, 2026** | **Mesocycle:** 12-Week Primary Force Development | **Approx. Duration:** 70 minutes
+
+This protocol emphasizes asymmetrical eccentric loading and foot pronation control. The bias toward unilateral yielding and strict foot mechanics supports long-term hamstring and foot resilience while respecting hip flexion limits.
+
+## Block A: Breathing Reset (3 min)
+
+**Purpose:** Establish deep squat positioning and diaphragmatic function under asymmetrical load.
+
+- **Supported Deep Squat Breathing on Wedges** — 2 × 5 breaths
+
+## Block B: Active Warm-Up (5 min)
+
+**Purpose:** Restore hip shift capacity and lateral wall stability.
+
+- **Quadruped Hip Shift** — 2 × 8/side
+- **Standing Wall Shift** — 2 × 8
+
+## Block C: CNS Primer (5 min)
+
+**Purpose:** Develop reactive foot and ankle yielding with controlled eccentric landings. Total volume: 3 sets × 3–5 quality reps. Emphasis on forcing pronation through the medial heel and big toe base.
+
+| Phase          | Weeks | Exercise Variation                  | Key Constraint / Execution |
+|----------------|-------|-------------------------------------|----------------------------|
+| Neural Base    | 1–4   | Band-Assisted Tap Jump             | Controlled tap with emphasis on foot placement. |
+| Velocity Build | 5–8   | Band-Assisted Hop Hop Drops        | Smash the medial heel and the base of the big toe on landing to neurologically force the locked foot into pronation. |
+| Reactive Yield | 9–12  | Medial/Lateral Continuous Hurdle Hops | Maintain continuous rhythm while preserving foot mechanics. |
+
+## Block D: A-Block Strength (15 min)
+
+**Purpose:** Heavy posterior chain strength with protected hip hinge mechanics.
+
+- **High-Handle Trap Bar Deadlift** — 4 × 4–6  
+  **Cue:** "Respect the 40° SLR; use the high handles to hinge without rounding."
+
+## Block E: Yielding Accessories (12 min)
+
+**Purpose:** Unilateral lower body yielding and isolated hamstring control.
+
+- **Offset Front-Foot Elevated Split Squat** — 3 × 8–12
+- **Seated Machine Hamstring Curls** — 3 × 8–12
+
+## Block F: LISS Cardio Finisher (30 min)
+
+**Purpose:** Build aerobic capacity and foot pronation strength under strict nasal breathing. Seated variations enforce unilateral drive and prevent compensatory bilateral extension.
+
+| Phase          | Weeks | Protocol                          | Parameters                        | Focus |
+|----------------|-------|-----------------------------------|-----------------------------------|-------|
+| Base           | 1–4   | Seated Nasal Spin                | Drive through medial heel and base of big toe on every stroke | Force pronation on each pedal. |
+| Loaded Aerobic | 5–8   | High-Resistance Seated Grind     | Increased resistance             | Maintain strict nasal breathing. |
+| Peak Yielding  | 9–12  | Seated Sprint Intervals          | Transition to HIIT structure     | Violent yielding under fatigue. |
+
+**Rule:** Standing on the pedals is explicitly banned as it forces bilateral symmetrical extension.
+
+# Day 5: Accessory — Arms, Shoulders & T5-T8 Expansion
+
+**Version 1.0** | **June 22, 2026** | **Mesocycle:** 12-Week Primary Force Development | **Approx. Duration:** 55–60 minutes
+
+This accessory day targets arm and shoulder development while expanding the T5-T8 thoracic region. Emphasis is placed on controlled deceleration patterning and lateral hip capsule mobility under lactate threshold conditions.
+
+## Block A: Breathing Reset (3 min)
+
+**Purpose:** Open the thoracic spine and restore diaphragmatic function with active rolling.
+
+- **Sidelying Foam Roller Active Roll** (or rolled towel) — 2 × 5 breaths
+
+## Block B: Active Warm-Up (5 min)
+
+**Purpose:** Integrate core control with thoracic reach and foot-driven stability.
+
+- **Dead Bug with Pursed-Lip Exhale** — 2 × 8/side
+- **Seated Wall-Supported Reach w/ Medial Foot Drive** — 2 × 8
+
+## Block C: CNS Primer (5 min)
+
+**Purpose:** Pure deceleration patterning and reactive upper body control. Total volume: 3 sets × 3–5 quality reps.
+
+| Phase          | Weeks | Exercise Variation                     | Key Constraint / Execution |
+|----------------|-------|----------------------------------------|----------------------------|
+| Neural Base    | 1–4   | Static Hinge Fake Throw               | Pure deceleration patterning from a dead stop. |
+| Velocity Build | 5–8   | Single Hop to Fake Throw Stick        | Stick the landing then execute the fake throw. |
+| Reactive Power | 9–12  | Continuous Hop Hop Hadouken Fake Throw| Maintain rhythm and deceleration control under fatigue. |
+
+## Block D: A-Block Strength (15 min)
+
+**Purpose:** Superset for biceps and triceps development under chest-supported positioning.
+
+- **Chest-Supported Incline Spider Curls** superset with **Cable Rope Pushdowns** — 3 × 8–10
+
+## Block E: Yielding Accessories (12 min)
+
+**Purpose:** Superset for lateral and anterior deltoid development with strict shoulder constraint.
+
+- **Chest-Supported DB Lateral Raises** superset with **Low Cable Front Raises** (strictly capped at 60°) — 3 × 10–12
+
+## Block F: Lactate Threshold Finisher (15–20 min)
+
+**Purpose:** Develop lactate tolerance while opening the lateral hip capsule through sustained lateral loading.
+
+| Phase       | Weeks | Protocol                        | Parameters                              | Focus |
+|-------------|-------|---------------------------------|-----------------------------------------|-------|
+| Base        | 1–4   | Isometric Lateral Lean         | Hold sled straps laterally, sink into quarter squat and lean away | Sled weight opens the lateral hip capsule. |
+| Power       | 5–8   | Slow Lateral Step & Drag       | Controlled step and drag pattern       | Maintain tension and posture. |
+| Peak        | 9–12  | Continuous Lateral Shuffle Drag| Sustained shuffle under load           | High lactate accumulation with continuous movement. |
+
+# Day 6: Full Body — Strength Integration
+
+**Version 1.0** | **June 22, 2026** | **Mesocycle:** 12-Week Primary Force Development | **Approx. Duration:** 70 minutes
+
+This full-body day integrates heavy lower body strength with upper body deceleration patterning. Emphasis is placed on controlled eccentric loading, single-leg stability, and anti-lateral flexion under load.
+
+## Block A: Breathing Reset (3 min)
+
+**Purpose:** Establish anterior core control and pelvic positioning with active squeeze.
+
+- **Hook Lying Tilt with Ball Squeeze** — 2 × 5 breaths
+
+## Block B: Active Warm-Up (5 min)
+
+**Purpose:** Activate bear crawl patterning, medial foot drive, and lateral step control.
+
+- **Quadruped Bear Crawl Hover w/ Medial Foot Push** — 2 × 8
+- **Low Box Alternating Lateral Step** — 2 × 8/side
+
+## Block C: CNS Primer (5 min)
+
+**Purpose:** Integrate lower body positioning with upper body deceleration. Total volume: 3 sets × 3–5 quality reps.
+
+| Phase          | Weeks | Exercise Variation                              | Key Constraint / Execution |
+|----------------|-------|-------------------------------------------------|----------------------------|
+| Neural Base    | 1–4   | FFE Split Squat Iso-Hold with Fake Throw       | Hold the split squat position while executing the fake throw. |
+| Velocity Build | 5–8   | FFE Reverse Lunge with Slow 4-Second Deceleration Fake Throw | Emphasize controlled 4-second eccentric on the fake throw. |
+| Dynamic Power  | 9–12  | Dynamic FFE Reverse Lunge Fake Throw           | Increase speed while maintaining deceleration control. |
+
+## Block D: A-Block Strength (15 min)
+
+**Purpose:** Heavy axial loading with protected box squat mechanics.
+
+- **Heavy Zercher Box Squats** — 4 × 4–6  
+  **Cue:** "Keep elbows tight, pause dead on the box, drive through mid-foot."
+
+## Block E: Yielding Accessories (12 min)
+
+**Purpose:** Horizontal pressing and pulling under alternating and landmine conditions.
+
+- **Alternating Dumbbell Floor Press** — 3 × 8–12
+- **Meadows Row (Landmine)** — 3 × 8–12
+
+## Block F: LISS / Active Recovery (30 min)
+
+**Purpose:** Build single-leg stability, foot pronation, and anti-lateral flexion capacity under sustained load.
+
+| Phase          | Weeks | Protocol                        | Parameters                              | Focus |
+|----------------|-------|---------------------------------|-----------------------------------------|-------|
+| Base           | 1–4   | Static Offset Hold             | 5–10 breath cycles per side            | Maintain level shoulders and stable base. |
+| Loaded March   | 5–8   | Slow Suitcase March            | Lift knees to 90°                      | Force the planted foot to pronate on every step. |
+| Dynamic Carry  | 9–12  | Dynamic Heavy Suitcase Carry   | Walk for distance                      | Keep shoulders level; do not allow side-bending toward the weight. |
 
 #### Day 7: System Recovery (Cycle Reset)
 *Complete central nervous system rest. Execute the Daily Reset. No loading. No warm-ups. Hydrate.*
 
 ---
 
-### BLOCK 2: WEEKS 7–12 (SOFTWARE SOLIDIFICATION & YIELDING OVERLOAD)
 
-#### Block 2 Warm-Up Reference Matrix
-- **Lower Body (Days 1 & 4):** Modified 90/90 Hip Switches (10 total) | Spiderman Lunge w/ T-Spine Rotation (5/side) | Narrow-Stance Goblet Squat Prying (10 reps).
-- **Upper Body (Days 2 & 5):** Quadruped Thoracic Rotation (8/side) | Scapular Push-Ups (10 reps) | Low Band Pull-Aparts (15 reps).
-- **Core & Arm (Days 3 & 6):** Bear Crawl (10 yds forward/reverse) | Modified Inchworms (5 reps, knees bent) | KB Around-the-Worlds (10/direction).
-
----
-
-#### Day 1: Lower Body Quad Architecture (Progression Phase)
-- **PT Primer:** Supine 90/90 Heel Taps (5 reps/side)
-- **Warm-Up:** Lower Body Warm-Up Block
-- **System Parameters:** A block is heavy compound. B/C blocks are supersets (75-90s rest).
-- **Mechanical Tempo:** **2110** for A block *(2s down, 1s pause at bottom to own yielding mechanics, 1s up).*
-
-| Exercise | Target Volume | Form Cues & Biomechanical Intent |
-| :--- | :--- | :--- |
-| **0. Plyo: Box Jumps** | 3 sets x 5 reps | Concentric power focus with step-down protocols. |
-| **A1. Safety Squat Bar (SSB) Squat**| 3 sets (10/8/6) | Heavy loading without requiring shoulder flexion. Option: Smith machine. |
-| **B1. FFE Offset DB Bulgarian Split Squat**| 3 sets x 6 / side | Elevate front foot 2" on plate to force deep rear-hip capsule yielding. |
-| **B2. Standing Calf Raise** | 3 sets (12/10/8) | Keep ribs stacked over pelvis. Prevent lumbar flare. |
-| **C1. Leg Press (Pyramid)** | 3 sets (10/8/6) | Maintain full foot contact against sled. |
-| **C2. Lateral Sled Drag** | 3 sets (10/8/6) | Lateral movement plane directly compresses lateral Wide ISA. |
-| **Cardio: Steep Hill Sprints** | 5 rounds | 30s max sprint / 90s walk down cycles. |
-
-#### Day 2: Upper Body Strength & Hypertrophy (Progression Phase)
-- **PT Primer:** Seated Wall-Supported Reaches (10 reps)
-- **Warm-Up:** Upper Body Warm-Up Block
-- **System Parameters:** A/B blocks are supersets (75-90s rest). C block is a continuous giant set.
-- **Mechanical Tempo:** **2110** for A block.
-
-| Exercise | Target Volume | Form Cues & Biomechanical Intent |
-| :--- | :--- | :--- |
-| **0. Plyo: Kneeling Med Ball Pass** | 3 sets x 5 reps | Horizontal power output validation. |
-| **A1. Alternating DB Floor Press** | 3 sets (10/8/6) | Press one arm while other is isometric. Forces dynamic thorax rotation. |
-| **A2. Band Pull-Aparts** | 3 sets x 15-20 reps | Pull strictly to lower chest lines. |
-| **B1. Dumbbell Row** | 3 sets (10/8/6) | Keep chest parallel to floor. |
-| **B2. Low Incline DB Press (15-30°)** | 3 sets (10/8/6) | Safe 0-60° reach boundary tracking. |
-| **C1. Flat Machine Press** | 3 sets (10/8/6) | Parallel posture setup. Do not puff torso. |
-| **C2. 1-Arm Lat Pulldown w/ Sidebend** | 3 sets (10/8/6) / side| Keep elbow tucked strictly to side to force buckethandle shift. |
-| **C3. DB Lateral Raise** | 3 sets (10/8/6) | Stop strictly at 90°. |
-| **C4. Cable Tricep Pushdowns** | 3 sets to Failure | Vertical downward vector. |
-| **Cardio: SkiErg Sprints** | 6 rounds | 30s sprint / 60s rest sequence. |
-
-#### Day 3: Core Architecture & Anaerobic Capacity (Progression Phase)
-- **PT Primer:** Dynamic Low Cable Reaches w/ Weight Shift (5 cycles/side)
-- **Warm-Up:** Core & Arm Warm-Up Block
-- **System Parameters:** Sequential circuits (Minimal rest between movements, 60s rest after full circuit).
-- **Mechanical Tempo:** **2011** with extended isometric hold metrics for structural endurance.
-
-| Exercise | Target Volume | Form Cues & Biomechanical Intent |
-| :--- | :--- | :--- |
-| **0. Plyo: Extensive Pogo Jumps** | 3 sets x 15 seconds| Elastic bounce off mid-foot/calves. |
-| **A1. Heavy Suitcase Carry** | 3 sets x 60 sec / side| Increased duration benchmark for lateral compression capacity. |
-| **A2. Bear Crawl Hold** | 3 sets x 45 sec | Knees hovering 1 inch. Focus on expanding upper back structural layout.|
-| **A3. Dead Bug (Pursed-Lip Exhale)** | 3 sets x 12 / side | Full extension exhalation focus. |
-| **B1. Bird Dog** | 3 sets x 8 reps / side | Reach fist-bump style. No lumbar extension permitted. |
-| **B2. Offset Racked KB Carry** | 3 sets x 60 sec / side| Extended duration front rack tracking parameters. |
-| **B3. Swiss Ball Core Rollout** | 3 sets x 12 reps | Prevent lower back sag entirely. |
-| **Cardio: Heavy Sled Pushes** | 4x10m, 3x20m, 2x30m, 1x40m| Maximized resistance profiling. |
-
-#### Day 4: Posterior Chain & Lower Body Hypertrophy (Progression Phase)
-- **PT Primer:** Supine 90/90 Heel Taps (5 reps/side)
-- **Warm-Up:** Lower Body Warm-Up Block
-- **System Parameters:** A block is heavy compound. B/C blocks are supersets (75-90s rest). C1 increases load linearly.
-- **Mechanical Tempo:** **2110** for A block *(1-second pause at bottom forces core integration at maximal stretch).*
-
-| Exercise | Target Volume | Form Cues & Biomechanical Intent |
-| :--- | :--- | :--- |
-| **0. Plyo: Box Jumps** | 3 sets x 5 reps | Concentric power baseline validation. |
-| **A1. B-Stance Trap Bar Deadlift** | 3 sets x 8 reps / side | Stagger one foot back. Targets proximal hamstring of lead leg, forcing unilateral sacral nutation. |
-| **B1. Offset DB RDL (Single Leg)** | 3 sets x 8 reps / side | DB in opposite hand of working leg to optimize torque lines. |
-| **B2. Seated Calf Raise** | 3 sets x 15 reps | Controlled tempo patterns. |
-| **C1. DB Goblet Squat (Ramped)** | 3 sets (10/8/6) | Heels highly elevated. Strict 0-60° high depth management. |
-| **C2. Single-Leg Seated Hamstring Curl**| 3 sets x 12 / side | Unilateral progression to isolate proximal yielding capacity. |
-| **Cardio: LISS / Zone 2** | 30-45 minutes | 130-140 BPM. Incline treadmill or bike. Nasal breathing only. |
-
-#### Day 5: Upper Body Push/Pull & Giant Set (Progression Phase)
-- **PT Primer:** 1-Arm Pulldown w/ Sidebend & Iso-Hold (5 reps/side)
-- **Warm-Up:** Upper Body Warm-Up Block
-- **System Parameters:** A/B blocks are heavy supersets (45s rest). C block is a continuous giant set.
-- **Mechanical Tempo:** **2110** for A blocks.
-
-| Exercise | Target Volume | Form Cues & Biomechanical Intent |
-| :--- | :--- | :--- |
-| **0. Plyo: Kneeling Med Ball Pass** | 3 sets x 5 reps | Horizontal power output. |
-| **A1. Half-Kneeling Landmine Press** | 5 sets x 8 reps | 1-second pause at the fully extended structural reach. |
-| **A2. Dumbbell Row** | 5 sets x 8 reps | Keep chest parallel to the floor surface. |
-| **B1. Horizontal Inverted Row** | 5 sets x 8 reps | Bypasses lumbar hyperextension risks. |
-| **B2. Dumbbell Floor Press** | 5 sets x 8 reps | Strict physical floor boundary constraints. |
-| **C1. Low Incline DB Press (15-30°)** | 3 sets (10/8/6) | Dynamic chest mapping framework. |
-| **C2. Seated Cable Row (Neutral)** | 3 sets (10/8/6) | Reach on inhale, compress on pursed-lip exhale. |
-| **C3. Bent Over T-Raise** | 3 sets (10/8/6) | Upper back isolation focus. |
-| **C4. Dumbbell Shrug** | 3 sets (10/8/6) | Strict vertical tracking alignment. |
-| **Cardio: SkiErg Metcon** | 3 rounds | 1min fast / 1min active recovery structure. |
-
-#### Day 6: Core Architecture & Arm Hypertrophy (Progression Phase)
-- **PT Primer:** Dynamic Low Cable Reaches w/ Weight Shift (5 breath cycles/side)
-- **Warm-Up:** Core & Arm Warm-Up Block
-- **System Parameters:** A block is a core circuit. B and C blocks are arm supersets. D block is a high-density finisher.
-- **Mechanical Tempo:** Standard control logic.
-
-| Exercise | Target Volume | Form Cues & Biomechanical Intent |
-| :--- | :--- | :--- |
-| **0. Plyo: Extensive Pogo Jumps** | 3 sets x 15 seconds| Mid-foot elasticity mechanics. |
-| **A1. Suitcase Carry** | 3 sets x 40m / side | Offset lateral compression framework. |
-| **A2. Rotational Landmine Punches** | 3 sets x 8 reps / side | Heavier rotational power for AP expansion. Progressed from Side Toss. |
-| **A3. Swiss Ball Core Rollout** | 3 sets x 8 reps | Pursed-lip exhale on the forward progression lines. |
-| **B1. EZ Bar Curl (21s)** | 3 sets x 21 reps | Keep elbows pinned tightly. |
-| **B2. Cable Tricep Pushdown** | 3 sets x 20 reps | Horizontal/downward force profiling. |
-| **C1. Dumbbell Spider Curl** | 3 sets x 20 reps | Chest supported on incline bench. |
-| **C2. Double D Push-Down** | 3 sets x 20 reps | Full extensions focus. |
-| **D1. Incline DB Curl (Low Incline)**| 7 sets x 10 reps | High-density metabolic finisher protocol. |
-| **D2. Cable Tricep Kickbacks** | 7 sets x 10 reps | Safe alternative to traditional bench dip patterns. |
-| **Cardio: Zone 2 Baseline** | 25 minutes | 130-140 BPM tracker. Conversational pace mapping. |
-
-#### Day 7: System Recovery (Cycle Reset)
-*Complete central nervous system rest. Execute the Daily Reset. No loading. No warm-ups. Hydrate.*
-
----
-
-### Current Block Systems Reflection
-> **Phase 2 Ongoing Insight:** Staying hydrated is going to be pivotal as I will be eating a little less. With work schedule, etc. the breathing exercises not only help posture, but put the body into a parasympathetic state. The whole goal of this program is to keep athleticism, drop weight, protect muscle/strength while also getting enough recovery to do all of that + workload.
-
----
-
-## 4. Key Metrics (End of Block Targets)
-- **Bodyweight:** Target stabilization at 163 (Current: 172 as of 5/20/26)
-- **Structural Markers:** Unrestricted deep squat resting position, proper pelvic stacking without forced lumbar extension, elimination of lower ribcage flare.
