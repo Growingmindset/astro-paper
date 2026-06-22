@@ -33,65 +33,36 @@ I had already started an account, putting $200/month in, so I just took the mone
 ## 2. System Metrics & Sector Exposure
 *Tracking precise capital distribution and structural sector exposure for the growing portfolio.*
 
-*Last Updated: May 26, 2026*
+*Last Updated: 6.22.2026*
 
-### Capital Allocation
-- **Total Account Value:** $5,036.16
-- **Cash (Dry Powder):** 28.15% *($1,417.74 unspent capital)*
-- **Equities Position:** 71.85% *($3,618.42 deployed in market)*
-
-### Sector Exposure *(% of Deployed Capital)*
-- **Consumer Staples:** 51.52% *(Defensive anchors: KMB, TAP, GIS)*
-- **Information Technology:** 30.94% *(Anchored by ORCL, ADBE, CRM, MSFT)*
-- **Healthcare:** 13.81% *(PFE)*
-- **Financials:** 3.67% *(PYPL)*
-- **Est. Dividend Yield:** ~2.8% *(The passive compounding engine)*
-
-### YTD Performance
-- **Portfolio vs SPY:** +6.89% vs +9.69%
-
-<img src="/mom-ytd-performance.png" alt="YTD Performance Chart" width="100%" style="border-radius: 8px; margin-top: 15px; margin-bottom: 5px;" />
-*(Note: Cumulative rate of return from Jan 1 to current update.)*
-
----
-
-## 3. The Heavyweights (Top 5 Holdings)
-*The structural anchors of the portfolio. Percentages reflect the exact % of total account value.*
-
-1. **KMB (Kimberly-Clark):** 15.63% weight
-2. **TAP (Molson Coors):** 11.49% weight
-3. **GIS (General Mills):** 9.93% weight
-4. **PFE (Pfizer):** 9.92% weight
-5. **ORCL (Oracle):** 9.92% weight
 
 ---
 
 ## 4. 2026 Deployments (Recent Capital Flow)
-*Tracking the execution of the automated cash engine.*
+*Where new cash is actively being deployed this year and the immediate logic behind it.*
 
-| Ticker | Asset Class | Execution | Thesis / Catalyst |
+| Ticker | Asset Class             | Execution                              | Thesis / Catalyst |
 | :--- | :--- | :--- | :--- |
-| **System** | Cash Flow | Initial Seed | $3,000 foundational capital injection added to dry powder reserves. |
-| **System** | Cash Flow | Recurring | Steady $200 automated transfer. The engine of the portfolio. |
-| **KMB** | Consumer Defensive | Buy (Apr/May) | Scaling into a high-yield, recession-proof anchor. |
-| **TAP** | Consumer Defensive | Buy (Apr/May) | Adding to value play in a deeply entrenched, resilient sector. |
-| **GIS** | Consumer Defensive | Buy (May) | Establishing a defensive position in consumer staples with strong yield. |
-| **PFE** | Healthcare | Buy (May) | Opening healthcare exposure with a beaten-down, high-yield legacy pharmaceutical. |
-| **ORCL** | Tech / Cloud | Buy (Mar/Apr) | High-conviction downstream execution fed from the main macro thesis. |
-| **ADBE** | Tech / Software | Buy (Feb) | Capturing a wide-moat software incumbent at a structural discount. |
+| **MSFT** | Technology (Software)   | **Buy** (06/17/2026) 1 share @ $378.61     | Adding to core cloud and AI infrastructure leader with durable enterprise moat. |
+| **INTU** | Technology (Software)   | **Buy** (06/17/2026) 1 share @ $269.06     | High-quality small business software compounder with strong recurring revenue. |
+| **MSFT** | Technology (Software)   | **Buy** (06/15/2026) 1 share @ $397.09     | Continuing to build position in dominant cloud and AI infrastructure. |
+| **INTU** | Technology (Software)   | **Buy** (06/11/2026) 1 share @ $285.69     | Adding to fintech software leader with sticky ecosystem and AI tailwinds. |
+| **KMB**  | Consumer Staples        | **Buy** (06/10/2026) 3 shares @ $95.67     | Scaling into defensive staple with consistent pricing power and resilient cash flow. |
+| **KMB**  | Consumer Staples        | **Buy** (05/27/2026) 5.0475 shares @ $99.06 | Adding to high-yield, recession-resistant consumer staple. |
+| **GIS**  | Consumer Staples        | **Buy** (05/26/2026) 15.038 shares @ $33.25 | Establishing position in defensive staples with strong yield and stable demand. |
+| **TAP**  | Consumer Staples        | **Buy** (05/26/2026) 12.026 shares @ $41.58 | Adding to entrenched value play in resilient consumer sector. |
+| **PFE**  | Healthcare              | **Buy** (05/26/2026) 19.405 shares @ $25.77 | Opening healthcare exposure with beaten-down, high-yield legacy pharmaceutical. |
 
 ---
 
-## 5. Execution & Systems Reflection (Historical Log)
-*(Operating Rule: DO NOT delete old entries. Stack your newest quarterly review directly below this line.)*
-
 **System Changelog:**
-* *v2026.05.2 (May 26, 2026):* Executed a $2,000 bulk deployment from dry powder reserves, establishing new positions in GIS and PFE, and scaling KMB and TAP. Previously my cash reserves were 67%. I now have 28.15% cash reserves. The goal is to be under 20% cash, though ex-dividend for many value stocks is coming up, plan to deploy after depending on what they do. Aiming for 7% cash by October. 
-* *v2026.05.1 (May 20, 2026):* Initial $3,000 seed added to cash reserves. 
 
-> **Q2 Review (May 2026):**
-> **Performance Snapshot:** Portfolio +6.55% YTD | SPY +8.62% YTD 
-> 
-> The system is operating exactly as designed. The slight underperformance versus the S&P 500 (+6.55% vs +8.62%) is mathematically expected and entirely acceptable right now. This is because the portfolio was heavily weighted in cash. 
+* *v2026.05.3 (6.22.2026):* Deployed additional capital in June into MSFT and INTU, adding to the tech/software side after the heavy defensive pivot in late May. The May 26 deployment of ~$2,000 went into KMB, GIS, TAP, and PFE as planned. Cash reserves are now sitting at 0ish%.  Will continue deploying the remaining dry powder with recurring $200 transfers opportunistically, especially around ex-dividend dates.
+
+* *v2026.05.2 (5.27.2026):* Executed a $2,000 bulk deployment from dry powder reserves, establishing new positions in GIS and PFE while scaling KMB and TAP. This moved cash reserves from 67% down to 28.15%. The goal remains getting under 20% cash, with a target of ~7% by October.
+
+* *v2026.05.1 (May 20, 2026):* Initial $3,000 seed added to cash reserves.
+
+> The system is operating exactly as designed. The slight underperformance versus the S&P 500 is expected and acceptable at this stage due to the high cash weighting earlier in the year.
 >
-> On May 26th, $2,000 of the $3,000 seed was deployed strictly into defensive, high-yield value plays: Pfizer (PFE), General Mills (GIS), Kimberly-Clark (KMB), and Molson Coors (TAP). This pivot radically shifted the structural exposure of the portfolio, elevating Consumer Staples and Healthcare to the top, effectively buffering the earlier tech dominance (Oracle, Adobe, Salesforce). By anchoring the account in shock-absorbers that pay strong dividends, the primary objective moving forward is to simply let the remaining $1,000 seed and the $200 recurring deposits accumulate and wait for asymmetric deals to present themselves.
+> On May 26th, the bulk of the seed capital was deployed into defensive, high-yield value names (KMB, GIS, TAP, and PFE). This shifted the portfolio’s structural exposure toward Consumer Staples and Healthcare, providing a buffer against the earlier tech concentration. The strategy moving forward is straightforward: let the remaining cash + recurring $200 deposits accumulate, then deploy into asymmetric opportunities as they appear — particularly around upcoming ex-dividend dates.
