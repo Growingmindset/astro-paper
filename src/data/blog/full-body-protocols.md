@@ -10,7 +10,6 @@ tags:
   - training-protocols
 draft: false
 ---
-
 # Full Body Protocols (Day 3 & 6)
 
 **Phase 2 — 12-Week Multi-Phasial Hardware Reset**
