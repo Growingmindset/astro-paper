@@ -1,4 +1,3 @@
-
 ---
 author: Rudy Galan
 title: "Daily Home Reset — 3-Movement Passive Yielding Protocol"
