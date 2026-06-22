@@ -21,7 +21,7 @@ draft: false
 
 ## 1. Macro Market Thesis (Live Dashboard)
 
-*Last Updated: June 2, 2026*
+*Last Updated: 6.22.2026*
 
 ### Core Economic Indicators (Live Tracker)
 *A high-signal dashboard of the leading indicators dictating current capital flow.*
@@ -31,12 +31,12 @@ draft: false
 | Metric | Prior Read | Current Read | Delta | Status | Implication |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Fed Funds Target Rate** | 3.50-3.75% | 3.50-3.75% | 0 bps | Paused (Held) | Baseline cost of capital. The anchor for all market liquidity. |
-| **CPI (Inflation)** | 3.3% | 3.8% | +50 bps | Watch (Accelerating) | Measures pressure on consumer discretionary spending. |
-| **ISM Manufacturing PMI** | 52.7 | 54.0 | +1.3 pts | Expansion | Above 50 = Expansion. Below 50 = Contraction. |
-| **ISM New Orders** | 54.1 | 56.8 | +2.7 pts | Bullish | >50 indicates manufacturing expansion in the next 3-6 months. |
-| **ISM Prices Paid** | 84.6 | 82.1 | -2.5 pts | Up (Debasement) | Rising = Debasement (Gold/Silver bullish). Falling = Bearish. |
-| **Total Nonfarm Payrolls** | 185k | 115k | -37.8% | Weak (Cooling) | 80% of workforce. More jobs = more household spending. |
-| **PPI: Corrugated Boxes** | 425.956 | 425.151 | -0.2% | Down (Slight) | Physical goods ship in boxes. The ultimate truth-teller of economic velocity. |
+| **CPI (Inflation)** | 3.8% | 4.2% | +40 bps | Pressure Accelerating | Essential gauge of consumer resilience; rising metrics test whether sustained premiums erode discretionary spending. |
+| **ISM Manufacturing PMI** | 52.7 | 54.0 | +1.3 pts | Expansion (Bullish) | The ultimate economic true north. Reading above 50 signals active expansion and boasts a ~78% correlation with future EPS. |
+| **ISM New Orders** | 54.1 | 56.8 | +2.7 pts | **Leading Expansion** | Binary bullish signal. New Orders above 50 telegraph manufacturing and macro expansion over the next 3 to 6 months. |
+| **ISM Prices Paid** | 84.6 | 82.1 | -2.5 pts | **Currency Debasement** | Binary debasement signal. Elevated reading confirms ongoing currency debasement, driving capital into macro dollar hedges (gold, silver, Bitcoin). |
+| **Total Nonfarm Payrolls** | 115k | 172k | +57k | Cooling (Lagging) | Dictates the pulse of 80% of the workforce. Though currently soft, the leading ISM momentum reveals the forward employment reality before official numbers lag behind. |
+| **PPI: Corrugated Boxes** | 425.18 | 431.42 | +1.47% | **Booming (Acceleration)** | Binary expansion signal. Rising box demand means physical goods are moving — the economy is booming and business velocity is accelerating. |
 
 </div>
 
