@@ -11,7 +11,6 @@ tags:
   - recovery
 draft: false
 ---
-
 # Daily Home Reset — 3-Movement Passive Yielding Protocol
 
 **Version 1.0** | **June 22, 2026** | **Frequency:** Daily | **Duration:** ~15–20 minutes
