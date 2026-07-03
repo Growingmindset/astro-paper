@@ -4,7 +4,7 @@ pubDatetime: 2026-07-02T18:45:00Z
 title: "The Digital Squeeze: How the Death of Physical Media is Rigging the Gaming Economy"
 slug: the-digital-squeeze
 featured: true
-draft: true
+draft: false
 tags:
   - gaming
   - economics
