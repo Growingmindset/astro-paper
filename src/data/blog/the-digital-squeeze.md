@@ -65,7 +65,7 @@ I hope we get back to something closer to the old way. Not out of nostalgia, but
 
 ### The Economics of Artificial Scarcity
 
-![Digital Squeeze Graph](/digital_squeeze.jpg)
+![Digital Squeeze Graph](/digital_squeeze.png)
 
 **What's Happening Here:**
 This is where the microeconomics gets real. This supply-and-demand graph compares the old physical market to the new digital one:
