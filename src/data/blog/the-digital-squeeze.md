@@ -51,7 +51,7 @@ Physical discs gave me options that felt like actual ownership. If I beat a game
 
 Digital purchases never offered that same utility. I’ve bought digital games, but only when the price reflected how little I was actually getting. *The Last of Us* seasons were good and cheap. *Halo Wars* for eleven dollars. I bought them because they weren’t worth much to begin with.
 
-In economics, it’s called **“The Income Effect”** (when a very cheap good drops in price, you suddenly have a tiny bit of "extra" real income, but it’s so negligible that it barely impacts your purchasing habits). What I was really purchasing was temporary access, not a thing I could keep, resell, or fully control. 
+In economics, it’s called **“Price Inelasticity of Demand”**It was an assymetrical bet--the price was so low that the lack of ownership didn't sting. What I was really purchasing was temporary access, not a thing I could keep, resell, or fully control. 
 
 The same problem existed with always-online titles like *Elder Scrolls*. I enjoyed the game, but the experience required permission to continue. I come from a time when the whole game lived on a disc you could hold, lend, or sell without asking anyone.
 
@@ -84,7 +84,9 @@ That’s when it clicked. They made the jug less convenient to carry, reduced th
 
 Video game companies are running the same play. They talk about convenience, saving space, and better experiences while systematically removing the consumer’s ability to own, resell, or retain value in what they buy. I’ll still purchase cheap add-ons or upgrades that actually improve the game, but I want the base game to carry some storage of value. Give me the damn game.
 
-This same logic creates dangerous downstream effects. If you get banned for breaking a rule in an always-online or license-based game, do you lose access to everything you paid for? Social media already operates this way. Video games are drifting toward the same model—a mix of social media control and Netflix-style access. Once the game lives entirely on their servers and under their terms, banning you doesn’t just remove you from the community. It can erase your purchase. That’s not a hypothetical. It’s a structural possibility the current model enables.
+This same logic creates dangerous downstream effects. If you get banned for breaking a rule in an always-online or license-based game, do you lose access to everything you paid for? Social media already operates this way. Video games are drifting toward the same model—a mix of social media control and Netflix-style access. When they take away the physical disc, they also gain the power to take away your access entirely.
+
+Once the game lives entirely on their servers and under their terms, banning you doesn’t just remove you from the community. It can erase your purchase. That’s not a hypothetical. It’s a structural possibility the current model enables.
 
 None of this is primarily about saving space or making life more convenient. It’s about market share, recurring revenue, and the gradual transfer of economic power. By eliminating aftermarket demand—used games, resale, ownership—companies distort the demand curve so the true market can no longer set prices. The consumer loses leverage. The corporation gains it. This is inefficient by design.
 
