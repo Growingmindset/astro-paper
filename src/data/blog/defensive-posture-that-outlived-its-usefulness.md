@@ -7,7 +7,6 @@ featured: false
 draft: false
 tags:
   - philosophy
-  - deconstructions
   - systems-thinking
   - transmissions
 description: "An exploration of the internal resistance to change and the defensive postures we continue to run long after scarcity has ended."
