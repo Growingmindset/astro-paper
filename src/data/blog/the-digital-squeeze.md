@@ -12,17 +12,7 @@ tags:
 description: "Breaking down the microeconomics of the video game industry's shift to digital-only formats and what it means for consumer rights."
 ---
 
-<iframe 
-  width="100%" 
-  height="400" 
-  src="https://www.youtube.com/embed/MtfOUW8HzRakwjAU" 
-  title="The Digital Squeeze: The Economics of Gaming Scarcity" 
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-  allowfullscreen
-  style="margin-bottom: 2rem; border-radius: 8px;"
-  loading="lazy">
-</iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qAi8NhsHMVU?si=PPoqo3sofTGyS8G2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Remember when dropping $70 on a new video game meant you actually *owned* it? 
 
