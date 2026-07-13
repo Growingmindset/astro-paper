@@ -9,6 +9,7 @@ tags:
   - philosophy
   - psychology
   - behavioral-finance
+  - transmissions
 description: "A raw exploration of hedonic adaptation, shifting goalposts, and why the ultimate prize of financial success might just be the one thing money can't buy back."
 ---
 
