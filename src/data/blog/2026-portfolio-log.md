@@ -27,6 +27,7 @@ draft: false
 *A high-signal dashboard of the leading indicators dictating current capital flow.*
 
 <div style="width: 100%; overflow-x: auto;">
+
 <!-- AUTO-TABLE-START -->
 | Metric | Prior Read | Current Read | Delta | Status | Implication |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -38,6 +39,7 @@ draft: false
 | **Total Nonfarm Payrolls** | 115k | 172k | +57k | Cooling (Lagging) | Dictates the pulse of 80% of the workforce. Though currently soft, the leading ISM momentum reveals the forward employment reality before official numbers lag behind. |
 | **PPI: Corrugated Boxes** | 425.18 | 431.42 | +1.47% | **Booming (Acceleration)** | Binary expansion signal. Rising box demand means physical goods are moving — the economy is booming and business velocity is accelerating. |
 <!-- AUTO-TABLE-END -->
+
 </div>
 
 > **Current Insight:** The macro environment is currently defined by dual disruptors: the proliferation of AI and geopolitical instability in the Middle East. The core question is consumer resilience—will sustained premiums in energy and gas prices erode discretionary spending? 
