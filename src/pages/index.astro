@@ -29,7 +29,8 @@ const recentPosts = labPosts.filter(({ data }) => !data.featured).slice(0, SITE.
   <Header />
   <main id="main-content" class="app-layout">
     <section id="hero" class="pb-6 pt-8">
-      <h1 class="my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl">{SITE.title}</h1>
+      <!-- Elevated Thesis Headline to Eliminate Name Redundancy -->
+      <h1 class="my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl">Systems Builder & Operator</h1>
       <a
         target="_blank"
         href="/rss.xml"
@@ -44,17 +45,14 @@ const recentPosts = labPosts.filter(({ data }) => !data.featured).slice(0, SITE.
         </svg>
         <span class="sr-only">RSS Feed</span>
       </a>
-
-      <p class="my-2 text-xl font-medium text-foreground">
-        Systems Builder & Operator
-      </p>
       
-      <p class="my-2">
+      <p class="my-2 text-base leading-relaxed">
         This site is my open-source blueprint—documenting the raw mechanics of wealth generation, the Human Machine, and first-principles physics. Zero noise. Just the systems that work.
       </p>
       
+      <!-- Cleaned up Navigation Funnel (Sunsetted The Archive Link) -->
       <p class="my-2 mt-4">
-        Track active deployments in <span class="whitespace-nowrap"><LinkButton href="/posts" class="underline decoration-dashed underline-offset-4 hover:text-accent">The Lab</LinkButton>,</span> read foundational essays in <span class="whitespace-nowrap"><LinkButton href="/library" class="underline decoration-dashed underline-offset-4 hover:text-accent">The Library</LinkButton>,</span> or audit past builds and academic foundations in <LinkButton href="/archive" class="underline decoration-dashed underline-offset-4 hover:text-accent">The Archive</LinkButton>.
+        Track active deployments in <span class="whitespace-nowrap"><LinkButton href="/posts" class="underline decoration-dashed underline-offset-4 hover:text-accent">The Lab</LinkButton>,</span> or read foundational essays in <span class="whitespace-nowrap"><LinkButton href="/library" class="underline decoration-dashed underline-offset-4 hover:text-accent">The Library</LinkButton></span>.
       </p>
     </section>
 
@@ -84,10 +82,10 @@ const recentPosts = labPosts.filter(({ data }) => !data.featured).slice(0, SITE.
 
     <hr class="my-6 border-dashed border-border" />
 
-    <section class="my-8 rounded-lg border border-skin-line bg-skin-card px-6 py-8 shadow-sm">
-      <h2 class="mb-2 text-2xl font-semibold tracking-wide text-skin-base">Subscribe to the OS</h2>
-      <p class="mb-6 text-skin-base">
-        Direct transmissions of new physical builds, market frameworks, and system logs. One high-signal update, deployed every Sunday.
+   <section class="my-8 rounded-lg border border-skin-line bg-skin-card px-6 py-8 shadow-sm">
+      <h2 class="mb-2 text-2xl font-semibold tracking-wide text-skin-base">Asynchronous Transmissions</h2>
+      <p class="mb-6 text-sm text-skin-base opacity-90">
+        Drop your email to receive a direct log whenever a new framework or build drops. No arbitrary weekly schedules, no filler content. Deployed only when the system updates.
       </p>
       
       <form
