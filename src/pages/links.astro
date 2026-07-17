@@ -2,12 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-
-const links = [
-  { text: "Home & Portfolio", href: "/" },
-  { text: "Essays & Writing", href: "/posts" },
-  { text: "Book Reviews", href: "/reviews" },
-];
 ---
 
 <Layout title="Links | RISK ON">
@@ -16,33 +10,27 @@ const links = [
     <div class="mx-auto flex w-full max-w-sm flex-col items-center">
       <!-- Header Section -->
       <div class="mb-10 flex flex-col items-center text-center">
-        <h1 class="text-4xl font-bold uppercase tracking-[0.2em] text-skin-base">
-          RISK ON
-        </h1>
-        <p class="mt-3 text-sm italic text-skin-base opacity-80">
-          Personal performance for a bold undertaking.
-        </p>
+        <h1 class="text-4xl font-bold uppercase tracking-[0.2em] text-skin-base">RISK ON</h1>
+        <p class="mt-3 text-sm italic text-skin-base opacity-80">Personal performance for a bold undertaking.</p>
       </div>
 
       <!-- Link Stack -->
       <div class="flex w-full flex-col gap-4">
-        <!-- Primary Commerce Link -->
-        
-          href="/shop"
-          class="w-full rounded-lg border-2 border-skin-accent px-6 py-4 text-center text-sm font-bold uppercase tracking-wider text-skin-accent transition-all duration-300 hover:bg-skin-accent hover:text-skin-inverted"
-        >
+        <a href="/shop" class="w-full rounded-lg border-2 border-skin-accent px-6 py-4 text-center text-sm font-bold uppercase tracking-wider text-skin-accent transition-all duration-300 hover:bg-skin-accent hover:text-skin-inverted">
           SHOP RISK ON APPAREL
         </a>
 
-        <!-- Secondary Links -->
-        {links.map((link) => {
-          const linkClass = "w-full rounded-lg border border-skin-line px-6 py-4 text-center text-sm font-medium tracking-wide text-skin-base transition-all duration-300 hover:border-skin-accent hover:text-skin-accent";
-          return (
-            <a href={link.href} class={linkClass}>
-              {link.text}
-            </a>
-          );
-        })}
+        <a href="/posts" class="w-full rounded-lg border border-skin-line px-6 py-4 text-center text-sm font-medium tracking-wide text-skin-base transition-all duration-300 hover:border-skin-accent hover:text-skin-accent">
+          The Lab
+        </a>
+
+        <a href="/library" class="w-full rounded-lg border border-skin-line px-6 py-4 text-center text-sm font-medium tracking-wide text-skin-base transition-all duration-300 hover:border-skin-accent hover:text-skin-accent">
+          The Library
+        </a>
+
+        <a href="/about" class="w-full rounded-lg border border-skin-line px-6 py-4 text-center text-sm font-medium tracking-wide text-skin-base transition-all duration-300 hover:border-skin-accent hover:text-skin-accent">
+          Profile
+        </a>
       </div>
     </div>
   </main>
