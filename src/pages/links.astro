@@ -1,7 +1,7 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import Header from "@components/Header.astro";
-import Footer from "@components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
 const links = [
   { text: "Home & Portfolio", href: "/" },
@@ -35,16 +35,14 @@ const links = [
         </a>
 
         <!-- Secondary Links -->
-        {
-          links.map(link => (
-            
-              href={link.href}
-              class="w-full rounded-lg border border-skin-line px-6 py-4 text-center text-sm font-medium tracking-wide text-skin-base transition-all duration-300 hover:border-skin-accent hover:text-skin-accent"
-            >
+        {links.map((link) => {
+          const linkClass = "w-full rounded-lg border border-skin-line px-6 py-4 text-center text-sm font-medium tracking-wide text-skin-base transition-all duration-300 hover:border-skin-accent hover:text-skin-accent";
+          return (
+            <a href={link.href} class={linkClass}>
               {link.text}
             </a>
-          ))
-        }
+          );
+        })}
       </div>
     </div>
   </main>
