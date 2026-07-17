@@ -71,22 +71,26 @@ def main():
     for name, spec in fred_metrics.items():
         try:
             current_val, prior_val = get_fred_data(spec['id'], api_key, units=spec['units'])
-            delta = current_val - prior_val
+            
+            # Custom delta rule for Box demand to show percentage change, linear difference for others
+            if spec['id'] == 'WPU09150301':
+                delta = ((current_val - prior_val) / prior_val) * 100
+                delta_str = f"{delta:+.2f}%"
+            else:
+                delta = current_val - prior_val
+                delta_str = f"{delta:+.2f}{spec['suffix']}"
+                
             current_state_to_save['fred'][spec['id']] = current_val
             
             sfx = spec['suffix']
             status = "Rising" if delta > 0 else "Falling/Stable"
             implication = "Monitoring Shift" if abs(delta) > 0.05 else "Stable Baseline"
             
-            # The ⚡ emoji is dynamically injected right before the metric name variable here
             table_rows.append(
-                f"| ⚡ **{name}** | {prior_val:.2f}{sfx} | {current_val:.2f}{sfx} | {delta:+.2f}{sfx} | {status} | {implication} |"
+                f"| ⚡ **{name}** | {prior_val:.2f}{sfx} | {current_val:.2f}{sfx} | {delta_str} | {status} | {implication} |"
             )
         except Exception as e:
             print(f"Skipping {name} due to fetch error: {e}")
-
-    # Cache live values to state file
-    current_state_to_save['fred'] = {'FEDFUNDS': ff_curr, 'CPIAUCSL': cpi_curr, 'PAYEMS': nfp_curr, 'WPU09150301': box_curr}
 
     # --- 3. REWRITE MARKDOWN FILE ---
     table_header = [
