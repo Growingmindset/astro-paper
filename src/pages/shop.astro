@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const products = [
+  {
+    name: "RISK ON Tee — Black",
+    price: "$29.99",
+    image: "/shop/tee-black.jpg",
+    stripeLink: "https://buy.stripe.com/xxxxxxxxxxxx1", // replace after step 2
+  },
+  {
+    name: "RISK ON Tee — Sand",
+    price: "$29.99",
+    image: "/shop/tee-sand.jpg",
+    stripeLink: "https://buy.stripe.com/xxxxxxxxxxxx2",
+  },
+];
+---
+
+<Layout title="Shop | RISK ON">
+  <Header activeNav="shop" />
+  <main id="main-content" class="mx-auto max-w-4xl px-4 py-12">
+    <div class="mb-10 text-center">
+      <h1 class="text-3xl font-bold uppercase tracking-[0.15em] text-skin-base">RISK ON SUPPLY</h1>
+      <p class="mt-2 text-sm text-skin-base opacity-75">Built for training. Made by hand.</p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+      {products.map((p) => (
+        <div class="flex flex-col overflow-hidden rounded-lg border border-skin-line bg-skin-fill">
+          <img src={p.image} alt={p.name} class="aspect-square w-full object-cover" />
+          <div class="flex flex-1 flex-col p-4">
+            <h2 class="text-sm font-semibold text-skin-base">{p.name}</h2>
+            <p class="mt-1 text-sm text-skin-base opacity-70">{p.price}</p>
+            
+              href={p.stripeLink}
+              data-astro-reload
+              class="mt-4 rounded-lg border-2 border-skin-accent px-4 py-2 text-center text-xs font-bold uppercase tracking-wider text-skin-accent transition-all duration-300 hover:bg-skin-accent hover:text-skin-inverted"
+            >
+              Buy Now
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </main>
+  <Footer />
+</Layout>
