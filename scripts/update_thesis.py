@@ -35,14 +35,14 @@ def main():
     table_rows = []
     current_state_to_save = {'ism': ism_data, 'fred': {}}
 
-    # --- 1. PROCESS ISM DATA (Using your explicit macro rules) ---
+    # --- 1. PROCESS ISM DATA (Manual Inputs - Marked with ✍️) ---
     # Manufacturing PMI
     pmi_curr = ism_data.get('manufacturing_pmi', 50.0)
     pmi_prior = prior_state.get('ism', {}).get('manufacturing_pmi', pmi_curr)
     pmi_delta = pmi_curr - pmi_prior
     pmi_status = "Expansion (Bullish)" if pmi_curr > 50 else ("Extreme Contraction" if pmi_curr < 42.3 else "Contraction")
     pmi_impl = "Accelerating Momentum" if pmi_delta >= 0 else "Decelerating Growth"
-    table_rows.append(f"| **ISM Manufacturing PMI** | {pmi_prior:.1f} | {pmi_curr:.1f} | {pmi_delta:+.1f} pts | {pmi_status} | {pmi_impl} |")
+    table_rows.append(f"| ✍️ **ISM Manufacturing PMI** | {pmi_prior:.1f} | {pmi_curr:.1f} | {pmi_delta:+.1f} pts | {pmi_status} | {pmi_impl} |")
 
     # New Orders
     no_curr = ism_data.get('new_orders', 50.0)
@@ -50,7 +50,7 @@ def main():
     no_delta = no_curr - no_prior
     no_status = "**Leading Expansion**" if no_curr > 50 else "Leading Contraction"
     no_impl = "Telegraphs Forward Growth 3-6M" if no_curr > 50 else "Forward Demand Cooling"
-    table_rows.append(f"| **ISM New Orders** | {no_prior:.1f} | {no_curr:.1f} | {no_delta:+.1f} pts | {no_status} | {no_impl} |")
+    table_rows.append(f"| ✍️ **ISM New Orders** | {no_prior:.1f} | {no_curr:.1f} | {no_delta:+.1f} pts | {no_status} | {no_impl} |")
 
     # Prices Paid
     pp_curr = ism_data.get('prices_paid', 50.0)
@@ -58,36 +58,32 @@ def main():
     pp_delta = pp_curr - pp_prior
     pp_status = "**Currency Debasement**" if pp_curr > 60 else "Price Stability"
     pp_impl = "Capital Rotates to Dollar Hedges" if pp_curr > 60 else "Weak Tailwinds for Hedges"
-    table_rows.append(f"| **ISM Prices Paid** | {pp_prior:.1f} | {pp_curr:.1f} | {pp_delta:+.1f} pts | {pp_status} | {pp_impl} |")
+    table_rows.append(f"| ✍️ **ISM Prices Paid** | {pp_prior:.1f} | {pp_curr:.1f} | {pp_delta:+.1f} pts | {pp_status} | {pp_impl} |")
 
-    # --- 2. PROCESS FRED DATA (Applying API conversions) ---
-    # Fed Funds Target Rate
-    ff_curr, ff_prior = get_fred_data('FEDFUNDS', api_key, 'lin')
-    ff_delta = ff_curr - ff_prior
-    ff_status = "Rate Hiked" if ff_delta > 0 else ("Rate Cut" if ff_delta < 0 else "Paused (Held)")
-    ff_impl = "Baseline cost of capital anchor."
-    table_rows.append(f"| **Fed Funds Target Rate** | {ff_prior:.2f}% | {ff_curr:.2f}% | {ff_delta:+.2f}% | {ff_status} | {ff_impl} |")
+    # --- 2. PROCESS FRED DATA (Automated API - Marked with ⚡) ---
+    fred_metrics = {
+        'Fed Funds Target Rate': {'id': 'FEDFUNDS', 'units': 'lin', 'suffix': '%'},
+        'CPI (Inflation)': {'id': 'CPIAUCSL', 'units': 'pc1', 'suffix': '%'},
+        'Total Nonfarm Payrolls': {'id': 'PAYEMS', 'units': 'chg', 'suffix': 'k'},
+        'PPI: Corrugated Boxes': {'id': 'WPU09150301', 'units': 'lin', 'suffix': ''}
+    }
 
-    # CPI YoY Inflation
-    cpi_curr, cpi_prior = get_fred_data('CPIAUCSL', api_key, 'pc1') # pc1 = Percent Change YoY
-    cpi_delta = cpi_curr - cpi_prior
-    cpi_status = "Pressure Accelerating" if cpi_delta > 0 else "Inflation Cooling"
-    cpi_impl = "Tests consumer resilience."
-    table_rows.append(f"| **CPI (Inflation)** | {cpi_prior:.1f}% | {cpi_curr:.1f}% | {cpi_delta:+.1f}% | {cpi_status} | {cpi_impl} |")
-
-    # Nonfarm Payrolls Monthly Net Growth
-    nfp_curr, nfp_prior = get_fred_data('PAYEMS', api_key, 'chg') # chg = Net Change in Thousands
-    nfp_delta = nfp_curr - nfp_prior
-    nfp_status = "Labor Growth Accelerating" if nfp_delta > 0 else "Cooling (Lagging)"
-    nfp_impl = "Dictates pulse of 80% of workforce."
-    table_rows.append(f"| **Total Nonfarm Payrolls** | {nfp_prior:.0f}k | {nfp_curr:.0f}k | {nfp_delta:+.0f}k | {nfp_status} | {nfp_impl} |")
-
-    # PPI: Corrugated Boxes
-    box_curr, box_prior = get_fred_data('WPU09150301', api_key, 'lin')
-    box_pct_delta = ((box_curr - box_prior) / box_prior) * 100
-    box_status = "**Booming (Acceleration)**" if box_curr > box_prior else "Velocity Slowing"
-    box_impl = "Boxes moving = physical goods expansion."
-    table_rows.append(f"| **PPI: Corrugated Boxes** | {box_prior:.1f} | {box_curr:.1f} | {box_pct_delta:+.2f}% | {box_status} | {box_impl} |")
+    for name, spec in fred_metrics.items():
+        try:
+            current_val, prior_val = get_fred_data(spec['id'], api_key, units=spec['units'])
+            delta = current_val - prior_val
+            current_state_to_save['fred'][spec['id']] = current_val
+            
+            sfx = spec['suffix']
+            status = "Rising" if delta > 0 else "Falling/Stable"
+            implication = "Monitoring Shift" if abs(delta) > 0.05 else "Stable Baseline"
+            
+            # The ⚡ emoji is dynamically injected right before the metric name variable here
+            table_rows.append(
+                f"| ⚡ **{name}** | {prior_val:.2f}{sfx} | {current_val:.2f}{sfx} | {delta:+.2f}{sfx} | {status} | {implication} |"
+            )
+        except Exception as e:
+            print(f"Skipping {name} due to fetch error: {e}")
 
     # Cache live values to state file
     current_state_to_save['fred'] = {'FEDFUNDS': ff_curr, 'CPIAUCSL': cpi_curr, 'PAYEMS': nfp_curr, 'WPU09150301': box_curr}
@@ -113,7 +109,7 @@ def main():
     with open(STATE_PATH, 'w') as f:
         json.dump(current_state_to_save, f, indent=2)
 
-    print("Macro engine dashboard synchronized successfully.")
+    print("Macro engine dashboard synchronized successfully with visual indicators.")
 
 if __name__ == "__main__":
     main()
