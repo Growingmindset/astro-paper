@@ -1,13 +1,13 @@
 {
   "ism": {
-    "manufacturing_pmi": 54.0,
-    "new_orders": 56.8,
+    "manufacturing_pmi": 53.3,
+    "new_orders": 56.0,
     "prices_paid": 82.1
   },
   "fred": {
     "FEDFUNDS": 3.63,
-    "CPIAUCSL": 332.568,
-    "PAYEMS": 158984.0,
+    "CPIAUCSL": 3.46353,
+    "PAYEMS": 57.0,
     "WPU09150301": 375.493
   }
 }

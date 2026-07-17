@@ -32,13 +32,13 @@ draft: false
 
 | Metric | Prior Read | Current Read | Delta | Status | Implication |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Manufacturing Pmi | 54.0 | 54.0 | +0.0 | Expansion | Accelerating |
-| New Orders | 56.8 | 56.8 | +0.0 | Expansion | Accelerating |
-| Prices Paid | 82.1 | 82.1 | +0.0 | Expansion | Accelerating |
-| Fed Funds Target Rate | 3.63 | 3.63 | +0.00 | Falling/Stable | Stable Baseline |
-| CPI (Inflation) | 333.98 | 332.57 | -1.41 | Falling/Stable | Monitoring Shift |
-| Total Nonfarm Payrolls | 158927.00 | 158984.00 | +57.00 | Rising | Monitoring Shift |
-| PPI: Corrugated Boxes | 366.92 | 375.49 | +8.58 | Rising | Monitoring Shift |
+| **Manufacturing Pmi** | 54.0 | 53.3 | -0.7 pts | Expansion | Decelerating |
+| **New Orders** | 56.8 | 56.0 | -0.8 pts | Expansion | Decelerating |
+| **Prices Paid** | 82.1 | 82.1 | +0.0 pts | Expansion | Accelerating |
+| **Fed Funds Target Rate** | 3.63% | 3.63% | +0.00% | Falling/Stable | Stable Baseline |
+| **CPI (Inflation)** | 4.17% | 3.46% | -0.70% | Falling/Stable | Monitoring Shift |
+| **Total Nonfarm Payrolls** | 129.00k | 57.00k | -72.00k | Falling/Stable | Monitoring Shift |
+| **PPI: Corrugated Boxes** | 366.92 | 375.49 | +8.58 | Rising | Monitoring Shift |
 
 <!-- AUTO-TABLE-END -->
 
