@@ -8,11 +8,13 @@ ISM_PATH = 'data/ism.json'
 STATE_PATH = 'data/thesis_state.json'
 MD_PATH = 'src/data/blog/2026-portfolio-log.md'
 
-def get_fred_data(series_id, api_key):
-    url = f"https://api.stlouisfed.org/fred/series/observations?series_id={series_id}&api_key={api_key}&file_type=json&sort_order=desc&limit=2"
+def get_fred_data(series_id, api_key, units='lin'):
+    """Fetches the two most recent data points for a given FRED series ID with optional unit transformations."""
+    url = f"https://api.stlouisfed.org/fred/series/observations?series_id={series_id}&api_key={api_key}&file_type=json&sort_order=desc&limit=2&units={units}"
     response = requests.get(url)
     response.raise_for_status()
     observations = response.json().get('observations', [])
+    
     current_val = float(observations[0]['value'])
     prior_val = float(observations[1]['value'])
     return current_val, prior_val
@@ -33,31 +35,42 @@ def main():
     table_rows = []
     current_state_to_save = {'ism': ism_data, 'fred': {}}
 
+    # --- PROCESS MANUAL ISM DATA ---
     for key, current_val in ism_data.items():
         prior_val = prior_state.get('ism', {}).get(key, current_val)
         delta = current_val - prior_val
         metric_name = key.replace('_', ' ').title()
+        
         status = "Expansion" if current_val > 50 else "Contraction"
         implication = "Accelerating" if delta >= 0 else "Decelerating"
-        table_rows.append(f"| {metric_name} | {prior_val:.1f} | {current_val:.1f} | {delta:+.1f} | {status} | {implication} |")
+        
+        # Format explicitly for ISM points
+        table_rows.append(f"| **{metric_name}** | {prior_val:.1f} | {current_val:.1f} | {delta:+.1f} pts | {status} | {implication} |")
 
+    # --- PROCESS TRANSFORMED FRED DATA ---
+    # Configure exact tracking specifications for your layout
     fred_metrics = {
-        'Fed Funds Target Rate': 'FEDFUNDS',
-        'CPI (Inflation)': 'CPIAUCSL',
-        'Total Nonfarm Payrolls': 'PAYEMS',
-        'PPI: Corrugated Boxes': 'WPU09150301'
+        'Fed Funds Target Rate': {'id': 'FEDFUNDS', 'units': 'lin', 'suffix': '%'},
+        'CPI (Inflation)': {'id': 'CPIAUCSL', 'units': 'pc1', 'suffix': '%'},          # pc1 = Percent Change From Year Ago
+        'Total Nonfarm Payrolls': {'id': 'PAYEMS', 'units': 'chg', 'suffix': 'k'},       # chg = Change from prior month in thousands
+        'PPI: Corrugated Boxes': {'id': 'WPU09150301', 'units': 'lin', 'suffix': ''}
     }
 
-    for name, series_id in fred_metrics.items():
+    for name, spec in fred_metrics.items():
         try:
-            current_val, prior_val = get_fred_data(series_id, api_key)
+            current_val, prior_val = get_fred_data(spec['id'], api_key, units=spec['units'])
             delta = current_val - prior_val
-            current_state_to_save['fred'][series_id] = current_val
+            current_state_to_save['fred'][spec['id']] = current_val
+            
+            sfx = spec['suffix']
             status = "Rising" if delta > 0 else "Falling/Stable"
-            implication = "Monitoring Shift" if abs(delta) > 0.1 else "Stable Baseline"
-            table_rows.append(f"| {name} | {prior_val:.2f} | {current_val:.2f} | {delta:+.2f} | {status} | {implication} |")
+            implication = "Monitoring Shift" if abs(delta) > 0.05 else "Stable Baseline"
+            
+            table_rows.append(
+                f"| **{name}** | {prior_val:.2f}{sfx} | {current_val:.2f}{sfx} | {delta:+.2f}{sfx} | {status} | {implication} |"
+            )
         except Exception as e:
-            print(f"Skipping {name} due to error: {e}")
+            print(f"Skipping {name} due to fetch error: {e}")
 
     table_header = [
         "| Metric | Prior Read | Current Read | Delta | Status | Implication |",
@@ -79,7 +92,7 @@ def main():
     with open(STATE_PATH, 'w') as f:
         json.dump(current_state_to_save, f, indent=2)
 
-    print("Successfully updated macro indicators.")
+    print("Successfully synchronized dashboard metrics.")
 
 if __name__ == "__main__":
     main()
