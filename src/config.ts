@@ -39,6 +39,5 @@ export const SOCIALS = [];
 export const navLinks = [
   { href: "/posts", linkText: "Lab", active: true },
   { href: "/library", linkText: "Library", active: true }, // <-- Updated path
-  { href: "/archive", linkText: "Archive", active: true }, // <-- Updated path
   { href: "/about", linkText: "Profile", active: true }, //added this like
 ];
