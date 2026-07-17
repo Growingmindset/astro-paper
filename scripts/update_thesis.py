@@ -36,7 +36,6 @@ def main():
     current_state_to_save = {'ism': ism_data, 'fred': {}}
 
     # --- 1. PROCESS ISM DATA (Manual Inputs - Marked with ✍️) ---
-    # Manufacturing PMI
     pmi_curr = ism_data.get('manufacturing_pmi', 50.0)
     pmi_prior = prior_state.get('ism', {}).get('manufacturing_pmi', pmi_curr)
     pmi_delta = pmi_curr - pmi_prior
@@ -44,7 +43,6 @@ def main():
     pmi_impl = "Accelerating Momentum" if pmi_delta >= 0 else "Decelerating Growth"
     table_rows.append(f"| ✍️ **ISM Manufacturing PMI** | {pmi_prior:.1f} | {pmi_curr:.1f} | {pmi_delta:+.1f} pts | {pmi_status} | {pmi_impl} |")
 
-    # New Orders
     no_curr = ism_data.get('new_orders', 50.0)
     no_prior = prior_state.get('ism', {}).get('new_orders', no_curr)
     no_delta = no_curr - no_prior
@@ -52,7 +50,6 @@ def main():
     no_impl = "Telegraphs Forward Growth 3-6M" if no_curr > 50 else "Forward Demand Cooling"
     table_rows.append(f"| ✍️ **ISM New Orders** | {no_prior:.1f} | {no_curr:.1f} | {no_delta:+.1f} pts | {no_status} | {no_impl} |")
 
-    # Prices Paid
     pp_curr = ism_data.get('prices_paid', 50.0)
     pp_prior = prior_state.get('ism', {}).get('prices_paid', pp_curr)
     pp_delta = pp_curr - pp_prior
@@ -72,7 +69,6 @@ def main():
         try:
             current_val, prior_val = get_fred_data(spec['id'], api_key, units=spec['units'])
             
-            # Custom delta rule for Box demand to show percentage change, linear difference for others
             if spec['id'] == 'WPU09150301':
                 delta = ((current_val - prior_val) / prior_val) * 100
                 delta_str = f"{delta:+.2f}%"
