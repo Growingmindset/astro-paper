@@ -14,20 +14,20 @@ draft: false
 
 **Objective:** Outperform the S&P 500 baseline through a concentrated, first-principles approach to asset allocation.  
 **Strategy:** Active Satellite (Highly concentrated, high-conviction individual equity positions).  
-**Update Cadence (SOP):** Monthly. 
+**Update Cadence (SOP):** Monthly.  
 
 
 ---
 
 ## 1. Macro Market Thesis (Live Dashboard)
 
-*Last Updated: 6.22.2026*
+*Last Updated: <!-- AUTO-DATE -->6.22.2026<!-- /AUTO-DATE -->*
 
 ### Core Economic Indicators (Live Tracker)
 *A high-signal dashboard of the leading indicators dictating current capital flow.*
 
 <div style="width: 100%; overflow-x: auto;">
-
+<!-- AUTO-TABLE-START -->
 | Metric | Prior Read | Current Read | Delta | Status | Implication |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Fed Funds Target Rate** | 3.50-3.75% | 3.50-3.75% | 0 bps | Paused (Held) | Baseline cost of capital. The anchor for all market liquidity. |
@@ -37,7 +37,7 @@ draft: false
 | **ISM Prices Paid** | 84.6 | 82.1 | -2.5 pts | **Currency Debasement** | Binary debasement signal. Elevated reading confirms ongoing currency debasement, driving capital into macro dollar hedges (gold, silver, Bitcoin). |
 | **Total Nonfarm Payrolls** | 115k | 172k | +57k | Cooling (Lagging) | Dictates the pulse of 80% of the workforce. Though currently soft, the leading ISM momentum reveals the forward employment reality before official numbers lag behind. |
 | **PPI: Corrugated Boxes** | 425.18 | 431.42 | +1.47% | **Booming (Acceleration)** | Binary expansion signal. Rising box demand means physical goods are moving — the economy is booming and business velocity is accelerating. |
-
+<!-- AUTO-TABLE-END -->
 </div>
 
 > **Current Insight:** The macro environment is currently defined by dual disruptors: the proliferation of AI and geopolitical instability in the Middle East. The core question is consumer resilience—will sustained premiums in energy and gas prices erode discretionary spending? 
@@ -73,7 +73,7 @@ draft: false
 ## 4. 2026 Deployments (Recent Capital Flow)
 *Where new cash is actively being deployed this year and the immediate logic behind it.*
 
-| Ticker | Asset Class                  | Execution                          | Thesis / Catalyst |
+| Ticker | Asset Class                   | Execution                          | Thesis / Catalyst |
 | :--- | :--- | :--- | :--- |
 | **INTC** | Technology (Semiconductors) | **Sold 3x Dec 2028 $200 Calls** (06/22/2026) | Collected **$17,382.64** in premium on long-dated calls while staying long semiconductor recovery. |
 | **MSFT** | Technology (Software)       | **Buy** (06/17/2026) @ $378.10     | Dominant cloud and AI infrastructure leader with durable pricing power and enterprise stickiness. |
