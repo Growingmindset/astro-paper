@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Training Partner Application">
+  <section class="workout-partner">
+    <div class="intro">
+      <h1>Find a training partner in San Antonio</h1>
+      <p>
+This is primarily for me to find 2-4 experienced lifters so we can push eachother to the next level while building comraderie. 
+If we can't train together, ill link you up with other lifters who are similar in terms of 
+        training age, goals, schedule- No app, no
+        algorithm, just people who'll actually show up and help push you to the next level. 
+      </p>
+      <p class="note">Takes about 2 minutes. I review every submission and reach out directly once I've got a match.</p>
+    </div>
+
+    <iframe
+      data-tally-src="https://tally.so/embed/81gaEO?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+      loading="lazy"
+      width="100%"
+      height="1047"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      title="Training Partner Application"
+    ></iframe>
+  </section>
+
+  <script is:inline>
+    var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}
+  </script>
+</Layout>
+
+<style>
+  .workout-partner {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+  .intro h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  .intro p {
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+  }
+  .note {
+    font-size: 0.9rem;
+    opacity: 0.75;
+  }
+  iframe {
+    margin-top: 1.5rem;
+    border-radius: 8px;
+  }
+</style>
