@@ -11,6 +11,7 @@ title: "About"
 
 ## The Core Thesis
 I am a San Antonio-based builder and operator focused on the physical layer of the future economy.
+This website is just one of many things i've built. * + more to come.
 
 The exponential growth of data centers is fundamentally changing global power demands. As energy requirements scale and privatization accelerates, the bottleneck will not be software—it will be physical infrastructure (energy involvement). My long-term objective is to build, manage, and optimize efficient energy generation systems, specifically targeting scalable solar and nuclear frameworks.
 
