@@ -64,7 +64,7 @@ draft: false
 *Tracking precise capital distribution, concentration risk, and structural sector exposure.*
 
 ### Capital Allocation & Risk
-- **Cash Position:** 12.86% *(Dry powder) cover call boost+monthly deposits*
+- **Cash Position:** 12.98% *
 
 ### YTD Performance
 <img src="/ytd-performance.png" alt="YTD Performance Chart" width="100%" style="border-radius: 8px; margin-top: 15px; margin-bottom: 5px;" />
