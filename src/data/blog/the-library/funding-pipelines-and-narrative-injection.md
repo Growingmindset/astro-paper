@@ -76,7 +76,7 @@ This single document evolved into a corporate triad:
 * **Indivisible Civics:** A 501(c)(3) educational arm.
 * **Indivisible Action:** A hybrid political action committee.
 
-![Shadow Funding: The Facade of Civic Education](../../assets/images/shadow-funding.webp)
+![Shadow Funding: The Facade of Civic Education](../../../assets/images/shadow-funding.webp)
 
 This legal structure shields massive anonymous donations, maximizes tax deductions under the guise of "education," and funnels money into electoral politics. This capital is not funded by ordinary citizens. It operates as a pipeline for foreign and elites seeking to manipulate the USA for their own strategic objectives.
 
