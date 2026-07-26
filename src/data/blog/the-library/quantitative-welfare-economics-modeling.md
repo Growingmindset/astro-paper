@@ -29,7 +29,7 @@ When the "invisible hand" is not left to its own devices, bad things happen. Bui
 
 When the market is left to its own accord, the supply and demand will dictate the price leading to an equilibrium, or a minimal loss of energy in the system. 
 
-![Unconstrained Market Equilibrium](../../assets/images/market-equilibrium.png)
+![Unconstrained Market Equilibrium](../../../assets/images/market-equilibrium.png)
 
 ### Quantitative Breakdown:
 * **Equilibrium Vector:** (Q* = 8, P* = $8)
