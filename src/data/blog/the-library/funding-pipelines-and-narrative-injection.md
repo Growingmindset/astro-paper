@@ -100,7 +100,7 @@ The scale of the "No Kings Coalition" was a feat of modular architecture. Over 2
 * **Organized labor (SEIU, AFT, AFGE)** delivered raw mass and street-level density.
 * **The Party for Socialism and Liberation (PSL)** managed tactical discipline, chant coordination, and route planning, executing their explicit long-term goal of replacing capitalism.
 
-![Anatomy of a Distributed Coalition: The "No Kings" Architecture](../../assets/images/modular-architecture.webp)
+![Anatomy of a Distributed Coalition: The "No Kings" Architecture](../../../assets/images/modular-architecture.webp)
 
 Like an optimized structure under load, each organization covered a weakness the others could not support alone. They did not need perfect ideological alignment. They only needed enough shared momentum to keep the engine running.
 
