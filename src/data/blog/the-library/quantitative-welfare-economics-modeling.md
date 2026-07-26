@@ -60,7 +60,7 @@ Imposing a legal minimum price above the equilibrium price restricts consumer pa
 
 Imposing a legal maximum price below equilibrium restricts manufacturer capability and generates structural supply depletion (a market shortage). In this case the customer wants to buy as much possible because it's a bargain, but the company has no incentive to produce more. The producing cannot keep up with the demand, therefore a shortage is created, max scarcity, but low price. If its a low price, yet you can't get it, is it even worth it? *pictures a care package dropped in a third world country and people swarming the package because they havent eaten in days*. The food was "free". 
 
-![Price Ceiling Market Distortion](../../assets/images/price-ceiling-shortage.png)
+![Price Ceiling Market Distortion](../../../assets/images/price-ceiling-shortage.png)
 
 ### Quantitative Breakdown:
 * **Throttled Quantity:** At **$5**, Qs = 3 and Qd = 10. The system bottlenecks at actual units sold = **3**.
