@@ -22,7 +22,7 @@ This is not a coincidence. This is the engineering of actors scripting your voca
 
 ## From Capital Inputs to Autonomous Belief Propagation
 
-![The Political Supply Chain: From Money to Compliance](../../assets/images/political-supply-chain.webp)
+![The Political Supply Chain: From Money to Compliance](../../../assets/images/political-supply-chain.webp)
 
 The system is engineered like a hard science, yet distributed as a philosophy. Like a thermodynamic cycle, it requires a specific stepwise process: energy (money) enters the system, acts upon a substrate (public opinion), and produces a mechanical output (compliance). Then the compliance acts on the system creating massive return on investment.
 
