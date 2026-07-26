@@ -59,7 +59,7 @@ The new operators immediately shifted the goalposts. The demands mutated from si
 
 To understand the sheer momentum of this engineered takeover, look at the scaling data:
 
-![The Rise of No Kings: 14 Months of Global Escalation](../../assets/images/global-escalation.webp)
+![The Rise of No Kings: 14 Months of Global Escalation](../../../assets/images/global-escalation.webp)
 
 > [Nationwide 'No Kings' demonstrations draw millions to streets](https://www.youtube.com/watch?v=hHcPN2ln-Vw) — Footprint of the centralized mobilization network during peak execution phase.
 
