@@ -45,7 +45,7 @@ When the market is left to its own accord, the supply and demand will dictate th
 
 Imposing a legal minimum price above the equilibrium price restricts consumer participation and creates structural asset accumulation (a market surplus). People who cannot afford to buy above $10 will be priced out the market and flood toward substitutions or alternatives. This may lead to the customer learning to "live without" a product, having structural implications in the future. There is a surplus of "stuff" and not enough customers to buy it. The red indicates the leakage in the system. 
 
-![Price Floor Market Distortion](../../assets/images/price-floor-surplus.png)
+![Price Floor Market Distortion](../../../assets/images/price-floor-surplus.png)
 
 ### Quantitative Breakdown:
 * **Throttled Quantity:** At **$10**, Qd = 4 and Qs = 10.67. The system bottlenecks at actual units sold = **4**.
