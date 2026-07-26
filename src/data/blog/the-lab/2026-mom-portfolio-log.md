@@ -1,5 +1,6 @@
 ---
 title: "Mom's small account management"
+postSlug: 2026-mom-portfolio-log
 description: "Demonstrating systemic wealth building for smaller accounts. Anyone can do it."
 pubDatetime: 2026-05-26T00:00:00Z
 tags:
@@ -14,10 +15,10 @@ draft: false
 
 **Objective:** This portfolio acts as a proof-of-concept that first-principles systems scale perfectly to accounts of any size.
 **Strategy:** Grow a small portfolio into a big one.
-**Update Cadence (SOP):** New buys or sells. 
+**Update Cadence (SOP):** New buys or sells.
 
 > **The Systemic Engine:** The power of this portfolio does not come from daily trading. Recurring **$200/month capital injections**. In a smaller account, your savings rate is your highest ROI asset. The goal here is to funnel that steady cash into impenetrable fortresses based on the 10% rule (Invest 10% of your income).
-> My original portfolio was built from 0 to over 100k+. That was my first longterm account. This is the second, which im managing for my mother. 
+> My original portfolio was built from 0 to over 100k+. That was my first longterm account. This is the second, which im managing for my mother.
 
 ---
 
@@ -35,10 +36,9 @@ I had already started an account, putting $200/month in, so I just took the mone
 
 *Last Updated: 6.22.2026*
 
-
 ---
 
-## 4. 2026 Deployments (Recent Capital Flow)
+## 3. 2026 Deployments (Recent Capital Flow)
 *Where new cash is actively being deployed this year and the immediate logic behind it.*
 
 | Ticker | Asset Class             | Execution                              | Thesis / Catalyst |
@@ -57,7 +57,7 @@ I had already started an account, putting $200/month in, so I just took the mone
 
 **System Changelog:**
 
-* *v2026.05.3 (6.22.2026):* Deployed additional capital in June into MSFT and INTU, adding to the tech/software side after the heavy defensive pivot in late May. The May 26 deployment of ~$2,000 went into KMB, GIS, TAP, and PFE as planned. Cash reserves are now sitting at 0ish%.  Will continue deploying the remaining dry powder with recurring $200 transfers opportunistically, especially around ex-dividend dates.
+* *v2026.05.3 (6.22.2026):* Deployed additional capital in June into MSFT and INTU, adding to the tech/software side after the heavy defensive pivot in late May. The May 26 deployment of ~$2,000 went into KMB, GIS, TAP, and PFE as planned. Cash reserves are now sitting at 0ish%. Will continue deploying the remaining dry powder with recurring $200 transfers opportunistically, especially around ex-dividend dates.
 
 * *v2026.05.2 (5.27.2026):* Executed a $2,000 bulk deployment from dry powder reserves, establishing new positions in GIS and PFE while scaling KMB and TAP. This moved cash reserves from 67% down to 28.15%. The goal remains getting under 20% cash, with a target of ~7% by October.
 
@@ -65,4 +65,4 @@ I had already started an account, putting $200/month in, so I just took the mone
 
 > The system is operating exactly as designed. The slight underperformance versus the S&P 500 is expected and acceptable at this stage due to the high cash weighting earlier in the year.
 >
-> On May 26th, the bulk of the seed capital was deployed into defensive, high-yield value names (KMB, GIS, TAP, and PFE). This shifted the portfolio’s structural exposure toward Consumer Staples and Healthcare, providing a buffer against the earlier tech concentration. The strategy moving forward is straightforward: let the remaining cash + recurring $200 deposits accumulate, then deploy into asymmetric opportunities as they appear — particularly around upcoming ex-dividend dates.
+> On May 26th, the bulk of the seed capital was deployed into defensive, high-yield value names (KMB, GIS, TAP, and PFE). This shifted the portfolio's structural exposure toward Consumer Staples and Healthcare, providing a buffer against the earlier tech concentration. The strategy moving forward is straightforward: let the remaining cash + recurring $200 deposits accumulate, then deploy into asymmetric opportunities as they appear — particularly around upcoming ex-dividend dates.

@@ -2,7 +2,7 @@
 author: Rudy Galan
 pubDatetime: 2026-05-19T10:00:00Z
 title: "Deconstruction: Hurricanes by Rick Ross"
-postSlug: deconstruction-hurricanes-rick-ross
+postSlug: hurricanes-deconstruction
 featured: false
 draft: false
 tags:

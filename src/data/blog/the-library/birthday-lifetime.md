@@ -2,7 +2,7 @@
 author: Rudy Galan
 pubDatetime: 2026-06-24T18:00:00Z
 title: "1% of a Lifetime"
-postSlug: 1-percent-of-a-lifetime
+postSlug: birthday-lifetime
 featured: false
 draft: false
 tags:

@@ -8,8 +8,7 @@ tags:
   - finance
 featured: true
 draft: false
-slug: "2026-portfolio-log"
-
+postSlug: "2026-portfolio-log"
 ---
 
 # 2026 Financial Architecture
@@ -17,7 +16,6 @@ slug: "2026-portfolio-log"
 **Objective:** Outperform the S&P 500 baseline through a concentrated, first-principles approach to asset allocation.  
 **Strategy:** Active Satellite (Highly concentrated, high-conviction individual equity positions).  
 **Update Cadence (SOP):** Monthly.  
-
 
 ---
 
@@ -74,9 +72,7 @@ slug: "2026-portfolio-log"
 
 ---
 
-
-
-## 4. 2026 Deployments (Recent Capital Flow)
+## 3. 2026 Deployments (Recent Capital Flow)
 *Where new cash is actively being deployed this year and the immediate logic behind it.*
 
 | Ticker | Asset Class                   | Execution                          | Thesis / Catalyst |
@@ -90,17 +86,16 @@ slug: "2026-portfolio-log"
 | **FISV** | Financials (Fintech)        | **Add** (03/16/2026) @ $57.03      | Undervalued legacy fintech with sticky enterprise contracts and improving execution. |
 | **ORCL** | Technology (Cloud)          | **Buy** (03/05/2026) @$153.5       | Benefiting from aggressive shift toward database and cloud infrastructure modernization. |
 
-
 ---
 
-## 6. Execution & Systems Reflection (Historical Log)
+## 4. Execution & Systems Reflection (Historical Log)
 
 **Q2 Review (June 2026 Update):**
 
-On June 22nd I sold 3 contracts of the INTC Dec 2028 $200 calls and collected $17,382.64 in premium. This was a deliberate move to harvest income on a name I still view as a primary long-term anchor. Took risk completely off the table and it gives me options to roll over in the future. Intel remains one of my highest-conviction holdings after the government support and foundry momentum started to show up in the price action. I’m comfortable staying long the stock while using the call sale to reduce cost basis(now negative) and generate cash.
+On June 22nd I sold 3 contracts of the INTC Dec 2028 $200 calls and collected $17,382.64 in premium. This was a deliberate move to harvest income on a name I still view as a primary long-term anchor. Took risk completely off the table and it gives me options to roll over in the future. Intel remains one of my highest-conviction holdings after the government support and foundry momentum started to show up in the price action. I'm comfortable staying long the stock while using the call sale to reduce cost basis(now negative) and generate cash.
 
 In mid-June I added to MSFT and INTU. Both were opportunistic adds into software names that had pulled back. Microsoft continues to serve as the core cloud and AI infrastructure holding with unmatched distribution, while Intuit offers a high-quality, sticky small-business compounder with recurring revenue and AI tailwinds. These were smaller, measured deployments rather than aggressive sizing.
 
-Earlier in the year I added McDonald’s (MCD) as a defensive, high-quality balance against higher-beta names like Sweetgreen (SG). MCD provides gravitational stability in the consumer space, especially with leading indicators still showing resilience despite short-term pressure on discretionary spending. I also maintain positions in Oracle and the earlier FISV add, both of which were executed when the software and fintech sectors were under pressure. I still see structural value in these incumbents long-term.
+Earlier in the year I added McDonald's (MCD) as a defensive, high-quality balance against higher-beta names like Sweetgreen (SG). MCD provides gravitational stability in the consumer space, especially with leading indicators still showing resilience despite short-term pressure on discretionary spending. I also maintain positions in Oracle and the earlier FISV add, both of which were executed when the software and fintech sectors were under pressure. I still see structural value in these incumbents long-term.
 
-I’m currently monitoring KMB and TAP as potential defensive additions, but I’m being patient. Parts of the market feel stretched while other areas remain in lukewarm territory. My priority remains preserving dry powder for asymmetric, high-margin-of-safety opportunities. With midterms historically providing a tailwind into year-end, I’m comfortable sitting on cash until clearer setups present themselves rather than forcing deployments.
+I'm currently monitoring KMB and TAP as potential defensive additions, but I'm being patient. Parts of the market feel stretched while other areas remain in lukewarm territory. My priority remains preserving dry powder for asymmetric, high-margin-of-safety opportunities. With midterms historically providing a tailwind into year-end, I'm comfortable sitting on cash until clearer setups present themselves rather than forcing deployments.

@@ -1,6 +1,7 @@
 ---
 author: Rudy Galan
 title: "2026 Human Machine Log"
+postSlug: 2026-human-machine-log
 description: "Macro-level living document tracking physical architecture, hypertrophy program, and nutritional systems."
 pubDatetime: 2026-05-22T00:00:00Z
 tags:
@@ -28,28 +29,7 @@ draft: false
 > Keeping a relatively healthy diet based on loose fittings of the Mediterranean diet keeps energy levels in check, fullness, and needed fat. Lower carbs are likely, so eat them before workouts if you can to keep a high intensity. Salads before meals, eating before going out, skipping nights of drinking, lower calorie drinks like Martinis or light beer if so. Just be conservative in all of your actions when concerning energy intake.
 
 **6.22.26 Update**  
-I've been strapped for time so I'm trying out a new diet I can operate with on the fly. Including bread that doesn’t expire quick, canned chilies, canned oysters, canned sardines, beef bone broth, whole grain crackers. Frozen salmon, chicken, lean beef staples stayed the same. A bigger change I've made is in my breakfast. Instead of eating 3-5 eggs, I'm going 1-2 whole eggs with half a cup of egg whites. It hasn’t been that bad so far — down around 8lbs.
-
-## Current Program Phase
-
-**Phase 2 — 12-Week Multi-Phasial Hardware Reset & Yielding Overload** (May 2026 – Present)
-
-**Focus:** Progressive overload via structural stacking, multi-planar core stability, and targeted eccentric/isometric tissue pacing.
-
-### Weekly Structure
-- **Day 1:** Leg Day A — Primary Force Production
-- **Day 2:** Upper Body — Horizontal Constraint Bias
-- **Day 3:** Full Body — Cardio Dominant (Metabolic & Yielding)
-- **Day 4:** Leg Day B — Asymmetrical Eccentric Bias
-- **Day 5:** Accessory — Arms, Shoulders & T5-T8 Expansion
-- **Day 6:** Full Body — Strength Integration
-- **Day 7:** System Recovery (CNS rest + Daily Reset)
-
-### Detailed Protocols
-- [Daily Home Reset — 3-Movement Passive Yielding Protocol](/posts/daily-home-reset)
-- [Lower Body Protocols (Day 1 & 4)](/posts/lower-body-protocols)
-- [Upper Body + Accessory Protocols (Day 2 & 5)](/posts/upper-body-accessory-protocols)
-- [Full Body Protocols (Day 3 & 6)](/posts/full-body-protocols)
+I've been strapped for time so I'm trying out a new diet I can operate with on the fly. Including bread that doesn't expire quick, canned chilies, canned oysters, canned sardines, beef bone broth, whole grain crackers. Frozen salmon, chicken, lean beef staples stayed the same. A bigger change I've made is in my breakfast. Instead of eating 3-5 eggs, I'm going 1-2 whole eggs with half a cup of egg whites. It hasn't been that bad so far — down around 8lbs.
 
 ## Systems Reflections
 

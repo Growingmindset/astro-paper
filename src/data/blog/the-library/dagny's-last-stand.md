@@ -2,7 +2,7 @@
 author: Rudy Galan
 pubDatetime: 2026-05-21T14:24:00Z
 title: "Dagny’s Last Stand: Ayn Rand’s Vision in a Collapsing World"
-postSlug: dagnys-last-stand-ayn-rand
+postSlug: dagny's-last-stand
 featured: false
 draft: false
 tags:

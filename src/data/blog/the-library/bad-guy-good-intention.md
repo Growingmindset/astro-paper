@@ -2,7 +2,7 @@
 author: Rudy Galan
 pubDatetime: 2026-07-26T00:00:00Z
 title: "The Bad Guy With Good Intentions"
-postSlug: the-bad-guy-with-good-intentions
+postSlug: bad-guy-good-intention
 featured: false
 draft: false
 tags:

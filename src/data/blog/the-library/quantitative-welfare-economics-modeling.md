@@ -7,6 +7,7 @@ featured: false
 draft: false
 tags:
   - microeconomics
+  - deconstructions
 description: "A first-principles geometric and mathematical evaluation of consumer surplus, producer surplus, and deadweight loss under boundary constraints."
 ---
 **Part of the Alamo Colleges 2302 Economics Track — Module 01**

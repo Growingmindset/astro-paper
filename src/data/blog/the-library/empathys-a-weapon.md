@@ -2,7 +2,7 @@
 author: Rudy Galan
 pubDatetime: 2026-05-22T12:00:00Z
 title: "Empathy's a Weapon, Standards Are Armor"
-postSlug: empathys-a-weapon-standards-armor
+postSlug: empathys-a-weapon
 featured: false
 draft: false
 tags:
