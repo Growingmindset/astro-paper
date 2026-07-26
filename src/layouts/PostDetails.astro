@@ -48,7 +48,7 @@ if (typeof initOgImage === "string") {
 
 // Use dynamic OG image if enabled and no remote|local ogImage
 if (!ogImageUrl && SITE.dynamicOgImage) {
-  ogImageUrl = `${getPath(post.id, post.filePath)}/index.png`;
+  ogImageUrl = `${getPath(post.id, post.filePath, true, post.data.postSlug)}/index.png`;
 }
 
 // Resolve OG image URL (or fallback to SITE.ogImage / default `og.png`)
@@ -69,10 +69,11 @@ const layoutProps = {
 
 /* ========== Prev/Next Posts ========== */
 
-const allPosts = posts.map(({ data: { title }, id, filePath }) => ({
+const allPosts = posts.map(({ data: { title, postSlug }, id, filePath }) => ({
   id,
   title,
   filePath,
+  postSlug,
 }));
 
 const currentPostIndex = allPosts.findIndex(a => a.id === post.id);
@@ -132,8 +133,8 @@ const nextPost =
     <div data-pagefind-ignore class="grid grid-cols-1 gap-6 sm:grid-cols-2">
       {
         prevPost && (
-          <a
-            href={getPath(prevPost.id, prevPost.filePath)}
+          
+            href={getPath(prevPost.id, prevPost.filePath, true, prevPost.postSlug)}
             class="flex w-full gap-1 hover:opacity-75"
           >
             <IconChevronLeft class="inline-block flex-none rtl:rotate-180" />
@@ -146,8 +147,8 @@ const nextPost =
       }
       {
         nextPost && (
-          <a
-            href={getPath(nextPost.id, nextPost.filePath)}
+          
+            href={getPath(nextPost.id, nextPost.filePath, true, nextPost.postSlug)}
             class="flex w-full justify-end gap-1 text-end hover:opacity-75 sm:col-start-2"
           >
             <div>
