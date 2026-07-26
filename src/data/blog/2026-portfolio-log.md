@@ -8,6 +8,8 @@ tags:
   - finance
 featured: true
 draft: false
+slug: "2026-portfolio-log"
+
 ---
 
 # 2026 Financial Architecture
