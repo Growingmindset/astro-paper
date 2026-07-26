@@ -42,7 +42,7 @@ If I survive, I just call it the cost of the game. Move on and become stronger. 
 
 ## Backs Against the Door
 
-She is my saving grace, but even that wasn't just given. We suffered together early in life — she protected me, risked her own life, and made lifelong sacrifices. I'll always draw back to the time my dad was on a drug binge. We locked ourselves in the restroom while he banged on the door and yelled for hours. It was cold. We covered ourselves with towels. That's where we slept for the night — backs against the door.
+She is my saving grace, but even that wasn't just given. We suffered together early in life — she protected me, risked her own life, and made lifelong sacrifices. I'll always draw back to the time my dad was on a drug binge. We locked ourselves in the restroom while he banged on the door and yelled for hours. It was cold. We covered ourselves with towels. That's where we slept for the night — backs against the door. I was nine.
 
 Being able to suffer for long periods of time is a superpower, a tool that can be used to win a game. If you can out-suffer someone, that means you can play games that hurt you both, and ultimately win.
 
