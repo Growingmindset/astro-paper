@@ -14,8 +14,7 @@ const { title, description, postSlug, ...props } = data;
 ---
 
 <li class="my-6">
-  
-    href={getPath(id, filePath, true, postSlug)}
+  <a href={getPath(id, filePath, true, postSlug)}
     class:list={[
       "inline-block text-lg font-medium text-accent",
       "decoration-dashed underline-offset-4 hover:underline",
