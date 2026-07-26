@@ -69,7 +69,7 @@ The ideology had momentum, but it needed a physical component. Enter Indivisible
 
 They began with a 23-page tactical document acting as the standard operating procedure for local progressive extremists to harass and obstruct officials.
 
-![Indivisible: A Practical Guide to Democracy on the Brink](../../assets/images/indivisible-guide.webp)
+![Indivisible: A Practical Guide to Democracy on the Brink](../../../assets/images/indivisible-guide.webp)
 
 This single document evolved into a corporate triad:
 * **Indivisible Project:** A 501(c)(4) dark money nonprofit.
