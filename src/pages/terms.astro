@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+<Layout title="Terms of Service | RISK ON">
+  <Header activeNav="terms" />
+  <main id="main-content" class="mx-auto max-w-3xl px-4 py-12 text-skin-base">
+    <h1 class="text-2xl font-bold uppercase tracking-wide mb-6">Terms of Service</h1>
+    <div class="prose prose-invert max-w-none space-y-4">
+      <p>By purchasing from Risk On, you agree to the following:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>All sales are final except in cases of product defect (see our Return Policy).</li>
+        <li>Prices are listed in USD and are subject to change without notice.</li>
+        <li>We reserve the right to refuse or cancel any order at our discretion, including in cases of suspected fraud.</li>
+        <li>Product images are for illustrative purposes; actual colors may vary slightly due to screen settings and print processes.</li>
+        <li>Risk On is a project of Growth State of Mind LLC, operating under the assumed name "Risk On."</li>
+        <li>These terms are governed by the laws of the State of Texas.</li>
+      </ul>
+      <p>Questions? Contact us at <a href="mailto:growingstateofmind@gmail.com" class="underline">growingstateofmind@gmail.com</a>.</p>
+    </div>
+  </main>
+  <Footer />
+</Layout>
