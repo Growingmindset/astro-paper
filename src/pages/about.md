@@ -25,7 +25,7 @@ I don't take on debt to bootstrap this. I run a cash-flow model instead.
 
 ![Rudy Galan behind the bar at the Grand Hyatt](/action-shot.jpg)
 
-**I also manage my own equity portfolio** — long-term positions in businesses I use, understand, and think will still be dominant in 10+ years. The process: industry research, chart and fundamentals review, and position sizing driven by conviction and risk management, not hot tips. I publish every trade and thesis update in real time, no hindsight edits — [link to portfolio/trade log].
+**I also manage my own equity portfolio** — long-term positions in businesses I use, understand, and think will still be dominant in 10+ years. The process: industry research, chart and fundamentals review, and position sizing driven by conviction and risk management, not hot tips. I publish every trade and thesis update in real time, no hindsight edits — [[link to portfolio/trade log](https://www.rudygalan.com/posts/2026-portfolio-log/)].
 
 ---
 
