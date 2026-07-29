@@ -29,9 +29,8 @@ const recentPosts = labPosts.filter(({ data }) => !data.featured).slice(0, SITE.
   <Header />
   <main id="main-content" class="app-layout">
     <section id="hero" class="pb-6 pt-8">
-      <!-- Elevated Thesis Headline to Eliminate Name Redundancy -->
       <h1 class="my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl">Systems Builder & Operator</h1>
-      <a
+      
         target="_blank"
         href="/rss.xml"
         class="rss-link mb-6 inline-block"
@@ -47,14 +46,13 @@ const recentPosts = labPosts.filter(({ data }) => !data.featured).slice(0, SITE.
       </a>
       
       <p class="my-2 text-base leading-relaxed">
-        This site is my open-source blueprint—documenting the raw mechanics of wealth generation, philosophy, the Human Machine, and first-principles physics. Zero noise. Just the systems that work.
+        This site is where I document what I'm building — practical systems for wealth, first-principles physics, and the thinking behind both. No filler, just what's actually working.
       </p>
       
-      <!-- Cleaned up Navigation Funnel (Sunsetted The Archive Link) -->
       <p class="my-2 mt-4">
-  Track active deployments in <span class="whitespace-nowrap"><LinkButton href="/posts" class="underline decoration-dashed underline-offset-4 hover:text-accent">The Lab</LinkButton>,</span> read foundational essays in <span class="whitespace-nowrap"><LinkButton href="/library" class="underline decoration-dashed underline-offset-4 hover:text-accent">The Library</LinkButton>,</span> or acquire physical assets in the <span class="whitespace-nowrap"><LinkButton href="/shop" class="underline decoration-dashed underline-offset-4 hover:text-accent">Shop</LinkButton></span>.
-</p>
-</section>
+        Track active builds in <span class="whitespace-nowrap"><LinkButton href="/posts" class="underline decoration-dashed underline-offset-4 hover:text-accent">The Lab</LinkButton>,</span> read core essays in <span class="whitespace-nowrap"><LinkButton href="/library" class="underline decoration-dashed underline-offset-4 hover:text-accent">The Library</LinkButton>,</span> or check out physical goods in the <span class="whitespace-nowrap"><LinkButton href="/shop" class="underline decoration-dashed underline-offset-4 hover:text-accent">Shop</LinkButton></span>.
+      </p>
+    </section>
 
     <section id="operator-profile" class="my-6 grid grid-cols-1 gap-6 items-center border-t border-dashed border-border pt-8 sm:grid-cols-3">
       <div class="flex justify-center sm:col-span-1">
@@ -67,7 +65,7 @@ const recentPosts = labPosts.filter(({ data }) => !data.featured).slice(0, SITE.
       <div class="sm:col-span-2 flex flex-col justify-center">
         <h3 class="text-xl font-semibold text-skin-base mb-2">Meet the Operator</h3>
         <p class="text-sm leading-relaxed text-skin-base opacity-90">
-          With over a decade of high-volume frontline execution combined with an academic background in the physical sciences, I design and build systems at the intersection of technical architecture, quantitative behavioral finance, and in the near future clean energy.
+          Over a decade in high-volume hospitality funds my degree in physics and economics, plus my own investing. I'm building toward project management in large-scale energy infrastructure — the physical backbone the next economy will actually run on.
         </p>
         <p class="text-sm mt-3">
           <LinkButton href="/about" class="text-skin-accent font-medium hover:underline inline-flex items-center gap-1">
@@ -81,36 +79,6 @@ const recentPosts = labPosts.filter(({ data }) => !data.featured).slice(0, SITE.
     </section>
 
     <hr class="my-6 border-dashed border-border" />
-
-   <section class="my-8 rounded-lg border border-skin-line bg-skin-card px-6 py-8 shadow-sm">
-      <h2 class="mb-2 text-2xl font-semibold tracking-wide text-skin-base">Asynchronous Transmissions</h2>
-      <p class="mb-6 text-sm text-skin-base opacity-90">
-        Drop your email to receive a direct log whenever a new framework or build drops. No arbitrary weekly schedules, no filler content. Deployed only when the system updates.
-      </p>
-      
-      <form
-        action="https://buttondown.com/api/emails/embed-subscribe/galan"
-        method="post"
-        target="popupwindow"
-        onsubmit="window.open('https://buttondown.com/api/emails/embed-subscribe/galan', 'popupwindow')"
-        class="flex flex-col gap-3 sm:flex-row"
-      >
-        <input
-          type="email"
-          name="email"
-          id="bd-email"
-          placeholder="Enter your email address"
-          required
-          class="w-full rounded border border-skin-fill border-opacity-40 bg-skin-fill px-4 py-2 text-skin-base focus:border-skin-accent focus:outline-none sm:w-2/3"
-        />
-        <button
-          type="submit"
-          class="w-full rounded bg-skin-accent px-4 py-2 font-semibold text-skin-inverted transition-colors hover:bg-skin-accent/80 sm:w-1/3"
-        >
-          Initialize
-        </button>
-      </form>
-    </section>
 
     {
       featuredPosts.length > 0 && (
