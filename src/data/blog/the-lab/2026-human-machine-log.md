@@ -41,7 +41,7 @@ Train at your own risk — I'm not responsible for injuries.
 ## Get The Program
  
 <div class="download-block">
-<a href="/downloads/5-day-training-program.pdf" download class="btn-download">📄 Download the Printable PDF</a>
+<a href="/downloads/atreides-revenge.pdf" download class="btn-download">📄 Download the Printable PDF</a>
  
 <div class="email-opt-in">
 <p>Want to know when I drop the next one? Drop your email — no spam, just new programs.</p>
