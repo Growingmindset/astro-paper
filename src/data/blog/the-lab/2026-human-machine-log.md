@@ -202,5 +202,5 @@ If it's worth something to you and you want to throw a few bucks back my way, th
  
 <a href="/shop" class="btn-shop">Shop Risk On →</a>
  
-<p class="tip-link" style="font-size: 0.85rem; opacity: 0.75;">or <a href="https://risk-on.kit.com/products/rudy-galan">send a tip</a> if a shirt's not your thing</p>
+<p class="tip-link" style="font-size: 0.85rem; opacity: 0.75;">or <a href="https://risk-on.kit.com/products/rudy-galan?_gl=1*1rgkb24*_gcl_au*MTIzMzMzOTg5MC4xNzg1Mzc4OTA5LjI4NzkxNTA0OC4xNzg1Mzc5ODM5LjE3ODUzNzk4MzkuMTQyNjE2NTU1NS4xNzg1Mzc4OTM3LjE3ODUzNzk4Mzk.">send a tip</a> if a shirt's not your thing</p>
  
