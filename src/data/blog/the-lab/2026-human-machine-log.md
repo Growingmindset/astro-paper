@@ -8,6 +8,7 @@ tags:
   - lab
   - training
   - fitness
+  - living-document
 featured: true
 draft: false
 ---
