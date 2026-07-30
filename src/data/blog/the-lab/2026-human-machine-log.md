@@ -1,36 +1,208 @@
+
+
+5 day training program · MD
 ---
 author: Rudy Galan
-title: "2026 Human Machine Log"
-postSlug: 2026-human-machine-log
-description: "Macro-level living document tracking physical architecture, hypertrophy program, and nutritional systems."
-pubDatetime: 2026-05-22T00:00:00Z
+title: "Atreides Revenge"
+postSlug: atreides-revenge
+description: "Free 5-day strength & power program — warm-ups, lifts, and conditioning laid out day by day. Download the PDF."
+pubDatetime: 2026-07-29T00:00:00Z
 tags:
   - lab
-  - living-document
+  - training
   - fitness
 featured: true
 draft: false
 ---
-
-# 2026 Human Machine Log
-
-**Protocol:** Biomechanics, Structural Prep, Progressive overload, Energy Systems & Nutrition  
-**Philosophy:** Health is much like compound interest...the longer you do it, the more you get out of it.  
-**Update Cadence:** Every 12-15 weeks
-
-## Nutritional Architecture
-
-**Objective:** Intuitive tracking to increase strength, keep/gain muscle and cut fat using mostly intuition of long-term implications of inputs.
-
-### Nutritional Systems Reflection
-
-> **Current Insight:** Be prepared to be a little hungry. Remember, you're not starving. It's okay to be a little hungry after a meal, before sleep, etc. You will have another meal.
->
-> Keeping a relatively healthy diet based on loose fittings of the Mediterranean diet keeps energy levels in check, fullness, and needed fat. Lower carbs are likely, so eat them before workouts if you can to keep a high intensity. Salads before meals, eating before going out, skipping nights of drinking, lower calorie drinks like Martinis or light beer if so. Just be conservative in all of your actions when concerning energy intake.
-
-**6.22.26 Update**  
-I've been strapped for time so I'm trying out a new diet I can operate with on the fly. Including bread that doesn't expire quick, canned chilies, canned oysters, canned sardines, beef bone broth, whole grain crackers. Frozen salmon, chicken, lean beef staples stayed the same. A bigger change I've made is in my breakfast. Instead of eating 3-5 eggs, I'm going 1-2 whole eggs with half a cup of egg whites. It hasn't been that bad so far — down around 8lbs.
-
-## Systems Reflections
-
-> **Version 1.0 Insight:** Getting back to the foundations. All of those aches and pains come from doing movement out of my ranges of motion. Zeroing in on a baseline of cardio, improving my ranges of motion, and taking into consideration my structural biases. A plus is the breathing exercises will allow me to be more parasympathetic, while the weights may be conservative on the front end, this is part of a year long program in which they will get more aggressive as force production increases and ranges of motion improves. Weeks are future guidance, not set in stone; they're more for goal setting. If I'm not there when I get there then I will stay the same and keep working.
+ 
+# Atreides Revenge
+ 
+*Forged in exile. Built to come back stronger.*
+ 
+## About This Program
+ 
+I've spent over a decade coaching people through movement — starting as a personal trainer focused on sports performance and physical therapy back in 2013, and since then pulling together everything I've learned about long-term athletic development into one structured system. This 5-day split is built for real life: focused warm-ups, a mix of power, strength, and conditioning, and sessions that don't run longer than they need to.
+ 
+This is for anybody who wants a good training plan — intermediate-advanced or an ambitious beginner, all ages. I built this to provide value in the world and not let my past knowledge go to waste as I've moved on from personal training. This is meticulously built — if it's active, I'm actively doing the same thing you are.
+ 
+## How It Works
+ 
+Each day follows the same shape: a short movement-prep warm-up, a power or plyometric primer, a strength block built around a top set plus back-off sets, and a cardio finisher. The split rotates through squat/push, press/pull, posterior chain, power/shoulders, and a full-body accessory day so nothing gets neglected.
+ 
+2 days on, 1 day off, for a total of a five-day work week. I'm currently running this program while in a deficit, so the volume is a little lower than it would otherwise be. Run it for 6 weeks or until you stop seeing gains, then change it up. It's balanced for athletics, strength, and lifestyle.
+ 
+## Before You Begin
+ 
+I'm not responsible for injuries or anything — train at your own risk.
+ 
+---
+ 
+## Get The Program
+ 
+<div class="download-block">
+<a href="/downloads/5-day-training-program.pdf" download class="btn-download">📄 Download the Printable PDF</a>
+ 
+<div class="email-opt-in">
+<p>Want to know when I drop the next one? Drop your email — no spam, just new programs.</p>
+<!-- PASTE YOUR KIT (CONVERTKIT) FORM EMBED SNIPPET HERE -->
+<!-- It will look like: -->
+<!-- <script async data-uid="XXXXXXXXXX" src="https://YOURSUBDOMAIN.kit.com/XXXXXXXXXX/index.js"></script> -->
+ 
+</div>
+</div>
+<style>
+.download-block {
+  border: 1px solid var(--color-border, #ddd);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0 2rem 0;
+}
+.btn-download {
+  display: inline-block;
+  font-weight: 600;
+  padding: 0.65rem 1.25rem;
+  border: 2px solid currentColor;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.email-opt-in p {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-bottom: 0.5rem;
+}
+</style>
+ 
+---
+ 
+## Day 1 — Squat & Upper Push
+ 
+**Warm-up (2 rounds)**
+- Hip switch — 10/side
+- Cat-camel — 10
+- Hip CARs
+- Cossack plank
+**Plyometrics**
+- Broad jump — 4x3
+- Single-leg lateral bound — 3x6/side
+**Strength**
+- High-bar back squat
+  - Top set: 1x4 @ ______
+  - Back-off: 3x6 @ ______
+- DB incline press — 3x8 @ ______
+- Lateral raise — 3x15 @ ______
+- Hangs — 3x30s (feet on box, 90°)
+**Cardio**
+- Incline walk — 20 min
+- Bike — 20 min
+- Zone 2 (127–138 bpm)
+**Coach's Notes**
+> It might run a little long. Make sure to eat carbs 90 minutes before the workout — fast-digesting. Rest should always go by feel, and longer for compound movements.
+ 
+---
+ 
+## Day 2 — Incline Press, Pull & Arms
+ 
+**Warm-up (2 rounds)**
+- Cat-camel — 10
+- Bird dog — 8/side
+- Shoulder CAR, half-kneeling — 6
+- KB hold-to-twist, lying — 6
+**Plyo / Power**
+- No-hands push-up — 3x6
+**Strength**
+- Cambered bar incline press
+  - Top set: 1x3 @ ______
+  - Back-off: 3x6–8 @ ______
+- Neutral-grip pull-up — 3x6 (perfect form)
+**Superset**
+- Incline DB curl — 3x8 @ ______
+- DB French press — 3x12 @ ______
+**Cardio**
+- Prowler push + pull — 15 yd each, 5 rounds, 1 min rest
+**Coach's Notes**
+> Pretty easy day. Make sure to get that stretch on the cambered incline press.
+ 
+---
+ 
+## Day 3 — Posterior Chain / Pull
+ 
+**Warm-up**
+- Core stability circuit (curl-up, side plank, bird dog)
+- Hip CARs
+- Glute bridge — 10
+**Power**
+- Kettlebell swing
+**Strength**
+- Trap bar deadlift
+  - Top set: 1x5
+  - Back-off: 3x6
+- Weighted dip — 4x6
+- Chest-supported row — 3x10 (machine works too)
+- Standing calf raise — 3x15
+- Pallof press — 3x10/side
+**Cardio**
+- Zone 2 — 30 min (127–138 bpm)
+**Coach's Notes**
+> Try not to take too long on the deadlifts — I know it's tempting.
+ 
+---
+ 
+## Day 4 — Power, Shoulders & Back
+ 
+**Warm-up (2 rounds)**
+- Shoulder CARs, half-kneeling
+- Thoracic rotation — 8/side
+- Band pull-apart — 15
+**Plyo / Power**
+- Rotational med-ball throw — 3x5/side
+**Strength**
+- Kneeling landmine OHP
+  - Top set: 1x4–5
+  - Back-off: 3x6
+- Weighted pull-up / lat pulldown — 3x8
+- Face pull — 3x15
+- Farmer's carry — 3x40 yd
+**Cardio**
+- Prowler push/pull or bike sprints — 6–8 rounds, 1 min rest
+**Coach's Notes**
+> If you don't have shoulder problems, the kneeling landmine can be an overhead press instead.
+ 
+---
+ 
+## Day 5 — Full Body / Weak Point Accessory
+ 
+**Warm-up**
+- Hip CARs
+- Cat-camel — 10
+- Cossack squat
+- Ankle CARs
+**Strength**
+- Bulgarian split squat — 3x8/leg
+- Single-leg RDL — 3x8/side
+- Leg extension — 2x12
+- Standing calf raise — 3x15
+- Reverse fly — 3x10
+- Hammer curl — 3x10
+**Core**
+- Dead bug — 3x10/side
+- Suitcase carry — 3x30 yd/side
+**Cardio**
+- Incline walk — Zone 2, 25 min
+**Coach's Notes**
+> Mostly here to get volume, since the other days are taxing and cardio load is already high. There's a minimum amount of volume you should be doing every week — this isn't a reason to slack off.
+ 
+---
+ 
+## Support This
+ 
+<div class="support-block">
+Everything above is free — no email gate, no paywall.
+ 
+If it's worth something to you and you want to throw a few bucks back my way, the highest-impact move is grabbing a shirt from the Risk On shop. It funds more programs like this one, and π φ hits different under a barbell.
+ 
+<a href="______________________" class="btn-shop">Shop Risk On →</a>
+ 
+<p class="tip-link" style="font-size: 0.85rem; opacity: 0.75;">or <a href="______________________">buy me a coffee</a> if a shirt's not your thing</p>
+</div>
+ 
