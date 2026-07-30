@@ -77,6 +77,12 @@ postSlug: "2026-portfolio-log"
 
 | Ticker | Asset Class                   | Execution                          | Thesis / Catalyst |
 | :--- | :--- | :--- | :--- |
+| **ORCL** | Technology (Cloud)          | **Buy** (07/28/2026) 10 sh @ $116.11 avg | *— add rationale* |
+| **SWVXX** | Cash Equivalent            | **Sell** (07/27/2026) 1,400 sh @ $1.00 | *— add rationale* |
+| **ORCL** | Technology (Cloud)          | **Buy** (07/24/2026) 10 sh @ $120.16 | *— add rationale* |
+| **CRSR** | Technology (Hardware)       | **Buy** (07/24/2026) 100 sh @ $10.14 | *— add rationale* |
+| **SWVXX** | Cash Equivalent            | **Buy** (07/10/2026) 18,346 sh @ $1.00 | *— add rationale* |
+| **MSFT** | Technology (Software)       | **Buy** (06/25/2026) 4 sh @ $352.40 avg | *— add rationale* |
 | **INTC** | Technology (Semiconductors) | **Sold 3x Dec 2028 $200 Calls** (06/22/2026) | Collected **$17,382.64** in premium on long-dated calls while staying long semiconductor recovery. |
 | **MSFT** | Technology (Software)       | **Buy** (06/17/2026) @ $378.10     | Dominant cloud and AI infrastructure leader with durable pricing power and enterprise stickiness. |
 | **INTU** | Technology (Software)       | **Buy** (06/17/2026) @ $269.59     | High-quality small business software compounder with strong recurring revenue and AI tailwinds. |
@@ -99,3 +105,15 @@ In mid-June I added to MSFT and INTU. Both were opportunistic adds into software
 Earlier in the year I added McDonald's (MCD) as a defensive, high-quality balance against higher-beta names like Sweetgreen (SG). MCD provides gravitational stability in the consumer space, especially with leading indicators still showing resilience despite short-term pressure on discretionary spending. I also maintain positions in Oracle and the earlier FISV add, both of which were executed when the software and fintech sectors were under pressure. I still see structural value in these incumbents long-term.
 
 I'm currently monitoring KMB and TAP as potential defensive additions, but I'm being patient. Parts of the market feel stretched while other areas remain in lukewarm territory. My priority remains preserving dry powder for asymmetric, high-margin-of-safety opportunities. With midterms historically providing a tailwind into year-end, I'm comfortable sitting on cash until clearer setups present themselves rather than forcing deployments.
+
+**Q3 Review (July 2026 Update):**
+
+July leaned on the macro backdrop more than any quarter so far. ISM and New Orders are both still holding above 50, which by my own framework means the economy is firing on both cylinders and the next 3-to-9 months should keep trending expansionary — that's the backdrop that gave me the confidence to keep deploying rather than sit in cash. Prices Paid staying elevated at 82.1 is still the currency-debasement signal I flagged in the dashboard, and the corrugated box index ticking up 2.34% is the same "follow the boxes" confirmation — real goods are moving, this isn't a paper expansion.
+
+On the cash side, I moved $18,346 into SWVXX on the 10th to keep dry powder productive, then pulled $1,400 back out on the 27th to fund the next leg of buys. Same discipline as Q2 — preserve optionality, deploy when the setup is there.
+
+The bulk of that redeployment went into Oracle — 10 shares at $120.16 on the 24th, another 10 at $116.11 average on the 28th — buying the pullback on the same cloud/database modernization thesis I've been running all year. The SaaS-vs-AI paradigm shift keeps favoring the entrenched incumbents with the infrastructure moat, and Oracle's still squarely in that lane. Added to MSFT too on the 25th (4 shares, $352.40 average), staying consistent with the core cloud and AI infrastructure position.
+
+CRSR is the high-risk, high-reward add — 100 shares at $10.14. I'm reading this through sector rotation: cyber ran, chips ran, software's had its leg up too, and memory's been moving. Gaming hardware/peripherals feels like it could be next in that rotation, and CRSR was cheap enough that the asymmetry made sense to me — small size, but real upside if the rotation reaches it.
+
+Zooming out, the macro still supports the aggressive posture. With the ISM's ~78% correlation to forward EPS still intact and Q4 historically strong in a midterm year, I'm comfortable staying deployed into names with real conviction (ORCL, MSFT) while keeping a small speculative sleeve (CRSR) for asymmetric upside if the rotation plays out the way sector price action is suggesting.
