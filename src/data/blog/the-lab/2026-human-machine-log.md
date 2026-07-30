@@ -16,23 +16,25 @@ draft: false
  
 # Atreides Revenge
  
+# Atreides Revenge
+ 
 *Forged in exile. Built to come back stronger.*
  
 ## About This Program
  
-I've spent over a decade coaching people through movement — starting as a personal trainer focused on sports performance and physical therapy back in 2013, and since then pulling together everything I've learned about long-term athletic development into one structured system. This 5-day split is built for real life: focused warm-ups, a mix of power, strength, and conditioning, and sessions that don't run longer than they need to.
+12+ years coaching movement — from personal training focused on sports performance and physical therapy, to pulling everything I've learned into one structured system. This 5-day split is built for real life: efficient sessions, real progression, nothing wasted.
  
-This is for anybody who wants a good training plan — intermediate-advanced or an ambitious beginner, all ages. I built this to provide value in the world and not let my past knowledge go to waste as I've moved on from personal training. This is meticulously built — if it's active, I'm actively doing the same thing you are.
+Built for intermediate-advanced lifters or ambitious beginners, any age. I'm not coaching anymore, but I didn't want the knowledge to go to waste — so if it's live, I'm running it myself.
  
 ## How It Works
  
-Each day follows the same shape: a short movement-prep warm-up, a power or plyometric primer, a strength block built around a top set plus back-off sets, and a cardio finisher. The split rotates through squat/push, press/pull, posterior chain, power/shoulders, and a full-body accessory day so nothing gets neglected.
+Same shape every day: warm-up, a power primer, a strength block (top set + back-off sets), and a cardio finisher — rotating through squat/push, press/pull, posterior chain, power/shoulders, and full-body accessory.
  
-2 days on, 1 day off, for a total of a five-day work week. I'm currently running this program while in a deficit, so the volume is a little lower than it would otherwise be. Run it for 6 weeks or until you stop seeing gains, then change it up. It's balanced for athletics, strength, and lifestyle.
+2 days on, 1 off, five-day week. I'm running it in a deficit right now, so volume's a bit lower than usual. Run it 6 weeks or until progress stalls, then switch it up.
  
 ## Before You Begin
  
-I'm not responsible for injuries or anything — train at your own risk.
+Train at your own risk — I'm not responsible for injuries.
  
 ---
  
