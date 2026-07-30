@@ -1,4 +1,3 @@
-
 ---
 author: Rudy Galan
 title: "Atreides Revenge"
@@ -9,46 +8,45 @@ tags:
   - lab
   - training
   - fitness
-  - living-document
 featured: true
 draft: false
 ---
- 
+
 # Atreides Revenge
- 
-# Atreides Revenge
- 
+
 *Forged in exile. Built to come back stronger.*
- 
+
 ## About This Program
- 
+
 12+ years coaching movement — from personal training focused on sports performance and physical therapy, to pulling everything I've learned into one structured system. This 5-day split is built for real life: efficient sessions, real progression, nothing wasted.
- 
+
 Built for intermediate-advanced lifters or ambitious beginners, any age. I'm not coaching anymore, but I didn't want the knowledge to go to waste — so if it's live, I'm running it myself.
- 
+
 ## How It Works
- 
+
 Same shape every day: warm-up, a power primer, a strength block (top set + back-off sets), and a cardio finisher — rotating through squat/push, press/pull, posterior chain, power/shoulders, and full-body accessory.
- 
+
 2 days on, 1 off, five-day week. I'm running it in a deficit right now, so volume's a bit lower than usual. Run it 6 weeks or until progress stalls, then switch it up.
- 
+
 ## Before You Begin
- 
+
 Train at your own risk — I'm not responsible for injuries.
- 
+
 ---
- 
+
 ## Get The Program
- 
+
 <div class="download-block">
+
 <a href="/downloads/atreides-revenge.pdf" download class="btn-download">📄 Download the Printable PDF</a>
- 
+
 <div class="email-opt-in">
 <p>Want to know when I drop the next one? Drop your email — no spam, just new programs.</p>
 <script async data-uid="006aec9548" src="https://risk-on.kit.com/006aec9548/index.js"></script>
- 
 </div>
+
 </div>
+
 <style>
 .download-block {
   border: 1px solid var(--color-border, #ddd);
@@ -71,19 +69,21 @@ Train at your own risk — I'm not responsible for injuries.
   margin-bottom: 0.5rem;
 }
 </style>
- 
+
 ---
- 
+
 ## Day 1 — Squat & Upper Push
- 
+
 **Warm-up (2 rounds)**
 - Hip switch — 10/side
 - Cat-camel — 10
 - Hip CARs
 - Cossack plank
+
 **Plyometrics**
 - Broad jump — 4x3
 - Single-leg lateral bound — 3x6/side
+
 **Strength**
 - High-bar back squat
   - Top set: 1x4 @ ______
@@ -91,47 +91,56 @@ Train at your own risk — I'm not responsible for injuries.
 - DB incline press — 3x8 @ ______
 - Lateral raise — 3x15 @ ______
 - Hangs — 3x30s (feet on box, 90°)
+
 **Cardio**
 - Incline walk — 20 min
 - Bike — 20 min
 - Zone 2 (127–138 bpm)
+
 **Coach's Notes**
 > It might run a little long. Make sure to eat carbs 90 minutes before the workout — fast-digesting. Rest should always go by feel, and longer for compound movements.
- 
+
 ---
- 
+
 ## Day 2 — Incline Press, Pull & Arms
- 
+
 **Warm-up (2 rounds)**
 - Cat-camel — 10
 - Bird dog — 8/side
 - Shoulder CAR, half-kneeling — 6
 - KB hold-to-twist, lying — 6
+
 **Plyo / Power**
 - No-hands push-up — 3x6
+
 **Strength**
 - Cambered bar incline press
   - Top set: 1x3 @ ______
   - Back-off: 3x6–8 @ ______
 - Neutral-grip pull-up — 3x6 (perfect form)
+
 **Superset**
 - Incline DB curl — 3x8 @ ______
 - DB French press — 3x12 @ ______
+
 **Cardio**
 - Prowler push + pull — 15 yd each, 5 rounds, 1 min rest
+
 **Coach's Notes**
 > Pretty easy day. Make sure to get that stretch on the cambered incline press.
- 
+
 ---
- 
+
 ## Day 3 — Posterior Chain / Pull
- 
+
 **Warm-up**
 - Core stability circuit (curl-up, side plank, bird dog)
 - Hip CARs
 - Glute bridge — 10
+
 **Power**
 - Kettlebell swing
+
 **Strength**
 - Trap bar deadlift
   - Top set: 1x5
@@ -140,21 +149,25 @@ Train at your own risk — I'm not responsible for injuries.
 - Chest-supported row — 3x10 (machine works too)
 - Standing calf raise — 3x15
 - Pallof press — 3x10/side
+
 **Cardio**
 - Zone 2 — 30 min (127–138 bpm)
+
 **Coach's Notes**
 > Try not to take too long on the deadlifts — I know it's tempting.
- 
+
 ---
- 
+
 ## Day 4 — Power, Shoulders & Back
- 
+
 **Warm-up (2 rounds)**
 - Shoulder CARs, half-kneeling
 - Thoracic rotation — 8/side
 - Band pull-apart — 15
+
 **Plyo / Power**
 - Rotational med-ball throw — 3x5/side
+
 **Strength**
 - Kneeling landmine OHP
   - Top set: 1x4–5
@@ -162,20 +175,23 @@ Train at your own risk — I'm not responsible for injuries.
 - Weighted pull-up / lat pulldown — 3x8
 - Face pull — 3x15
 - Farmer's carry — 3x40 yd
+
 **Cardio**
 - Prowler push/pull or bike sprints — 6–8 rounds, 1 min rest
+
 **Coach's Notes**
 > If you don't have shoulder problems, the kneeling landmine can be an overhead press instead.
- 
+
 ---
- 
+
 ## Day 5 — Full Body / Weak Point Accessory
- 
+
 **Warm-up**
 - Hip CARs
 - Cat-camel — 10
 - Cossack squat
 - Ankle CARs
+
 **Strength**
 - Bulgarian split squat — 3x8/leg
 - Single-leg RDL — 3x8/side
@@ -183,24 +199,29 @@ Train at your own risk — I'm not responsible for injuries.
 - Standing calf raise — 3x15
 - Reverse fly — 3x10
 - Hammer curl — 3x10
+
 **Core**
 - Dead bug — 3x10/side
 - Suitcase carry — 3x30 yd/side
+
 **Cardio**
 - Incline walk — Zone 2, 25 min
+
 **Coach's Notes**
 > Mostly here to get volume, since the other days are taxing and cardio load is already high. There's a minimum amount of volume you should be doing every week — this isn't a reason to slack off.
- 
+
 ---
- 
+
 ## Support This
- 
+
 <div class="support-block">
+
 Everything above is free — no email gate, no paywall.
- 
+
 If it's worth something to you and you want to throw a few bucks back my way, the highest-impact move is grabbing a shirt from the Risk On shop. It funds more programs like this one, and π φ hits different under a barbell.
- 
-<a href="/shop" class="btn-shop">Shop Risk On →</a>
- 
-<p class="tip-link" style="font-size: 0.85rem; opacity: 0.75;">or <a href="https://risk-on.kit.com/products/rudy-galan?_gl=1*1rgkb24*_gcl_au*MTIzMzMzOTg5MC4xNzg1Mzc4OTA5LjI4NzkxNTA0OC4xNzg1Mzc5ODM5LjE3ODUzNzk4MzkuMTQyNjE2NTU1NS4xNzg1Mzc4OTM3LjE3ODUzNzk4Mzk.">send a tip</a> if a shirt's not your thing</p>
- 
+
+<a href="/shop/" class="btn-shop">Shop Risk On →</a>
+
+<p class="tip-link" style="font-size: 0.85rem; opacity: 0.75;">or <a href="https://risk-on.kit.com/products/rudy-galan">send a tip</a> if a shirt's not your thing</p>
+
+</div>
