@@ -77,12 +77,12 @@ postSlug: "2026-portfolio-log"
 
 | Ticker | Asset Class                   | Execution                          | Thesis / Catalyst |
 | :--- | :--- | :--- | :--- |
-| **ORCL** | Technology (Cloud)          | **Buy** (07/28/2026) 10 sh @ $116.11 avg | *— add rationale* |
-| **SWVXX** | Cash Equivalent            | **Sell** (07/27/2026) 1,400 sh @ $1.00 | *— add rationale* |
-| **ORCL** | Technology (Cloud)          | **Buy** (07/24/2026) 10 sh @ $120.16 | *— add rationale* |
-| **CRSR** | Technology (Hardware)       | **Buy** (07/24/2026) 100 sh @ $10.14 | *— add rationale* |
-| **SWVXX** | Cash Equivalent            | **Buy** (07/10/2026) 18,346 sh @ $1.00 | *— add rationale* |
-| **MSFT** | Technology (Software)       | **Buy** (06/25/2026) 4 sh @ $352.40 avg | *— add rationale* |
+| **ORCL** | Technology (Cloud)          | **Buy** (07/28/2026) 10 sh @ $116.11 avg | Same as below |
+| **SWVXX** | Cash Equivalent            | **Sell** (07/27/2026) 1,400 sh @ $1.00 | Needed liquidity|
+| **ORCL** | Technology (Cloud)          | **Buy** (07/24/2026) 10 sh @ $120.16 | Its everywhere. It'll be here in 10 years. Its cheap. |
+| **CRSR** | Technology (Hardware)       | **Buy** (07/24/2026) 100 sh @ $10.14 | Potential next rotation, cheap|
+| **SWVXX** | Cash Equivalent            | **Buy** (07/10/2026) 18,346 sh @ $1.00 | Money should always be working|
+| **MSFT** | Technology (Software)       | **Buy** (06/25/2026) 4 sh @ $352.40 avg | Cheap relative to its assets |
 | **INTC** | Technology (Semiconductors) | **Sold 3x Dec 2028 $200 Calls** (06/22/2026) | Collected **$17,382.64** in premium on long-dated calls while staying long semiconductor recovery. |
 | **MSFT** | Technology (Software)       | **Buy** (06/17/2026) @ $378.10     | Dominant cloud and AI infrastructure leader with durable pricing power and enterprise stickiness. |
 | **INTU** | Technology (Software)       | **Buy** (06/17/2026) @ $269.59     | High-quality small business software compounder with strong recurring revenue and AI tailwinds. |
