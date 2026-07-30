@@ -1,6 +1,3 @@
-
-
-5 day training program · MD
 ---
 author: Rudy Galan
 title: "Atreides Revenge"
