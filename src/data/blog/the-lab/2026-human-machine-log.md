@@ -45,9 +45,7 @@ Train at your own risk — I'm not responsible for injuries.
  
 <div class="email-opt-in">
 <p>Want to know when I drop the next one? Drop your email — no spam, just new programs.</p>
-<!-- PASTE YOUR KIT (CONVERTKIT) FORM EMBED SNIPPET HERE -->
-<!-- It will look like: -->
-<!-- <script async data-uid="XXXXXXXXXX" src="https://YOURSUBDOMAIN.kit.com/XXXXXXXXXX/index.js"></script> -->
+<script async data-uid="006aec9548" src="https://risk-on.kit.com/006aec9548/index.js"></script>
  
 </div>
 </div>
