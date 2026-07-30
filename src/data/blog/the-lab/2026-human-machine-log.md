@@ -202,6 +202,5 @@ If it's worth something to you and you want to throw a few bucks back my way, th
  
 <a href="/shop" class="btn-shop">Shop Risk On →</a>
  
-<p class="tip-link" style="font-size: 0.85rem; opacity: 0.75;">or <a href="______________________">buy me a coffee</a> if a shirt's not your thing</p>
-</div>
+<p class="tip-link" style="font-size: 0.85rem; opacity: 0.75;">or <a href="https://risk-on.kit.com/products/rudy-galan">send a tip</a> if a shirt's not your thing</p>
  
