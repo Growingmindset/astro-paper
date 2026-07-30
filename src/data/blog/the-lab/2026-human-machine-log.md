@@ -200,7 +200,7 @@ Everything above is free — no email gate, no paywall.
  
 If it's worth something to you and you want to throw a few bucks back my way, the highest-impact move is grabbing a shirt from the Risk On shop. It funds more programs like this one, and π φ hits different under a barbell.
  
-<a href="______________________" class="btn-shop">Shop Risk On →</a>
+<a href="www.rudygalan.com/shop" class="btn-shop">Shop Risk On →</a>
  
 <p class="tip-link" style="font-size: 0.85rem; opacity: 0.75;">or <a href="______________________">buy me a coffee</a> if a shirt's not your thing</p>
 </div>
