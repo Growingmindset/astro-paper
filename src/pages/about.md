@@ -37,7 +37,7 @@ I moved away from it deliberately: medicine and fitness are high-friction system
 ---
 
 ## What I'm Building Toward
-Short-term: Working toward **Google PM and Primavera certifications**, and holding an active Texas real estate license (eXp Realty, referral division) as a side channel.
+Short-term: Working toward **CAPM and Primavera certifications**, and holding an active Texas real estate license (eXp Realty, referral division) as a side channel.
 
 Long-term: project management in large-scale energy infrastructure. I think it's one of the biggest unsolved problems the world will face in the next few decades, and I want to be building inside it — eventually running my own sustainable energy operation.
 
