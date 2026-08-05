@@ -32,11 +32,11 @@ postSlug: "2026-portfolio-log"
 
 | Metric | Prior Read | Current Read | Delta | Status | Implication |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| ✍️ **ISM Manufacturing PMI** | 53.3 | 53.3 | +0.0 pts | Expansion (Bullish) | Accelerating Momentum |
-| ✍️ **ISM New Orders** | 56.0 | 56.0 | +0.0 pts | **Leading Expansion** | Telegraphs Forward Growth 3-6M |
-| ✍️ **ISM Prices Paid** | 82.1 | 82.1 | +0.0 pts | **Currency Debasement** | Capital Rotates to Dollar Hedges |
+| ✍️ **ISM Manufacturing PMI** | 53.3 | 55.6 | +2.3 pts | Expansion (Bullish) | Accelerating Momentum |
+| ✍️ **ISM New Orders** | 56.0 | 56.7 | +0.7 pts | **Leading Expansion** | Telegraphs Forward Growth 3-6M |
+| ✍️ **ISM Prices Paid** | 73.0 | 71.1 | -1.9 pts | **Currency Debasement** | Capital Rotates to Dollar Hedges |
 | ⚡ **Fed Funds Target Rate** | 3.63% | 3.63% | +0.00% | Falling/Stable | Stable Baseline |
-| ⚡ **CPI (Inflation)** | 4.17% | 3.46% | -0.70% | Falling/Stable | Monitoring Shift |
+| ⚡ **CPI (Inflation)** | 4.17% | 3.46% | -0.71% | Falling/Stable | Monitoring Shift |
 | ⚡ **Total Nonfarm Payrolls** | 129.00k | 57.00k | -72.00k | Falling/Stable | Monitoring Shift |
 | ⚡ **PPI: Corrugated Boxes** | 366.92 | 375.49 | +2.34% | Rising | Monitoring Shift |
 
