@@ -1,8 +1,8 @@
 {
   "ism": {
-    "manufacturing_pmi": 53.3,
-    "new_orders": 56.0,
-    "prices_paid": 82.1
+    "manufacturing_pmi": 55.6,
+    "new_orders": 56.7,
+    "prices_paid": 71.1
   },
   "fred": {
     "FEDFUNDS": 3.63,
