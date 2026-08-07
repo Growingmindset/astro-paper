@@ -14,7 +14,6 @@ tags:
 description: "The components of a high agency individual and how you can become one"
 ---
 
-# Anti-Signal
 
 High agency is a batch of personality traits composed of confidence, struggle, self-awareness, and psychological prowess. In this writing you'll learn the traits of what makes someone high agency, and how you can apply it to your life. Identification of this individual is the first step to freedom of mind.
 
