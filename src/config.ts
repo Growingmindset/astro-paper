@@ -1,4 +1,6 @@
-export const SITE = {
+import type { Site, SocialObjects } from "./types";
+
+export const SITE: Site = {
   website: "https://rudygalan.com/",
   author: "Rudy Galan",
   profile: "https://rudygalan.com/",
@@ -20,7 +22,7 @@ export const SITE = {
   dir: "ltr",
   lang: "en",
   timezone: "America/Chicago",
-} as const;
+};
 
 export const LOCALE = {
   lang: "en",
@@ -34,11 +36,30 @@ export const LOGO_IMAGE = {
   height: 46,
 };
 
-export const SOCIALS = [];
+export const SOCIALS: SocialObjects = [
+  {
+    name: "Github",
+    href: "https://github.com/Growingmindset",
+    linkTitle: `${SITE.title} on Github`,
+    active: true,
+  },
+  {
+    name: "Mail",
+    href: "mailto:growingstateofmind@gmail.com",
+    linkTitle: `Send an email to ${SITE.title}`,
+    active: true,
+  },
+  {
+    name: "X",
+    href: "https://x.com/Rudygalan",
+    linkTitle: `${SITE.title} on X`,
+    active: false,
+  },
+];
 
 export const navLinks = [
   { href: "/posts", linkText: "Lab", active: true },
-  { href: "/library", linkText: "Library", active: true }, // <-- Updated path
-{ href: "/shop", linkText: "Shop", active: true },
-  { href: "/about", linkText: "Profile", active: true }, //added this like
+  { href: "/library", linkText: "Library", active: true },
+  { href: "/shop", linkText: "Shop", active: true },
+  { href: "/about", linkText: "Profile", active: true },
 ];
