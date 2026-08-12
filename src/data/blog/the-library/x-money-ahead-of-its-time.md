@@ -10,6 +10,7 @@ tags:
   - fintech
   - capital
   - transmissions
+  - system-log
 description: "X pays 6% on deposits while the Fed target sits at 3.75%. That gap is the whole story — and it isn't the one most people are telling."
 ---
 

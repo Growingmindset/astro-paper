@@ -6,11 +6,11 @@ postSlug: market-intel-illusion-of-highs
 featured: false
 draft: false
 tags:
-  - system-log
   - archive
   - macro
   - market-intel
   - trading
+  - transmissions
 description: "An analysis of the divergence between all-time index highs and decaying market breadth, structural macro shifts, and key tactical setups to watch."
 ---
 
