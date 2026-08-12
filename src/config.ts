@@ -1,6 +1,6 @@
-import type { Site, SocialObjects } from "./types";
+import type { SocialObjects } from "./types";
 
-export const SITE: Site = {
+export const SITE = {
   website: "https://rudygalan.com/",
   author: "Rudy Galan",
   profile: "https://rudygalan.com/",
@@ -22,7 +22,7 @@ export const SITE: Site = {
   dir: "ltr",
   lang: "en",
   timezone: "America/Chicago",
-};
+} as const;
 
 export const LOCALE = {
   lang: "en",
@@ -45,13 +45,13 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "Mail",
-    href: "mailto:growingstateofmind@gmail.com",
+    href: "growingstateofmind@gmail.com",
     linkTitle: `Send an email to ${SITE.title}`,
     active: true,
   },
   {
     name: "X",
-    href: "https://x.com/Rudygalan",
+    href: "https://x.com/rudygalan",
     linkTitle: `${SITE.title} on X`,
     active: false,
   },
