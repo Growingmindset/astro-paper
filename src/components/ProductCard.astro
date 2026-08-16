@@ -47,13 +47,7 @@ const defaultVariant = product.variants[0];
       ${(defaultVariant.price ?? product.price).toFixed(2)}
     </p>
 
-    
-      href={defaultVariant.stripeUrl}
-      data-astro-reload
-      class="product-card-buy mt-4 rounded-lg border-2 border-skin-accent px-4 py-2 text-center text-xs font-bold uppercase tracking-wider text-skin-accent transition-all duration-300 hover:bg-skin-accent hover:text-skin-inverted"
-    >
-      Buy Now
-    </a>
+    <a href={defaultVariant.stripeUrl} data-astro-reload class="product-card-buy mt-4 rounded-lg border-2 border-skin-accent px-4 py-2 text-center text-xs font-bold uppercase tracking-wider text-skin-accent transition-all duration-300 hover:bg-skin-accent hover:text-skin-inverted">Buy Now</a>
   </div>
 </div>
 
