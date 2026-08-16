@@ -154,7 +154,7 @@ export const products: Product[] = [
     line: "essentials",
     name: "Risk On Logo Hat",
     description:
-      "Curved brim, embroidered wordmark, adjustable strap. Add your own name to the back for a personal touch — pictured with 'Rudy G.' as an example.",
+      "Curved brim, embroidered wordmark, adjustable strap. This one's personalized — we embroider your own name on the back, shown here with 'Rudy G.' as an example. Just include the name you want at checkout.",
     price: 29.99,
     published: true,
     variants: [
