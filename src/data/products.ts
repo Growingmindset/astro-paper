@@ -64,16 +64,16 @@ export const products: Product[] = [
     published: true,
     variants: [
       {
-        label: "Racerback",
-        image: "/shop/ggg-sups-racerback.png",
-        alt: "Good Girls Get Sups Racerback",
-        stripeUrl: "https://buy.stripe.com/fZu9AS6Zb6atdFN1hO2oE07",
-      },
-      {
         label: "Muscle Tee",
         image: "/shop/ggg-sups-muscle-tee.png",
         alt: "Good Girls Get Sups Muscle Tee",
         stripeUrl: "https://buy.stripe.com/4gM00idnzcyR45dbWs2oE08",
+      },
+      {
+        label: "Racerback",
+        image: "/shop/ggg-sups-racerback.png",
+        alt: "Good Girls Get Sups Racerback",
+        stripeUrl: "https://buy.stripe.com/fZu9AS6Zb6atdFN1hO2oE07",
       },
     ],
   },
@@ -154,7 +154,7 @@ export const products: Product[] = [
     line: "essentials",
     name: "Risk On Logo Hat",
     description:
-      "Curved brim, embroidered wordmark, adjustable strap. A clean daily topper that doesn't try too hard.",
+      "Curved brim, embroidered wordmark, adjustable strap. Add your own name to the back for a personal touch — pictured with 'Rudy G.' as an example.",
     price: 29.99,
     published: true,
     variants: [
