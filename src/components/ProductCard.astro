@@ -1,4 +1,11 @@
 ---
+import type { Product } from "../data/products";
+
+interface Props {
+  product: Product;
+  compact?: boolean;
+}
+
 const { product, compact = false } = Astro.props;
 const defaultVariant = product.variants[0];
 ---
@@ -65,28 +72,30 @@ const defaultVariant = product.variants[0];
 
 <script>
   function initVariantToggles() {
-    document.querySelectorAll(".product-card").forEach((card) => {
-      const buttons = card.querySelectorAll(".variant-btn");
+    document.querySelectorAll<HTMLElement>(".product-card").forEach((card) => {
+      const buttons = card.querySelectorAll<HTMLButtonElement>(".variant-btn");
       if (!buttons.length) return;
 
-      const img = card.querySelector(".product-card-image");
-      const priceEl = card.querySelector(".product-card-price");
-      const buyLink = card.querySelector(".product-card-buy");
+      const img = card.querySelector<HTMLImageElement>(".product-card-image");
+      const priceEl = card.querySelector<HTMLElement>(".product-card-price");
+      const buyLink = card.querySelector<HTMLAnchorElement>(".product-card-buy");
 
       buttons.forEach((btn) => {
         btn.addEventListener("click", () => {
           buttons.forEach((b) => b.setAttribute("aria-pressed", "false"));
           btn.setAttribute("aria-pressed", "true");
 
-          if (img && btn.dataset.image) {
-            img.src = btn.dataset.image;
-            img.alt = btn.dataset.alt ?? img.alt;
+          const { image, alt, price, stripe } = btn.dataset;
+
+          if (img && image) {
+            img.src = image;
+            img.alt = alt ?? img.alt;
           }
-          if (priceEl && btn.dataset.price) {
-            priceEl.textContent = `$${parseFloat(btn.dataset.price).toFixed(2)}`;
+          if (priceEl && price) {
+            priceEl.textContent = `$${parseFloat(price).toFixed(2)}`;
           }
-          if (buyLink && btn.dataset.stripe) {
-            buyLink.href = btn.dataset.stripe;
+          if (buyLink && stripe) {
+            buyLink.href = stripe;
           }
         });
       });

@@ -3,9 +3,10 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ProductCard from "../components/ProductCard.astro";
-import { products, lineMeta } from "../data/products.js";
+import { products, lineMeta, type ProductLine } from "../data/products";
 
-const byLine = (line) => products.filter((p) => p.line === line && p.published);
+const byLine = (line: ProductLine) =>
+  products.filter((p) => p.line === line && p.published);
 
 const line01 = byLine("line-01");
 const line02 = byLine("line-02");
