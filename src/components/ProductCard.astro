@@ -20,9 +20,7 @@ const defaultVariant = product.variants[0];
       {product.name}
     </h2>
 
-    {!compact && (
-      <p class="mt-1 text-xs text-skin-base opacity-60">{product.description}</p>
-    )}
+    <p class="mt-1 text-xs text-skin-base opacity-60">{product.description}</p>
 
     {product.variants.length > 1 && (
       <div class="mt-3 flex flex-wrap gap-2">
