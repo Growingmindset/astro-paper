@@ -11,11 +11,10 @@ const defaultVariant = product.variants[0];
 ---
 
 <div class="product-card flex flex-col overflow-hidden rounded-lg border border-skin-line bg-skin-fill">
-  <img
-    src={defaultVariant.image}
-    alt={defaultVariant.alt}
-    class="product-card-image aspect-square w-full object-cover"
-  />
+  <div class="product-card-image-wrap relative">
+    <img src={defaultVariant.image} alt={defaultVariant.alt} class="product-card-image aspect-square w-full object-cover cursor-zoom-in" />
+    <span class="zoom-badge pointer-events-none absolute bottom-2 right-2 rounded bg-black/70 px-2 py-1 text-[10px] font-bold uppercase tracking-wide text-white">Tap to enlarge</span>
+  </div>
   <div class:list={["flex flex-1 flex-col", compact ? "p-3" : "p-4"]}>
     <h2 class:list={["font-semibold text-skin-base", compact ? "text-xs" : "text-sm"]}>
       {product.name}
@@ -65,12 +64,73 @@ const defaultVariant = product.variants[0];
 </style>
 
 <script>
-  function initVariantToggles() {
+  function ensureLightbox(): HTMLElement {
+    let lightbox = document.getElementById("product-lightbox");
+    if (lightbox) return lightbox;
+
+    lightbox = document.createElement("div");
+    lightbox.id = "product-lightbox";
+    lightbox.setAttribute("role", "dialog");
+    lightbox.setAttribute("aria-modal", "true");
+    lightbox.style.cssText = "display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.92); align-items:center; justify-content:center; cursor:zoom-out; padding:2rem;";
+
+    const closeBtn = document.createElement("button");
+    closeBtn.type = "button";
+    closeBtn.id = "product-lightbox-close";
+    closeBtn.setAttribute("aria-label", "Close");
+    closeBtn.textContent = "Close";
+    closeBtn.style.cssText = "position:absolute; top:1rem; right:1rem; padding:8px 16px; border-radius:9999px; background:rgba(255,255,255,0.1); border:none; color:#fff; font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; cursor:pointer;";
+
+    const img = document.createElement("img");
+    img.id = "product-lightbox-img";
+    img.style.cssText = "max-width:100%; max-height:100%; object-fit:contain; border-radius:4px;";
+
+    lightbox.appendChild(closeBtn);
+    lightbox.appendChild(img);
+    document.body.appendChild(lightbox);
+
+    lightbox.addEventListener("click", closeLightbox);
+    closeBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      closeLightbox();
+    });
+
+    return lightbox;
+  }
+
+  function openLightbox(src: string, alt: string) {
+    const lightbox = ensureLightbox();
+    const img = document.getElementById("product-lightbox-img") as HTMLImageElement | null;
+    if (img) {
+      img.src = src;
+      img.alt = alt;
+    }
+    lightbox.style.display = "flex";
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    const lightbox = document.getElementById("product-lightbox");
+    if (lightbox) {
+      lightbox.style.display = "none";
+      document.body.style.overflow = "";
+    }
+  }
+
+  function initProductCards() {
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeLightbox();
+    });
+
+    document.querySelectorAll<HTMLImageElement>(".product-card-image").forEach((img) => {
+      img.addEventListener("click", () => openLightbox(img.src, img.alt));
+    });
+
     document.querySelectorAll<HTMLElement>(".product-card").forEach((card) => {
       const buttons = card.querySelectorAll<HTMLButtonElement>(".variant-btn");
       if (!buttons.length) return;
 
-      const img = card.querySelector<HTMLImageElement>(".product-card-image");
+      const cardImg = card.querySelector<HTMLImageElement>(".product-card-image");
       const priceEl = card.querySelector<HTMLElement>(".product-card-price");
       const buyLink = card.querySelector<HTMLAnchorElement>(".product-card-buy");
 
@@ -81,9 +141,9 @@ const defaultVariant = product.variants[0];
 
           const { image, alt, price, stripe } = btn.dataset;
 
-          if (img && image) {
-            img.src = image;
-            img.alt = alt ?? img.alt;
+          if (cardImg && image) {
+            cardImg.src = image;
+            cardImg.alt = alt ?? cardImg.alt;
           }
           if (priceEl && price) {
             priceEl.textContent = `$${parseFloat(price).toFixed(2)}`;
@@ -96,5 +156,5 @@ const defaultVariant = product.variants[0];
     });
   }
 
-  document.addEventListener("astro:page-load", initVariantToggles);
+  document.addEventListener("astro:page-load", initProductCards);
 </script>
