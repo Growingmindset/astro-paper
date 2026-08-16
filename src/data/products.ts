@@ -61,19 +61,19 @@ export const products: Product[] = [
     description:
       "Good girls get sups — everyone else gets excuses. Racerback and muscle-tee cuts built for the ones who put in the work first.",
     price: 29.99,
-    published: false,
+    published: true,
     variants: [
       {
         label: "Racerback",
-        image: "/shop/TODO-ggg-sups-racerback.png",
+        image: "/shop/ggg-sups-racerback.png",
         alt: "Good Girls Get Sups Racerback",
-        stripeUrl: "https://buy.stripe.com/REPLACE_ME",
+        stripeUrl: "https://buy.stripe.com/fZu9AS6Zb6atdFN1hO2oE07",
       },
       {
         label: "Muscle Tee",
-        image: "/shop/TODO-ggg-sups-muscle.png",
+        image: "/shop/ggg-sups-muscle-tee.png",
         alt: "Good Girls Get Sups Muscle Tee",
-        stripeUrl: "https://buy.stripe.com/REPLACE_ME",
+        stripeUrl: "https://buy.stripe.com/4gM00idnzcyR45dbWs2oE08",
       },
     ],
   },
@@ -84,13 +84,13 @@ export const products: Product[] = [
     description:
       "Value investing for your body — patience compounds in the gym the same way it compounds in the market. Sleeveless, unapologetic, built for the long game.",
     price: 29.99,
-    published: false,
+    published: true,
     variants: [
       {
         label: "Tank",
-        image: "/shop/TODO-buffett-tank.png",
+        image: "/shop/warren-buffett-tank.png",
         alt: "Warren Buffett Tank",
-        stripeUrl: "https://buy.stripe.com/REPLACE_ME",
+        stripeUrl: "https://buy.stripe.com/cNi8wO1ER0Q9fNV9Ok2oE06",
       },
     ],
   },
@@ -138,14 +138,14 @@ export const products: Product[] = [
     name: "Risk On Trucker Cap",
     description:
       "Structured five-panel, mesh back, embroidered mark up front. The cap for whichever mode you're in.",
-    price: 24.99,
-    published: false,
+    price: 29.99,
+    published: true,
     variants: [
       {
         label: "One size",
-        image: "/shop/TODO-trucker-cap.png",
+        image: "/shop/risk-on-trucker-cap.png",
         alt: "Risk On Trucker Cap",
-        stripeUrl: "https://buy.stripe.com/REPLACE_ME",
+        stripeUrl: "https://buy.stripe.com/bJeeVcgzL8iBdFNaSo2oE05",
       },
     ],
   },
@@ -155,31 +155,14 @@ export const products: Product[] = [
     name: "Risk On Logo Hat",
     description:
       "Curved brim, embroidered wordmark, adjustable strap. A clean daily topper that doesn't try too hard.",
-    price: 24.99,
-    published: false,
+    price: 29.99,
+    published: true,
     variants: [
       {
         label: "One size",
-        image: "/shop/TODO-logo-hat.png",
+        image: "/shop/risk-on-logo-hat.png",
         alt: "Risk On Logo Hat",
-        stripeUrl: "https://buy.stripe.com/REPLACE_ME",
-      },
-    ],
-  },
-  {
-    id: "polo",
-    line: "essentials",
-    name: "Risk On Pique Polo",
-    description:
-      "Pique knit, embroidered chest mark, zero wasted ornamentation. Elevated basics for whatever comes after the gym.",
-    price: 39.99,
-    published: false,
-    variants: [
-      {
-        label: "Polo",
-        image: "/shop/TODO-polo.png",
-        alt: "Risk On Pique Polo",
-        stripeUrl: "https://buy.stripe.com/REPLACE_ME",
+        stripeUrl: "https://buy.stripe.com/8x2fZgerD0Q9atBgcI2oE04",
       },
     ],
   },
