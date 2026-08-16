@@ -58,7 +58,8 @@ export const products: Product[] = [
     id: "ggg-sups",
     line: "line-01",
     name: "Good Girls Get Sups",
-    description: "TODO: write the description line.",
+    description:
+      "Good girls get sups — everyone else gets excuses. Racerback and muscle-tee cuts built for the ones who put in the work first.",
     price: 29.99,
     published: false,
     variants: [
@@ -80,7 +81,8 @@ export const products: Product[] = [
     id: "warren-buffett-tank",
     line: "line-01",
     name: "Warren Buffett Tank",
-    description: "TODO: write the description line.",
+    description:
+      "Value investing for your body — patience compounds in the gym the same way it compounds in the market. Sleeveless, unapologetic, built for the long game.",
     price: 29.99,
     published: false,
     variants: [
@@ -134,7 +136,8 @@ export const products: Product[] = [
     id: "trucker-cap",
     line: "essentials",
     name: "Risk On Trucker Cap",
-    description: "TODO: write the description line.",
+    description:
+      "Structured five-panel, mesh back, embroidered mark up front. The cap for whichever mode you're in.",
     price: 24.99,
     published: false,
     variants: [
@@ -150,7 +153,8 @@ export const products: Product[] = [
     id: "logo-hat",
     line: "essentials",
     name: "Risk On Logo Hat",
-    description: "TODO: write the description line.",
+    description:
+      "Curved brim, embroidered wordmark, adjustable strap. A clean daily topper that doesn't try too hard.",
     price: 24.99,
     published: false,
     variants: [
@@ -166,7 +170,8 @@ export const products: Product[] = [
     id: "polo",
     line: "essentials",
     name: "Risk On Pique Polo",
-    description: "TODO: write the description line.",
+    description:
+      "Pique knit, embroidered chest mark, zero wasted ornamentation. Elevated basics for whatever comes after the gym.",
     price: 39.99,
     published: false,
     variants: [
