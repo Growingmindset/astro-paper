@@ -2,17 +2,25 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import ProductCard from "../components/ProductCard.astro";
+import { products, lineMeta } from "../data/products.js";
+
+const byLine = (line) => products.filter((p) => p.line === line && p.published);
+
+const line01 = byLine("line-01");
+const line02 = byLine("line-02");
+const essentials = byLine("essentials");
 ---
 
 <Layout title="Shop | RISK ON">
   <Header activeNav="shop" />
   <main id="main-content" class="mx-auto max-w-4xl px-4 py-12">
-    <div class="mb-10 text-center">
+    <div class="mb-6 text-center">
       <h1 class="text-3xl font-bold uppercase tracking-[0.15em] text-skin-base">RISK ON SUPPLY</h1>
       <p class="mt-2 text-sm text-skin-base opacity-75">Built for training. Made when ordered.</p>
     </div>
 
-    <div class="mb-12 mx-auto max-w-2xl text-center text-sm text-skin-base opacity-80 leading-relaxed">
+    <div class="mb-8 mx-auto max-w-2xl text-center text-sm text-skin-base opacity-80 leading-relaxed">
       <p>
         Every trader knows the feeling. Risk on: you're in, you're pushing, you're betting on yourself.
         Risk off: you play it safe, you sit on the sidelines. We only make gear for one mode.
@@ -23,67 +31,62 @@ import Footer from "../components/Footer.astro";
       </p>
     </div>
 
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-      <div class="flex flex-col overflow-hidden rounded-lg border border-skin-line bg-skin-fill">
-        <img src="/shop/hit-maxes-evade-taxes.png" alt="Hit Maxes, Evade Taxes Tee" class="aspect-square w-full object-cover" />
-        <div class="flex flex-1 flex-col p-4">
-          <h2 class="text-sm font-semibold text-skin-base">Hit Maxes, Evade Taxes</h2>
-          <p class="mt-1 text-xs text-skin-base opacity-60">For the ones who chase PRs and dodge W-2s. Soft, heavyweight cotton blend built to survive leg day and everything after.</p>
-          <p class="mt-2 text-sm text-skin-base opacity-70">$29.99</p>
-          <a href="https://buy.stripe.com/4gMbJ01ER6atbxF6C82oE00" data-astro-reload class="mt-4 rounded-lg border-2 border-skin-accent px-4 py-2 text-center text-xs font-bold uppercase tracking-wider text-skin-accent transition-all duration-300 hover:bg-skin-accent hover:text-skin-inverted">
-            Buy Now
-          </a>
+    <nav class="mb-12 flex flex-wrap items-center justify-center gap-3" aria-label="Shop sections">
+      {line01.length > 0 && (
+        <a href="#line-01" class="rounded-full border border-skin-line px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-skin-base opacity-70 transition-opacity duration-200 hover:opacity-100">
+          {lineMeta["line-01"].heading}
+        </a>
+      )}
+      {line02.length > 0 && (
+        <a href="#line-02" class="rounded-full border border-skin-line px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-skin-base opacity-70 transition-opacity duration-200 hover:opacity-100">
+          {lineMeta["line-02"].heading}
+        </a>
+      )}
+      {essentials.length > 0 && (
+        <a href="#essentials" class="rounded-full border border-skin-line px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-skin-base opacity-70 transition-opacity duration-200 hover:opacity-100">
+          {lineMeta.essentials.heading}
+        </a>
+      )}
+    </nav>
+
+    {line01.length > 0 && (
+      <section id="line-01" class="mb-16 scroll-mt-24">
+        <div class="mb-6 text-center">
+          <p class="text-xs uppercase tracking-[0.2em] text-skin-base opacity-50">{lineMeta["line-01"].heading}</p>
+          <h2 class="text-xl font-bold uppercase tracking-wide text-skin-base">{lineMeta["line-01"].title}</h2>
+          <p class="mt-1 text-xs text-skin-base opacity-60">{lineMeta["line-01"].blurb}</p>
         </div>
-      </div>
-
-      <div class="flex flex-col overflow-hidden rounded-lg border border-skin-line bg-skin-fill">
-        <img src="/shop/nostoploss-mockup.png" alt="All In, No Stop Loss Tee" class="aspect-square w-full object-cover" />
-        <div class="flex flex-1 flex-col p-4">
-          <h2 class="text-sm font-semibold text-skin-base">All In, No Stop Loss</h2>
-          <p class="mt-1 text-xs text-skin-base opacity-60">No hedging. No sitting out. Bold statement tee built for the ones who bet on themselves.</p>
-          <p class="mt-2 text-sm text-skin-base opacity-70">$29.99</p>
-          <a href="https://buy.stripe.com/5kQbJ0gzLbuN0T13pW2oE01" data-astro-reload class="mt-4 rounded-lg border-2 border-skin-accent px-4 py-2 text-center text-xs font-bold uppercase tracking-wider text-skin-accent transition-all duration-300 hover:bg-skin-accent hover:text-skin-inverted">
-            Buy Now
-          </a>
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          {line01.map((product) => <ProductCard product={product} />)}
         </div>
-      </div>
+      </section>
+    )}
 
-      <div class="flex flex-col overflow-hidden rounded-lg border border-skin-line bg-skin-fill">
-        <img src="/shop/vsyo-voda-front.png" alt="Vsyo Voda Tee" class="aspect-square w-full object-cover" />
-        <div class="flex flex-1 flex-col p-4">
-          <h2 class="text-sm font-semibold text-skin-base">Vsyo Voda</h2>
-          <p class="mt-1 text-xs text-skin-base opacity-60">Everything is water — chaos finding its calm. Thin-line graphic tee for the ones who think as hard as they train.</p>
-          <p class="mt-2 text-sm text-skin-base opacity-70">$29.99</p>
-          <a href="https://buy.stripe.com/4gMcN4cjvgP7atBgcI2oE02" data-astro-reload class="mt-4 rounded-lg border-2 border-skin-accent px-4 py-2 text-center text-xs font-bold uppercase tracking-wider text-skin-accent transition-all duration-300 hover:bg-skin-accent hover:text-skin-inverted">
-            Buy Now
-          </a>
+    {line02.length > 0 && (
+      <section id="line-02" class="mb-16 scroll-mt-24">
+        <div class="mb-6 text-center">
+          <p class="text-xs uppercase italic tracking-[0.2em] text-skin-base opacity-50">{lineMeta["line-02"].heading}</p>
+          <h2 class="text-xl font-light italic tracking-wide text-skin-base" style="font-family: 'Bodoni Moda', serif;">{lineMeta["line-02"].title}</h2>
+          <p class="mt-1 text-xs text-skin-base opacity-60">{lineMeta["line-02"].blurb}</p>
         </div>
-      </div>
-
-      <div class="flex flex-col overflow-hidden rounded-lg border border-skin-line bg-skin-fill">
-        <img src="/shop/NFPA_BLACK.png" alt="Maximum Exposure Tee" class="aspect-square w-full object-cover" />
-        <div class="flex flex-1 flex-col p-4">
-          <h2 class="text-sm font-semibold text-skin-base">Maximum Exposure</h2>
-          <p class="mt-1 text-xs text-skin-base opacity-60">Every category maxed out — risk, intensity, discipline. Hazard-label graphic tee for the ones who never dial it back.</p>
-          <p class="mt-2 text-sm text-skin-base opacity-70">$29.99</p>
-          <a href="https://buy.stripe.com/aFa6oGfvH8iB7hp5y42oE03" data-astro-reload class="mt-4 rounded-lg border-2 border-skin-accent px-4 py-2 text-center text-xs font-bold uppercase tracking-wider text-skin-accent transition-all duration-300 hover:bg-skin-accent hover:text-skin-inverted">
-            Buy Now
-          </a>
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          {line02.map((product) => <ProductCard product={product} />)}
         </div>
-      </div>
+      </section>
+    )}
 
-      <!--
-        TO ADD A NEW DESIGN LATER:
-        1. Drop the new photo in public/shop/your-file-name.png
-        2. Create a new Stripe Payment Link for it
-        3. Copy the entire <div class="flex flex-col overflow-hidden..."> block above,
-           paste it here as a sibling, and swap: image src, alt text, product name,
-           price, and Stripe link href.
-        The grid-cols-2 above will automatically slot it in next to the first card.
-      -->
-    </div>
+    {essentials.length > 0 && (
+      <section id="essentials" class="mb-16 scroll-mt-24">
+        <div class="mb-6 text-center">
+          <p class="text-xs uppercase tracking-[0.2em] text-skin-base opacity-50">{lineMeta.essentials.heading}</p>
+        </div>
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+          {essentials.map((product) => <ProductCard product={product} compact />)}
+        </div>
+      </section>
+    )}
 
-    <div class="mt-12 text-center text-xs text-skin-base opacity-50 space-x-3">
+    <div class="mt-4 text-center text-xs text-skin-base opacity-50 space-x-3">
       <a href="/terms" class="hover:underline">Terms</a>
       <span>·</span>
       <a href="/returns" class="hover:underline">Returns</a>
