@@ -1,187 +1,160 @@
-export interface ProductVariant {
-  label: string;
-  image: string;
-  alt: string;
-  stripeUrl: string;
-  price?: number;
+---
+import type { Product } from "../data/products";
+
+interface Props {
+  product: Product;
+  compact?: boolean;
 }
 
-export type ProductLine = "line-01" | "line-02" | "essentials";
+const { product, compact = false } = Astro.props;
+const defaultVariant = product.variants[0];
+---
 
-export interface Product {
-  id: string;
-  line: ProductLine;
-  name: string;
-  description: string;
-  price: number;
-  published: boolean;
-  variants: ProductVariant[];
-}
+<div class="product-card flex flex-col overflow-hidden rounded-lg border border-skin-line bg-skin-fill">
+  <div class="product-card-image-wrap relative">
+    <img src={defaultVariant.image} alt={defaultVariant.alt} class="product-card-image aspect-square w-full object-cover cursor-zoom-in" />
+    <span class="zoom-badge pointer-events-none absolute bottom-2 right-2 rounded bg-black/70 px-2 py-1 text-[10px] font-bold uppercase tracking-wide text-white">Tap to enlarge</span>
+  </div>
+  <div class:list={["flex flex-1 flex-col", compact ? "p-3" : "p-4"]}>
+    <h2 class:list={["font-semibold text-skin-base", compact ? "text-xs" : "text-sm"]}>
+      {product.name}
+    </h2>
 
-export const products: Product[] = [
-  // ---------- LINE 01 — MOTIVATIONAL ----------
-  {
-    id: "hit-maxes-evade-taxes",
-    line: "line-01",
-    name: "Hit Maxes, Evade Taxes",
-    description:
-      "For the ones who chase PRs and dodge W-2s. Soft, heavyweight cotton blend built to survive leg day and everything after.",
-    price: 29.99,
-    published: true,
-    variants: [
-      {
-        label: "Tee",
-        image: "/shop/hit-maxes-evade-taxes.png",
-        alt: "Hit Maxes, Evade Taxes Tee",
-        stripeUrl: "https://buy.stripe.com/4gMbJ01ER6atbxF6C82oE00",
-      },
-    ],
-  },
-  {
-    id: "all-in-no-stop-loss",
-    line: "line-01",
-    name: "All In, No Stop Loss",
-    description:
-      "No hedging. No sitting out. Bold statement tee built for the ones who bet on themselves.",
-    price: 29.99,
-    published: true,
-    variants: [
-      {
-        label: "Tee",
-        image: "/shop/nostoploss-mockup.png",
-        alt: "All In, No Stop Loss Tee",
-        stripeUrl: "https://buy.stripe.com/5kQbJ0gzLbuN0T13pW2oE01",
-      },
-    ],
-  },
-  {
-    id: "ggg-sups",
-    line: "line-01",
-    name: "Good Girls Get Sups",
-    description:
-      "Good girls get sups — everyone else gets excuses. Racerback and muscle-tee cuts built for the ones who put in the work first.",
-    price: 29.99,
-    published: true,
-    variants: [
-      {
-        label: "Muscle Tee",
-        image: "/shop/ggg-sups-muscle-tee.png",
-        alt: "Good Girls Get Sups Muscle Tee",
-        stripeUrl: "https://buy.stripe.com/4gM00idnzcyR45dbWs2oE08",
-      },
-      {
-        label: "Racerback",
-        image: "/shop/ggg-sups-racerback.png",
-        alt: "Good Girls Get Sups Racerback",
-        stripeUrl: "https://buy.stripe.com/fZu9AS6Zb6atdFN1hO2oE07",
-      },
-    ],
-  },
-  {
-    id: "warren-buffett-tank",
-    line: "line-01",
-    name: "Warren Buffett Tank",
-    description:
-      "Value investing for your body — patience compounds in the gym the same way it compounds in the market. Sleeveless, unapologetic, built for the long game.",
-    price: 29.99,
-    published: true,
-    variants: [
-      {
-        label: "Tank",
-        image: "/shop/warren-buffett-tank.png",
-        alt: "Warren Buffett Tank",
-        stripeUrl: "https://buy.stripe.com/cNi8wO1ER0Q9fNV9Ok2oE06",
-      },
-    ],
-  },
+    {!compact && (
+      <p class="mt-1 text-xs text-skin-base opacity-60">{product.description}</p>
+    )}
 
-  // ---------- LINE 02 — INTELLECTUAL ----------
-  {
-    id: "vsyo-voda",
-    line: "line-02",
-    name: "Vsyo Voda",
-    description:
-      "Everything is water — chaos finding its calm. Thin-line graphic tee for the ones who think as hard as they train.",
-    price: 29.99,
-    published: true,
-    variants: [
-      {
-        label: "Tee",
-        image: "/shop/vsyo-voda-front.png",
-        alt: "Vsyo Voda Tee",
-        stripeUrl: "https://buy.stripe.com/4gMcN4cjvgP7atBgcI2oE02",
-      },
-    ],
-  },
-  {
-    id: "maximum-exposure",
-    line: "line-02",
-    name: "Maximum Exposure",
-    description:
-      "Every category maxed out — risk, intensity, discipline. Hazard-label graphic tee for the ones who never dial it back.",
-    price: 29.99,
-    published: true,
-    variants: [
-      {
-        label: "Black",
-        image: "/shop/NFPA_BLACK.png",
-        alt: "Maximum Exposure Tee, black",
-        stripeUrl: "https://buy.stripe.com/aFa6oGfvH8iB7hp5y42oE03",
-      },
-    ],
-  },
+    {product.variants.length > 1 && (
+      <div class="mt-3 flex flex-wrap gap-2">
+        {product.variants.map((variant, i) => (
+          <button
+            type="button"
+            class="variant-btn rounded-full border px-3 py-1 text-[10px] font-bold uppercase tracking-wide transition-colors duration-200"
+            data-image={variant.image}
+            data-alt={variant.alt}
+            data-stripe={variant.stripeUrl}
+            data-price={variant.price ?? product.price}
+            aria-pressed={i === 0 ? "true" : "false"}
+          >
+            {variant.label}
+          </button>
+        ))}
+      </div>
+    )}
 
-  // ---------- ESSENTIALS ----------
-  {
-    id: "trucker-cap",
-    line: "essentials",
-    name: "Risk On Trucker Cap",
-    description:
-      "Structured five-panel, mesh back, embroidered mark up front. The cap for whichever mode you're in.",
-    price: 29.99,
-    published: true,
-    variants: [
-      {
-        label: "One size",
-        image: "/shop/risk-on-trucker-cap.png",
-        alt: "Risk On Trucker Cap",
-        stripeUrl: "https://buy.stripe.com/bJeeVcgzL8iBdFNaSo2oE05",
-      },
-    ],
-  },
-  {
-    id: "logo-hat",
-    line: "essentials",
-    name: "Risk On Logo Hat",
-    description:
-      "Curved brim, embroidered wordmark, adjustable strap. Add your own name to the back for a personal touch — pictured with 'Rudy G.' as an example.",
-    price: 29.99,
-    published: true,
-    variants: [
-      {
-        label: "One size",
-        image: "/shop/risk-on-logo-hat.png",
-        alt: "Risk On Logo Hat",
-        stripeUrl: "https://buy.stripe.com/8x2fZgerD0Q9atBgcI2oE04",
-      },
-    ],
-  },
-];
+    <p class="product-card-price mt-2 text-sm text-skin-base opacity-70">
+      ${(defaultVariant.price ?? product.price).toFixed(2)}
+    </p>
 
-export const lineMeta: Record<ProductLine, { heading: string; title: string; blurb: string }> = {
-  "line-01": {
-    heading: "Line 01",
-    title: "Motivational",
-    blurb: "Bold statements for the ones who bet on themselves.",
-  },
-  "line-02": {
-    heading: "Line 02",
-    title: "Intellectual",
-    blurb: "Markets, philosophy, and the laws underneath both.",
-  },
-  essentials: {
-    heading: "Essentials",
-    title: "Essentials",
-    blurb: "",
-  },
-};
+    <a href={defaultVariant.stripeUrl} data-astro-reload class="product-card-buy mt-4 rounded-lg border-2 border-skin-accent px-4 py-2 text-center text-xs font-bold uppercase tracking-wider text-skin-accent transition-all duration-300 hover:bg-skin-accent hover:text-skin-inverted">Buy Now</a>
+  </div>
+</div>
+
+<style>
+  .variant-btn {
+    border-color: var(--color-skin-line);
+    color: var(--color-skin-base);
+    opacity: 0.6;
+  }
+  .variant-btn[aria-pressed="true"] {
+    opacity: 1;
+    border-color: var(--color-skin-accent);
+    color: var(--color-skin-accent);
+  }
+</style>
+
+<script>
+  function ensureLightbox(): HTMLElement {
+    let lightbox = document.getElementById("product-lightbox");
+    if (lightbox) return lightbox;
+
+    lightbox = document.createElement("div");
+    lightbox.id = "product-lightbox";
+    lightbox.setAttribute("role", "dialog");
+    lightbox.setAttribute("aria-modal", "true");
+    lightbox.style.cssText = "display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.92); align-items:center; justify-content:center; cursor:zoom-out; padding:2rem;";
+
+    const closeBtn = document.createElement("button");
+    closeBtn.type = "button";
+    closeBtn.id = "product-lightbox-close";
+    closeBtn.setAttribute("aria-label", "Close");
+    closeBtn.textContent = "Close";
+    closeBtn.style.cssText = "position:absolute; top:1rem; right:1rem; padding:8px 16px; border-radius:9999px; background:rgba(255,255,255,0.1); border:none; color:#fff; font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; cursor:pointer;";
+
+    const img = document.createElement("img");
+    img.id = "product-lightbox-img";
+    img.style.cssText = "max-width:100%; max-height:100%; object-fit:contain; border-radius:4px;";
+
+    lightbox.appendChild(closeBtn);
+    lightbox.appendChild(img);
+    document.body.appendChild(lightbox);
+
+    lightbox.addEventListener("click", closeLightbox);
+    closeBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      closeLightbox();
+    });
+
+    return lightbox;
+  }
+
+  function openLightbox(src: string, alt: string) {
+    const lightbox = ensureLightbox();
+    const img = document.getElementById("product-lightbox-img") as HTMLImageElement | null;
+    if (img) {
+      img.src = src;
+      img.alt = alt;
+    }
+    lightbox.style.display = "flex";
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    const lightbox = document.getElementById("product-lightbox");
+    if (lightbox) {
+      lightbox.style.display = "none";
+      document.body.style.overflow = "";
+    }
+  }
+
+  function initProductCards() {
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeLightbox();
+    });
+
+    document.querySelectorAll<HTMLImageElement>(".product-card-image").forEach((img) => {
+      img.addEventListener("click", () => openLightbox(img.src, img.alt));
+    });
+
+    document.querySelectorAll<HTMLElement>(".product-card").forEach((card) => {
+      const buttons = card.querySelectorAll<HTMLButtonElement>(".variant-btn");
+      if (!buttons.length) return;
+
+      const cardImg = card.querySelector<HTMLImageElement>(".product-card-image");
+      const priceEl = card.querySelector<HTMLElement>(".product-card-price");
+      const buyLink = card.querySelector<HTMLAnchorElement>(".product-card-buy");
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          buttons.forEach((b) => b.setAttribute("aria-pressed", "false"));
+          btn.setAttribute("aria-pressed", "true");
+
+          const { image, alt, price, stripe } = btn.dataset;
+
+          if (cardImg && image) {
+            cardImg.src = image;
+            cardImg.alt = alt ?? cardImg.alt;
+          }
+          if (priceEl && price) {
+            priceEl.textContent = `$${parseFloat(price).toFixed(2)}`;
+          }
+          if (buyLink && stripe) {
+            buyLink.href = stripe;
+          }
+        });
+      });
+    });
+  }
+
+  document.addEventListener("astro:page-load", initProductCards);
+</script>
