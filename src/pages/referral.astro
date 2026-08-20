@@ -1,0 +1,742 @@
+---
+// src/pages/referral.astro
+// -----------------------------------------------------------------------------
+// This is a LEAD CAPTURE page, not a "refer a friend, get paid" page.
+// You (Rudy) are the referral agent — you get paid by the receiving brokerage/
+// agent when a deal closes, so this page never promises money to the visitor.
+// Its only job is to get contact info + a few qualifying details in front of you
+// fast, from three channels: in-person, social bio links, and your NFC card.
+//
+// Edit the CAPTURE object below. Anything in [brackets] is a placeholder —
+// find them all before you publish. Nothing else in the file needs touching.
+// -----------------------------------------------------------------------------
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import { SITE } from "@/config";
+
+const CAPTURE = {
+  name: "Rudy Galan",
+  contactEmail: "rudy.galan@expreferral.com",
+  responseWindow: "48 hours",
+  primaryMarket: "San Antonio, TX",
+
+  // ---- Form endpoint --------------------------------------------------------
+  // Web3Forms endpoint is fixed and free with no submission cap — you only
+  // need to drop in your own access key. Get one at https://web3forms.com
+  // (enter your email, it emails you a key back in ~10 seconds, no account).
+  formEndpoint: "https://api.web3forms.com/submit",
+  web3formsKey: "REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY",
+
+  // ---- Source attribution ----------------------------------------------------
+  // Use these as query params on the links you hand out, so every lead arrives
+  // pre-tagged with where it came from:
+  //   rudygalan.com/referral?src=nfc   → NFC card
+  //   rudygalan.com/referral?src=ig    → Instagram bio link
+  //   rudygalan.com/referral?src=x     → X bio link
+  //   rudygalan.com/referral?src=fb    → Facebook bio link
+  //   rudygalan.com/referral?src=ref   → sent to someone directly
+  //   rudygalan.com/referral?src=person → default when you hand someone your phone at the bar
+  sourceMap: {
+    person: "In person",
+    nfc: "NFC card",
+    ig: "Instagram",
+    x: "X",
+    fb: "Facebook",
+    ref: "A friend",
+  },
+
+  goals: ["Buy", "Sell", "Invest", "Not sure yet"],
+  timeframes: [
+    "Ready now",
+    "1–3 months",
+    "3–6 months",
+    "6–12 months",
+    "Just exploring",
+  ],
+  budgets: [
+    "Under $300k",
+    "$300k – $600k",
+    "$600k – $1M",
+    "$1M+",
+    "Prefer not to say",
+  ],
+
+  channels: [
+    { label: "In-person", detail: "Bar conversations" },
+    { label: "Social", detail: "IG · X · Facebook" },
+    { label: "NFC card", detail: "Tap to send" },
+  ],
+
+  steps: [
+    {
+      title: "Tell me what's going on",
+      body: "A couple of details — what you're trying to do, and where. Takes less than a minute, whether that's here or across the bar.",
+    },
+    {
+      title: "I make the match",
+      body: `I connect you with a licensed partner agent who's active in that market and built for your situation. Usually within ${"48 hours"}.`,
+    },
+    {
+      title: "They take it from there",
+      body: "Your partner agent runs the transaction — the offers, the paperwork, the closing. I stay reachable if you need anything along the way.",
+    },
+  ],
+
+  faqs: [
+    {
+      q: "Does this cost me anything?",
+      a: "No. If a referral fee applies, it's paid by the agent or brokerage on the back end — never by you.",
+    },
+    {
+      q: "Who actually handles my purchase or sale?",
+      a: "A licensed agent in my partner network, matched to your market and situation. I make the introduction and stay reachable — they run the transaction.",
+    },
+    {
+      q: "I'm not ready to buy or sell, just thinking it through.",
+      a: "Still worth a conversation. Fill this out and I'll point you in the right direction — no pressure to move faster than you want to.",
+    },
+    {
+      q: "Are you limited to San Antonio?",
+      a: "San Antonio is home base, but the network reaches further. If you're looking elsewhere, tell me where and I'll find the right fit.",
+    },
+    {
+      q: "How fast will I hear back?",
+      a: "Within 48 hours, usually sooner.",
+    },
+  ],
+
+  // ---- Disclosures ------------------------------------------------------------
+  // I'm not a lawyer and this is not legal advice. Real estate referral
+  // disclosure requirements are state-specific (and eXp will have its own
+  // compliance-approved wording). Confirm exact language with eXp compliance
+  // before this page goes live — do not publish with the bracketed line as-is.
+  disclosures: [
+    "Rudy Galan is affiliated with eXp Referral Division and does not personally represent buyers or sellers in a transaction.",
+    "There is never a fee to you. Referral fees, when they apply, are paid by the brokerage or agent — not the client.",
+    "[Add your state license number and any broker disclosure required by eXp compliance before publishing this page.]",
+  ],
+};
+
+const hearAboutOptions = [...Object.values(CAPTURE.sourceMap), "Other"];
+const pageDescription = `Buying, selling, or investing in real estate? Tell ${CAPTURE.name} what you need and get matched with a licensed partner agent — no cost, no obligation.`;
+---
+
+<Layout title={`Work With Me | ${SITE.title}`} description={pageDescription}>
+  <Header />
+
+  <main id="main-content" class="mx-auto w-full max-w-3xl px-4 pb-16">
+    <!-- ================= HERO ================= -->
+    <section class="pt-10 pb-10">
+      <p class="text-accent mb-4 font-mono text-xs tracking-[0.2em] uppercase">
+        eXp Referral Division
+      </p>
+      <h1 class="text-3xl leading-tight font-semibold sm:text-5xl">
+        I don't sell real estate. I connect you with someone who will.
+      </h1>
+      <p class="text-foreground/75 mt-4 max-w-xl text-base sm:text-lg">
+        Buying, selling, or investing — tell me what's going on and I'll
+        match you with a licensed partner agent built for it. No cost to
+        you, no obligation.
+      </p>
+
+      <a
+        href="#capture"
+        class="bg-accent text-background focus-visible:outline-accent mt-8 inline-block px-5 py-3 text-sm font-medium transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2"
+      >
+        Tell me what's going on
+      </a>
+
+      <!-- Signature element: the actual routing system -->
+      <div class="mt-12">
+        <div class="grid grid-cols-3 gap-2 sm:gap-3">
+          {
+            CAPTURE.channels.map(c => (
+              <div class="border-border border p-3 text-center">
+                <p class="font-mono text-[11px] tracking-wide uppercase opacity-70 sm:text-xs">
+                  {c.label}
+                </p>
+                <p class="mt-1 text-[10px] opacity-50 sm:text-xs">
+                  {c.detail}
+                </p>
+              </div>
+            ))
+          }
+        </div>
+
+        <p
+          class="text-foreground/40 py-2 text-center font-mono text-[11px] sm:text-xs"
+          aria-hidden="true"
+        >
+          ↓ everything lands in one place ↓
+        </p>
+
+        <div class="border-accent border-2 p-4 text-center">
+          <p class="text-accent font-mono text-xs tracking-wide uppercase">
+            {CAPTURE.name}
+          </p>
+          <p class="mt-1 text-sm opacity-80">
+            Screens the details, matches you with the right partner
+          </p>
+        </div>
+
+        <p
+          class="text-foreground/40 py-2 text-center font-mono text-[11px] sm:text-xs"
+          aria-hidden="true"
+        >
+          ↓
+        </p>
+
+        <div class="border-border border p-4 text-center">
+          <p class="font-mono text-xs tracking-wide uppercase opacity-70">
+            Licensed partner agent
+          </p>
+          <p class="text-foreground/70 mt-1 text-sm">
+            Runs the transaction, market by market
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+    <section class="border-border border-t py-14">
+      <h2 class="text-2xl font-semibold sm:text-3xl">How it works</h2>
+      <ol class="mt-8 space-y-0">
+        {
+          CAPTURE.steps.map((step, i) => (
+            <li class="step grid grid-cols-[2.5rem_1fr] gap-x-4 pb-8 last:pb-0">
+              <div class="step-rail">
+                <span class="text-accent font-mono text-sm font-semibold">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+              </div>
+              <div class="pt-0.5">
+                <h3 class="text-lg font-medium">{step.title}</h3>
+                <p class="text-foreground/70 mt-1 text-sm sm:text-base">
+                  {step.body}
+                </p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <!-- ================= THE FORM (capture point) ================= -->
+    <section id="capture" class="border-border scroll-mt-8 border-t py-14">
+      <h2 class="text-2xl font-semibold sm:text-3xl">Tell me what's going on</h2>
+      <p class="text-foreground/70 mt-2 text-sm sm:text-base">
+        Required fields are marked with an asterisk. The rest is optional —
+        give me what you've got.
+      </p>
+
+      <!-- Success state -->
+      <div
+        id="form-success"
+        class="border-accent mt-8 hidden border p-6"
+        tabindex="-1"
+      >
+        <p class="text-accent font-mono text-xs tracking-widest uppercase">
+          Got it
+        </p>
+        <h3 class="mt-2 text-xl font-medium">
+          I'll follow up within {CAPTURE.responseWindow}.
+        </h3>
+        <p class="text-foreground/75 mt-2 text-sm">
+          If it's urgent, email me directly at{" "}
+          <a href={`mailto:${CAPTURE.contactEmail}`} class="text-accent underline">
+            {CAPTURE.contactEmail}
+          </a>.
+        </p>
+        <button
+          id="send-another"
+          type="button"
+          class="border-border focus-visible:outline-accent mt-5 border px-4 py-2 text-sm transition-colors hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2"
+        >
+          Send another
+        </button>
+      </div>
+
+      <form id="capture-form" class="mt-8 space-y-10" novalidate>
+        <!-- Honeypot -->
+        <div class="hp" aria-hidden="true">
+          <label for="company">Company</label>
+          <input id="company" type="text" name="company" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <!-- ---------- Who's filling this out ---------- -->
+        <fieldset>
+          <legend class="text-foreground/60 mb-5 font-mono text-xs tracking-[0.2em] uppercase">
+            Your info
+          </legend>
+
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div class="field sm:col-span-2">
+              <label for="contact_name">Your name *</label>
+              <input id="contact_name" name="contact_name" type="text" required autocomplete="name" />
+            </div>
+
+            <div class="field">
+              <label for="contact_phone">Your phone</label>
+              <input id="contact_phone" name="contact_phone" type="tel" autocomplete="tel" />
+            </div>
+
+            <div class="field">
+              <label for="contact_email">Your email</label>
+              <input id="contact_email" name="contact_email" type="email" autocomplete="email" />
+            </div>
+
+            <p class="text-foreground/60 -mt-2 text-xs sm:col-span-2">
+              Give me at least one — phone or email.
+            </p>
+          </div>
+        </fieldset>
+
+        <!-- ---------- Who this is about ---------- -->
+        <fieldset>
+          <legend class="text-foreground/60 mb-5 font-mono text-xs tracking-[0.2em] uppercase">
+            Who's this about?
+          </legend>
+
+          <div class="flex gap-6">
+            <label class="check">
+              <input type="radio" name="about" value="me" checked />
+              <span>Me</span>
+            </label>
+            <label class="check">
+              <input type="radio" name="about" value="someone_else" />
+              <span>Someone I know</span>
+            </label>
+          </div>
+
+          <div id="someone-else-fields" class="mt-5 hidden grid gap-5 sm:grid-cols-2">
+            <div class="field sm:col-span-2">
+              <label for="prospect_name">Their name *</label>
+              <input id="prospect_name" name="prospect_name" type="text" />
+            </div>
+            <div class="field">
+              <label for="prospect_phone">Their phone</label>
+              <input id="prospect_phone" name="prospect_phone" type="tel" />
+            </div>
+            <div class="field">
+              <label for="prospect_email">Their email</label>
+              <input id="prospect_email" name="prospect_email" type="email" />
+            </div>
+            <p class="text-foreground/60 -mt-2 text-xs sm:col-span-2">
+              Give me at least one — their phone or email.
+            </p>
+          </div>
+        </fieldset>
+
+        <!-- ---------- The details ---------- -->
+        <fieldset>
+          <legend class="text-foreground/60 mb-5 font-mono text-xs tracking-[0.2em] uppercase">
+            The details
+          </legend>
+
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div class="field">
+              <label for="goal">What's the goal? *</label>
+              <select id="goal" name="goal" required>
+                <option value="">Pick one</option>
+                {CAPTURE.goals.map(g => <option value={g}>{g}</option>)}
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="market">Which market?</label>
+              <input id="market" name="market" type="text" placeholder={`e.g. ${CAPTURE.primaryMarket}`} />
+            </div>
+
+            <div class="field">
+              <label for="timeframe">Timeframe</label>
+              <select id="timeframe" name="timeframe">
+                <option value="">Pick one</option>
+                {CAPTURE.timeframes.map(t => <option value={t}>{t}</option>)}
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="budget">Budget range</label>
+              <select id="budget" name="budget">
+                <option value="">Pick one</option>
+                {CAPTURE.budgets.map(b => <option value={b}>{b}</option>)}
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="hear_about">How'd you hear about me?</label>
+              <select id="hear_about" name="hear_about">
+                <option value="">Pick one</option>
+                {hearAboutOptions.map(h => <option value={h}>{h}</option>)}
+              </select>
+            </div>
+
+            <div class="field sm:col-span-2">
+              <label for="notes">Anything else I should know?</label>
+              <textarea id="notes" name="notes" rows="4" placeholder="Best time to reach you, what you're working with, anything that'll save us both time."></textarea>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <label class="check">
+            <input id="consent" name="consent" type="checkbox" required />
+            <span>It's okay to call or text about this. *</span>
+          </label>
+        </fieldset>
+
+        <input type="hidden" id="traffic_source" name="traffic_source" value="" />
+
+        <div>
+          <button
+            id="submit-btn"
+            type="submit"
+            class="bg-accent text-background focus-visible:outline-accent px-6 py-3 text-sm font-medium transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-50"
+          >
+            Send it to {CAPTURE.name.split(" ")[0]}
+          </button>
+
+          <p id="form-status" class="mt-4 text-sm" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="border-border border-t py-14">
+      <h2 class="text-2xl font-semibold sm:text-3xl">Questions</h2>
+      <div class="border-border mt-6 border-t">
+        {
+          CAPTURE.faqs.map(item => (
+            <details class="faq border-border border-b">
+              <summary>
+                <span>{item.q}</span>
+                <span class="faq-icon" aria-hidden="true" />
+              </summary>
+              <p class="text-foreground/75 pb-5 text-sm sm:text-base">{item.a}</p>
+            </details>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- ================= DISCLOSURES ================= -->
+    <section class="border-border border-t py-12">
+      <h2 class="text-foreground/60 font-mono text-xs tracking-[0.2em] uppercase">
+        Disclosures
+      </h2>
+      <ul class="text-foreground/70 mt-4 space-y-2 text-sm">
+        {
+          CAPTURE.disclosures.map(d => (
+            <li class="grid grid-cols-[1rem_1fr] gap-2">
+              <span class="text-accent" aria-hidden="true">&mdash;</span>
+              <span>{d}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .step-rail {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.15rem;
+  }
+  .step-rail::after {
+    content: "";
+    position: absolute;
+    top: 1.9rem;
+    bottom: -1.25rem;
+    left: 50%;
+    border-left: 1px dashed currentColor;
+    opacity: 0.25;
+  }
+  .step:last-child .step-rail::after {
+    display: none;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .field label {
+    font-size: 0.8125rem;
+    opacity: 0.75;
+  }
+  .field input,
+  .field select,
+  .field textarea {
+    width: 100%;
+    padding: 0.625rem 0.75rem;
+    font: inherit;
+    font-size: 0.9375rem;
+    color: inherit;
+    background: transparent;
+    border: 1px solid currentColor;
+    border-color: color-mix(in srgb, currentColor 25%, transparent);
+    border-radius: 0;
+    transition: border-color 0.15s ease;
+  }
+  .field textarea {
+    resize: vertical;
+  }
+  .field input:hover,
+  .field select:hover,
+  .field textarea:hover {
+    border-color: color-mix(in srgb, currentColor 45%, transparent);
+  }
+  .field input:focus-visible,
+  .field select:focus-visible,
+  .field textarea:focus-visible {
+    outline: 2px solid;
+    outline-offset: 2px;
+    border-color: currentColor;
+  }
+  .field input[aria-invalid="true"],
+  .field textarea[aria-invalid="true"] {
+    border-color: currentColor;
+    box-shadow: inset 3px 0 0 currentColor;
+  }
+  .field input::placeholder,
+  .field textarea::placeholder {
+    color: inherit;
+    opacity: 0.4;
+  }
+
+  .check {
+    display: grid;
+    grid-template-columns: 1.1rem 1fr;
+    gap: 0.65rem;
+    align-items: start;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    cursor: pointer;
+  }
+  .check input {
+    margin-top: 0.2rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    accent-color: currentColor;
+  }
+
+  .hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  #form-status:empty {
+    display: none;
+  }
+  #form-status[data-state="error"] {
+    padding-left: 0.75rem;
+    box-shadow: inset 3px 0 0 currentColor;
+  }
+
+  .faq summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 0;
+    cursor: pointer;
+    font-weight: 500;
+    list-style: none;
+  }
+  .faq summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq summary:focus-visible {
+    outline: 2px solid;
+    outline-offset: 2px;
+  }
+  .faq-icon {
+    flex: none;
+    width: 0.75rem;
+    height: 0.75rem;
+    position: relative;
+    opacity: 0.6;
+  }
+  .faq-icon::before,
+  .faq-icon::after {
+    content: "";
+    position: absolute;
+    inset: 50% 0 auto 0;
+    border-top: 1px solid currentColor;
+    transition: transform 0.2s ease;
+  }
+  .faq-icon::after {
+    transform: rotate(90deg);
+  }
+  .faq[open] .faq-icon::after {
+    transform: rotate(0deg);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
+
+<script define:vars={{
+  endpoint: CAPTURE.formEndpoint,
+  accessKey: CAPTURE.web3formsKey,
+  sourceMap: CAPTURE.sourceMap,
+}}>
+  const form = document.getElementById("capture-form");
+  const statusEl = document.getElementById("form-status");
+  const submitBtn = document.getElementById("submit-btn");
+  const successPanel = document.getElementById("form-success");
+  const sendAnother = document.getElementById("send-another");
+  const someoneElseFields = document.getElementById("someone-else-fields");
+  const aboutRadios = form.querySelectorAll('input[name="about"]');
+  const hearAboutSelect = document.getElementById("hear_about");
+  const trafficSourceInput = document.getElementById("traffic_source");
+
+  // ---- Pre-fill "how'd you hear about me" + hidden traffic source from ?src= ----
+  const params = new URLSearchParams(window.location.search);
+  const src = params.get("src");
+  if (src) {
+    trafficSourceInput.value = src;
+    const mapped = sourceMap[src];
+    if (mapped) {
+      const match = [...hearAboutSelect.options].find(o => o.value === mapped);
+      if (match) hearAboutSelect.value = mapped;
+    }
+  }
+
+  // ---- Toggle "someone else" fields ----
+  const isSomeoneElse = () =>
+    form.querySelector('input[name="about"]:checked')?.value === "someone_else";
+
+  const syncAboutToggle = () => {
+    if (isSomeoneElse()) {
+      someoneElseFields.classList.remove("hidden");
+    } else {
+      someoneElseFields.classList.add("hidden");
+      someoneElseFields
+        .querySelectorAll("input")
+        .forEach(el => (el.value = ""));
+    }
+  };
+  aboutRadios.forEach(r => r.addEventListener("change", syncAboutToggle));
+
+  const setStatus = (message, state) => {
+    statusEl.textContent = message;
+    if (state) statusEl.dataset.state = state;
+    else delete statusEl.dataset.state;
+  };
+
+  const clearInvalid = () => {
+    form.querySelectorAll('[aria-invalid="true"]').forEach(el => el.removeAttribute("aria-invalid"));
+  };
+
+  const flagInvalid = el => {
+    el.setAttribute("aria-invalid", "true");
+    el.focus();
+  };
+
+  sendAnother?.addEventListener("click", () => {
+    form.reset();
+    clearInvalid();
+    setStatus("");
+    syncAboutToggle();
+    successPanel.classList.add("hidden");
+    form.classList.remove("hidden");
+    form.querySelector("#contact_name").focus();
+  });
+
+  form.addEventListener("submit", async event => {
+    event.preventDefault();
+    clearInvalid();
+    setStatus("");
+
+    // Honeypot
+    if (form.elements.company.value) return;
+
+    // Native required/type checks (name, goal, consent)
+    if (!form.checkValidity()) {
+      const firstBad = form.querySelector(":invalid");
+      if (firstBad) {
+        flagInvalid(firstBad);
+        setStatus(firstBad.validationMessage || "Check the highlighted field.", "error");
+      }
+      return;
+    }
+
+    // Your contact: need phone or email
+    const contactPhone = form.elements.contact_phone.value.trim();
+    const contactEmail = form.elements.contact_email.value.trim();
+    if (!contactPhone && !contactEmail) {
+      flagInvalid(form.elements.contact_phone);
+      setStatus("Add a phone or email so I can reach you.", "error");
+      return;
+    }
+
+    // If referring someone else: need their name + phone or email
+    if (isSomeoneElse()) {
+      const prospectName = form.elements.prospect_name.value.trim();
+      if (!prospectName) {
+        flagInvalid(form.elements.prospect_name);
+        setStatus("Add their name.", "error");
+        return;
+      }
+      const prospectPhone = form.elements.prospect_phone.value.trim();
+      const prospectEmail = form.elements.prospect_email.value.trim();
+      if (!prospectPhone && !prospectEmail) {
+        flagInvalid(form.elements.prospect_phone);
+        setStatus("Add their phone or email so I can reach them.", "error");
+        return;
+      }
+    }
+
+    if (!endpoint || !accessKey || accessKey.startsWith("REPLACE_")) {
+      setStatus("This form isn't connected yet. Add your Web3Forms access key in referral.astro.", "error");
+      return;
+    }
+
+    const payload = new FormData(form);
+    payload.delete("company");
+    payload.set("consent", form.elements.consent.checked ? "Yes" : "No");
+    payload.set("submitted_from", window.location.href);
+    payload.set("access_key", accessKey);
+    payload.set(
+      "subject",
+      isSomeoneElse()
+        ? `New referral: ${form.elements.prospect_name.value} (via ${form.elements.contact_name.value})`
+        : `New lead: ${form.elements.contact_name.value}`
+    );
+
+    submitBtn.disabled = true;
+    const originalLabel = submitBtn.textContent;
+    submitBtn.textContent = "Sending…";
+
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: payload,
+      });
+      if (!response.ok) throw new Error(String(response.status));
+
+      form.classList.add("hidden");
+      successPanel.classList.remove("hidden");
+      successPanel.scrollIntoView({ behavior: "smooth", block: "center" });
+      successPanel.focus();
+    } catch (error) {
+      setStatus("That didn't go through. Try again, or email me directly.", "error");
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalLabel;
+    }
+  });
+</script>
