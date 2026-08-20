@@ -148,7 +148,11 @@ const hearAboutOptions = [...Object.values(CAPTURE.sourceMap), "Other"];
 const pageDescription = `Buying, selling, or investing in real estate? Tell ${CAPTURE.name} what you need and get matched with a licensed partner agent — no cost, no obligation.`;
 ---
 
-<Layout title={`Work With Me | ${SITE.title}`} description={pageDescription}>
+<Layout
+  title={`Work With Me | ${SITE.title}`}
+  description={pageDescription}
+  ogImage="/referral-og.jpg"
+>
   <Header />
 
   <main id="main-content" class="mx-auto w-full max-w-3xl px-4 pb-16">
