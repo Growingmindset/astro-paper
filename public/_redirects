@@ -1,0 +1,5 @@
+/r      /referral?src=nfc     302
+/x      /referral?src=x       302
+/ig     /referral?src=ig      302
+/fb     /referral?src=fb      302
+/card   /referral?src=card    302
