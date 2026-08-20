@@ -1,16 +1,90 @@
+
+/
+Claude finished the response
+
+Thought for 28s
+Thought for 28s
+Let me look at what TREC (Texas) actually requires here so I don't guess wrong on a compliance item — this is worth getting right.
+
+
+Searched the web, viewed 2 files
+Searched the web, viewed 2 files
+Good catch on the license fields — but first, an important detail: TREC doesn't just want this notice buried in a referral page's footer text. The rule is specific: the link has to be on your homepage, labeled exactly right, in at least 10pt font. I'll wire it into this page's disclosures section too, but the real requirement is on your site's Footer.astro (or wherever the homepage renders) so it shows up sitewide.
+
+Here's what I confirmed and what I'm doing:
+
+
+Edited 3 files, read a file · 1 note
+Edited 3 files, read a file · 1 note
+Both edits are in — Web3Forms key wired up, and the IABS/Consumer Protection Notice links added correctly in the disclosures section, with the exact TREC-required labels.
+
+What I found on the actual rule (this part matters): TREC Rule 531.20(b) and Rule 531.18 don't just want these links somewhere on your site — they specifically require both links on your homepage, in a readily noticeable spot, labeled exactly "Texas Real Estate Commission Information About Brokerage Services" and "Texas Real Estate Commission Consumer Protection Notice" (or the shorter "TREC" versions at 12pt+), at 10pt font minimum. Putting them in this referral page's disclosures section is good practice but doesn't satisfy the rule by itself if this page isn't your homepage.
+
+So here's what else I need:
+
+Your homepage/Footer file. The cleanest fix is adding these same two links to Footer.astro (or wherever renders sitewide), since that covers every page including the homepage automatically. If you paste or upload that file, I'll wire it in the same way.
+Confirm the license number formatting. I cleaned [9010212-BB] up into "Texas Real Estate License #9010212-BB" — but I don't know if that's your individual sales agent license or your sponsoring broker's (eXp Realty's) license number. The correct disclosure differs slightly depending on which it is. Worth a quick check with eXp compliance.
+The Drive link works but isn't ideal long-term. It opens Google's PDF viewer chrome, not just the document, and depends on Drive sharing settings never changing. If you want it more solid, download that PDF and I can drop it straight into public/iabs.pdf on your site — then the link is just rudygalan.com/iabs.pdf, permanent, no dependency on Drive.
+I linked the Consumer Protection Notice straight to TREC's own page rather than uploading a copy — that's actually the recommended approach, since TREC updates the notice on their end and your link never goes stale. If you'd rather host your own copy, send me that PDF too.
+Want to send me the Footer file next so this is actually compliant sitewide, not just on this one page?
+
+
+Referral
+ASTRO 
+
+
+
+
+
+Message collapsed
+
+Edited a file, created a file, read a file
+Edited a file, created a file, read a file
+This is the minimum version — one small line under your existing copyright row, using the short "TREC ..." labels since they take less horizontal space than the full "Texas Real Estate Commission ..." versions. Two things worth knowing:
+
+The short labels require 12pt minimum, not 10pt — that's why the block is pinned to text-base (16px = 12pt exactly) rather than a smaller size. I added a comment in the file so future-you (or anyone else editing it) doesn't shrink it later without knowing that breaks compliance.
+This satisfies the rule as long as Footer.astro actually renders on your homepage — since it's a shared component that should already be true, but worth a quick check that your homepage layout includes <Footer /> and isn't using some stripped-down variant.
+Drop this over your existing src/components/Footer.astro. Nothing else in the file changed — same props, same structure, same Socials import.
+
+One loose end: since you're keeping the Drive link permanently, that's fine — just make sure its Google Drive sharing setting is "Anyone with the link can view" (not restricted), or the link will 404 for visitors even though it works fine when you test it while logged in.
+
+
+Footer
+ASTRO 
+
+Referral
+ASTRO 
+
+
+
+
+
+Claude is AI and can make mistakes. Please double-check responses.
+Footer · ASTRO
 ---
 import type { HTMLAttributes } from "astro/types";
 import Socials from "./Socials.astro";
-
+ 
 const currentYear = new Date().getFullYear();
-
+ 
 type Props = {
   noMarginTop?: boolean;
 } & HTMLAttributes<"footer">;
-
+ 
 const { noMarginTop = false, class: className, ...attrs } = Astro.props;
+ 
+// TREC Rules 531.18 / 531.20(b): both links must appear on the homepage,
+// in a readily noticeable place, using one of two label/size pairs:
+//   - full label ("Texas Real Estate Commission ...") at 10pt minimum, or
+//   - short label ("TREC ...") at 12pt minimum
+// Using the short labels here since they take less room, so the two links
+// below are pinned to text-base (16px = 12pt) on purpose — don't shrink
+// this specific block with a smaller text-size class.
+const IABS_URL =
+  "https://drive.google.com/file/d/1cTMRql8JOueF2ipH6R5OWF6csYdnyqyp/view?usp=sharing";
+const CPN_URL = "https://www.trec.texas.gov/forms/consumer-protection-notice";
 ---
-
+ 
 <footer
   class:list={["app-layout", { "mt-auto": !noMarginTop }, className]}
   {...attrs}
@@ -29,4 +103,25 @@ const { noMarginTop = false, class: className, ...attrs } = Astro.props;
       <span>All rights reserved.</span>
     </div>
   </div>
+ 
+  <div class="text-foreground/70 pb-6 text-center text-base sm:pb-4">
+    <a
+      href={IABS_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hover:text-foreground underline underline-offset-2"
+    >
+      TREC Information About Brokerage Services
+    </a>
+    <span class="opacity-50" aria-hidden="true">&nbsp;&middot;&nbsp;</span>
+    <a
+      href={CPN_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hover:text-foreground underline underline-offset-2"
+    >
+      TREC Consumer Protection Notice
+    </a>
+  </div>
 </footer>
+ 

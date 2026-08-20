@@ -26,7 +26,7 @@ const CAPTURE = {
   // need to drop in your own access key. Get one at https://web3forms.com
   // (enter your email, it emails you a key back in ~10 seconds, no account).
   formEndpoint: "https://api.web3forms.com/submit",
-  web3formsKey: "REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY",
+  web3formsKey: "9783d0cb-c632-4866-9f7d-c4f9c40e31ef",
 
   // ---- Source attribution ----------------------------------------------------
   // Use these as query params on the links you hand out, so every lead arrives
@@ -107,14 +107,40 @@ const CAPTURE = {
   ],
 
   // ---- Disclosures ------------------------------------------------------------
-  // I'm not a lawyer and this is not legal advice. Real estate referral
-  // disclosure requirements are state-specific (and eXp will have its own
-  // compliance-approved wording). Confirm exact language with eXp compliance
-  // before this page goes live — do not publish with the bracketed line as-is.
+  // I'm not a lawyer and this is not legal advice.
+  //
+  // TREC Rule 531.20(b) and Rule 531.18 require every business website
+  // operated by a Texas license holder to link to the IABS and the Consumer
+  // Protection Notice on the HOMEPAGE, in a readily noticeable place, in the
+  // exact labels used below, at 10pt font minimum. This page's disclosures
+  // section is a reasonable place to ALSO show them, but it does not satisfy
+  // the rule by itself — the same two links need to live on your site's
+  // actual homepage (your Footer.astro is the easiest way to get that for
+  // free, since it renders on every page including the homepage).
+  //
+  // The IABS link below points to your own filled-out IABS PDF (correct —
+  // TREC allows prefilling the broker-contact section as long as the rest is
+  // verbatim). The Consumer Protection Notice links straight to TREC's own
+  // page, which is the simpler choice since TREC updates it for you and you
+  // never have to re-upload a new version yourself.
   disclosures: [
-    "Rudy Galan is affiliated with eXp Referral Division and does not personally represent buyers or sellers in a transaction.",
-    "There is never a fee to you. Referral fees, when they apply, are paid by the brokerage or agent — not the client.",
-    "[Add your state license number and any broker disclosure required by eXp compliance before publishing this page.]",
+    {
+      text: "Rudy Galan is affiliated with eXp Referral Division and does not personally represent buyers or sellers in a transaction.",
+    },
+    {
+      text: "There is never a fee to you. Referral fees, when they apply, are paid by the brokerage or agent — not the client.",
+    },
+    {
+      text: "Texas Real Estate License #9010212-BB", // Confirm this is labeled correctly (your license vs. your sponsoring broker's) with eXp compliance.
+    },
+    {
+      text: "Texas Real Estate Commission Information About Brokerage Services",
+      href: "https://drive.google.com/file/d/1cTMRql8JOueF2ipH6R5OWF6csYdnyqyp/view?usp=sharing",
+    },
+    {
+      text: "Texas Real Estate Commission Consumer Protection Notice",
+      href: "https://www.trec.texas.gov/forms/consumer-protection-notice",
+    },
   ],
 };
 
@@ -430,7 +456,18 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
           CAPTURE.disclosures.map(d => (
             <li class="grid grid-cols-[1rem_1fr] gap-2">
               <span class="text-accent" aria-hidden="true">&mdash;</span>
-              <span>{d}</span>
+              {d.href ? (
+                <a
+                  href={d.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-accent underline underline-offset-2"
+                >
+                  {d.text}
+                </a>
+              ) : (
+                <span>{d.text}</span>
+              )}
             </li>
           ))
         }
