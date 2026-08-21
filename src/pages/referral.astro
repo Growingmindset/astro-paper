@@ -5,7 +5,7 @@
 // You (Rudy) are the referral agent — you get paid by the receiving brokerage/
 // agent when a deal closes, so this page never promises money to the visitor.
 // Its only job is to get contact info + a few qualifying details in front of you
-// fast, from three channels: in-person, social bio links, and your NFC card.
+// fast, from three channels: in-person, social bio links, and your printed QR card.
 //
 // Edit the CAPTURE object below. Anything in [brackets] is a placeholder —
 // find them all before you publish. Nothing else in the file needs touching.
@@ -31,7 +31,7 @@ const CAPTURE = {
   // ---- Source attribution ----------------------------------------------------
   // Use these as query params on the links you hand out, so every lead arrives
   // pre-tagged with where it came from:
-  //   rudygalan.com/referral?src=nfc   → NFC card
+  //   rudygalan.com/referral?src=card  → the printed QR card
   //   rudygalan.com/referral?src=ig    → Instagram bio link
   //   rudygalan.com/referral?src=x     → X bio link
   //   rudygalan.com/referral?src=fb    → Facebook bio link
@@ -39,7 +39,7 @@ const CAPTURE = {
   //   rudygalan.com/referral?src=person → default when you hand someone your phone at the bar
   sourceMap: {
     person: "In person",
-    nfc: "NFC card",
+    card: "QR card",
     ig: "Instagram",
     x: "X",
     fb: "Facebook",
@@ -65,7 +65,7 @@ const CAPTURE = {
   channels: [
     { label: "In-person", detail: "Bar conversations" },
     { label: "Social", detail: "IG · X · Facebook" },
-    { label: "NFC card", detail: "Tap to send" },
+    { label: "QR card", detail: "Scan to start" },
   ],
 
   steps: [
@@ -125,13 +125,16 @@ const CAPTURE = {
   // never have to re-upload a new version yourself.
   disclosures: [
     {
-      text: "Rudy Galan is affiliated with eXp Referral Division and does not personally represent buyers or sellers in a transaction.",
+      text: "Rudy Galan III, Sales Agent — affiliated with eXp Referral Division. Does not personally represent buyers or sellers in a transaction.",
+    },
+    {
+      text: "Broker: eXp Commercial, LLC",
     },
     {
       text: "There is never a fee to you. Referral fees, when they apply, are paid by the brokerage or agent — not the client.",
     },
     {
-      text: "Texas Real Estate License #9010212-BB", // Confirm this is labeled correctly (your license vs. your sponsoring broker's) with eXp compliance.
+      text: "Texas Real Estate License #9010212-BB",
     },
     {
       text: "Texas Real Estate Commission Information About Brokerage Services",
