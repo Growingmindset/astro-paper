@@ -31,7 +31,8 @@ const CAPTURE = {
   // ---- Source attribution ----------------------------------------------------
   // Use these as query params on the links you hand out, so every lead arrives
   // pre-tagged with where it came from:
-  //   rudygalan.com/referral?src=card  → the printed QR card
+  //   rudygalan.com/referral?src=card  → the printed QR card (handed out)
+  //   rudygalan.com/referral?src=nfc   → the NFC tag in your wallet (tapped)
   //   rudygalan.com/referral?src=ig    → Instagram bio link
   //   rudygalan.com/referral?src=x     → X bio link
   //   rudygalan.com/referral?src=fb    → Facebook bio link
@@ -40,6 +41,7 @@ const CAPTURE = {
   sourceMap: {
     person: "In person",
     card: "QR card",
+    nfc: "NFC tap",
     ig: "Instagram",
     x: "X",
     fb: "Facebook",
@@ -64,7 +66,7 @@ const CAPTURE = {
 
   channels: [
     { label: "In-person", detail: "Bar conversations" },
-    { label: "Social", detail: "IG · X · Facebook" },
+    { label: "Instagram", detail: "@rudyg_1" },
     { label: "QR card", detail: "Scan to start" },
   ],
 
