@@ -21,6 +21,13 @@ const CAPTURE = {
   responseWindow: "48 hours",
   primaryMarket: "San Antonio, TX",
 
+  // ---- Browse listings (eXp My Link My Lead) --------------------------------
+  // Routes through your own domain so the destination can change without
+  // reprinting anything. Anyone who registers or inquires through this link is
+  // auto-attributed to you in the eXp Global Referral Platform dashboard —
+  // it's a second capture channel that needs zero maintenance from you.
+  browseUrl: "/homes",
+
   // ---- Form endpoint --------------------------------------------------------
   // Web3Forms endpoint is fixed and free with no submission cap — you only
   // need to drop in your own access key. Get one at https://web3forms.com
@@ -175,12 +182,21 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
         you, no obligation.
       </p>
 
-      <a
-        href="#capture"
-        class="bg-accent text-background focus-visible:outline-accent mt-8 inline-block px-5 py-3 text-sm font-medium transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2"
-      >
-        Tell me what's going on
-      </a>
+      <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+        <a
+          href="#capture"
+          class="bg-accent text-background focus-visible:outline-accent inline-block px-5 py-3 text-sm font-medium transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2"
+        >
+          Tell me what's going on
+        </a>
+
+        <a
+          href={CAPTURE.browseUrl}
+          class="text-foreground/70 hover:text-foreground focus-visible:outline-accent text-sm underline underline-offset-4 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
+        >
+          Or just browse San Antonio listings &rarr;
+        </a>
+      </div>
 
       <!-- Signature element: the actual routing system -->
       <div class="mt-12">
@@ -435,6 +451,33 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
           <p id="form-status" class="mt-4 text-sm" role="status" aria-live="polite"></p>
         </div>
       </form>
+
+      <!-- Browse fallback — deliberately NOT a mock listing card. Fabricated
+           property data on a licensed agent's site is deceptive advertising,
+           and it's the exact real-estate trope this brand avoids. Visual
+           weight comes from layout, not invented content. -->
+      <a
+        href={CAPTURE.browseUrl}
+        class="browse-card border-border hover:border-accent focus-visible:outline-accent mt-10 flex items-center justify-between gap-4 border p-5 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 sm:p-6"
+      >
+        <div>
+          <p
+            class="text-foreground/60 font-mono text-[11px] tracking-[0.2em] uppercase"
+          >
+            Not ready to talk yet
+          </p>
+          <p class="mt-2 text-lg font-medium sm:text-xl">
+            Browse San Antonio listings
+          </p>
+          <p class="text-foreground/70 mt-1 text-sm">
+            Active listings, straight from the MLS. No form, no phone call.
+          </p>
+        </div>
+        <span
+          class="browse-arrow text-accent shrink-0 text-2xl transition-transform"
+          aria-hidden="true">&rarr;</span
+        >
+      </a>
     </section>
 
     <!-- ================= FAQ ================= -->
@@ -625,6 +668,10 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
   }
   .faq[open] .faq-icon::after {
     transform: rotate(0deg);
+  }
+
+  .browse-card:hover .browse-arrow {
+    transform: translateX(4px);
   }
 
   @media (prefers-reduced-motion: reduce) {
