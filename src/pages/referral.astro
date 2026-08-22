@@ -696,6 +696,12 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
   const hearAboutSelect = document.getElementById("hear_about");
   const trafficSourceInput = document.getElementById("traffic_source");
 
+  // Sheet webhook — writes each submission into the referral-ledger PIPELINE
+  // tab, in parallel with the Web3Forms email. Fire-and-forget by design:
+  // a Sheet hiccup should never block the visitor's confirmation screen.
+  const sheetWebhookUrl = "https://script.google.com/macros/s/AKfycbxHUYFVQXFJFPrZVnOhtpxGbw0Bltlz2NR5TElY-fPYfQ_pOcstka2ozFRpZKrCTuBt/exec";
+  const sheetWebhookSecret = "Ilovebigbooty23";
+
   // ---- Pre-fill "how'd you hear about me" + hidden traffic source from ?src= ----
   const params = new URLSearchParams(window.location.search);
   const src = params.get("src");
@@ -803,6 +809,7 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
     payload.set("consent", form.elements.consent.checked ? "Yes" : "No");
     payload.set("submitted_from", window.location.href);
     payload.set("access_key", accessKey);
+    payload.set("secret", sheetWebhookSecret);
     payload.set(
       "subject",
       isSomeoneElse()
@@ -821,6 +828,13 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
         body: payload,
       });
       if (!response.ok) throw new Error(String(response.status));
+
+      // Write the same submission to the PIPELINE sheet. Not awaited —
+      // this rides in the background and never blocks the success screen.
+      fetch(sheetWebhookUrl, {
+        method: "POST",
+        body: payload,
+      }).catch(() => {});
 
       form.classList.add("hidden");
       successPanel.classList.remove("hidden");
