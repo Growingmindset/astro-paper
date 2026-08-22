@@ -394,7 +394,7 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
               </select>
             </div>
 
-            <div class="field">
+            <div class="field" id="field-market">
               <label for="market">Which market?</label>
               <input id="market" name="market" type="text" placeholder={`e.g. ${CAPTURE.primaryMarket}`} />
             </div>
@@ -407,7 +407,7 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
               </select>
             </div>
 
-            <div class="field">
+            <div class="field" id="field-budget">
               <label for="budget">Budget range</label>
               <select id="budget" name="budget">
                 <option value="">Pick one</option>
@@ -732,14 +732,22 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
   const trafficSourceInput = document.getElementById("traffic_source");
   const goalSelect = document.getElementById("goal");
   const offMarketFieldset = document.getElementById("offmarket-fieldset");
+  const marketField = document.getElementById("field-market");
+  const budgetField = document.getElementById("field-budget");
   const OFF_MARKET_GOAL = "Sell As-Is / Off-Market";
 
   // ---- Toggle off-market fields based on goal ----
+  // Budget doesn't apply to a seller, and market is redundant once they've
+  // given a specific property address — hide both for the off-market path.
   const syncGoalToggle = () => {
     if (goalSelect.value === OFF_MARKET_GOAL) {
       offMarketFieldset.classList.remove("hidden");
+      marketField.classList.add("hidden");
+      budgetField.classList.add("hidden");
     } else {
       offMarketFieldset.classList.add("hidden");
+      marketField.classList.remove("hidden");
+      budgetField.classList.remove("hidden");
     }
   };
   goalSelect.addEventListener("change", syncGoalToggle);
