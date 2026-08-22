@@ -55,7 +55,7 @@ const CAPTURE = {
     ref: "A friend",
   },
 
-  goals: ["Buy", "Sell", "Invest", "Not sure yet"],
+  goals: ["Buy", "Sell", "Invest", "Sell As-Is / Off-Market", "Not sure yet"],
   timeframes: [
     "Ready now",
     "1–3 months",
@@ -430,6 +430,41 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
           </div>
         </fieldset>
 
+        <!-- ---------- Off-market / Track B (shown only when goal = off-market) ---------- -->
+        <fieldset id="offmarket-fieldset" class="hidden">
+          <legend class="text-foreground/60 mb-5 font-mono text-xs tracking-[0.2em] uppercase">
+            The property
+          </legend>
+
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div class="field sm:col-span-2">
+              <label for="property_address">Property address *</label>
+              <input id="property_address" name="property_address" type="text" autocomplete="street-address" />
+            </div>
+
+            <div class="field">
+              <label for="property_condition">Condition</label>
+              <select id="property_condition" name="property_condition">
+                <option value="">Pick one</option>
+                <option value="Move-in ready">Move-in ready</option>
+                <option value="Needs cosmetic work">Needs cosmetic work</option>
+                <option value="Needs major repair">Needs major repair</option>
+                <option value="Tear-down">Tear-down</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="deal_fork">What matters more?</label>
+              <select id="deal_fork" name="deal_fork">
+                <option value="">Pick one</option>
+                <option value="Top dollar, willing to wait">Top dollar, willing to wait</option>
+                <option value="Fast and certain, condition as-is">Fast and certain, as-is</option>
+                <option value="Not sure yet">Not sure yet</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
         <fieldset>
           <label class="check">
             <input id="consent" name="consent" type="checkbox" required />
@@ -695,6 +730,20 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
   const aboutRadios = form.querySelectorAll('input[name="about"]');
   const hearAboutSelect = document.getElementById("hear_about");
   const trafficSourceInput = document.getElementById("traffic_source");
+  const goalSelect = document.getElementById("goal");
+  const offMarketFieldset = document.getElementById("offmarket-fieldset");
+  const OFF_MARKET_GOAL = "Sell As-Is / Off-Market";
+
+  // ---- Toggle off-market fields based on goal ----
+  const syncGoalToggle = () => {
+    if (goalSelect.value === OFF_MARKET_GOAL) {
+      offMarketFieldset.classList.remove("hidden");
+    } else {
+      offMarketFieldset.classList.add("hidden");
+    }
+  };
+  goalSelect.addEventListener("change", syncGoalToggle);
+  syncGoalToggle();
 
   // Sheet webhook — writes each submission into the referral-ledger PIPELINE
   // tab, in parallel with the Web3Forms email. Fire-and-forget by design:
@@ -795,6 +844,16 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
       if (!prospectPhone && !prospectEmail) {
         flagInvalid(form.elements.prospect_phone);
         setStatus("Add their phone or email so I can reach them.", "error");
+        return;
+      }
+    }
+
+    // Off-market path: need a property address to do anything with the lead
+    if (goalSelect.value === OFF_MARKET_GOAL) {
+      const propertyAddress = form.elements.property_address.value.trim();
+      if (!propertyAddress) {
+        flagInvalid(form.elements.property_address);
+        setStatus("Add the property address.", "error");
         return;
       }
     }
