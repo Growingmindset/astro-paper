@@ -742,12 +742,12 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
   const syncGoalToggle = () => {
     if (goalSelect.value === OFF_MARKET_GOAL) {
       offMarketFieldset.classList.remove("hidden");
-      marketField.classList.add("hidden");
-      budgetField.classList.add("hidden");
+      marketField.style.display = "none";
+      budgetField.style.display = "none";
     } else {
       offMarketFieldset.classList.add("hidden");
-      marketField.classList.remove("hidden");
-      budgetField.classList.remove("hidden");
+      marketField.style.display = "";
+      budgetField.style.display = "";
     }
   };
   goalSelect.addEventListener("change", syncGoalToggle);
