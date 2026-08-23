@@ -4,15 +4,16 @@ export const SITE = {
   profile: "https://rudygalan.com/",
   desc: "Systems, blueprints, and analysis from first principles.",
   title: "Rudy Galan Portal",
+  // TODO: replace public/astropaper-og.jpg with your own 1200x630 fallback card
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
-  postPerPage: 4,
+  postPerPage: 50,
   scheduledPostMargin: 15 * 60 * 1000,
   showArchives: true,
   showBackButton: true,
   editPost: {
-    enabled: true,
+    enabled: false,
     text: "Edit page",
     url: "https://github.com/Growingmindset/astro-paper/edit/main/",
   },
@@ -24,7 +25,7 @@ export const SITE = {
 
 export const LOCALE = {
   lang: "en",
-  langTag: ["en-EN"],
+  langTag: ["en-US"],
 } as const;
 
 export const LOGO_IMAGE = {
@@ -36,22 +37,23 @@ export const LOGO_IMAGE = {
 
 export const SOCIALS = [
   {
-    name: "Github",
-    href: "https://github.com/Growingmindset",
-    linkTitle: `${SITE.title} on Github`,
+    name: "X",
+    href: "https://x.com/rudygalan",
+    linkTitle: `${SITE.title} on X`,
     active: true,
   },
+  {
+    name: "Instagram",
+    href: "https://instagram.com/rudyg_1",
+    linkTitle: `${SITE.title} on Instagram`,
+    active: true,
+  },
+
   {
     name: "Mail",
     href: "mailto:growingstateofmind@gmail.com",
     linkTitle: `Send an email to ${SITE.title}`,
     active: true,
-  },
-  {
-    name: "X",
-    href: "https://x.com/rudygalan",
-    linkTitle: `${SITE.title} on X`,
-    active: false,
   },
 ];
 
