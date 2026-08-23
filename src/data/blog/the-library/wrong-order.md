@@ -4,7 +4,7 @@ author: Rudy Galan
 pubDatetime: 2026-08-23T12:00:00Z
 postSlug: wrong-order
 featured: true
-draft: true
+draft: false
 tags:
   - deconstructions
   - systems
