@@ -22,7 +22,6 @@ const labPosts = sortedPosts.filter(post =>
 
 // 4. Feed ONLY the remaining operator logs into your Featured and Recent sections
 const featuredPosts = labPosts.filter(({ data }) => data.featured);
-const recentPosts = labPosts.filter(({ data }) => !data.featured).slice(0, SITE.postPerIndex);
 ---
 
 <Layout>
@@ -73,21 +72,8 @@ const recentPosts = labPosts.filter(({ data }) => !data.featured).slice(0, SITE.
               ))}
             </ul>
           </section>
-          {recentPosts.length > 0 && <hr class="my-6 border-dashed border-border" />}
+          <hr class="my-6 border-dashed border-border" />
         </>
-      )
-    }
-
-    {
-      recentPosts.length > 0 && (
-        <section id="recent-posts" class="pb-6 pt-12">
-          <h2 class="text-2xl font-semibold tracking-wide">Recent Deployments</h2>
-          <ul>
-            {recentPosts.map(post => (
-              <Card {...post} />
-            ))}
-          </ul>
-        </section>
       )
     }
 
