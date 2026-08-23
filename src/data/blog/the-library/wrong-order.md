@@ -6,7 +6,7 @@ postSlug: wrong-order
 featured: true
 draft: false
 tags:
-  - deconstructions
+  - capital
   - systems
 description: "Cash flow, then compounding, then leverage. Three layers, in that order — and a body that survives the twenty years it takes. Here's the sequence and the tools I use for each one."
 ---
