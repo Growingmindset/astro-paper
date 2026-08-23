@@ -5,7 +5,7 @@ export const SITE = {
   desc: "Systems, blueprints, and analysis from first principles.",
   title: "Rudy Galan Portal",
   // TODO: replace public/astropaper-og.jpg with your own 1200x630 fallback card
-  ogImage: "astropaper-og.jpg",
+  ogImage: "og-portal.png",
   lightAndDarkMode: true,
   postPerIndex: 4,
   postPerPage: 50,
