@@ -22,7 +22,7 @@ const libraryTags = ["transmissions", "deconstructions", "academic-systems"];
 // 4. The Firewall: Filter OUT any post that belongs to The Library
 const labPosts = sortedPosts.filter((post) => {
   const tags = post.data.tags || [];
-  const isLibraryPost = tags.some(tag => libraryTags.includes(tag));
+  const isLibraryPost = tags.some((tag) => libraryTags.includes(tag));
   return !isLibraryPost;
 });
 
@@ -41,39 +41,47 @@ const regularPosts = labPosts.filter((post) => {
 
 <Layout title={`The Lab | ${SITE.title}`}>
   <Header activeNav="posts" />
-  
+
   <main id="main-content" class="app-layout">
-    <section class="pt-8 pb-10 border-b border-dashed border-border text-center">
-      <h1 class="text-3xl font-bold tracking-wider sm:text-4xl mb-4">The Lab</h1>
-      <p class="text-skin-base opacity-90 max-w-2xl mx-auto leading-relaxed">
-        Active system deployments. A living workspace documenting the raw mechanics of capital allocation, the Human Machine, and programmatic logic.
+    <section class="border-border border-b border-dashed pt-8 pb-10 text-center">
+      <h1 class="mb-4 text-3xl font-bold tracking-wider sm:text-4xl">The Lab</h1>
+      <p class="text-skin-base mx-auto max-w-2xl leading-relaxed opacity-90">
+        Active system deployments. A living workspace documenting the raw
+        mechanics of capital allocation, the Human Machine, and programmatic
+        logic.
       </p>
     </section>
 
     {
       livingDocs.length > 0 && (
-        <section class="pt-12 pb-8 max-w-4xl mx-auto">
-          <h2 class="text-2xl font-bold tracking-wide text-skin-accent mb-6">Living Documents</h2>
-          <div class="grid gap-6 md:grid-cols-2">
-            {livingDocs.map((post) => <Card {...post} />)}
-          </div>
+        <section class="mx-auto max-w-4xl pt-12 pb-8">
+          <h2 class="text-skin-accent mb-2 text-2xl font-bold tracking-wide">
+            Living Documents
+          </h2>
+          <ul class="grid list-none grid-cols-1 items-start gap-x-10 gap-y-0 ps-0 md:grid-cols-2">
+            {livingDocs.map(post => (
+              <Card {...post} />
+            ))}
+          </ul>
         </section>
       )
     }
 
     {
       regularPosts.length > 0 && (
-        <section class="pt-8 pb-16 max-w-4xl mx-auto">
-          <h2 class="text-2xl font-bold tracking-wide text-skin-accent mb-6">System Logs</h2>
-          <ul class="space-y-6 border-l-2 border-skin-line border-opacity-50 pl-2">
-            {regularPosts.map((post) => (
-              <li class="block"><Card {...post} /></li>
+        <section class="mx-auto max-w-4xl pt-8 pb-16">
+          <h2 class="text-skin-accent mb-2 text-2xl font-bold tracking-wide">
+            System Logs
+          </h2>
+          <ul class="border-skin-line list-none border-l-2 border-opacity-50 ps-6">
+            {regularPosts.map(post => (
+              <Card {...post} />
             ))}
           </ul>
         </section>
       )
     }
   </main>
-  
+
   <Footer />
 </Layout>
