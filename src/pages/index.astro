@@ -46,36 +46,18 @@ const recentPosts = labPosts.filter(({ data }) => !data.featured).slice(0, SITE.
       </a>
       
       <p class="my-2 text-base leading-relaxed">
-        This site is where I document what I'm building — practical systems for wealth, first-principles physics, and the thinking behind both. No filler, just what's actually working.
+        This site is where I document what I'm building — practical systems for money, training, and the physics underneath both. No filler, just what's actually working.
+      </p>
+
+      <p class="my-2 text-base leading-relaxed font-semibold text-skin-accent">
+        <LinkButton href="/posts/wrong-order" class="hover:underline underline-offset-4">
+          New here? Start with the order most people get wrong →
+        </LinkButton>
       </p>
       
       <p class="my-2 mt-4">
         Track active builds in <span class="whitespace-nowrap"><LinkButton href="/posts" class="underline decoration-dashed underline-offset-4 hover:text-accent">The Lab</LinkButton>,</span> read core essays in <span class="whitespace-nowrap"><LinkButton href="/library" class="underline decoration-dashed underline-offset-4 hover:text-accent">The Library</LinkButton>,</span> or check out physical goods in the <span class="whitespace-nowrap"><LinkButton href="/shop" class="underline decoration-dashed underline-offset-4 hover:text-accent">Shop</LinkButton></span>.
       </p>
-    </section>
-
-    <section id="operator-profile" class="my-6 grid grid-cols-1 gap-6 items-center border-t border-dashed border-border pt-8 sm:grid-cols-3">
-      <div class="flex justify-center sm:col-span-1">
-        <img 
-          src="/headshot.jpg" 
-          alt="Rudy Galan, professional operator and systems builder in San Antonio, Texas" 
-          class="w-48 h-48 rounded-full object-cover border-2 border-skin-line bg-skin-card shadow-sm sm:w-full sm:h-auto sm:aspect-square sm:rounded-lg"
-        />
-      </div>
-      <div class="sm:col-span-2 flex flex-col justify-center">
-        <h3 class="text-xl font-semibold text-skin-base mb-2">Meet the Operator</h3>
-        <p class="text-sm leading-relaxed text-skin-base opacity-90">
-          Over a decade in high-volume hospitality funded my 150+ credits in STEM-- biology, physics and economics, plus my own investing. My curiosity and a internet connection fund the rest. I'm building toward project management in large-scale energy infrastructure — the physical backbone the next economy will actually run on.
-        </p>
-        <p class="text-sm mt-3">
-          <LinkButton href="/about" class="text-skin-accent font-medium hover:underline inline-flex items-center gap-1">
-            Read the full brief
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </LinkButton>
-        </p>
-      </div>
     </section>
 
     <hr class="my-6 border-dashed border-border" />
@@ -108,6 +90,31 @@ const recentPosts = labPosts.filter(({ data }) => !data.featured).slice(0, SITE.
         </section>
       )
     }
+
+    <section id="operator-profile" class="my-6 grid grid-cols-1 gap-6 items-center border-t border-dashed border-border pt-8 sm:grid-cols-3">
+      <div class="flex justify-center sm:col-span-1">
+        <img 
+          src="/headshot.jpg" 
+          alt="Rudy Galan, professional operator and systems builder in San Antonio, Texas" 
+          class="w-48 h-48 rounded-full object-cover border-2 border-skin-line bg-skin-card shadow-sm sm:w-full sm:h-auto sm:aspect-square sm:rounded-lg"
+        />
+      </div>
+      <div class="sm:col-span-2 flex flex-col justify-center">
+        <h3 class="text-xl font-semibold text-skin-base mb-2">Meet the Operator</h3>
+        <p class="text-sm leading-relaxed text-skin-base opacity-90">
+          Over a decade in high-volume hospitality funded 150+ credits in STEM — biology, physics, and economics — plus my own investing. Curiosity and an internet connection funded the rest. I'm building toward project management in large-scale energy infrastructure — the physical backbone the next economy will actually run on.
+        </p>
+        <p class="text-sm mt-3">
+          <LinkButton href="/about" class="text-skin-accent font-medium hover:underline inline-flex items-center gap-1">
+            Read the full brief
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </LinkButton>
+        </p>
+      </div>
+    </section>
+
   </main>
 
   <Footer />
