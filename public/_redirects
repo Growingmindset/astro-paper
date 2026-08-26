@@ -5,3 +5,5 @@
 /tap     /txhouse?src=nfc     302
 /r       /txhouse?src=ref     302
 /homes   https://exprealty.com/@rudygalan   302
+/referral   /txhouse   301
+/referral/  /txhouse   301
