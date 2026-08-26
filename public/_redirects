@@ -1,7 +1,7 @@
-/ig      /referral?src=ig      302
-/x       /referral?src=x       302
-/fb      /referral?src=fb      302
-/card    /referral?src=card    302
-/tap     /referral?src=nfc     302
-/r       /referral?src=ref     302
+/ig      /txhouse?src=ig      302
+/x       /txhouse?src=x       302
+/fb      /txhouse?src=fb      302
+/card    /txhouse?src=card    302
+/tap     /txhouse?src=nfc     302
+/r       /txhouse?src=ref     302
 /homes   https://exprealty.com/@rudygalan   302

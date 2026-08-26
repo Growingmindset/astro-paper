@@ -69,7 +69,7 @@ I hold a Texas real estate license and I sit in the referral division at eXp Rea
 
 What you get for it is a filter. I have three agents I refer to and I picked them for how they handle a buyer asking hard questions about condition and comps, not for how quickly they can get someone to sign. The alternative is a portal form that sells your phone number to whoever bought the zip code.
 
-**[If you're looking in the next 12 months, start here →](https://rudygalan.com/referral)**
+**[If you're looking in the next 12 months, start here →](https://rudygalan.com/txhouse)**
 
 If you're not — genuinely not — skip it. Don't buy a house to complete a framework. And if you're somewhere in between — thinking about it, not close yet — that's most people, and it's the position I'd rather you be in than rushed. The form on that page handles both.
 

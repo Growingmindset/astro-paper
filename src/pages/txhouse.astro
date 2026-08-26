@@ -1,5 +1,5 @@
 ---
-// src/pages/referral.astro
+// src/pages/txhouse.astro
 // -----------------------------------------------------------------------------
 // This is a LEAD CAPTURE page, not a "refer a friend, get paid" page.
 // You (Rudy) are the referral agent — you get paid by the receiving brokerage/
@@ -38,13 +38,13 @@ const CAPTURE = {
   // ---- Source attribution ----------------------------------------------------
   // Use these as query params on the links you hand out, so every lead arrives
   // pre-tagged with where it came from:
-  //   rudygalan.com/referral?src=card  → the printed QR card (handed out)
-  //   rudygalan.com/referral?src=nfc   → the NFC tag in your wallet (tapped)
-  //   rudygalan.com/referral?src=ig    → Instagram bio link
-  //   rudygalan.com/referral?src=x     → X bio link
-  //   rudygalan.com/referral?src=fb    → Facebook bio link
-  //   rudygalan.com/referral?src=ref   → sent to someone directly
-  //   rudygalan.com/referral?src=person → default when you hand someone your phone at the bar
+  //   rudygalan.com/txhouse?src=card  → the printed QR card (handed out)
+  //   rudygalan.com/txhouse?src=nfc   → the NFC tag in your wallet (tapped)
+  //   rudygalan.com/txhouse?src=ig    → Instagram bio link
+  //   rudygalan.com/txhouse?src=x     → X bio link
+  //   rudygalan.com/txhouse?src=fb    → Facebook bio link
+  //   rudygalan.com/txhouse?src=ref   → sent to someone directly
+  //   rudygalan.com/txhouse?src=person → default when you hand someone your phone at the bar
   sourceMap: {
     person: "In person",
     card: "QR card",
@@ -163,7 +163,7 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
 <Layout
   title={`Work With Me | ${SITE.title}`}
   description={pageDescription}
-  ogImage="/referral-og.jpg"
+  ogImage="/txhouse-og.jpg"
 >
   <Header />
 
