@@ -73,6 +73,8 @@ const DESK = {
     "Commercial",
     "Leasing / property mgmt",
     "Relocation",
+    "Off-market / pocket listings",
+    "Spanish-speaking",
   ],
 
   priceBands: [
@@ -172,7 +174,6 @@ const DESK = {
   ],
 };
 
-const hearAboutOptions = [...Object.values(DESK.sourceMap), "Other"];
 const pageDescription = `Referral partner intake for licensed real estate agents. ${DESK.name}, eXp Referral Division — ${DESK.homeMarket}.`;
 ---
 
@@ -359,20 +360,6 @@ const pageDescription = `Referral partner intake for licensed real estate agents
             <p class="text-foreground/60 -mt-2 text-xs sm:col-span-2">
               Give me at least one — phone or email.
             </p>
-
-            <div class="field">
-              <label for="license">License #</label>
-              <input id="license" name="license" type="text" />
-            </div>
-
-            <div class="field">
-              <label for="reach">Fastest way to reach you</label>
-              <select id="reach" name="reach">
-                <option value="Text">Text</option>
-                <option value="Call">Call</option>
-                <option value="Email">Email</option>
-              </select>
-            </div>
           </div>
         </fieldset>
 
@@ -415,24 +402,12 @@ const pageDescription = `Referral partner intake for licensed real estate agents
               </div>
             </div>
 
-            <div class="grid gap-5 sm:grid-cols-2">
-              <div class="field">
-                <label for="price_band">Price range you work most</label>
-                <select id="price_band" name="price_band">
-                  <option value="">Pick one</option>
-                  {DESK.priceBands.map(b => <option value={b}>{b}</option>)}
-                </select>
-              </div>
-
-              <div class="field">
-                <label for="languages">Languages</label>
-                <input
-                  id="languages"
-                  name="languages"
-                  type="text"
-                  placeholder="English, Spanish"
-                />
-              </div>
+            <div class="field">
+              <label for="price_band">Price range you work most</label>
+              <select id="price_band" name="price_band">
+                <option value="">Pick one</option>
+                {DESK.priceBands.map(b => <option value={b}>{b}</option>)}
+              </select>
             </div>
           </div>
         </fieldset>
@@ -504,14 +479,6 @@ const pageDescription = `Referral partner intake for licensed real estate agents
                   <span>Let's talk about it</span>
                 </label>
               </div>
-            </div>
-
-            <div class="field">
-              <label for="hear_about">Where'd we connect?</label>
-              <select id="hear_about" name="hear_about">
-                <option value="">Pick one</option>
-                {hearAboutOptions.map(h => <option value={h}>{h}</option>)}
-              </select>
             </div>
 
             <div class="field">
@@ -777,20 +744,12 @@ const pageDescription = `Referral partner intake for licensed real estate agents
   const submitBtn = document.getElementById("submit-btn");
   const successPanel = document.getElementById("form-success");
   const sendAnother = document.getElementById("send-another");
-  const hearAboutSelect = document.getElementById("hear_about");
   const trafficSourceInput = document.getElementById("traffic_source");
 
-  // ---- Pre-fill "where'd we connect" + hidden traffic source from ?src= ----
-  const params = new URLSearchParams(window.location.search);
-  const src = params.get("src");
-  if (src) {
-    trafficSourceInput.value = src;
-    const mapped = sourceMap[src];
-    if (mapped) {
-      const match = [...hearAboutSelect.options].find(o => o.value === mapped);
-      if (match) hearAboutSelect.value = mapped;
-    }
-  }
+  // ---- Log where they came from, silently, from ?src= ----
+  // Writes the readable label ("At the bar") when it maps, the raw tag if not.
+  const src = new URLSearchParams(window.location.search).get("src");
+  if (src) trafficSourceInput.value = sourceMap[src] || src;
 
   const setStatus = (message, state) => {
     statusEl.textContent = message;
