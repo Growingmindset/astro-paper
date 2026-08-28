@@ -1,0 +1,912 @@
+---
+// src/pages/partners.astro
+// -----------------------------------------------------------------------------
+// AGENT-FACING page. The mirror of txhouse.astro.
+//
+// txhouse.astro captures CONSUMERS (people who want to buy or sell).
+// This page captures AGENTS — two kinds, and it's built to catch both:
+//   1. BENCH   — agents you can place your bar leads with, sorted by market
+//   2. SOURCES — agents who send YOU the leads they can't service
+//
+// Never link this page and txhouse to each other. An agent who lands on a
+// consumer page reads you as competition, which kills the only advantage the
+// whole system runs on.
+//
+// Edit the DESK object below. Nothing else in the file needs touching.
+// -----------------------------------------------------------------------------
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import { SITE } from "@/config";
+
+const DESK = {
+  name: "Rudy Galan",
+  firstName: "Rudy",
+  contactEmail: "rudy.galan@expreferral.com",
+  responseWindow: "24 hours",
+  homeMarket: "San Antonio, TX",
+
+  // ---- Form endpoint --------------------------------------------------------
+  // Same Web3Forms account as txhouse. The form_type hidden field lets your
+  // Apps Script route agent submissions to a different tab than consumer leads.
+  formEndpoint: "https://api.web3forms.com/submit",
+  web3formsKey: "9783d0cb-c632-4866-9f7d-c4f9c40e31ef",
+
+  // ---- Sheet webhook ---------------------------------------------------------
+  // Same webhook as txhouse.astro. Submissions land in your Sheet alongside
+  // consumer leads — the form_type field below tells your Apps Script that
+  // these are agents, so you can send them to their own tab.
+  sheetWebhookUrl:
+    "https://script.google.com/macros/s/AKfycbxHUYFVQXFJFPrZVnOhtpxGbw0Bltlz2NR5TElY-fPYfQ_pOcstka2ozFRpZKrCTuBt/exec",
+  sheetWebhookSecret: "Ilovebigbooty23",
+
+  // ---- Source attribution ----------------------------------------------------
+  //   rudygalan.com/partners?src=bar   -> handed your phone at the bar
+  //   rudygalan.com/partners?src=card  -> printed QR routing card
+  //   rudygalan.com/partners?src=nfc   -> NFC tag
+  //   rudygalan.com/partners?src=conf  -> conference follow-up text
+  //   rudygalan.com/partners?src=exp   -> eXp Hub / agent portal
+  //   rudygalan.com/partners?src=ref   -> another agent passed it along
+  sourceMap: {
+    bar: "At the bar",
+    card: "QR card",
+    nfc: "NFC tap",
+    conf: "Conference",
+    exp: "eXp Hub",
+    ref: "Another agent",
+  },
+
+  roles: [
+    "Both — send and receive",
+    "I'd take referrals from you",
+    "I'd send you my overflow",
+  ],
+
+  specialties: [
+    "Residential resale",
+    "New construction",
+    "Luxury",
+    "First-time buyers",
+    "Military / VA / PCS",
+    "Investment / multifamily",
+    "Land / ranch",
+    "Commercial",
+    "Leasing / property mgmt",
+    "Relocation",
+  ],
+
+  priceBands: [
+    "Under $250k",
+    "$250k – $400k",
+    "$400k – $650k",
+    "$650k – $1M",
+    "$1M+",
+    "No typical range",
+  ],
+
+  // ---- The two lanes (signature element) --------------------------------------
+  lanes: [
+    {
+      tag: "You → Me",
+      title: "The ones you can't take",
+      body: "Out of your area. Below your price point. A PCS move to a state you don't cover. A lead you don't have bandwidth for.",
+      outcome:
+        "You get 25% of the referral fee — on business that's worth nothing to you right now.",
+    },
+    {
+      tag: "Me → You",
+      title: "The ones headed your way",
+      body: "I tend bar at a downtown San Antonio conference hotel. Relocations, job transfers, PCS moves, second homes. They're headed everywhere.",
+      outcome:
+        "You get the client and the transaction. Standard 25% referral fee, negotiable.",
+    },
+  ],
+
+  terms: [
+    {
+      title: "Signed agreement before any introduction",
+      body: "Both directions, every time. Nothing on a handshake. If we're both eXp it runs through the agent-to-agent portal, and the client's details stay hidden until both sides sign.",
+    },
+    {
+      title: "Broker to broker, always",
+      body: "TREC requires it and I don't work around it. Referral fees go brokerage to brokerage, never agent to agent.",
+    },
+    {
+      title: "One agent per market on my sheet",
+      body: "I'd rather have one person I trust in a market than five I don't. Fill this out and the slot is yours until you tell me otherwise.",
+    },
+    {
+      title: "I don't compete with you",
+      body: "I'm referral-only. I don't list, show, or negotiate, and I'm not building a book of clients behind you. That's the whole point.",
+    },
+  ],
+
+  faqs: [
+    {
+      q: "What's in this for you?",
+      a: "The referral fee, same as you. I'm licensed on the referral side only, so routing people is the entire business — I don't have a transaction pipeline competing for my attention.",
+    },
+    {
+      q: "How do you decide who gets a lead?",
+      a: "Market first, then price band and specialty. If I don't have someone I trust in that market yet, I search, call them, and confirm they're active and can respond within a day before I hand anything over. I don't forward names off a directory.",
+    },
+    {
+      q: "Are you going to try to poach my client?",
+      a: "I can't. Referral Division agents aren't permitted to represent anyone in a transaction — no showings, no negotiating, no listings. It's a structural limit, not a promise.",
+    },
+    {
+      q: "We're both eXp. Does that change anything?",
+      a: "It makes it faster. The referral runs through eXp's agent-to-agent portal, the fee is withheld at closing before splits, and you're paid by direct deposit. No chasing another brokerage's accounting department for a check.",
+    },
+    {
+      q: "What if I just want to trade referrals without percentages?",
+      a: "Works for me, and with steady two-way flow it's usually simpler for both of us. Pick that option on the form and we'll each keep our own side.",
+    },
+    {
+      q: "What markets do you cover?",
+      a: "I can place a referral in any state. Where I have a relationship I'd personally vouch for: San Antonio, Corpus Christi and the Coastal Bend, and Abilene — and I'm adding markets constantly.",
+    },
+  ],
+
+  // ---- Disclosures ------------------------------------------------------------
+  // Same block as txhouse.astro. TREC Rule 531.20(b) and 531.18 apply across a
+  // license holder's business site, and the IABS + Consumer Protection Notice
+  // still need to live on the homepage itself (Footer.astro handles that).
+  disclosures: [
+    {
+      text: "Rudy Galan III, Sales Agent — affiliated with eXp Referral Division. Does not personally represent buyers or sellers in a transaction.",
+    },
+    { text: "Broker: eXp Commercial, LLC" },
+    { text: "Texas Real Estate License #9010212-BB" },
+    {
+      text: "All referral compensation is paid broker to broker in accordance with TREC rules.",
+    },
+    {
+      text: "Texas Real Estate Commission Information About Brokerage Services",
+      href: "https://drive.google.com/file/d/1cTMRql8JOueF2ipH6R5OWF6csYdnyqyp/view?usp=sharing",
+    },
+    {
+      text: "Texas Real Estate Commission Consumer Protection Notice",
+      href: "https://www.trec.texas.gov/forms/consumer-protection-notice",
+    },
+  ],
+};
+
+const hearAboutOptions = [...Object.values(DESK.sourceMap), "Other"];
+const pageDescription = `Referral partner intake for licensed real estate agents. ${DESK.name}, eXp Referral Division — ${DESK.homeMarket}.`;
+---
+
+<Layout
+  title={`Referral Desk | ${SITE.title}`}
+  description={pageDescription}
+  ogImage="/partners-og.jpg"
+>
+  <Header />
+
+  <main id="main-content" class="mx-auto w-full max-w-3xl px-4 pb-16">
+    <!-- ================= HERO ================= -->
+    <section class="pt-10 pb-10">
+      <p class="text-accent mb-4 font-mono text-xs tracking-[0.2em] uppercase">
+        For licensed agents · eXp Referral Division
+      </p>
+      <h1 class="text-3xl leading-tight font-semibold sm:text-5xl">
+        Send me the ones you can't take.
+      </h1>
+      <p class="text-foreground/75 mt-4 max-w-xl text-base sm:text-lg">
+        I'm licensed on the referral side only — no listings, no showings, no
+        clients of my own. Which means I'm not competition. I'm somewhere to put
+        the business you're currently giving away.
+      </p>
+
+      <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+        <a
+          href="#intake"
+          class="bg-accent text-background focus-visible:outline-accent inline-block px-5 py-3 text-sm font-medium transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2"
+        >
+          Claim your market slot
+        </a>
+        <a
+          href="#terms"
+          class="text-foreground/70 hover:text-foreground focus-visible:outline-accent text-sm underline underline-offset-4 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
+        >
+          Or read the terms first &rarr;
+        </a>
+      </div>
+
+      <!-- Signature element: the two lanes, side by side -->
+      <div class="mt-12 grid gap-4 sm:grid-cols-2">
+        {
+          DESK.lanes.map(lane => (
+            <div class="border-border flex flex-col border p-5">
+              <p class="text-accent font-mono text-[11px] tracking-[0.2em] uppercase">
+                {lane.tag}
+              </p>
+              <h2 class="mt-3 text-lg font-medium">{lane.title}</h2>
+              <p class="text-foreground/70 mt-2 grow text-sm">{lane.body}</p>
+              <p class="border-border mt-4 border-t pt-4 text-sm font-medium">
+                {lane.outcome}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- ================= TERMS ================= -->
+    <section id="terms" class="border-border scroll-mt-8 border-t py-14">
+      <h2 class="text-2xl font-semibold sm:text-3xl">How I work</h2>
+      <ol class="mt-8 space-y-0">
+        {
+          DESK.terms.map((term, i) => (
+            <li class="step grid grid-cols-[2.5rem_1fr] gap-x-4 pb-8 last:pb-0">
+              <div class="step-rail">
+                <span class="text-accent font-mono text-sm font-semibold">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+              </div>
+              <div class="pt-0.5">
+                <h3 class="text-lg font-medium">{term.title}</h3>
+                <p class="text-foreground/70 mt-1 text-sm sm:text-base">
+                  {term.body}
+                </p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <!-- ================= THE FORM ================= -->
+    <section id="intake" class="border-border scroll-mt-8 border-t py-14">
+      <h2 class="text-2xl font-semibold sm:text-3xl">Get on the sheet</h2>
+      <p class="text-foreground/70 mt-2 text-sm sm:text-base">
+        Takes about a minute. Required fields are marked with an asterisk — the
+        rest just helps me route accurately.
+      </p>
+
+      <!-- Success state -->
+      <div
+        id="form-success"
+        class="border-accent mt-8 hidden border p-6"
+        tabindex="-1"
+      >
+        <p class="text-accent font-mono text-xs tracking-widest uppercase">
+          You're on the sheet
+        </p>
+        <h3 class="mt-2 text-xl font-medium">
+          I'll confirm your market slot within {DESK.responseWindow}.
+        </h3>
+        <p class="text-foreground/75 mt-2 text-sm">
+          When something comes across my bar headed your way, you'll hear from me
+          the same day. Anything you can't service, send it over. Direct line:{" "}
+          <a href={`mailto:${DESK.contactEmail}`} class="text-accent underline"
+            >{DESK.contactEmail}</a
+          >.
+        </p>
+        <button
+          id="send-another"
+          type="button"
+          class="border-border focus-visible:outline-accent mt-5 border px-4 py-2 text-sm transition-colors hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2"
+        >
+          Add another agent
+        </button>
+      </div>
+
+      <form id="intake-form" class="mt-8 space-y-10" novalidate>
+        <!-- Honeypot -->
+        <div class="hp" aria-hidden="true">
+          <label for="website">Website</label>
+          <input
+            id="website"
+            type="text"
+            name="website"
+            tabindex="-1"
+            autocomplete="off"
+          />
+        </div>
+
+        <!-- ---------- Who you are ---------- -->
+        <fieldset>
+          <legend
+            class="text-foreground/60 mb-5 font-mono text-xs tracking-[0.2em] uppercase"
+          >
+            Who you are
+          </legend>
+
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div class="field">
+              <label for="agent_name">Your name *</label>
+              <input
+                id="agent_name"
+                name="agent_name"
+                type="text"
+                required
+                autocomplete="name"
+              />
+            </div>
+
+            <div class="field">
+              <label for="brokerage">Brokerage *</label>
+              <input
+                id="brokerage"
+                name="brokerage"
+                type="text"
+                required
+                autocomplete="organization"
+              />
+            </div>
+
+            <div class="field">
+              <label for="agent_phone">Mobile</label>
+              <input
+                id="agent_phone"
+                name="agent_phone"
+                type="tel"
+                autocomplete="tel"
+              />
+            </div>
+
+            <div class="field">
+              <label for="agent_email">Email</label>
+              <input
+                id="agent_email"
+                name="agent_email"
+                type="email"
+                autocomplete="email"
+              />
+            </div>
+
+            <p class="text-foreground/60 -mt-2 text-xs sm:col-span-2">
+              Give me at least one — phone or email.
+            </p>
+
+            <div class="field">
+              <label for="license">License #</label>
+              <input id="license" name="license" type="text" />
+            </div>
+
+            <div class="field">
+              <label for="reach">Fastest way to reach you</label>
+              <select id="reach" name="reach">
+                <option value="Text">Text</option>
+                <option value="Call">Call</option>
+                <option value="Email">Email</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- ---------- What you cover ---------- -->
+        <fieldset>
+          <legend
+            class="text-foreground/60 mb-5 font-mono text-xs tracking-[0.2em] uppercase"
+          >
+            What you cover
+          </legend>
+
+          <div class="grid gap-5">
+            <div class="field">
+              <label for="markets">Markets you work *</label>
+              <input
+                id="markets"
+                name="markets"
+                type="text"
+                required
+                placeholder="e.g. Frisco, Plano, McKinney, N. Dallas"
+              />
+              <p class="text-xs">
+                Cities, counties, or metros. Be specific — this is how I route.
+              </p>
+            </div>
+
+            <div>
+              <p class="text-foreground/75 mb-2 text-[0.8125rem]">
+                Specialties
+              </p>
+              <div class="grid gap-2 sm:grid-cols-2">
+                {
+                  DESK.specialties.map(s => (
+                    <label class="check">
+                      <input type="checkbox" name="specialties" value={s} />
+                      <span>{s}</span>
+                    </label>
+                  ))
+                }
+              </div>
+            </div>
+
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div class="field">
+                <label for="price_band">Price range you work most</label>
+                <select id="price_band" name="price_band">
+                  <option value="">Pick one</option>
+                  {DESK.priceBands.map(b => <option value={b}>{b}</option>)}
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="languages">Languages</label>
+                <input
+                  id="languages"
+                  name="languages"
+                  type="text"
+                  placeholder="English, Spanish"
+                />
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- ---------- How we'd work ---------- -->
+        <fieldset>
+          <legend
+            class="text-foreground/60 mb-5 font-mono text-xs tracking-[0.2em] uppercase"
+          >
+            How we'd work
+          </legend>
+
+          <div class="grid gap-6">
+            <div class="field">
+              <label for="role">Which direction? *</label>
+              <select id="role" name="role" required>
+                <option value="">Pick one</option>
+                {DESK.roles.map(r => <option value={r}>{r}</option>)}
+              </select>
+            </div>
+
+            <div>
+              <p class="text-foreground/75 mb-2 text-[0.8125rem]">
+                Are you with eXp?
+              </p>
+              <div class="flex flex-wrap gap-x-6 gap-y-2">
+                <label class="check">
+                  <input type="radio" name="is_exp" value="Yes — eXp" />
+                  <span>Yes, eXp</span>
+                </label>
+                <label class="check">
+                  <input type="radio" name="is_exp" value="No" checked />
+                  <span>Different brokerage</span>
+                </label>
+              </div>
+              <p class="text-foreground/60 mt-2 text-xs">
+                If so, referrals between us run through the eXp portal and pay
+                out faster.
+              </p>
+            </div>
+
+            <div>
+              <p class="text-foreground/75 mb-2 text-[0.8125rem]">
+                Fee arrangement
+              </p>
+              <div class="grid gap-2">
+                <label class="check">
+                  <input
+                    type="radio"
+                    name="fee_basis"
+                    value="Standard 25%"
+                    checked
+                  />
+                  <span>Standard 25% referral fee, both directions</span>
+                </label>
+                <label class="check">
+                  <input
+                    type="radio"
+                    name="fee_basis"
+                    value="Straight reciprocity"
+                  />
+                  <span>
+                    Straight reciprocity — we trade referrals, each keep our own
+                    side
+                  </span>
+                </label>
+                <label class="check">
+                  <input type="radio" name="fee_basis" value="Let's discuss" />
+                  <span>Let's talk about it</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="hear_about">Where'd we connect?</label>
+              <select id="hear_about" name="hear_about">
+                <option value="">Pick one</option>
+                {hearAboutOptions.map(h => <option value={h}>{h}</option>)}
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="notes">Anything else I should know?</label>
+              <textarea
+                id="notes"
+                name="notes"
+                rows="4"
+                placeholder="Team size, out-of-state network, where we met, what you're usually turning away."
+              ></textarea>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <label class="check">
+            <input id="consent" name="consent" type="checkbox" required />
+            <span>It's okay to call or text about referrals. *</span>
+          </label>
+        </fieldset>
+
+        <input type="hidden" name="form_type" value="agent_partner" />
+        <input
+          type="hidden"
+          id="traffic_source"
+          name="traffic_source"
+          value=""
+        />
+
+        <div>
+          <button
+            id="submit-btn"
+            type="submit"
+            class="bg-accent text-background focus-visible:outline-accent px-6 py-3 text-sm font-medium transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-50"
+          >
+            Send it to {DESK.firstName}
+          </button>
+
+          <p id="form-status" class="mt-4 text-sm" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="border-border border-t py-14">
+      <h2 class="text-2xl font-semibold sm:text-3xl">Questions</h2>
+      <div class="border-border mt-6 border-t">
+        {
+          DESK.faqs.map(item => (
+            <details class="faq border-border border-b">
+              <summary>
+                <span>{item.q}</span>
+                <span class="faq-icon" aria-hidden="true" />
+              </summary>
+              <p class="text-foreground/75 pb-5 text-sm sm:text-base">
+                {item.a}
+              </p>
+            </details>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- ================= DISCLOSURES ================= -->
+    <section class="border-border border-t py-12">
+      <h2 class="text-foreground/60 font-mono text-xs tracking-[0.2em] uppercase">
+        Disclosures
+      </h2>
+      <ul class="text-foreground/70 mt-4 space-y-2 text-sm">
+        {
+          DESK.disclosures.map(d => (
+            <li class="grid grid-cols-[1rem_1fr] gap-2">
+              <span class="text-accent" aria-hidden="true">
+                &mdash;
+              </span>
+              {d.href ? (
+                <a
+                  href={d.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-accent underline underline-offset-2"
+                >
+                  {d.text}
+                </a>
+              ) : (
+                <span>{d.text}</span>
+              )}
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .step-rail {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.15rem;
+  }
+  .step-rail::after {
+    content: "";
+    position: absolute;
+    top: 1.9rem;
+    bottom: -1.25rem;
+    left: 50%;
+    border-left: 1px dashed currentColor;
+    opacity: 0.25;
+  }
+  .step:last-child .step-rail::after {
+    display: none;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .field label {
+    font-size: 0.8125rem;
+    opacity: 0.75;
+  }
+  .field > p {
+    font-size: 0.75rem;
+    opacity: 0.6;
+  }
+  .field input[type="text"],
+  .field input[type="tel"],
+  .field input[type="email"],
+  .field select,
+  .field textarea {
+    width: 100%;
+    padding: 0.625rem 0.75rem;
+    font: inherit;
+    font-size: 0.9375rem;
+    color: inherit;
+    background: transparent;
+    border: 1px solid currentColor;
+    border-color: color-mix(in srgb, currentColor 25%, transparent);
+    border-radius: 0;
+    transition: border-color 0.15s ease;
+  }
+  .field textarea {
+    resize: vertical;
+  }
+  .field input:hover,
+  .field select:hover,
+  .field textarea:hover {
+    border-color: color-mix(in srgb, currentColor 45%, transparent);
+  }
+  .field input:focus-visible,
+  .field select:focus-visible,
+  .field textarea:focus-visible {
+    outline: 2px solid;
+    outline-offset: 2px;
+    border-color: currentColor;
+  }
+  .field input[aria-invalid="true"],
+  .field select[aria-invalid="true"],
+  .field textarea[aria-invalid="true"] {
+    border-color: currentColor;
+    box-shadow: inset 3px 0 0 currentColor;
+  }
+  .field input::placeholder,
+  .field textarea::placeholder {
+    color: inherit;
+    opacity: 0.4;
+  }
+
+  .check {
+    display: grid;
+    grid-template-columns: 1.1rem 1fr;
+    gap: 0.65rem;
+    align-items: start;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    cursor: pointer;
+  }
+  .check input {
+    margin-top: 0.2rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    accent-color: currentColor;
+  }
+
+  .hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  #form-status:empty {
+    display: none;
+  }
+  #form-status[data-state="error"] {
+    padding-left: 0.75rem;
+    box-shadow: inset 3px 0 0 currentColor;
+  }
+
+  .faq summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 0;
+    cursor: pointer;
+    font-weight: 500;
+    list-style: none;
+  }
+  .faq summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq summary:focus-visible {
+    outline: 2px solid;
+    outline-offset: 2px;
+  }
+  .faq-icon {
+    flex: none;
+    width: 0.75rem;
+    height: 0.75rem;
+    position: relative;
+    opacity: 0.6;
+  }
+  .faq-icon::before,
+  .faq-icon::after {
+    content: "";
+    position: absolute;
+    inset: 50% 0 auto 0;
+    border-top: 1px solid currentColor;
+    transition: transform 0.2s ease;
+  }
+  .faq-icon::after {
+    transform: rotate(90deg);
+  }
+  .faq[open] .faq-icon::after {
+    transform: rotate(0deg);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
+
+<script
+  define:vars={{
+    endpoint: DESK.formEndpoint,
+    accessKey: DESK.web3formsKey,
+    sheetWebhookUrl: DESK.sheetWebhookUrl,
+    sheetWebhookSecret: DESK.sheetWebhookSecret,
+    sourceMap: DESK.sourceMap,
+  }}
+>
+  const form = document.getElementById("intake-form");
+  const statusEl = document.getElementById("form-status");
+  const submitBtn = document.getElementById("submit-btn");
+  const successPanel = document.getElementById("form-success");
+  const sendAnother = document.getElementById("send-another");
+  const hearAboutSelect = document.getElementById("hear_about");
+  const trafficSourceInput = document.getElementById("traffic_source");
+
+  // ---- Pre-fill "where'd we connect" + hidden traffic source from ?src= ----
+  const params = new URLSearchParams(window.location.search);
+  const src = params.get("src");
+  if (src) {
+    trafficSourceInput.value = src;
+    const mapped = sourceMap[src];
+    if (mapped) {
+      const match = [...hearAboutSelect.options].find(o => o.value === mapped);
+      if (match) hearAboutSelect.value = mapped;
+    }
+  }
+
+  const setStatus = (message, state) => {
+    statusEl.textContent = message;
+    if (state) statusEl.dataset.state = state;
+    else delete statusEl.dataset.state;
+  };
+
+  const clearInvalid = () => {
+    form
+      .querySelectorAll('[aria-invalid="true"]')
+      .forEach(el => el.removeAttribute("aria-invalid"));
+  };
+
+  const flagInvalid = el => {
+    el.setAttribute("aria-invalid", "true");
+    el.focus();
+  };
+
+  sendAnother?.addEventListener("click", () => {
+    form.reset();
+    clearInvalid();
+    setStatus("");
+    successPanel.classList.add("hidden");
+    form.classList.remove("hidden");
+    form.querySelector("#agent_name").focus();
+  });
+
+  form.addEventListener("submit", async event => {
+    event.preventDefault();
+    clearInvalid();
+    setStatus("");
+
+    // Honeypot
+    if (form.elements.website.value) return;
+
+    // Native required/type checks (name, brokerage, markets, role, consent)
+    if (!form.checkValidity()) {
+      const firstBad = form.querySelector(":invalid");
+      if (firstBad) {
+        flagInvalid(firstBad);
+        setStatus(
+          firstBad.validationMessage || "Check the highlighted field.",
+          "error"
+        );
+      }
+      return;
+    }
+
+    // Need a phone or an email
+    const phone = form.elements.agent_phone.value.trim();
+    const email = form.elements.agent_email.value.trim();
+    if (!phone && !email) {
+      flagInvalid(form.elements.agent_phone);
+      setStatus("Add a phone or email so I can reach you.", "error");
+      return;
+    }
+
+    if (!endpoint || !accessKey || accessKey.startsWith("REPLACE_")) {
+      setStatus(
+        "This form isn't connected yet. Add your Web3Forms access key in partners.astro.",
+        "error"
+      );
+      return;
+    }
+
+    const payload = new FormData(form);
+    payload.delete("website");
+
+    // Collapse the specialty checkboxes into one readable field
+    const specialties = payload.getAll("specialties");
+    payload.delete("specialties");
+    payload.set("specialties", specialties.join(", "));
+
+    payload.set("consent", form.elements.consent.checked ? "Yes" : "No");
+    payload.set("submitted_from", window.location.href);
+    payload.set("access_key", accessKey);
+    payload.set(
+      "subject",
+      `Referral partner: ${form.elements.agent_name.value} — ${form.elements.markets.value}`
+    );
+
+    submitBtn.disabled = true;
+    const originalLabel = submitBtn.textContent;
+    submitBtn.textContent = "Sending…";
+
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: payload,
+      });
+      if (!response.ok) throw new Error(String(response.status));
+
+      // Mirror into the Sheet. Fire-and-forget — a Sheet hiccup should never
+      // block the confirmation screen. form_type routes it to the partner tab.
+      if (sheetWebhookUrl) {
+        const sheetPayload = new FormData();
+        for (const [k, v] of payload.entries()) sheetPayload.append(k, v);
+        sheetPayload.delete("access_key");
+        if (sheetWebhookSecret) sheetPayload.set("secret", sheetWebhookSecret);
+        fetch(sheetWebhookUrl, { method: "POST", body: sheetPayload }).catch(
+          () => {}
+        );
+      }
+
+      form.classList.add("hidden");
+      successPanel.classList.remove("hidden");
+      successPanel.scrollIntoView({ behavior: "smooth", block: "center" });
+      successPanel.focus();
+    } catch (error) {
+      setStatus(
+        "That didn't go through. Try again, or email me directly.",
+        "error"
+      );
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalLabel;
+    }
+  });
+</script>
