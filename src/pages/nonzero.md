@@ -52,7 +52,7 @@ The live ledger starts January 2027.
 
 One email after each month closes: the ledger, my best and worst decision, and one lesson that carried over to life.
 
-<script async data-uid="fc647bb9ed" src="https://risk-on.kit.com/fc647bb9ed/index.js"></script>
+<script async data-astro-rerun data-uid="fc647bb9ed" src="https://risk-on.kit.com/fc647bb9ed/index.js"></script>
 
 ## Follow along
 
