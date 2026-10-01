@@ -21,9 +21,9 @@ That's why I'm studying **Physics and Economics**. You don't need a business deg
 ## How I Fund the Build
 I don't take on debt to bootstrap this. I run a cash-flow model instead.
 
-**14+ years in high-volume hospitality** — bartending at properties including the Grand Hyatt San Antonio — funds my coursework and my investing, full stop. The mechanics of the job are simple; what's actually useful is the environment. A bar is a constant, high-volume read on how people communicate, negotiate, and make decisions under low stakes — and that's a skill set that transfers directly to sales, management, and reading a room in any room.
+**14+ years in high-volume hospitality** — bartending at mid to high-end hotel properties— funds my coursework and my investing, full stop. The mechanics of the job are simple; what's actually useful is the environment. A bar is a constant, high-volume read on how people communicate, negotiate, and make decisions under low stakes — and that's a skill set that transfers directly to sales, management, and reading a room in any room.
 
-![Rudy Galan behind the bar at the Grand Hyatt](/action-shot.jpg)
+![Rudy Galan behind the bar](/action-shot.jpg)
 
 **I also manage my own equity portfolio** — long-term positions in businesses I use, understand, and think will still be dominant in 10+ years. The process: industry research, chart and fundamentals review, and position sizing driven by conviction and risk management, not hot tips. I publish every trade and thesis update in real time, no hindsight edits — [[link to portfolio/trade log](https://www.rudygalan.com/posts/2026-portfolio-log/)].
 

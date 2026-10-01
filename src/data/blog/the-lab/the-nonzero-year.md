@@ -103,7 +103,7 @@ The downside is capped at $20,000. The upside is open.
 
 The live ledger, rules, and links to every platform are at [rudygalan.com/nonzero](/nonzero). One email goes out after each month closes with the numbers, my best and worst decision, and one lesson that carried over to life.
 
-<!-- KIT FORM EMBED: paste your Kit form embed code here -->
+<script async data-uid="fc647bb9ed" src="https://risk-on.kit.com/fc647bb9ed/index.js"></script>
 
 ---
 
