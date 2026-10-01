@@ -22,9 +22,11 @@ This year I had $20,000 set aside to buy a Tesla in cash.
 
 I'm not buying it. For 2027, that money is tuition for a different kind of education: one year of using poker as a decision lab.
 
-## The Bet 
+## The Bet
 
-With my developed knowledge of the stock market, i'll be a millionaire by 46 on my current trajectory. A skill in the game, better/faster decisions under pressure, and a high potential upside of changing my life forever. Even if I lost all 20k, it's no different than paying a tuition at an overpriced university--only now I get to choose the curriculum. I'd still be projected to me a millionaire in my mid-early 50's. 
+My investing is on track, and my long-term plan holds up whether or not this $20,000 sits in it for one more year.
+
+In exchange, I get a skill: better, faster decisions under pressure, with an upside that's hard to put a ceiling on. If I lost all $20,000, it would be no different from tuition at an overpriced university, except this time I choose the curriculum.
 
 Most of life's important decisions give slow, noisy feedback. You pick a career, a house, an investment, and find out years later whether it was right, with no clean way to separate your judgment from your luck.
 
@@ -35,58 +37,57 @@ You can make the right call and lose. You can make the wrong call and win. Learn
 ## The setup
 
 - **Cap:** $20,000 for the year, $1,666.67 a month. When a month's money is gone, I stop until the 1st. No borrowing forward.
-- **Winnings:** swept out the same day and never played again.
+- **Winnings:** chips I win stay in play until I leave. When I clock out, the profit is recorded and swept to a separate account. It never comes back to the table.
 - **Rules:** ten hard rules, including leaving at 3 buy-ins down, no alcohol at the table, and no sessions on short sleep. [The full list is on the hub page.](/nonzero)
 - **Ledger:** exact dollars, published monthly. Losses posted the same way as wins.
 
 I'm a bartender, not a poker pro. I'm starting with almost no experience. October through December is study and preparation only. Day 1 is January 1, 2027.
 
-## The Poker EV Model: A 12-Month Distribution
+## My Prior: A 12-Month Distribution
 
-To calculate the direct Expected Value ($EV$) of the $20,000 lab, we model it as a 100% probabilistic distribution over 12 months 
+Before I've played a single hand, here's my best guess at how the year shakes out. It's a prior, not a forecast: a starting estimate I'll update in public every quarter as real hours, real win rate, and real costs come in. Updating beliefs with evidence is one of the skills I'm here to learn.
 
-This assumes a baseline win-rate advantage, strict cap limits (no going beyond the $20,000 budget), and capturing both the negative tail of variance and the convex right-tail of intraday compounding.
+The rules shape the distribution. Losses are capped at $1,666.67 a month and $20,000 for the year. Winnings leave the table at the end of every session, so they don't compound from one session to the next, and stakes only move up if I pass the gates on the rules page. The upside comes from big individual results, not from letting winnings ride.
 
 ### Distribution Matrix
 
-| Scenario | Probability | Gross Cash Returned | Net Profit (Cash − $20k) | The Reality |
+| Scenario | Probability | Cash at Year End | Net Result | The Reality |
 | :--- | :--- | :--- | :--- | :--- |
-| **1. The Bad End** | **7%** | **$8,000** | **-$12,000** | Severe negative variance, cold decks, and coolers. Monthly stop-losses trigger. Leaves $8k intact; $12k cost for a live-fire masterclass in drawdown control. |
-| **2. Breaking Around Even** | **43%** | **$16,000** | **-$4,000** | Treading water. A mix of coolers and minor leaks. $16k retained; effectively paying $4k for hundreds of hours of high-pressure reps. |
-| **3. Coming Out Ahead** | **43%** | **$26,000** | **+$6,000** | Baseline edge realized. Coolers balance out, table selection works, and the core $20k principal is returned alongside a $6k cash surplus. |
-| **4. The Sun-Run** | **7%** | **$55,000+** | **+$35,000+** | Severe positive variance and heater streaks. Intraday rollovers let winning sessions ride deeper and unlock shots at higher stakes. Upside is theoretically unlimited. |
+| **1. The Bad End** | **7%** | **$8,000** | **-$12,000** | Severe negative variance, cold decks, and coolers. Monthly stop-losses trigger. $12k for a live-fire course in drawdown control. |
+| **2. Paying Tuition** | **43%** | **$16,000** | **-$4,000** | A mix of coolers, minor leaks, and seat fees. $4k for hundreds of hours of high-pressure reps. |
+| **3. Coming Out Ahead** | **43%** | **$26,000** | **+$6,000** | The edge shows up. Table selection works, leaks get fixed, and the $20k comes back with $6k on top. |
+| **4. The Sun-Run** | **7%** | **$55,000+** | **+$35,000+** | A deep tournament run or a long heater. Rare, but tournaments give real right-tail upside even at capped stakes. |
 | **Total** | **100%** | — | — | Full probability space accounted for. |
+
+*Cash at year end = what's left in the bankroll plus everything swept to the winnings account.*
 
 ---
 
 ### Mathematical Expectation
 
-Expected Value is calculated by multiplying each scenario's dollar outcome by its probability, then adding them together.
+Expected value is each scenario's dollar outcome multiplied by its probability, added together.
 
-**1. Gross Expected Return (Ending Capital)**
-We calculate the weighted average of the total cash pulled from the tables:
+**1. Expected Cash at Year End**
 
-* Bad End: 0.07 x $8,000 = $560
-* Breaking Even: 0.43 x $16,000 = $6,880
-* Coming Out Ahead: 0.43 x $26,000 = $11,180
-* The Sun-Run: 0.07 x $55,000 = $3,850
+* Bad End: 0.07 × $8,000 = $560
+* Paying Tuition: 0.43 × $16,000 = $6,880
+* Coming Out Ahead: 0.43 × $26,000 = $11,180
+* The Sun-Run: 0.07 × $55,000 = $3,850
 
-Gross Expected Return = $560 + $6,880 + $11,180 + $3,850 = **$22,470**
+Expected cash = $560 + $6,880 + $11,180 + $3,850 = **$22,470**
 
-**2. Net Expected Value (Cash Profit)**
-Subtracting the initial $20,000 budget from the expected total cash pool:
+**2. Net Expected Value**
 
-Net EV = $22,470 - $20,000 = **+$2,470**
-
-**Baseline Return on Capital:** **+12.35%**
+Net EV = $22,470 − $20,000 = **+$2,470** (+12.35% on the $20k)
 
 ---
 
-### Core Takeaways
+### What the Numbers Say (and Don't)
 
-* **Downside Hard-Capped:** Maximum legal drawdown is limited by rule to $20,000; the statistical floor sits at -$12,000.
-* **Positive Expectancy:** The system carries an inherent baseline cash surplus of **+$3,470**.
-* **Subsidized Tuition:** The mathematical edge covers the entire operating cost of the decision lab, rebating the $20k tuition while delivering 500+ hours of high-stakes reps at a net profit.
+* **Worst case: −$20,000.** That's the hard cap, and it only happens if I lose every session of the year. Every winning session pushes the real floor up. The Bad End is my worst *realistic* case.
+* **My prior is mildly positive: +$2,470.** Most of that comes from the 7% tail. Across the middle 86% of outcomes, it's close to a coin flip between paying $4,000 and making $6,000.
+* **Seat fees are the number to beat.** Local clubs charge roughly $12–18 an hour just to sit. My win rate has to clear that before I can call myself a winner.
+* **I may be overrating myself.** Starting from almost no experience, a 43% chance of finishing ahead could be optimistic. If it is, the ledger will show it, and I'll say so. I give myself an edge because of my people reading skills and prior knowledge of psychology, math, mental make up. 
 
 ## What counts as winning
 
@@ -102,23 +103,23 @@ The live ledger, rules, and links to every platform are at [rudygalan.com/nonzer
 
 <!-- KIT FORM EMBED: paste your Kit form embed code here -->
 
-## The True EV Comparison: The Decision Lab vs. The Tesla
+## The Real Comparison: Tesla, Index Fund, or Decision Lab
 
-Allocating $20,000 cash to a depreciating liability versus allocating it as ring-fenced working capital in a high-leverage decision lab. Here is the true Expected Value (EV) calculation—combining direct financial metrics with the compound value of decision quality.
+The honest alternative to buying the car isn't only poker. It's also leaving the $20,000 invested. So here are all three.
 
-| Metric | The $20k Tesla Purchase | The $20k Poker Decision Lab |
-| :--- | :--- | :--- |
-| **Capital Status** | Sunk Cost (Liability) | Working Capital (Asset) |
-| **Direct Cash Expectation (1 Year)** | **-$4,000 to -$6,000**<br>*(Immediate 20-30% depreciation upon purchase).* | **+$2,400 to +$3,470**<br>*(Based on mathematical baseline edge).* |
-| **Downside Risk** | **100% loss of utility value over time.** | **Hard-Capped at -$20,000.** *(Probabilistic floor sits at -$12,000).* |
-| **Upside Ceiling** | **Capped.** The vehicle will never be worth more than purchase price. | **Uncapped.** Intraday rollovers compound winnings; skills scale indefinitely. |
-| **Emotional Discipline Acquired** | **Zero.** | **High.** Live-fire reps in absorbing drawdown variance without panic or tilt. |
-| **Market Resilience Acquired** | **Zero.** | **High.** Eliminates the "revenge trading" leak that costs investors six figures later in life. |
-| **Decision Speed Acquired** | **Zero.** | **High.** Bayesian probability updates forced under pressure with incomplete data. |
-| **True Estimated EV (Including Intangibles)** | **Guaranteed Negative.** | **Asymmetrically Positive.** The system covers its own operating cost while building cognitive habits that compound over a 25-year wealth accumulation timeline. |
+| | Used Tesla ($20k) | Index Fund | Poker Decision Lab |
+| :--- | :--- | :--- | :--- |
+| **Expected cash, year 1** | −$2,000 to −$3,000 (depreciation) | +$1,400 to +$2,000 (7–10% long-run average) | +$2,470 (my prior, unproven) |
+| **A bad year** | Repairs, an accident, faster depreciation | −$7,000 or worse (a 2008-style drop) | −$12,000 realistic, −$20,000 cap |
+| **How reliable is that estimate?** | Very | Decades of data | A guess until January |
+| **What else I get** | A year of driving a car I like | Nothing; it just compounds | Hundreds of hours of decisions under pressure |
+| **Feedback speed** | None | Years | Minutes |
+| **Skill acquired** | None | None | Practice holding a plan through drawdowns. That's the goal; I haven't proven it yet. |
 
 ### The Verdict
 
-Spending $20,000 on the Tesla guarantees a capital loss in exchange for transportation. 
+On cash alone, this isn't a slam dunk. The index fund's expected return is smaller than my poker prior, but it's far more reliable; my number is a guess made before playing a hand. The car is the only option with a near-certain loss, and also the only one I can drive.
 
-Deploying $20,000 into the poker lab yields a statistical surplus while permanently acquiring the exact risk-management and decision frameworks required to build and protect seven-figure portfolios. The math is not close.
+What tips it for me is everything that doesn't show up on a statement. Neither the car nor the fund teaches me anything. The lab gives me a fast, honest feedback loop on how I decide, and I'll carry that into every investment, career move, and big purchase for the rest of my life. That's worth paying for, and the cost is capped at $20,000.
+
+I'll find out whether I priced it right. That's the point.
