@@ -97,11 +97,15 @@ The scorecard is whether I come out of 2027 a measurably better decision-maker: 
 
 The downside is capped at $20,000. The upside is open.
 
+---
+
 ## Follow along
 
 The live ledger, rules, and links to every platform are at [rudygalan.com/nonzero](/nonzero). One email goes out after each month closes with the numbers, my best and worst decision, and one lesson that carried over to life.
 
 <!-- KIT FORM EMBED: paste your Kit form embed code here -->
+
+---
 
 ## The Real Comparison: Tesla, Index Fund, or Decision Lab
 
