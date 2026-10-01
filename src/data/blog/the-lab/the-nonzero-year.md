@@ -6,6 +6,7 @@ tags:
   - lab
   - nonzero
   - decisions
+  - living document
 featured: true
 draft: false
 postSlug: "the-nonzero-year"
