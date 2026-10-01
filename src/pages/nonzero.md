@@ -1,4 +1,7 @@
-
+   ---
+   layout: ../layouts/AboutLayout.astro
+   title: "Mr. Nonzero"
+   ---
 **Poker as a decision lab.** 12 months. $20,000 cap. Every dollar tracked.
 
 Day 1 is January 1, 2027.
@@ -46,7 +49,7 @@ One email after each month closes: the ledger, my best and worst decision, and o
 
 ## Follow along
 
-- Instagram: [@mrnonzero](https://instagram.com/mrnonzero)
+- Instagram: [@mr.nonzero](https://instagram.com/mr.nonzero)
 - TikTok: [@mrnonzero](https://www.tiktok.com/@mrnonzero)
-- YouTube: [@mrnonzero](https://www.youtube.com/@mrnonzero)
+- YouTube: [@mr.nonzero](https://www.youtube.com/@mr.nonzero)
 - X: [@mr_nonzero](https://x.com/mr_nonzero)
