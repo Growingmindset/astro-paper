@@ -17,6 +17,12 @@ So for 2027 I'm using poker to learn expected value, probability, and how to dec
 
 **What counts as winning:** getting measurably better at making decisions, on and off the table. The money is tracked honestly, but it isn't the scorecard.
 
+[Read the full story, including the numbers behind the bet →](/posts/the-nonzero-year)
+
+## The ledger
+
+**What counts as winning:** getting measurably better at making decisions, on and off the table. The money is tracked honestly, but it isn't the scorecard.
+
 ## The ledger
 
 Updated automatically from my tracker. Losses are posted the same way as wins.
@@ -34,7 +40,7 @@ The live ledger starts January 2027.
 3. No sessions after a late bar shift or on under 6 hours of sleep.
 4. Sessions are 6 hours max.
 5. Never add money beyond the monthly budget. Never borrow from next month.
-6. Winnings are swept out the same day and never recycled into the bankroll.
+6. Winnings are swept out when I leave the table and never recycled into the bankroll.
 7. Every session gets logged within 24 hours, including the ones that hurt.
 8. Grade the decision, not the result.
 9. No real-money online poker.
