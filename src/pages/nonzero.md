@@ -1,7 +1,7 @@
-   ---
-   layout: ../layouts/AboutLayout.astro
-   title: "Mr. Nonzero"
-   ---
+  ---
+  layout: ../layouts/AboutLayout.astro
+  title: "Mr. Nonzero"
+  ---
 **Poker as a decision lab.** 12 months. $20,000 cap. Every dollar tracked.
 
 Day 1 is January 1, 2027.
