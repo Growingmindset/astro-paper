@@ -52,8 +52,8 @@ This assumes a baseline win-rate advantage, strict cap limits (no going beyond t
 | Scenario | Probability | Gross Cash Returned | Net Profit (Cash − $20k) | The Reality |
 | :--- | :--- | :--- | :--- | :--- |
 | **1. The Bad End** | **7%** | **$8,000** | **-$12,000** | Severe negative variance, cold decks, and coolers. Monthly stop-losses trigger. Leaves $8k intact; $12k cost for a live-fire masterclass in drawdown control. |
-| **2. Breaking Around Even** | **33%** | **$16,000** | **-$4,000** | Treading water. A mix of coolers and minor leaks. $16k retained; effectively paying $4k for hundreds of hours of high-pressure reps. |
-| **3. Coming Out Ahead** | **53%** | **$26,000** | **+$6,000** | Baseline edge realized. Coolers balance out, table selection works, and the core $20k principal is returned alongside a $6k cash surplus. |
+| **2. Breaking Around Even** | **43%** | **$16,000** | **-$4,000** | Treading water. A mix of coolers and minor leaks. $16k retained; effectively paying $4k for hundreds of hours of high-pressure reps. |
+| **3. Coming Out Ahead** | **43%** | **$26,000** | **+$6,000** | Baseline edge realized. Coolers balance out, table selection works, and the core $20k principal is returned alongside a $6k cash surplus. |
 | **4. The Sun-Run** | **7%** | **$55,000+** | **+$35,000+** | Severe positive variance and heater streaks. Intraday rollovers let winning sessions ride deeper and unlock shots at higher stakes. Upside is theoretically unlimited. |
 | **Total** | **100%** | — | — | Full probability space accounted for. |
 
@@ -61,18 +61,24 @@ This assumes a baseline win-rate advantage, strict cap limits (no going beyond t
 
 ### Mathematical Expectation
 
-$$EV = \sum (P_i \times X_i)$$
+Expected Value is calculated by multiplying each scenario's dollar outcome by its probability, then adding them together.
 
 **1. Gross Expected Return (Ending Capital)**
 We calculate the weighted average of the total cash pulled from the tables:
-$$EV_{\text{Gross}} = (0.07 \times \$8,000) + (0.33 \times \$16,000) + (0.53 \times \$26,000) + (0.07 \times \$55,000)$$
-$$EV_{\text{Gross}} = \$560 + \$5,280 + \$13,780 + \$3,850 = \mathbf{\$23,470}$$
+
+* Bad End: 0.07 x $8,000 = $560
+* Breaking Even: 0.43 x $16,000 = $6,880
+* Coming Out Ahead: 0.43 x $26,000 = $11,180
+* The Sun-Run: 0.07 x $55,000 = $3,850
+
+Gross Expected Return = $560 + $6,880 + $11,180 + $3,850 = **$22,470**
 
 **2. Net Expected Value (Cash Profit)**
 Subtracting the initial $20,000 budget from the expected total cash pool:
-$$EV_{\text{Net}} = \$23,470 - \$20,000 = \mathbf{+\$3,470}$$
 
-**Baseline Return on Capital:** **+17.35%**
+Net EV = $22,470 - $20,000 = **+$2,470**
+
+**Baseline Return on Capital:** **+12.35%**
 
 ---
 
