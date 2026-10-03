@@ -9,8 +9,10 @@ tags:
   - training
   - fitness
   - living-document
-featured: true
+featured: false
 draft: false
+archived: true
+supersededBy: atreides-powerbuilding
 ---
 
 # Atreides Revenge

@@ -33,7 +33,18 @@ const {
   timezone,
   tags,
   hideEditPost,
+  archived,
+  supersededBy,
 } = post.data;
+
+// If this post is archived, find the post that replaced it
+const successor = supersededBy
+  ? posts.find(
+      p =>
+        p.data.postSlug === supersededBy ||
+        p.id.split("/").pop() === supersededBy
+    )
+  : undefined;
 
 const { Content } = await render(post);
 
@@ -108,6 +119,24 @@ const nextPost =
       >
       <EditPost {hideEditPost} {post} class="max-sm:hidden" />
     </div>
+    {
+      archived && (
+        <aside class="mt-6 rounded-md border border-dashed border-accent px-4 py-3 text-sm">
+          <strong>Archived.</strong> This document is no longer maintained.
+          {successor && (
+            <>
+              {" "}The current version is{" "}
+              <a
+                class="text-accent underline"
+                href={getPath(successor.id, successor.filePath, true, successor.data.postSlug)}
+              >
+                {successor.data.title}
+              </a>.
+            </>
+          )}
+        </aside>
+      )
+    }
     <article
       id="article"
       class="app-prose mt-8 w-full max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"

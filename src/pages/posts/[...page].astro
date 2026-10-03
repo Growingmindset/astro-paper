@@ -23,7 +23,7 @@ const libraryTags = ["transmissions", "deconstructions", "academic-systems"];
 const labPosts = sortedPosts.filter((post) => {
   const tags = post.data.tags || [];
   const isLibraryPost = tags.some((tag) => libraryTags.includes(tag));
-  return !isLibraryPost;
+   return !isLibraryPost && !post.data.archived;
 });
 
 // 5. Separate into Living Documents (Top Section)
@@ -85,6 +85,10 @@ const regularPosts = labPosts.filter((post) => {
         </section>
       )
     }
+        <p class="pb-16 text-center text-sm opacity-70">
+      Retired programs and closed logs live in the
+      <a href="/archive" class="text-accent underline">Archive</a>.
+    </p>
   </main>
 
   <Footer />

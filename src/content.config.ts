@@ -21,6 +21,8 @@ const blog = defineCollection({
       canonicalURL: z.string().optional(),
       hideEditPost: z.boolean().optional(),
       timezone: z.string().optional(),
+            archived: z.boolean().optional(),
+      supersededBy: z.string().optional(),
     }),
 });
 

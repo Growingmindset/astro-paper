@@ -17,7 +17,8 @@ const libraryTags = ["transmissions", "deconstructions", "academic-systems"];
 
 // 3. The Firewall: Filter OUT any post that contains a Library tag
 const labPosts = sortedPosts.filter(post => 
-  !post.data.tags?.some(tag => libraryTags.includes(tag))
+  !post.data.tags?.some(tag => libraryTags.includes(tag)) &&
+  !post.data.archived
 );
 
 // 4. Feed ONLY the remaining operator logs into your Featured and Recent sections
