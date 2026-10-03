@@ -1,0 +1,51 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Card from "@/components/Card.astro";
+import { getCollection } from "astro:content";
+import getSortedPosts from "@/utils/getSortedPosts";
+import { SITE } from "@/config";
+
+// Only posts marked `archived: true` in their frontmatter
+const posts = await getCollection("blog", ({ data }) => !data.draft);
+const archivedPosts = getSortedPosts(posts).filter(
+  post => post.data.archived
+);
+---
+
+<Layout title={`The Archive | ${SITE.title}`}>
+  <Header />
+
+  <main id="main-content" class="app-layout">
+    <section class="border-border border-b border-dashed pt-8 pb-10 text-center">
+      <h1 class="mb-4 text-3xl font-bold tracking-wider sm:text-4xl">The Archive</h1>
+      <p class="text-skin-base mx-auto max-w-2xl leading-relaxed opacity-90">
+        Retired programs and closed cycles. Kept public as a record of what
+        changed and why.
+      </p>
+    </section>
+
+    {
+      archivedPosts.length > 0 ? (
+        <section class="mx-auto max-w-4xl pt-8 pb-16">
+          <ul class="list-none ps-0">
+            {archivedPosts.map(post => (
+              <Card {...post} />
+            ))}
+          </ul>
+        </section>
+      ) : (
+        <p class="py-16 text-center opacity-70">
+          Nothing archived yet. Retired posts will show up here.
+        </p>
+      )
+    }
+
+    <p class="pb-16 text-center text-sm">
+      <a href="/posts" class="text-accent underline">Back to the Lab</a>
+    </p>
+  </main>
+
+  <Footer />
+</Layout>
