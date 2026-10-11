@@ -6,7 +6,7 @@ import requests
 
 ISM_PATH = 'data/ism.json'
 STATE_PATH = 'data/thesis_state.json'
-MD_PATH = 'src/data/blog/2026-portfolio-log.md'
+MD_PATH = 'src/data/blog/the-lab/2026-portfolio-log.md'
 
 def get_fred_data(series_id, api_key, units='lin'):
     """Fetches the two most recent data points from FRED with structural unit transformations."""

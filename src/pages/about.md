@@ -11,9 +11,9 @@ title: "About"
 
 I'm Rudy Galan. I'm a bartender in San Antonio, I study markets and economics on my own terms, and I publish what I find. Right now that means three things:
 
-- **[Base Rate](/newsletter)**, a free weekly letter on markets, risk, and decisions.
+- **[Base Rate](/newsletter)**, a free weekly letter on markets, risk, and decisions. I'm studying for the Series 65.
 - **[Mr. Nonzero](/nonzero)**, a year of poker in 2027 with a hard $20,000 cap and a public ledger.
-- **[Work](/work)**: building toward project management and owner's rep roles in energy and large-scale infrastructure. I'm working toward my CAPM.
+- **[Work](/work)**: building toward project management and owner's rep roles in energy and large-scale infrastructure. I'm pursuing the CAPM and Oracle Primavera P6.
 
 The thread through all three is the same question: how do you make good decisions when you can't know how they'll turn out?
 

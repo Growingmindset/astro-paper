@@ -1,17 +1,8 @@
 ---
-import { getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
-import Card from "@/components/Card.astro";
 import BaseRateSignup from "@/components/BaseRateSignup.astro";
-import getSortedPosts from "@/utils/getSortedPosts";
-
-// Latest writing across the whole site (excluding drafts and archived posts)
-const posts = await getCollection("blog", ({ data }) => !data.draft);
-const latestPosts = getSortedPosts(posts)
-  .filter(post => !post.data.archived)
-  .slice(0, 4);
 
 const tracks = [
   {
@@ -111,6 +102,14 @@ const startHere = [
           ))
         }
       </ul>
+      <p class="mt-6 max-w-2xl text-sm leading-relaxed opacity-80">
+        The brand underneath all three is
+        <a
+          href="/shop"
+          class="font-medium underline decoration-dashed underline-offset-4 hover:text-accent"
+          >Risk On</a
+        >: bet on yourself, with the numbers. The shirts are for people who do.
+      </p>
     </section>
 
     <section
@@ -138,29 +137,15 @@ const startHere = [
           ))
         }
       </ol>
-    </section>
-
-    {
-      latestPosts.length > 0 && (
-        <section
-          id="latest"
-          class="border-t border-dashed border-border pt-10 pb-6"
+      <p class="mt-6 text-sm">
+        <a
+          href="/writing"
+          class="font-medium underline decoration-dashed underline-offset-4 hover:text-accent"
         >
-          <h2 class="text-2xl font-semibold tracking-wide">Latest writing</h2>
-          <ul>
-            {latestPosts.map(post => (
-              <Card {...post} variant="h3" />
-            ))}
-          </ul>
-          <a
-            href="/writing"
-            class="text-sm font-medium underline decoration-dashed underline-offset-4 hover:text-accent"
-          >
-            All writing &rarr;
-          </a>
-        </section>
-      )
-    }
+          All writing &rarr;
+        </a>
+      </p>
+    </section>
 
     <section
       id="about-short"
@@ -178,9 +163,10 @@ const startHere = [
         <p class="text-sm leading-relaxed opacity-90">
           I'm a bartender, not a credentialed insider. I left school on purpose
           and treat real projects as the curriculum: my own portfolio, real
-          estate deals, this site, and a year of poker. I'm working toward my
-          CAPM and building toward project management and owner's rep work in
-          energy and large-scale infrastructure.
+          estate deals, this site, and a year of poker. I'm pursuing the CAPM,
+          Oracle Primavera P6, and the Series 65, building toward owner's rep
+          work in energy and infrastructure and a market-analysis practice of my
+          own.
         </p>
         <p class="mt-3 text-sm">
           <a

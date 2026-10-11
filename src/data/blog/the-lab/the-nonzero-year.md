@@ -101,9 +101,9 @@ The downside is capped at $20,000. The upside is open.
 
 ## Follow along
 
-The live ledger, rules, and links to every platform are at [rudygalan.com/nonzero](/nonzero). One email goes out after each month closes with the numbers, my best and worst decision, and one lesson that carried over to life.
+The live ledger, rules, and links to every platform are at [rudygalan.com/nonzero](/nonzero). The numbers, my best and worst decision, and one lesson that carried over to life land in the first Base Rate issue after each month closes. It's free, and it goes out every Sunday.
 
-<<script async data-astro-rerun data-uid="fc647bb9ed" src="https://risk-on.kit.com/fc647bb9ed/index.js"></script>
+<script async data-astro-rerun src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="1372f0fc-9eea-41d4-b184-c7e355342850"></script>
 
 ---
 
