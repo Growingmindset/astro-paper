@@ -1,0 +1,63 @@
+---
+import { BASE_RATE } from "@/config";
+
+type Props = {
+  heading?: string;
+  blurb?: string;
+  compact?: boolean;
+};
+
+const {
+  heading = "Get Base Rate every Sunday",
+  blurb = "Free. One macro read, one lesson on how people really decide, and what I changed in my own portfolio. No hot tips, no hype.",
+  compact = false,
+} = Astro.props;
+---
+
+<div
+  class:list={[
+    "border-border rounded-lg border-2 border-dashed",
+    compact ? "p-4" : "p-5 sm:p-6",
+  ]}
+>
+  <p class="text-xs font-semibold tracking-widest uppercase opacity-70">
+    {BASE_RATE.name} &middot; {BASE_RATE.cadence}
+  </p>
+  <h2 class:list={["mt-1 font-bold", compact ? "text-lg" : "text-xl sm:text-2xl"]}>
+    {heading}
+  </h2>
+  <p class="mt-2 text-sm leading-relaxed opacity-90">{blurb}</p>
+
+  {
+    BASE_RATE.embedSrc ? (
+      <iframe
+        src={BASE_RATE.embedSrc}
+        class="mt-4 w-full"
+        height="60"
+        frameborder="0"
+        scrolling="no"
+        title="Subscribe to Base Rate"
+        style="background-color: transparent;"
+      />
+    ) : (
+      <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2">
+        <a
+          href={BASE_RATE.subscribeUrl}
+          target="_blank"
+          rel="noopener"
+          class="bg-foreground text-background inline-block rounded-md px-5 py-2.5 text-sm font-semibold hover:opacity-85"
+        >
+          Send me Sunday's email &rarr;
+        </a>
+        <a
+          href={BASE_RATE.url}
+          target="_blank"
+          rel="noopener"
+          class="text-sm underline decoration-dashed underline-offset-4 hover:text-accent"
+        >
+          Read past editions
+        </a>
+      </div>
+    )
+  }
+</div>

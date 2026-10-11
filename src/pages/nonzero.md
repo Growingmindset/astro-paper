@@ -20,8 +20,6 @@ So for 2027 I'm using poker to learn expected value, probability, and how to dec
 [Read the full story, including the numbers behind the bet →](/posts/the-nonzero-year)
 
 
-**What counts as winning:** getting measurably better at making decisions, on and off the table. The money is tracked honestly, but it isn't the scorecard.
-
 ## The rules
 
 1. Leave at 3 buy-ins down in any cash session.

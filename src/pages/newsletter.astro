@@ -1,0 +1,112 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import BaseRateSignup from "@/components/BaseRateSignup.astro";
+import { BASE_RATE, SITE } from "@/config";
+
+const sections = [
+  {
+    title: "One macro read",
+    body: "Rates, inflation, jobs, energy. What moved this week, what it means for ordinary people with money in the market, and what I'm watching next.",
+  },
+  {
+    title: "One lesson on how people decide",
+    body: "Behavioral economics from the field. Fourteen years behind a bar is a long study in how people actually choose, and it shows up in markets the same way.",
+  },
+  {
+    title: "What I changed in my own portfolio",
+    body: "Buys, sells, and holds in my own account, with the reasoning, posted before the result is known. The misses stay up next to the wins.",
+  },
+];
+---
+
+<Layout
+  title={`Base Rate | ${SITE.title}`}
+  description="Base Rate is a free weekly newsletter on markets, risk, and decisions by Rudy Galan."
+>
+  <Header />
+  <Breadcrumb />
+  <main id="main-content" class="app-layout pb-16">
+    <section class="pt-4 pb-8">
+      <h1 class="text-3xl font-bold sm:text-4xl">Base Rate</h1>
+      <p class="mt-3 max-w-2xl text-base leading-relaxed sm:text-lg">
+        Markets, risk, and decisions. {BASE_RATE.cadence}, free. Named for the
+        number most people skip: how often something actually happens before
+        you decide whether this time is different.
+      </p>
+    </section>
+
+    <BaseRateSignup heading="Get Sunday's email" />
+
+    <section class="pt-12">
+      <h2 class="text-2xl font-semibold tracking-wide">What's in every issue</h2>
+      <ol class="mt-4 list-none space-y-5 ps-0">
+        {
+          sections.map((s, i) => (
+            <li class="flex gap-4">
+              <span class="font-mono text-sm opacity-50">0{i + 1}</span>
+              <div>
+                <h3 class="font-semibold">{s.title}</h3>
+                <p class="text-sm leading-relaxed opacity-90">{s.body}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section class="border-border mt-12 border-t border-dashed pt-10">
+      <h2 class="text-2xl font-semibold tracking-wide">The track record</h2>
+      <p class="mt-2 max-w-2xl text-sm leading-relaxed opacity-90">
+        Opinions are cheap. Here's the running log of my own positions and
+        thesis changes, timestamped as they happened.
+      </p>
+      <ul class="mt-4 list-none space-y-2 ps-0 text-sm">
+        <li>
+          <a href="/posts/2026-portfolio-log" class="text-accent font-medium underline decoration-dashed underline-offset-4">
+            2026 Portfolio &amp; Market Thesis
+          </a>
+          <span class="opacity-70">: the live log</span>
+        </li>
+        <li>
+          <a href="/posts/wrong-order" class="text-accent font-medium underline decoration-dashed underline-offset-4">
+            Most People Build Wealth in the Wrong Order
+          </a>
+          <span class="opacity-70">: the framework behind it</span>
+        </li>
+        <li>
+          <a href={BASE_RATE.url} target="_blank" rel="noopener" class="text-accent font-medium underline decoration-dashed underline-offset-4">
+            Every past edition
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="border-border mt-12 border-t border-dashed pt-10">
+      <h2 class="text-2xl font-semibold tracking-wide">Who it's for</h2>
+      <p class="mt-2 max-w-2xl text-sm leading-relaxed opacity-90">
+        People who earn real money, often in jobs that don't come with a
+        financial advisor, and want to understand the market well enough to
+        make their own calls. If you want to be told what to buy on Monday
+        morning, this isn't it.
+      </p>
+    </section>
+
+    <section class="border-border mt-12 rounded-lg border p-5 text-xs leading-relaxed opacity-80">
+      <h2 class="mb-2 text-sm font-semibold">Disclosure</h2>
+      <p>
+        Base Rate and everything on this site are for education and general
+        information only. They are not investment, legal, or tax advice, and not
+        a recommendation to buy or sell any security. Nothing here accounts for
+        your personal situation. I am not currently a registered investment
+        adviser. I may hold positions in securities I write about, and I
+        disclose my own trades in the portfolio log. Past results do not
+        guarantee future results. Do your own research and consider a licensed
+        professional before making financial decisions.
+      </p>
+    </section>
+  </main>
+  <Footer />
+</Layout>
