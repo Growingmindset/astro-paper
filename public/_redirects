@@ -7,3 +7,12 @@
 /homes   https://exprealty.com/@rudygalan   302
 /referral   /txhouse   301
 /referral/  /txhouse   301
+# Retired page: keep any shared links alive
+/workout-partner   /   302
+/workout-partner/  /   302
+
+# Lab and Library were merged into Writing
+/posts      /writing  301
+/posts/     /writing  301
+/library    /writing  301
+/library/   /writing  301

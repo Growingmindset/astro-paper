@@ -14,11 +14,22 @@ const { pathname } = Astro.url;
 const currentPath =
   pathname.endsWith("/") && pathname !== "/" ? pathname.slice(0, -1) : pathname;
 
+// Sections that should highlight a different nav item. Individual posts live
+// under /posts, and tag and archive pages are part of Writing.
+const sectionAliases: Record<string, string[]> = {
+  writing: ["posts", "library", "tags", "archive"],
+};
+
 const isActive = (path: string) => {
   const currentPathArray = currentPath.split("/").filter(p => p.trim());
   const pathArray = path.split("/").filter(p => p.trim());
+  const aliases = sectionAliases[pathArray[0] ?? ""] ?? [];
 
-  return currentPath === path || currentPathArray[0] === pathArray[0];
+  return (
+    currentPath === path ||
+    currentPathArray[0] === pathArray[0] ||
+    aliases.includes(currentPathArray[0] ?? "")
+  );
 };
 ---
 

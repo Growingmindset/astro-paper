@@ -907,7 +907,7 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
       successPanel.classList.remove("hidden");
       successPanel.scrollIntoView({ behavior: "smooth", block: "center" });
       successPanel.focus();
-    } catch (error) {
+    } catch {
       setStatus("That didn't go through. Try again, or email me directly.", "error");
       submitBtn.disabled = false;
       submitBtn.textContent = originalLabel;

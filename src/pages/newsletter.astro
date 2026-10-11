@@ -33,15 +33,17 @@ const sections = [
       <h1 class="text-3xl font-bold sm:text-4xl">Base Rate</h1>
       <p class="mt-3 max-w-2xl text-base leading-relaxed sm:text-lg">
         Markets, risk, and decisions. {BASE_RATE.cadence}, free. Named for the
-        number most people skip: how often something actually happens before
-        you decide whether this time is different.
+        number most people skip: how often something actually happens before you
+        decide whether this time is different.
       </p>
     </section>
 
     <BaseRateSignup heading="Get Sunday's email" />
 
     <section class="pt-12">
-      <h2 class="text-2xl font-semibold tracking-wide">What's in every issue</h2>
+      <h2 class="text-2xl font-semibold tracking-wide">
+        What's in every issue
+      </h2>
       <ol class="mt-4 list-none space-y-5 ps-0">
         {
           sections.map((s, i) => (
@@ -57,7 +59,7 @@ const sections = [
       </ol>
     </section>
 
-    <section class="border-border mt-12 border-t border-dashed pt-10">
+    <section class="mt-12 border-t border-dashed border-border pt-10">
       <h2 class="text-2xl font-semibold tracking-wide">The track record</h2>
       <p class="mt-2 max-w-2xl text-sm leading-relaxed opacity-90">
         Opinions are cheap. Here's the running log of my own positions and
@@ -65,36 +67,50 @@ const sections = [
       </p>
       <ul class="mt-4 list-none space-y-2 ps-0 text-sm">
         <li>
-          <a href="/posts/2026-portfolio-log" class="text-accent font-medium underline decoration-dashed underline-offset-4">
+          <a
+            href="/posts/2026-portfolio-log"
+            class="font-medium text-accent underline decoration-dashed underline-offset-4"
+          >
             2026 Portfolio &amp; Market Thesis
           </a>
           <span class="opacity-70">: the live log</span>
         </li>
         <li>
-          <a href="/posts/wrong-order" class="text-accent font-medium underline decoration-dashed underline-offset-4">
+          <a
+            href="/posts/wrong-order"
+            class="font-medium text-accent underline decoration-dashed underline-offset-4"
+          >
             Most People Build Wealth in the Wrong Order
           </a>
           <span class="opacity-70">: the framework behind it</span>
         </li>
         <li>
-          <a href={BASE_RATE.url} target="_blank" rel="noopener" class="text-accent font-medium underline decoration-dashed underline-offset-4">
+          <a
+            href={BASE_RATE.url}
+            target="_blank"
+            rel="noopener"
+            class="font-medium text-accent underline decoration-dashed underline-offset-4"
+          >
             Every past edition
           </a>
         </li>
       </ul>
     </section>
 
-    <section class="border-border mt-12 border-t border-dashed pt-10">
+    <section class="mt-12 border-t border-dashed border-border pt-10">
       <h2 class="text-2xl font-semibold tracking-wide">Who it's for</h2>
       <p class="mt-2 max-w-2xl text-sm leading-relaxed opacity-90">
         People who earn real money, often in jobs that don't come with a
-        financial advisor, and want to understand the market well enough to
-        make their own calls. If you want to be told what to buy on Monday
-        morning, this isn't it.
+        financial advisor, and want to understand the market well enough to make
+        their own calls. If you want to be told what to buy on Monday morning,
+        this isn't it.
       </p>
     </section>
 
-    <section class="border-border mt-12 rounded-lg border p-5 text-xs leading-relaxed opacity-80">
+    <section
+      id="disclosure"
+      class="mt-12 scroll-mt-8 rounded-lg border border-border p-5 text-xs leading-relaxed opacity-80"
+    >
       <h2 class="mb-2 text-sm font-semibold">Disclosure</h2>
       <p>
         Base Rate and everything on this site are for education and general

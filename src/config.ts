@@ -66,13 +66,12 @@ export const navLinks = [
 ];
 
 // Base Rate newsletter (beehiiv).
-// To show an inline email form instead of a button, paste the src URL from
-// beehiiv > Settings > Subscribe forms > (your form) > Get embed code,
-// e.g. "https://subscribe-forms.beehiiv.com/xxxxxxxx-xxxx-..."
+// formId is the data-beehiiv-form value from the beehiiv embed code
+// (beehiiv > Grow > Subscribe forms > your form > Get embed code).
 export const BASE_RATE = {
   name: "Base Rate",
   url: "https://rudygalan.beehiiv.com",
   subscribeUrl: "https://rudygalan.beehiiv.com/subscribe",
-  embedSrc: "",
+  formId: "1372f0fc-9eea-41d4-b184-c7e355342850",
   cadence: "Every Sunday",
 };

@@ -131,6 +131,14 @@ const structuredData = {
 
     <ClientRouter />
 
+    <!-- beehiiv attribution: records the first-touch source (referrer, UTMs) so
+         subscribers who land on one page and sign up on another stay attributed.
+         Lives in <head> so it runs once per visit, not on every page transition. -->
+    <script
+      is:inline
+      async
+      src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
+
     <script is:inline>
       (function () {
         const currentTheme = localStorage.getItem("theme");

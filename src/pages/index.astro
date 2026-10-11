@@ -78,8 +78,13 @@ const startHere = [
       <BaseRateSignup />
     </section>
 
-    <section id="tracks" class="border-border border-t border-dashed pt-10 pb-10">
-      <h2 class="text-2xl font-semibold tracking-wide">One question, three tracks</h2>
+    <section
+      id="tracks"
+      class="border-t border-dashed border-border pt-10 pb-10"
+    >
+      <h2 class="text-2xl font-semibold tracking-wide">
+        One question, three tracks
+      </h2>
       <p class="mt-2 max-w-2xl text-sm leading-relaxed opacity-80">
         How do you make good decisions when you can't know the outcome? I'm
         working that out in public, in markets, at the poker table, and on real
@@ -88,15 +93,17 @@ const startHere = [
       <ul class="mt-6 grid list-none grid-cols-1 gap-4 ps-0 sm:grid-cols-3">
         {
           tracks.map(track => (
-            <li class="border-border flex flex-col rounded-lg border p-5">
+            <li class="flex flex-col rounded-lg border border-border p-5">
               <p class="text-xs font-semibold tracking-widest uppercase opacity-60">
                 {track.label}
               </p>
               <h3 class="mt-1 text-lg font-bold">{track.name}</h3>
-              <p class="mt-2 grow text-sm leading-relaxed opacity-90">{track.body}</p>
+              <p class="mt-2 grow text-sm leading-relaxed opacity-90">
+                {track.body}
+              </p>
               <a
                 href={track.href}
-                class="text-accent mt-4 text-sm font-medium underline decoration-dashed underline-offset-4 hover:decoration-solid"
+                class="mt-4 text-sm font-medium text-accent underline decoration-dashed underline-offset-4 hover:decoration-solid"
               >
                 {track.cta} &rarr;
               </a>
@@ -106,8 +113,13 @@ const startHere = [
       </ul>
     </section>
 
-    <section id="start-here" class="border-border border-t border-dashed pt-10 pb-6">
-      <h2 class="text-2xl font-semibold tracking-wide">New here? Start with these</h2>
+    <section
+      id="start-here"
+      class="border-t border-dashed border-border pt-10 pb-6"
+    >
+      <h2 class="text-2xl font-semibold tracking-wide">
+        New here? Start with these
+      </h2>
       <ol class="mt-4 list-none space-y-4 ps-0">
         {
           startHere.map((item, i) => (
@@ -116,7 +128,7 @@ const startHere = [
               <div>
                 <a
                   href={item.href}
-                  class="text-accent font-medium decoration-dashed underline-offset-4 hover:underline"
+                  class="font-medium text-accent decoration-dashed underline-offset-4 hover:underline"
                 >
                   {item.title}
                 </a>
@@ -130,7 +142,10 @@ const startHere = [
 
     {
       latestPosts.length > 0 && (
-        <section id="latest" class="border-border border-t border-dashed pt-10 pb-6">
+        <section
+          id="latest"
+          class="border-t border-dashed border-border pt-10 pb-6"
+        >
           <h2 class="text-2xl font-semibold tracking-wide">Latest writing</h2>
           <ul>
             {latestPosts.map(post => (
@@ -149,13 +164,13 @@ const startHere = [
 
     <section
       id="about-short"
-      class="border-border my-10 grid grid-cols-1 items-center gap-6 border-t border-dashed pt-10 sm:grid-cols-3"
+      class="my-10 grid grid-cols-1 items-center gap-6 border-t border-dashed border-border pt-10 sm:grid-cols-3"
     >
       <div class="flex justify-center sm:col-span-1">
         <img
           src="/headshot.jpg"
           alt="Rudy Galan in San Antonio, Texas"
-          class="border-border h-48 w-48 rounded-full border-2 object-cover shadow-sm sm:aspect-square sm:h-auto sm:w-full sm:rounded-lg"
+          class="h-48 w-48 rounded-full border-2 border-border object-cover shadow-sm sm:aspect-square sm:h-auto sm:w-full sm:rounded-lg"
         />
       </div>
       <div class="flex flex-col justify-center sm:col-span-2">
@@ -170,7 +185,7 @@ const startHere = [
         <p class="mt-3 text-sm">
           <a
             href="/about"
-            class="text-accent font-medium underline decoration-dashed underline-offset-4 hover:decoration-solid"
+            class="font-medium text-accent underline decoration-dashed underline-offset-4 hover:decoration-solid"
           >
             The full story &rarr;
           </a>

@@ -859,7 +859,7 @@ const pageDescription = `Referral partner intake for licensed real estate agents
       successPanel.classList.remove("hidden");
       successPanel.scrollIntoView({ behavior: "smooth", block: "center" });
       successPanel.focus();
-    } catch (error) {
+    } catch {
       setStatus(
         "That didn't go through. Try again, or email me directly.",
         "error"
