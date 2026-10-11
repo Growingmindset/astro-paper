@@ -39,7 +39,9 @@ So for 2027 I'm using poker to learn expected value, probability, and how to dec
 
 The ledger, my best and worst decision, and one lesson that carried over to life land in the first Base Rate issue after each month closes. Base Rate is my free Sunday newsletter on markets, risk, and decisions, so you'll get that too.
 
+<div class="rounded-md dark:bg-[#fdfdfd]">
 <script async data-astro-rerun src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="1372f0fc-9eea-41d4-b184-c7e355342850"></script>
+</div>
 
 ## Follow along
 
