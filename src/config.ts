@@ -73,10 +73,8 @@ export const BASE_RATE = {
   url: "https://rudygalan.beehiiv.com",
   subscribeUrl: "https://rudygalan.beehiiv.com/subscribe",
   formId: "1372f0fc-9eea-41d4-b184-c7e355342850",
-  // The beehiiv form currently draws its own title and description. While true,
-  // the site card shows only the form so the text isn't repeated. If you turn
-  // the title/description off inside beehiiv, set this to false and the card
-  // will supply its own heading and blurb again.
-  formShowsOwnCopy: true,
+  // Set to true only if the beehiiv form itself shows a title/description,
+  // so the site card doesn't repeat it. The form is currently email-only.
+  formShowsOwnCopy: false,
   cadence: "Every Sunday",
 };

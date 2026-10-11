@@ -48,16 +48,7 @@ const showCopy = !BASE_RATE.formShowsOwnCopy;
     data-astro-rerun makes it run again after client-side page transitions.
     Use at most one BaseRateSignup per page.
   -->
-  <div
-    class:list={[
-      showCopy && "mt-4",
-      // The beehiiv form draws dark text inside its iframe, which can't see
-      // the site theme. Give it a light surface in dark mode so it stays
-      // readable. Not needed once the form shows only the email field.
-      !showCopy && "dark:rounded-md dark:bg-[#fdfdfd]",
-      "min-h-[5rem]",
-    ]}
-  >
+  <div class:list={[showCopy && "mt-4", "min-h-[5rem]"]}>
     <script
       is:inline
       async

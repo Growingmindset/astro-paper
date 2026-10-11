@@ -9,6 +9,7 @@ import EditPost from "@/components/EditPost.astro";
 import ShareLinks from "@/components/ShareLinks.astro";
 import BackButton from "@/components/BackButton.astro";
 import BackToTopButton from "@/components/BackToTopButton.astro";
+import BaseRateSignup from "@/components/BaseRateSignup.astro";
 import { getPath } from "@/utils/getPath";
 import { slugifyStr } from "@/utils/slugify";
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
@@ -36,6 +37,11 @@ const {
   archived,
   supersededBy,
 } = post.data;
+
+// Show the Base Rate signup after posts that are still current and aren't
+// training programs. Archived pages and fitness programs stay clean.
+const showSignup =
+  !archived && !(tags || []).some(t => ["training", "programs"].includes(t));
 
 // If this post is archived, find the post that replaced it
 const successor = supersededBy
@@ -143,6 +149,14 @@ const nextPost =
     >
       <Content />
     </article>
+
+    {
+      showSignup && (
+        <section data-pagefind-ignore class="mt-10">
+          <BaseRateSignup compact />
+        </section>
+      )
+    }
 
     <hr class="my-8 border-dashed" />
 

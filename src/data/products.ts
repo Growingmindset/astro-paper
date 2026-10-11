@@ -42,7 +42,7 @@ export const products: Product[] = [
     line: "line-01",
     name: "All In, No Stop Loss",
     description:
-      "No hedging. No sitting out. Bold statement tee built for the ones who bet on themselves.",
+      "Take the right risk at the right time. Full conviction when the odds are on your side, sized so you can play again tomorrow. For people who bet on themselves.",
     price: 29.99,
     published: true,
     variants: [

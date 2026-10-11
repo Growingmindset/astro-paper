@@ -15,7 +15,7 @@ postSlug: "2026-portfolio-log"
 
 **Objective:** Beat the S&P 500 with a concentrated set of high-conviction positions.
 
-This page is the record: every trade, with the date, price, and why. The weekly read on markets goes out in [Base Rate](/newsletter). This is not investment advice. See the [full disclosure](/newsletter#disclosure).
+This page is the receipts for [Base Rate](/newsletter). The newsletter is the weekly read on markets and how I decide. This log is where every trade lives, with the date, price, and why, so you can check what I wrote against what I did. Each issue's "what I changed" section maps to rows below. This is not investment advice. See the [full disclosure](/newsletter#disclosure).
 
 ---
 
@@ -45,13 +45,16 @@ This page is the record: every trade, with the date, price, and why. The weekly 
 
 ---
 
-## Performance
+## How I decide
 
-<img src="/ytd-performance.png" alt="Cumulative rate of return, Jan 1 to Jul 20, 2026" width="100%" style="border-radius: 8px; margin-top: 15px; margin-bottom: 5px;" />
+- **Concentrated, not scattered.** A small number of positions I understand well enough to explain in a sentence.
+- **Quality incumbents on pullbacks.** Businesses with real moats and recurring revenue (MSFT, ORCL, INTU), added when the price is cheap relative to the assets, not when the story is exciting.
+- **A small speculative sleeve.** A position like CRSR is sized so a total loss is survivable. That is the asymmetric bet, and it stays small.
+- **Income against what I own.** Selling long-dated calls on INTC collects premium while I stay long, and it lowers my cost basis.
+- **Idle cash should work, but never force a buy.** Cash sits in a money-market fund until there is a setup with a real margin of safety.
+- **Let the macro set the posture.** ISM above 50 and a strong midterm Q4 backdrop mean I stay deployed. If the dashboard turns, the posture changes first and the positions follow.
 
-*Cumulative return from Jan 1 to Jul 20, 2026, against the S&P 500 and a moderate benchmark. The chart is updated by hand.*
-
-**Cash position:** 12.98%
+Same idea as Base Rate: start from how often things usually work, size for being wrong, and write the reasoning down before the result.
 
 ---
 
@@ -78,4 +81,6 @@ This page is the record: every trade, with the date, price, and why. The weekly 
 
 ## Where things stand (July update)
 
-I'm deploying into incumbents with real infrastructure moats, mainly Oracle and Microsoft, and keeping a small speculative sleeve (CRSR) for asymmetric upside if the sector rotation reaches gaming hardware. On June 22 I sold three INTC Dec 2028 $200 calls for $17,382.64 in premium. That pushed my cost basis on the position negative while I stay long and keep the option to roll. With ISM and New Orders both above 50 and Q4 historically strong in midterm years, I'm comfortable staying deployed, and I'm holding dry powder for setups with a real margin of safety rather than forcing buys.
+I'm deploying into incumbents with real infrastructure moats, mainly Oracle and Microsoft, and keeping a small speculative sleeve (CRSR) for asymmetric upside if the sector rotation reaches gaming hardware. On June 22 I sold three INTC Dec 2028 $200 calls for $17,382.64 in premium, which pushed my cost basis on the position negative while I stay long. With ISM and New Orders both above 50, I'm comfortable staying deployed and holding dry powder for setups with a margin of safety.
+
+New trades and thesis changes show up here first and get explained in the next [Base Rate](/newsletter) issue.
