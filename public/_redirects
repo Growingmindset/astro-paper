@@ -11,6 +11,10 @@
 /workout-partner   /   302
 /workout-partner/  /   302
 
+# Portfolio log became How I Invest (trades now live in Base Rate)
+/posts/2026-portfolio-log    /posts/how-i-invest   301
+/posts/2026-portfolio-log/   /posts/how-i-invest   301
+
 # Lab and Library were merged into Writing
 /posts      /writing  301
 /posts/     /writing  301

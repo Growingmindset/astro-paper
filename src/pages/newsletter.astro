@@ -74,18 +74,30 @@ const sections = [
     <section class="mt-12 border-t border-dashed border-border pt-10">
       <h2 class="text-2xl font-semibold tracking-wide">The track record</h2>
       <p class="mt-2 max-w-2xl text-sm leading-relaxed opacity-90">
-        Opinions are cheap. Here's the running log of my own positions and
-        thesis changes, timestamped as they happened.
+        Opinions are cheap. Every issue's "What I changed" section is my own
+        trades, sent before the result is known, and the archive keeps them
+        dated, misses included.
       </p>
       <ul class="mt-4 list-none space-y-2 ps-0 text-sm">
         <li>
           <a
-            href="/posts/2026-portfolio-log"
+            href={BASE_RATE.url}
+            target="_blank"
+            rel="noopener"
             class="font-medium text-accent underline decoration-dashed underline-offset-4"
           >
-            2026 Portfolio &amp; Market Thesis
+            The archive
           </a>
-          <span class="opacity-70">: the live log</span>
+          <span class="opacity-70">: every issue, dated</span>
+        </li>
+        <li>
+          <a
+            href="/posts/how-i-invest"
+            class="font-medium text-accent underline decoration-dashed underline-offset-4"
+          >
+            How I Invest
+          </a>
+          <span class="opacity-70">: the rules and the metrics I watch</span>
         </li>
         <li>
           <a
@@ -122,9 +134,9 @@ const sections = [
         adviser. I'm studying for the Series 65, and until I'm registered, Base
         Rate stays general education and commentary, never personalized advice.
         I may hold positions in securities I write about, and I disclose my own
-        trades in the portfolio log. Past results do not guarantee future
-        results. Do your own research and consider a licensed professional
-        before making financial decisions.
+        trades in Base Rate. Past results do not guarantee future results. Do
+        your own research and consider a licensed professional before making
+        financial decisions.
       </p>
     </section>
   </main>

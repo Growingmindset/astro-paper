@@ -29,7 +29,7 @@ The thread through all three is the same question: how do you make good decision
 
 **School, then on purpose, no school.** I took 150+ college credits across biology, physics, and economics, then stopped. I'm not pursuing a degree. I'd rather learn by doing real projects in public, where the results are checkable.
 
-**Money, the hard way.** In 2020 I lost $17,000 in the stock market. That loss is why I learned to invest properly. I now manage my own portfolio and [log every position and thesis change](/posts/2026-portfolio-log) as it happens, with no hindsight edits.
+**Money, the hard way.** In 2020 I lost $17,000 in the stock market. That loss is why I learned to invest properly. I now manage my own portfolio and share every position and thesis change in [Base Rate](/newsletter) as it happens, with no hindsight edits. The rules are in [How I Invest](/posts/how-i-invest).
 
 ---
 
