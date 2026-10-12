@@ -17,7 +17,11 @@ const defaultVariant = product.variants[0];
     <img
       src={defaultVariant.image}
       alt={defaultVariant.alt}
-      class="product-card-image aspect-square w-full cursor-zoom-in object-cover"
+      width="1200"
+      height="1200"
+      loading="lazy"
+      decoding="async"
+      class="product-card-image aspect-square w-full cursor-zoom-in bg-[#e6e6e3] object-cover"
     />
     <span
       class="zoom-badge pointer-events-none absolute right-2 bottom-2 rounded bg-black/70 px-2 py-1 text-[10px] font-bold tracking-wide text-white uppercase"
@@ -60,12 +64,24 @@ const defaultVariant = product.variants[0];
       ${(defaultVariant.price ?? product.price).toFixed(2)}
     </p>
 
-    <a
-      href={defaultVariant.stripeUrl}
-      data-astro-reload
-      class="product-card-buy border-skin-accent text-skin-accent hover:bg-skin-accent hover:text-skin-inverted mt-4 rounded-lg border-2 px-4 py-2 text-center text-xs font-bold tracking-wider uppercase transition-all duration-300"
-      >Buy Now</a
-    >
+    {
+      defaultVariant.stripeUrl ? (
+        <a
+          href={defaultVariant.stripeUrl}
+          data-astro-reload
+          class="product-card-buy border-skin-accent text-skin-accent hover:bg-skin-accent hover:text-skin-inverted mt-4 rounded-lg border-2 px-4 py-2 text-center text-xs font-bold tracking-wider uppercase transition-all duration-300"
+        >
+          Buy Now
+        </a>
+      ) : (
+        <span
+          aria-disabled="true"
+          class="border-skin-line text-skin-base mt-4 cursor-not-allowed rounded-lg border-2 px-4 py-2 text-center text-xs font-bold tracking-wider uppercase opacity-50"
+        >
+          Coming soon
+        </span>
+      )
+    }
   </div>
 </div>
 
