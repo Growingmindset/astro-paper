@@ -9,6 +9,7 @@ import EditPost from "@/components/EditPost.astro";
 import ShareLinks from "@/components/ShareLinks.astro";
 import BackButton from "@/components/BackButton.astro";
 import BackToTopButton from "@/components/BackToTopButton.astro";
+import BaseRateSignup from "@/components/BaseRateSignup.astro";
 import { getPath } from "@/utils/getPath";
 import { slugifyStr } from "@/utils/slugify";
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
@@ -36,6 +37,11 @@ const {
   archived,
   supersededBy,
 } = post.data;
+
+// Show the Base Rate signup after posts that are still current and aren't
+// training programs. Archived pages and fitness programs stay clean.
+const showSignup =
+  !archived && !(tags || []).some(t => ["training", "programs"].includes(t));
 
 // If this post is archived, find the post that replaced it
 const successor = supersededBy
@@ -80,18 +86,24 @@ const layoutProps = {
 
 /* ========== Prev/Next Posts ========== */
 
-const allPosts = posts.map(({ data: { title, postSlug }, id, filePath }) => ({
-  id,
-  title,
-  filePath,
-  postSlug,
-}));
+// Archived posts stay reachable by URL but drop out of Previous/Next.
+const navPosts = archived ? [] : posts.filter(p => !p.data.archived);
+const allPosts = navPosts.map(
+  ({ data: { title, postSlug }, id, filePath }) => ({
+    id,
+    title,
+    filePath,
+    postSlug,
+  })
+);
 
 const currentPostIndex = allPosts.findIndex(a => a.id === post.id);
 
-const prevPost = currentPostIndex !== 0 ? allPosts[currentPostIndex - 1] : null;
+const prevPost = currentPostIndex > 0 ? allPosts[currentPostIndex - 1] : null;
 const nextPost =
-  currentPostIndex !== allPosts.length ? allPosts[currentPostIndex + 1] : null;
+  currentPostIndex >= 0 && currentPostIndex < allPosts.length - 1
+    ? allPosts[currentPostIndex + 1]
+    : null;
 ---
 
 <Layout {...layoutProps}>
@@ -125,13 +137,20 @@ const nextPost =
           <strong>Archived.</strong> This document is no longer maintained.
           {successor && (
             <>
-              {" "}The current version is{" "}
+              {" "}
+              The current version is{" "}
               <a
                 class="text-accent underline"
-                href={getPath(successor.id, successor.filePath, true, successor.data.postSlug)}
+                href={getPath(
+                  successor.id,
+                  successor.filePath,
+                  true,
+                  successor.data.postSlug
+                )}
               >
                 {successor.data.title}
-              </a>.
+              </a>
+              .
             </>
           )}
         </aside>
@@ -143,6 +162,14 @@ const nextPost =
     >
       <Content />
     </article>
+
+    {
+      showSignup && (
+        <section data-pagefind-ignore class="mt-10">
+          <BaseRateSignup compact />
+        </section>
+      )
+    }
 
     <hr class="my-8 border-dashed" />
 
@@ -162,8 +189,13 @@ const nextPost =
     <div data-pagefind-ignore class="grid grid-cols-1 gap-6 sm:grid-cols-2">
       {
         prevPost && (
-          
-            <a href={getPath(prevPost.id, prevPost.filePath, true, prevPost.postSlug)}
+          <a
+            href={getPath(
+              prevPost.id,
+              prevPost.filePath,
+              true,
+              prevPost.postSlug
+            )}
             class="flex w-full gap-1 hover:opacity-75"
           >
             <IconChevronLeft class="inline-block flex-none rtl:rotate-180" />
@@ -176,8 +208,13 @@ const nextPost =
       }
       {
         nextPost && (
-          
-            <a href={getPath(nextPost.id, nextPost.filePath, true, nextPost.postSlug)}
+          <a
+            href={getPath(
+              nextPost.id,
+              nextPost.filePath,
+              true,
+              nextPost.postSlug
+            )}
             class="flex w-full justify-end gap-1 text-end hover:opacity-75 sm:col-start-2"
           >
             <div>

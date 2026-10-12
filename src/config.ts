@@ -2,8 +2,8 @@ export const SITE = {
   website: "https://rudygalan.com/",
   author: "Rudy Galan",
   profile: "https://rudygalan.com/",
-  desc: "Systems, blueprints, and analysis from first principles.",
-  title: "Rudy Galan Portal",
+  desc: "Markets, risk, and decisions. Weekly analysis, a public poker year, and the projects I run, with every call on the record.",
+  title: "Rudy Galan",
   // TODO: replace public/astropaper-og.jpg with your own 1200x630 fallback card
   ogImage: "og-portal.png",
   lightAndDarkMode: true,
@@ -58,8 +58,23 @@ export const SOCIALS = [
 ];
 
 export const navLinks = [
-  { href: "/posts", linkText: "Lab", active: true },
-  { href: "/library", linkText: "Library", active: true },
-  { href: "/shop", linkText: "Shop", active: true },
-  { href: "/about", linkText: "Profile", active: true },
+  { href: "/newsletter", linkText: "Base Rate", active: true },
+  { href: "/nonzero", linkText: "Nonzero", active: true },
+  { href: "/writing", linkText: "Writing", active: true },
+  { href: "/work", linkText: "Work", active: true },
+  { href: "/about", linkText: "About", active: true },
 ];
+
+// Base Rate newsletter (beehiiv).
+// formId is the data-beehiiv-form value from the beehiiv embed code
+// (beehiiv > Grow > Subscribe forms > your form > Get embed code).
+export const BASE_RATE = {
+  name: "Base Rate",
+  url: "https://rudygalan.beehiiv.com",
+  subscribeUrl: "https://rudygalan.beehiiv.com/subscribe",
+  formId: "1372f0fc-9eea-41d4-b184-c7e355342850",
+  // Set to true only if the beehiiv form itself shows a title/description,
+  // so the site card doesn't repeat it. The form is currently email-only.
+  formShowsOwnCopy: false,
+  cadence: "Every Sunday",
+};

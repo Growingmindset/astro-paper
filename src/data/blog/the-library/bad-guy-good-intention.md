@@ -12,6 +12,7 @@ tags:
   - essays
   - transmissions
 description: "On being the villain with good intentions, the mercenary I never became, and the mother who taught me where the line is."
+archived: true
 ---
 
 I like being viewed as the bad guy with good intentions. That is where the true "good" exists. The villain that actually does good, but is viewed as bad because of different perspectives. It's like being a Republican or a Democrat — there's a messy middle where most people live, but nobody likes them. Good exists only in the reality vacuum; human perception, incentives, motivations, etc. make it cloudy.

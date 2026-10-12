@@ -14,15 +14,17 @@ const categories = [
   {
     id: "transmissions",
     name: "Essays & Observations",
-    description: "Original philosophies, tactical baselines, and thoughts on human nature.",
-    exists: tagsInUse.has("transmissions")
+    description:
+      "Original philosophies, tactical baselines, and thoughts on human nature.",
+    exists: tagsInUse.has("transmissions"),
   },
   {
     id: "deconstructions",
     name: "Deconstructions",
-    description: "Audits of other systems, book reviews, and historical teardowns.",
-    exists: tagsInUse.has("deconstructions")
-  } 
+    description:
+      "Audits of other systems, book reviews, and historical teardowns.",
+    exists: tagsInUse.has("deconstructions"),
+  },
 ];
 
 // 3. Only show categories that actually have posts to prevent dead 404 links
@@ -33,29 +35,39 @@ const activeCategories = categories.filter(cat => cat.exists);
   <Header activeNav="library" />
 
   <main class="mx-auto w-full max-w-3xl px-4 pb-12">
-    
     <section class="pt-8 pb-10 text-center">
-      <h1 class="text-3xl font-bold tracking-wider sm:text-4xl mb-4">The Library</h1>
-      <p class="text-skin-base opacity-90 max-w-2xl mx-auto leading-relaxed">
-        First-principles thinking. Essays, observations, deconstructions, and academic systems exploring human behavior, operational excellence, and physical infrastructure.
+      <h1 class="mb-4 text-3xl font-bold tracking-wider sm:text-4xl">
+        The Library
+      </h1>
+      <p class="text-skin-base mx-auto max-w-2xl leading-relaxed opacity-90">
+        First-principles thinking. Essays, observations, deconstructions, and
+        academic systems exploring human behavior, operational excellence, and
+        physical infrastructure.
       </p>
     </section>
 
-    <section class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-6">
-      {activeCategories.map((cat) => {
-        return (
-          <a href={`/tags/${cat.id}/`} class="group block p-6 bg-skin-card border border-skin-line rounded-xl hover:border-skin-accent transition-all duration-300 hover:shadow-md hover:-translate-y-1">
-            <h2 class="text-xl font-bold mb-2 group-hover:text-skin-accent transition-colors">
-              {cat.name} <span class="inline-block transition-transform group-hover:translate-x-1">&rarr;</span>
-            </h2>
-            <p class="text-sm text-skin-base opacity-80 leading-relaxed">
-              {cat.description}
-            </p>
-          </a>
-        );
-      })}
+    <section class="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2">
+      {
+        activeCategories.map(cat => {
+          return (
+            <a
+              href={`/tags/${cat.id}/`}
+              class="group bg-skin-card border-skin-line hover:border-skin-accent block rounded-xl border p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+            >
+              <h2 class="group-hover:text-skin-accent mb-2 text-xl font-bold transition-colors">
+                {cat.name}{" "}
+                <span class="inline-block transition-transform group-hover:translate-x-1">
+                  &rarr;
+                </span>
+              </h2>
+              <p class="text-skin-base text-sm leading-relaxed opacity-80">
+                {cat.description}
+              </p>
+            </a>
+          );
+        })
+      }
     </section>
-
   </main>
 
   <Footer />

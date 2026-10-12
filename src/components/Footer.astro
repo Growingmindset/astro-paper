@@ -41,12 +41,39 @@ const CPN_URL = "https://www.trec.texas.gov/forms/consumer-protection-notice";
     </div>
   </div>
 
-  <div class="text-foreground/70 pb-6 text-center text-base sm:pb-4">
+  <nav
+    aria-label="Secondary"
+    class="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 pb-4 text-sm"
+  >
+    <a href="/shop" class="underline-offset-4 hover:text-accent hover:underline"
+      >Shop: Risk On</a
+    >
+    <a
+      href="/archive"
+      class="underline-offset-4 hover:text-accent hover:underline">Archive</a
+    >
+    <a
+      href="/rss.xml"
+      class="underline-offset-4 hover:text-accent hover:underline">RSS</a
+    >
+  </nav>
+
+  <p
+    class="mx-auto max-w-2xl pb-4 text-center text-xs leading-relaxed text-foreground/70"
+  >
+    Educational content only, not investment, legal, or tax advice.
+    <a
+      href="/newsletter#disclosure"
+      class="underline underline-offset-2 hover:text-accent">Full disclosure</a
+    >
+  </p>
+
+  <div class="pb-6 text-center text-base text-foreground/70 sm:pb-4">
     <a
       href={IABS_URL}
       target="_blank"
       rel="noopener noreferrer"
-      class="hover:text-foreground underline underline-offset-2"
+      class="underline underline-offset-2 hover:text-foreground"
     >
       TREC Information About Brokerage Services
     </a>
@@ -55,7 +82,7 @@ const CPN_URL = "https://www.trec.texas.gov/forms/consumer-protection-notice";
       href={CPN_URL}
       target="_blank"
       rel="noopener noreferrer"
-      class="hover:text-foreground underline underline-offset-2"
+      class="underline underline-offset-2 hover:text-foreground"
     >
       TREC Consumer Protection Notice
     </a>

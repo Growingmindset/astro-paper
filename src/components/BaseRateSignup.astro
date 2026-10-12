@@ -1,0 +1,78 @@
+---
+import { BASE_RATE } from "@/config";
+
+type Props = {
+  heading?: string;
+  blurb?: string;
+  compact?: boolean;
+};
+
+const {
+  heading = "Get Base Rate every Sunday",
+  blurb = "Free. One macro read, one lesson on how people really decide, and what I changed in my own portfolio. No hot tips, no hype.",
+  compact = false,
+} = Astro.props;
+
+const showCopy = !BASE_RATE.formShowsOwnCopy;
+---
+
+<div
+  class:list={[
+    "rounded-lg border-2 border-dashed border-border",
+    showCopy ? (compact ? "p-4" : "p-5 sm:p-6") : "p-3 sm:p-4",
+  ]}
+>
+  {
+    showCopy ? (
+      <>
+        <p class="text-xs font-semibold tracking-widest uppercase opacity-70">
+          {BASE_RATE.name} &middot; {BASE_RATE.cadence}
+        </p>
+        <h2
+          class:list={[
+            "mt-1 font-bold",
+            compact ? "text-lg" : "text-xl sm:text-2xl",
+          ]}
+        >
+          {heading}
+        </h2>
+        <p class="mt-2 text-sm leading-relaxed opacity-90">{blurb}</p>
+      </>
+    ) : (
+      <h2 class="sr-only">Subscribe to {BASE_RATE.name}</h2>
+    )
+  }
+
+  <!--
+    beehiiv form. The loader swaps this script for the form iframe.
+    data-astro-rerun makes it run again after client-side page transitions.
+    Use at most one BaseRateSignup per page.
+  -->
+  <div class:list={[showCopy && "mt-4", "min-h-[5rem]"]}>
+    <script
+      is:inline
+      async
+      data-astro-rerun
+      src="https://subscribe-forms.beehiiv.com/v3/loader.js"
+      data-beehiiv-form={BASE_RATE.formId}></script>
+    <noscript>
+      <a
+        href={BASE_RATE.subscribeUrl}
+        class="inline-block rounded-md bg-foreground px-5 py-2.5 text-sm font-semibold text-background"
+      >
+        Subscribe on beehiiv &rarr;
+      </a>
+    </noscript>
+  </div>
+
+  <p class="mt-3 text-sm">
+    <a
+      href={BASE_RATE.url}
+      target="_blank"
+      rel="noopener"
+      class="underline decoration-dashed underline-offset-4 hover:text-accent"
+    >
+      Read past editions &rarr;
+    </a>
+  </p>
+</div>

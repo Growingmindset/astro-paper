@@ -3,16 +3,44 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
+
 <Layout title="Privacy Policy | RISK ON">
   <Header activeNav="privacy" />
-  <main id="main-content" class="mx-auto max-w-3xl px-4 py-12 text-skin-base">
-    <h1 class="text-2xl font-bold uppercase tracking-wide mb-6">Privacy Policy</h1>
-    <div class="prose prose-invert max-w-none space-y-4">
-      <p>We collect only the information necessary to process your order: name, shipping address, email, and payment details.</p>
-      <p>Payments are processed securely through Stripe. We do not store your credit card information on our servers.</p>
-      <p>Order and shipping information may be shared with our fulfillment partner, Printify, solely to produce and ship your order.</p>
-      <p>We do not sell or share your personal information with third parties for marketing purposes.</p>
-      <p>If you have questions about your data, contact us at <a href="mailto:growingstateofmind@gmail.com" class="underline">growingstateofmind@gmail.com</a>.</p>
+  <main id="main-content" class="text-skin-base mx-auto max-w-3xl px-4 py-12">
+    <h1 class="mb-6 text-2xl font-bold tracking-wide uppercase">
+      Privacy Policy
+    </h1>
+    <div class="prose max-w-none space-y-4 prose-invert">
+      <p>
+        For shop orders, we collect only the information necessary to process
+        your order: name, shipping address, email, and payment details.
+      </p>
+      <p>
+        Payments are processed securely through Stripe. We do not store your
+        credit card information on our servers.
+      </p>
+      <p>
+        Order and shipping information may be shared with our fulfillment
+        partner, Printful, solely to produce and ship your order.
+      </p>
+      <p>
+        If you subscribe to the Base Rate newsletter or another email list on
+        this site, your email address is collected and stored by our email
+        provider (beehiiv) so we can send you what you signed up for. Our signup
+        forms also record where you came from, such as the referring site or a
+        campaign link, so we can see which channels bring in readers. You can
+        unsubscribe at any time from the link in any email.
+      </p>
+      <p>
+        We do not sell or share your personal information with third parties for
+        marketing purposes.
+      </p>
+      <p>
+        If you have questions about your data, contact us at <a
+          href="mailto:growingstateofmind@gmail.com"
+          class="underline">growingstateofmind@gmail.com</a
+        >.
+      </p>
     </div>
   </main>
   <Footer />

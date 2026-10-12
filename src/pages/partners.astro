@@ -187,13 +187,13 @@ const pageDescription = `Referral partner intake for licensed real estate agents
   <main id="main-content" class="mx-auto w-full max-w-3xl px-4 pb-16">
     <!-- ================= HERO ================= -->
     <section class="pt-10 pb-10">
-      <p class="text-accent mb-4 font-mono text-xs tracking-[0.2em] uppercase">
+      <p class="mb-4 font-mono text-xs tracking-[0.2em] text-accent uppercase">
         For licensed agents · eXp Referral Division
       </p>
       <h1 class="text-3xl leading-tight font-semibold sm:text-5xl">
         Send me the ones you can't take.
       </h1>
-      <p class="text-foreground/75 mt-4 max-w-xl text-base sm:text-lg">
+      <p class="mt-4 max-w-xl text-base text-foreground/75 sm:text-lg">
         I'm licensed on the referral side only — no listings, no showings, no
         clients of my own. Which means I'm not competition. I'm somewhere to put
         the business you're currently giving away.
@@ -202,13 +202,13 @@ const pageDescription = `Referral partner intake for licensed real estate agents
       <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
         <a
           href="#intake"
-          class="bg-accent text-background focus-visible:outline-accent inline-block px-5 py-3 text-sm font-medium transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2"
+          class="inline-block bg-accent px-5 py-3 text-sm font-medium text-background transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           Claim your market slot
         </a>
         <a
           href="#terms"
-          class="text-foreground/70 hover:text-foreground focus-visible:outline-accent text-sm underline underline-offset-4 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
+          class="text-sm text-foreground/70 underline underline-offset-4 transition-colors hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           Or read the terms first &rarr;
         </a>
@@ -218,13 +218,13 @@ const pageDescription = `Referral partner intake for licensed real estate agents
       <div class="mt-12 grid gap-4 sm:grid-cols-2">
         {
           DESK.lanes.map(lane => (
-            <div class="border-border flex flex-col border p-5">
-              <p class="text-accent font-mono text-[11px] tracking-[0.2em] uppercase">
+            <div class="flex flex-col border border-border p-5">
+              <p class="font-mono text-[11px] tracking-[0.2em] text-accent uppercase">
                 {lane.tag}
               </p>
               <h2 class="mt-3 text-lg font-medium">{lane.title}</h2>
-              <p class="text-foreground/70 mt-2 grow text-sm">{lane.body}</p>
-              <p class="border-border mt-4 border-t pt-4 text-sm font-medium">
+              <p class="mt-2 grow text-sm text-foreground/70">{lane.body}</p>
+              <p class="mt-4 border-t border-border pt-4 text-sm font-medium">
                 {lane.outcome}
               </p>
             </div>
@@ -234,20 +234,20 @@ const pageDescription = `Referral partner intake for licensed real estate agents
     </section>
 
     <!-- ================= TERMS ================= -->
-    <section id="terms" class="border-border scroll-mt-8 border-t py-14">
+    <section id="terms" class="scroll-mt-8 border-t border-border py-14">
       <h2 class="text-2xl font-semibold sm:text-3xl">How I work</h2>
       <ol class="mt-8 space-y-0">
         {
           DESK.terms.map((term, i) => (
             <li class="step grid grid-cols-[2.5rem_1fr] gap-x-4 pb-8 last:pb-0">
               <div class="step-rail">
-                <span class="text-accent font-mono text-sm font-semibold">
+                <span class="font-mono text-sm font-semibold text-accent">
                   {String(i + 1).padStart(2, "0")}
                 </span>
               </div>
               <div class="pt-0.5">
                 <h3 class="text-lg font-medium">{term.title}</h3>
-                <p class="text-foreground/70 mt-1 text-sm sm:text-base">
+                <p class="mt-1 text-sm text-foreground/70 sm:text-base">
                   {term.body}
                 </p>
               </div>
@@ -258,9 +258,9 @@ const pageDescription = `Referral partner intake for licensed real estate agents
     </section>
 
     <!-- ================= THE FORM ================= -->
-    <section id="intake" class="border-border scroll-mt-8 border-t py-14">
+    <section id="intake" class="scroll-mt-8 border-t border-border py-14">
       <h2 class="text-2xl font-semibold sm:text-3xl">Get on the sheet</h2>
-      <p class="text-foreground/70 mt-2 text-sm sm:text-base">
+      <p class="mt-2 text-sm text-foreground/70 sm:text-base">
         Takes about a minute. Required fields are marked with an asterisk — the
         rest just helps me route accurately.
       </p>
@@ -268,18 +268,19 @@ const pageDescription = `Referral partner intake for licensed real estate agents
       <!-- Success state -->
       <div
         id="form-success"
-        class="border-accent mt-8 hidden border p-6"
+        class="mt-8 hidden border border-accent p-6"
         tabindex="-1"
       >
-        <p class="text-accent font-mono text-xs tracking-widest uppercase">
+        <p class="font-mono text-xs tracking-widest text-accent uppercase">
           You're on the sheet
         </p>
         <h3 class="mt-2 text-xl font-medium">
           I'll confirm your market slot within {DESK.responseWindow}.
         </h3>
-        <p class="text-foreground/75 mt-2 text-sm">
-          When something comes across my bar headed your way, you'll hear from me
-          the same day. Anything you can't service, send it over. Direct line:{" "}
+        <p class="mt-2 text-sm text-foreground/75">
+          When something comes across my bar headed your way, you'll hear from
+          me the same day. Anything you can't service, send it over. Direct
+          line:{" "}
           <a href={`mailto:${DESK.contactEmail}`} class="text-accent underline"
             >{DESK.contactEmail}</a
           >.
@@ -287,7 +288,7 @@ const pageDescription = `Referral partner intake for licensed real estate agents
         <button
           id="send-another"
           type="button"
-          class="border-border focus-visible:outline-accent mt-5 border px-4 py-2 text-sm transition-colors hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2"
+          class="mt-5 border border-border px-4 py-2 text-sm transition-colors hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           Add another agent
         </button>
@@ -309,7 +310,7 @@ const pageDescription = `Referral partner intake for licensed real estate agents
         <!-- ---------- Who you are ---------- -->
         <fieldset>
           <legend
-            class="text-foreground/60 mb-5 font-mono text-xs tracking-[0.2em] uppercase"
+            class="mb-5 font-mono text-xs tracking-[0.2em] text-foreground/60 uppercase"
           >
             Who you are
           </legend>
@@ -357,7 +358,7 @@ const pageDescription = `Referral partner intake for licensed real estate agents
               />
             </div>
 
-            <p class="text-foreground/60 -mt-2 text-xs sm:col-span-2">
+            <p class="-mt-2 text-xs text-foreground/60 sm:col-span-2">
               Give me at least one — phone or email.
             </p>
           </div>
@@ -366,7 +367,7 @@ const pageDescription = `Referral partner intake for licensed real estate agents
         <!-- ---------- What you cover ---------- -->
         <fieldset>
           <legend
-            class="text-foreground/60 mb-5 font-mono text-xs tracking-[0.2em] uppercase"
+            class="mb-5 font-mono text-xs tracking-[0.2em] text-foreground/60 uppercase"
           >
             What you cover
           </legend>
@@ -387,7 +388,7 @@ const pageDescription = `Referral partner intake for licensed real estate agents
             </div>
 
             <div>
-              <p class="text-foreground/75 mb-2 text-[0.8125rem]">
+              <p class="mb-2 text-[0.8125rem] text-foreground/75">
                 Specialties
               </p>
               <div class="grid gap-2 sm:grid-cols-2">
@@ -415,7 +416,7 @@ const pageDescription = `Referral partner intake for licensed real estate agents
         <!-- ---------- How we'd work ---------- -->
         <fieldset>
           <legend
-            class="text-foreground/60 mb-5 font-mono text-xs tracking-[0.2em] uppercase"
+            class="mb-5 font-mono text-xs tracking-[0.2em] text-foreground/60 uppercase"
           >
             How we'd work
           </legend>
@@ -430,7 +431,7 @@ const pageDescription = `Referral partner intake for licensed real estate agents
             </div>
 
             <div>
-              <p class="text-foreground/75 mb-2 text-[0.8125rem]">
+              <p class="mb-2 text-[0.8125rem] text-foreground/75">
                 Are you with eXp?
               </p>
               <div class="flex flex-wrap gap-x-6 gap-y-2">
@@ -443,14 +444,14 @@ const pageDescription = `Referral partner intake for licensed real estate agents
                   <span>Different brokerage</span>
                 </label>
               </div>
-              <p class="text-foreground/60 mt-2 text-xs">
+              <p class="mt-2 text-xs text-foreground/60">
                 If so, referrals between us run through the eXp portal and pay
                 out faster.
               </p>
             </div>
 
             <div>
-              <p class="text-foreground/75 mb-2 text-[0.8125rem]">
+              <p class="mb-2 text-[0.8125rem] text-foreground/75">
                 Fee arrangement
               </p>
               <div class="grid gap-2">
@@ -512,28 +513,34 @@ const pageDescription = `Referral partner intake for licensed real estate agents
           <button
             id="submit-btn"
             type="submit"
-            class="bg-accent text-background focus-visible:outline-accent px-6 py-3 text-sm font-medium transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-50"
+            class="bg-accent px-6 py-3 text-sm font-medium text-background transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:opacity-50"
           >
             Send it to {DESK.firstName}
           </button>
 
-          <p id="form-status" class="mt-4 text-sm" role="status" aria-live="polite"></p>
+          <p
+            id="form-status"
+            class="mt-4 text-sm"
+            role="status"
+            aria-live="polite"
+          >
+          </p>
         </div>
       </form>
     </section>
 
     <!-- ================= FAQ ================= -->
-    <section class="border-border border-t py-14">
+    <section class="border-t border-border py-14">
       <h2 class="text-2xl font-semibold sm:text-3xl">Questions</h2>
-      <div class="border-border mt-6 border-t">
+      <div class="mt-6 border-t border-border">
         {
           DESK.faqs.map(item => (
-            <details class="faq border-border border-b">
+            <details class="faq border-b border-border">
               <summary>
                 <span>{item.q}</span>
                 <span class="faq-icon" aria-hidden="true" />
               </summary>
-              <p class="text-foreground/75 pb-5 text-sm sm:text-base">
+              <p class="pb-5 text-sm text-foreground/75 sm:text-base">
                 {item.a}
               </p>
             </details>
@@ -543,11 +550,13 @@ const pageDescription = `Referral partner intake for licensed real estate agents
     </section>
 
     <!-- ================= DISCLOSURES ================= -->
-    <section class="border-border border-t py-12">
-      <h2 class="text-foreground/60 font-mono text-xs tracking-[0.2em] uppercase">
+    <section class="border-t border-border py-12">
+      <h2
+        class="font-mono text-xs tracking-[0.2em] text-foreground/60 uppercase"
+      >
         Disclosures
       </h2>
-      <ul class="text-foreground/70 mt-4 space-y-2 text-sm">
+      <ul class="mt-4 space-y-2 text-sm text-foreground/70">
         {
           DESK.disclosures.map(d => (
             <li class="grid grid-cols-[1rem_1fr] gap-2">
@@ -859,7 +868,7 @@ const pageDescription = `Referral partner intake for licensed real estate agents
       successPanel.classList.remove("hidden");
       successPanel.scrollIntoView({ behavior: "smooth", block: "center" });
       successPanel.focus();
-    } catch (error) {
+    } catch {
       setStatus(
         "That didn't go through. Try again, or email me directly.",
         "error"

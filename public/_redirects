@@ -7,3 +7,30 @@
 /homes   https://exprealty.com/@rudygalan   302
 /referral   /txhouse   301
 /referral/  /txhouse   301
+# Retired page: keep any shared links alive
+/workout-partner   /   302
+/workout-partner/  /   302
+
+# Portfolio log became How I Invest (trades now live in Base Rate)
+/posts/2026-portfolio-log    /posts/how-i-invest   301
+/posts/2026-portfolio-log/   /posts/how-i-invest   301
+
+# Lab and Library were merged into Writing
+/posts      /writing  301
+/posts/     /writing  301
+/library    /writing  301
+/library/   /writing  301
+
+# Tracked short links. beehiiv's attribution script records the UTMs, so
+# the dashboard shows which channel actually converts. Use these in bios/posts.
+/br         /newsletter?utm_source=direct&utm_medium=shortlink   302
+/br/ig      /newsletter?utm_source=instagram&utm_medium=social   302
+/br/x       /newsletter?utm_source=x&utm_medium=social           302
+/br/yt      /newsletter?utm_source=youtube&utm_medium=social     302
+/br/tt      /newsletter?utm_source=tiktok&utm_medium=social      302
+/br/li      /newsletter?utm_source=linkedin&utm_medium=social    302
+/nz         /nonzero?utm_source=direct&utm_medium=shortlink      302
+/nz/ig      /nonzero?utm_source=instagram&utm_medium=social      302
+/nz/x       /nonzero?utm_source=x&utm_medium=social              302
+/nz/yt      /nonzero?utm_source=youtube&utm_medium=social        302
+/nz/tt      /nonzero?utm_source=tiktok&utm_medium=social         302

@@ -1,0 +1,145 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import { SITE } from "@/config";
+
+const proof = [
+  {
+    title: "Residential deal analysis",
+    body: "Evaluated multiple live-in flip properties end to end: comps and CMAs, walkthrough condition notes, rehab scope and budget, and financing terms. Made offers, lost one, and kept the numbers.",
+  },
+  {
+    title: "Automated data pipeline",
+    body: "Built a GitHub Actions job that pulled FRED economic data (fed funds, CPI, payrolls, producer prices) into a live market post on a schedule, and one that now keeps this site's latest newsletter issues current.",
+  },
+  {
+    title: "This site and its storefront",
+    body: "Built and run on Astro and Cloudflare Pages, with email capture, domain verification, and a shop wired to Stripe payment links and Printful fulfillment.",
+  },
+  {
+    title: "A $20,000 risk program",
+    body: "Designed the Nonzero ruleset: a fixed budget, monthly limits that never borrow forward, stop-loss rules, and a public ledger. It's project controls applied to a year of decisions.",
+  },
+  {
+    title: "Fourteen years of live operations",
+    body: "High-volume hotel bars across seven-plus properties, currently working the top-earning station at a major downtown hotel. Throughput, cash handling, and reading people under pressure, every night.",
+  },
+];
+
+const looking = [
+  "Owner's rep and owner-side project management",
+  "Project controls and scheduling (Primavera P6)",
+  "Energy, data center, and large-scale construction projects",
+];
+---
+
+<Layout
+  title={`Work | ${SITE.title}`}
+  description="Project management and owner's rep work: what Rudy Galan brings to a project, and what he's built so far."
+>
+  <Header />
+  <Breadcrumb />
+  <main id="main-content" class="app-layout pb-16">
+    <section class="pt-4 pb-8">
+      <h1 class="text-3xl font-bold sm:text-4xl">Work</h1>
+      <p class="mt-3 max-w-2xl text-base leading-relaxed sm:text-lg">
+        An owner's rep has one job: protect the owner's money, schedule, and
+        interests when everyone else on the project has their own. That's the
+        work I'm building toward, in energy and large-scale infrastructure.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold tracking-wide">Where I am</h2>
+      <ul
+        class="mt-3 max-w-2xl list-disc space-y-1 ps-5 text-sm leading-relaxed"
+      >
+        <li>
+          Pursuing the <strong>CAPM</strong> and <strong
+            >Oracle Primavera P6</strong
+          >.
+        </li>
+        <li>
+          Active Texas real estate license (eXp Realty, referral division).
+        </li>
+        <li>
+          No bachelor's degree, by choice. I'd rather be judged on what I've
+          built and how I decide, and all of it is published here.
+        </li>
+      </ul>
+    </section>
+
+    <section class="mt-12 border-t border-dashed border-border pt-10">
+      <h2 class="text-2xl font-semibold tracking-wide">
+        What I've actually done
+      </h2>
+      <ul class="mt-6 grid list-none grid-cols-1 gap-4 ps-0 sm:grid-cols-2">
+        {
+          proof.map(p => (
+            <li class="rounded-lg border border-border p-5">
+              <h3 class="font-semibold">{p.title}</h3>
+              <p class="mt-2 text-sm leading-relaxed opacity-90">{p.body}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section class="mt-12 border-t border-dashed border-border pt-10">
+      <h2 class="text-2xl font-semibold tracking-wide">
+        How I'd work on your project
+      </h2>
+      <ol
+        class="mt-4 max-w-2xl list-decimal space-y-2 ps-5 text-sm leading-relaxed"
+      >
+        <li>
+          <strong>Start from the base rate.</strong> How do projects like this usually
+          go over budget and late? Plan for that, not the brochure.
+        </li>
+        <li>
+          <strong>Every dollar has a line.</strong> Budget, contingency, and change
+          orders tracked in the open, not reconciled at the end.
+        </li>
+        <li>
+          <strong>Grade decisions, not outcomes.</strong> Write down why we chose
+          what we chose, so the next call is better whether or not this one got lucky.
+        </li>
+        <li>
+          <strong>Say the hard thing early.</strong> Bad news gets cheaper the sooner
+          the owner hears it.
+        </li>
+      </ol>
+    </section>
+
+    <section class="mt-12 border-t border-dashed border-border pt-10">
+      <h2 class="text-2xl font-semibold tracking-wide">What I'm looking for</h2>
+      <ul class="mt-3 list-disc space-y-1 ps-5 text-sm">
+        {looking.map(item => <li>{item}</li>)}
+      </ul>
+      <p class="mt-6 max-w-2xl text-sm leading-relaxed">
+        If you own, fund, or run projects like these and want someone in your
+        corner, or you just want to compare notes, email me. I'm easiest to
+        convince in a direct conversation.
+      </p>
+      <a
+        href="mailto:growingstateofmind@gmail.com?subject=Project%20work"
+        class="mt-4 inline-block rounded-md bg-foreground px-5 py-2.5 text-sm font-semibold text-background hover:opacity-85"
+      >
+        Email me about a project &rarr;
+      </a>
+      <p class="mt-3 text-sm">
+        <a
+          href="https://www.linkedin.com/in/rudy-galan-89262a40b/"
+          target="_blank"
+          rel="noopener"
+          class="underline decoration-dashed underline-offset-4 hover:text-accent"
+        >
+          LinkedIn
+        </a>
+      </p>
+    </section>
+  </main>
+  <Footer />
+</Layout>

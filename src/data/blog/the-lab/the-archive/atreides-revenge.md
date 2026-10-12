@@ -43,10 +43,7 @@ Train at your own risk — I'm not responsible for injuries.
 
 <a href="/downloads/atreides-revenge.pdf" download class="btn-download">📄 Download the Printable PDF</a>
 
-<div class="email-opt-in">
-<p>Want to know when I drop the next one? Drop your email — no spam, just new programs.</p>
-<script async data-uid="006aec9548" src="https://risk-on.kit.com/006aec9548/index.js"></script>
-</div>
+<p style="font-size: 0.9rem; opacity: 0.85; margin-top: 1rem;">This program is retired. My current one is <a href="/posts/atreides-powerbuilding">Atreides Powerbuilding</a>.</p>
 
 </div>
 
@@ -65,11 +62,6 @@ Train at your own risk — I'm not responsible for injuries.
   border-radius: 6px;
   text-decoration: none;
   margin-bottom: 1rem;
-}
-.email-opt-in p {
-  font-size: 0.9rem;
-  opacity: 0.85;
-  margin-bottom: 0.5rem;
 }
 </style>
 
@@ -225,6 +217,5 @@ If it's worth something to you and you want to throw a few bucks back my way, th
 
 <a href="/shop/" class="btn-shop">Shop Risk On →</a>
 
-<p class="tip-link" style="font-size: 0.85rem; opacity: 0.75;">or <a href="https://risk-on.kit.com/products/rudy-galan">send a tip</a> if a shirt's not your thing</p>
 
 </div>

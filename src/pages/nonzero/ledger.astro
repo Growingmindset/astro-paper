@@ -1,0 +1,234 @@
+---
+import ledgerCsv from "@/data/nonzero-ledger.csv?raw";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import { SITE } from "@/config";
+
+// The Mr. Nonzero rules: $20,000 for 2027, split evenly by month. Unused money
+// rolls forward, a bad month never borrows from the next, and winnings are
+// swept out (never recycled). So "budget used" counts losses only.
+const YEAR = 2027;
+const TOTAL = 20000;
+const MONTHS = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
+// Tiny CSV reader: handles quoted fields with commas.
+function parseCsv(text: string): string[][] {
+  const rows: string[][] = [];
+  let row: string[] = [];
+  let cell = "";
+  let quoted = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (quoted) {
+      if (c === '"' && text[i + 1] === '"') {
+        cell += '"';
+        i++;
+      } else if (c === '"') quoted = false;
+      else cell += c;
+    } else if (c === '"') quoted = true;
+    else if (c === ",") {
+      row.push(cell);
+      cell = "";
+    } else if (c === "\n" || c === "\r") {
+      if (c === "\r" && text[i + 1] === "\n") i++;
+      row.push(cell);
+      cell = "";
+      if (row.some(v => v.trim() !== "")) rows.push(row);
+      row = [];
+    } else cell += c;
+  }
+  row.push(cell);
+  if (row.some(v => v.trim() !== "")) rows.push(row);
+  return rows;
+}
+
+const [header = [], ...body] = parseCsv(ledgerCsv);
+const col = (name: string) => header.indexOf(name);
+
+const sessions = body
+  .map(r => {
+    const date = (r[col("date")] ?? "").trim();
+    const buyIn = Number(r[col("buy_in")]);
+    const cashOut = Number(r[col("cash_out")]);
+    return {
+      date,
+      game: (r[col("game")] ?? "").trim(),
+      buyIn,
+      cashOut,
+      net: cashOut - buyIn,
+      grade: (r[col("grade")] ?? "").trim(),
+      note: (r[col("note")] ?? "").trim(),
+    };
+  })
+  .filter(
+    s =>
+      /^\d{4}-\d{2}-\d{2}$/.test(s.date) &&
+      Number.isFinite(s.buyIn) &&
+      Number.isFinite(s.cashOut) &&
+      s.date.startsWith(String(YEAR))
+  )
+  .sort((a, b) => b.date.localeCompare(a.date));
+
+const money = (n: number) =>
+  (n < 0 ? "-" : "") +
+  "$" +
+  Math.abs(n).toLocaleString("en-US", {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 2,
+  });
+
+// Monthly rollup with rollover: available = allowance to date - losses to date.
+let cumulativeLoss = 0;
+const months = MONTHS.map((name, i) => {
+  const key = `${YEAR}-${String(i + 1).padStart(2, "0")}`;
+  const inMonth = sessions.filter(s => s.date.startsWith(key));
+  const loss = inMonth.reduce((sum, s) => sum + Math.max(0, -s.net), 0);
+  const net = inMonth.reduce((sum, s) => sum + s.net, 0);
+  cumulativeLoss += loss;
+  const allowanceToDate = Math.round(((TOTAL * (i + 1)) / 12) * 100) / 100;
+  return {
+    name,
+    count: inMonth.length,
+    net,
+    loss,
+    remaining: allowanceToDate - cumulativeLoss,
+  };
+});
+
+const totalNet = sessions.reduce((sum, s) => sum + s.net, 0);
+const totalLoss = cumulativeLoss;
+const hasData = sessions.length > 0;
+---
+
+<Layout
+  title={`Mr. Nonzero Ledger | ${SITE.title}`}
+  description="Every session in the Mr. Nonzero poker year: buy-in, cash-out, and the monthly budget with rollover."
+>
+  <Header />
+  <Breadcrumb />
+  <main id="main-content" class="app-layout pb-16">
+    <section class="pt-4 pb-6">
+      <h1 class="text-3xl font-bold sm:text-4xl">Mr. Nonzero ledger</h1>
+      <p class="mt-3 max-w-2xl text-base leading-relaxed">
+        Every session, logged within 24 hours. Budget used counts losses only,
+        because winnings are swept out and never recycled. Rules are on the <a
+          href="/nonzero"
+          class="underline decoration-dashed underline-offset-4">Mr. Nonzero</a
+        > page.
+      </p>
+    </section>
+
+    {
+      !hasData && (
+        <p class="rounded-lg border-2 border-dashed border-border p-5 text-sm">
+          The ledger opens January 1, 2027. Nothing is logged yet.
+        </p>
+      )
+    }
+
+    <section class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+      <div class="rounded-lg border border-border p-4">
+        <p class="text-xs tracking-widest uppercase opacity-60">Net result</p>
+        <p class="mt-1 text-xl font-bold">{money(totalNet)}</p>
+      </div>
+      <div class="rounded-lg border border-border p-4">
+        <p class="text-xs tracking-widest uppercase opacity-60">Budget used</p>
+        <p class="mt-1 text-xl font-bold">{money(totalLoss)}</p>
+      </div>
+      <div class="rounded-lg border border-border p-4">
+        <p class="text-xs tracking-widest uppercase opacity-60">Left of $20k</p>
+        <p class="mt-1 text-xl font-bold">{money(TOTAL - totalLoss)}</p>
+      </div>
+      <div class="rounded-lg border border-border p-4">
+        <p class="text-xs tracking-widest uppercase opacity-60">Sessions</p>
+        <p class="mt-1 text-xl font-bold">{sessions.length}</p>
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-2xl font-semibold tracking-wide">By month</h2>
+      <p class="mt-1 text-sm opacity-75">
+        "Available" is the allowance to date ($1,666.67 a month) minus losses to
+        date, so unused money rolls forward.
+      </p>
+      <div class="mt-4 overflow-x-auto">
+        <table class="w-full text-left text-sm">
+          <thead>
+            <tr class="border-b border-border">
+              <th class="py-2 pe-4">Month</th>
+              <th class="py-2 pe-4">Sessions</th>
+              <th class="py-2 pe-4">Net</th>
+              <th class="py-2 pe-4">Lost</th>
+              <th class="py-2">Available</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              months.map(m => (
+                <tr class="border-b border-border/50">
+                  <td class="py-2 pe-4">{m.name}</td>
+                  <td class="py-2 pe-4">{m.count}</td>
+                  <td class="py-2 pe-4">{money(m.net)}</td>
+                  <td class="py-2 pe-4">{money(m.loss)}</td>
+                  <td class="py-2">{money(m.remaining)}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    {
+      hasData && (
+        <section class="mt-10">
+          <h2 class="text-2xl font-semibold tracking-wide">Sessions</h2>
+          <div class="mt-4 overflow-x-auto">
+            <table class="w-full text-left text-sm">
+              <thead>
+                <tr class="border-b border-border">
+                  <th class="py-2 pe-4">Date</th>
+                  <th class="py-2 pe-4">Game</th>
+                  <th class="py-2 pe-4">Buy-in</th>
+                  <th class="py-2 pe-4">Cash-out</th>
+                  <th class="py-2 pe-4">Net</th>
+                  <th class="py-2 pe-4">Decision grade</th>
+                  <th class="py-2">Note</th>
+                </tr>
+              </thead>
+              <tbody>
+                {sessions.map(s => (
+                  <tr class="border-b border-border/50 align-top">
+                    <td class="py-2 pe-4 whitespace-nowrap">{s.date}</td>
+                    <td class="py-2 pe-4">{s.game}</td>
+                    <td class="py-2 pe-4">{money(s.buyIn)}</td>
+                    <td class="py-2 pe-4">{money(s.cashOut)}</td>
+                    <td class="py-2 pe-4">{money(s.net)}</td>
+                    <td class="py-2 pe-4">{s.grade}</td>
+                    <td class="py-2">{s.note}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )
+    }
+  </main>
+  <Footer />
+</Layout>

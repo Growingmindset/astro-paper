@@ -1,107 +1,186 @@
 ---
-import { getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
-import LinkButton from "@/components/LinkButton.astro";
-import Card from "@/components/Card.astro";
-import getSortedPosts from "@/utils/getSortedPosts";
-import { SITE } from "@/config";
+import BaseRateSignup from "@/components/BaseRateSignup.astro";
+import LatestIssues from "@/components/LatestIssues.astro";
 
-// 1. Fetch all published posts (excluding drafts)
-const posts = await getCollection("blog", ({ data }) => !data.draft);
-const sortedPosts = getSortedPosts(posts);
+const tracks = [
+  {
+    href: "/newsletter",
+    label: "Markets",
+    name: "Base Rate",
+    body: "A free weekly letter. One macro read, one lesson on how people decide, and what I changed in my own portfolio, on the record.",
+    cta: "Read Base Rate",
+  },
+  {
+    href: "/nonzero",
+    label: "Poker · 2027",
+    name: "Mr. Nonzero",
+    body: "Twelve months of poker with a hard $20,000 cap and a public ledger. Not a gambling story. A year-long test of deciding under pressure.",
+    cta: "See the rules and ledger",
+  },
+  {
+    href: "/work",
+    label: "Projects",
+    name: "Work",
+    body: "Project management and owner's rep work, built on the same habits: define the risk, track every dollar, grade the decision.",
+    cta: "What I bring to a project",
+  },
+];
 
-// 2. Define the tags reserved EXCLUSIVELY for The Library
-const libraryTags = ["transmissions", "deconstructions", "academic-systems"];
-
-// 3. The Firewall: Filter OUT any post that contains a Library tag
-const labPosts = sortedPosts.filter(post => 
-  !post.data.tags?.some(tag => libraryTags.includes(tag)) &&
-  !post.data.archived
-);
-
-// 4. Feed ONLY the remaining operator logs into your Featured and Recent sections
-const featuredPosts = labPosts.filter(({ data }) => data.featured);
+const startHere = [
+  {
+    href: "/posts/wrong-order",
+    title: "Most People Build Wealth in the Wrong Order",
+    note: "The sequence I use: cash flow, then compounding, then leverage.",
+  },
+  {
+    href: "/posts/the-nonzero-year",
+    title: "The Nonzero Year",
+    note: "Why I'm putting $20k into a year of decisions instead of a car.",
+  },
+  {
+    href: "/posts/how-i-invest",
+    title: "How I Invest",
+    note: "The rules I invest by and the metrics I watch.",
+  },
+];
 ---
 
 <Layout>
   <Header />
   <main id="main-content" class="app-layout">
-    <section id="hero" class="pb-6 pt-8">
-      <h1 class="my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl">Systems Builder & Operator</h1>
-      
-      <a  target="_blank"
-        href="/rss.xml"
-        class="rss-link mb-6 inline-block"
-        aria-label="rss feed"
-        title="RSS Feed"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="mb-2 h-6 w-6 scale-110 fill-muted sm:mb-3 sm:scale-125">
-          <path d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"></path>
-          <path d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"></path>
-          <circle cx="6" cy="18" r="2"></circle>
-        </svg>
-        <span class="sr-only">RSS Feed</span>
-      </a>
-      
-      <p class="my-2 text-base leading-relaxed">
-        This site is where I document what I'm building — practical systems for money, training, and the physics underneath both. No filler, just what's actually working.
+    <section id="hero" class="pt-8 pb-8 sm:pt-12">
+      <p class="text-sm font-semibold tracking-widest uppercase opacity-70">
+        Rudy Galan &middot; San Antonio, TX
       </p>
-
-      <p class="my-2 text-base leading-relaxed font-semibold text-skin-accent">
-        <LinkButton href="/posts/wrong-order" class="hover:underline underline-offset-4">
-          New here? Start with the order most people get wrong →
-        </LinkButton>
-      </p>
-      
-      <p class="my-2 mt-4">
-        Track active builds in <span class="whitespace-nowrap"><LinkButton href="/posts" class="underline decoration-dashed underline-offset-4 hover:text-accent">The Lab</LinkButton>,</span> read core essays in <span class="whitespace-nowrap"><LinkButton href="/library" class="underline decoration-dashed underline-offset-4 hover:text-accent">The Library</LinkButton>,</span> or check out physical goods in the <span class="whitespace-nowrap"><LinkButton href="/shop" class="underline decoration-dashed underline-offset-4 hover:text-accent">Shop</LinkButton></span>.
+      <h1 class="mt-3 mb-5 text-3xl leading-tight font-bold sm:text-5xl">
+        Markets, risk, and decisions.
+      </h1>
+      <p class="max-w-2xl text-base leading-relaxed sm:text-lg">
+        I've spent 14 years behind high-volume hotel bars watching how people
+        talk, negotiate, and decide, and I study markets and economics on my own
+        terms. Here I publish what I see, what I'm doing about it, and how it
+        turns out. No hindsight edits.
       </p>
     </section>
 
-    <hr class="my-6 border-dashed border-border" />
+    <section id="newsletter" class="pb-10">
+      <BaseRateSignup />
+    </section>
 
-    {
-      featuredPosts.length > 0 && (
-        <>
-          <section id="featured" class="pb-6 pt-12">
-            <h2 class="text-2xl font-semibold tracking-wide">Featured Systems</h2>
-            <ul>
-              {featuredPosts.map(post => (
-                <Card {...post} />
-              ))}
-            </ul>
-          </section>
-          <hr class="my-6 border-dashed border-border" />
-        </>
-      )
-    }
+    <LatestIssues />
 
-    <section id="operator-profile" class="my-6 grid grid-cols-1 gap-6 items-center border-t border-dashed border-border pt-8 sm:grid-cols-3">
+    <section
+      id="tracks"
+      class="border-t border-dashed border-border pt-10 pb-10"
+    >
+      <h2 class="text-2xl font-semibold tracking-wide">
+        One question, three tracks
+      </h2>
+      <p class="mt-2 max-w-2xl text-sm leading-relaxed opacity-80">
+        How do you make good decisions when you can't know the outcome? I'm
+        working that out in public, in markets, at the poker table, and on real
+        projects.
+      </p>
+      <ul class="mt-6 grid list-none grid-cols-1 gap-4 ps-0 sm:grid-cols-3">
+        {
+          tracks.map(track => (
+            <li class="flex flex-col rounded-lg border border-border p-5">
+              <p class="text-xs font-semibold tracking-widest uppercase opacity-60">
+                {track.label}
+              </p>
+              <h3 class="mt-1 text-lg font-bold">{track.name}</h3>
+              <p class="mt-2 grow text-sm leading-relaxed opacity-90">
+                {track.body}
+              </p>
+              <a
+                href={track.href}
+                class="mt-4 text-sm font-medium text-accent underline decoration-dashed underline-offset-4 hover:decoration-solid"
+              >
+                {track.cta} &rarr;
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <p class="mt-6 max-w-2xl text-sm leading-relaxed opacity-80">
+        The brand underneath all three is
+        <a
+          href="/shop"
+          class="font-medium underline decoration-dashed underline-offset-4 hover:text-accent"
+          >Risk On</a
+        >: bet on yourself, with the numbers. The shirts are for people who do.
+      </p>
+    </section>
+
+    <section
+      id="start-here"
+      class="border-t border-dashed border-border pt-10 pb-6"
+    >
+      <h2 class="text-2xl font-semibold tracking-wide">
+        New here? Start with these
+      </h2>
+      <ol class="mt-4 list-none space-y-4 ps-0">
+        {
+          startHere.map((item, i) => (
+            <li class="flex gap-4">
+              <span class="font-mono text-sm opacity-50">0{i + 1}</span>
+              <div>
+                <a
+                  href={item.href}
+                  class="font-medium text-accent decoration-dashed underline-offset-4 hover:underline"
+                >
+                  {item.title}
+                </a>
+                <p class="text-sm opacity-80">{item.note}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+      <p class="mt-6 text-sm">
+        <a
+          href="/writing"
+          class="font-medium underline decoration-dashed underline-offset-4 hover:text-accent"
+        >
+          All writing &rarr;
+        </a>
+      </p>
+    </section>
+
+    <section
+      id="about-short"
+      class="my-10 grid grid-cols-1 items-center gap-6 border-t border-dashed border-border pt-10 sm:grid-cols-3"
+    >
       <div class="flex justify-center sm:col-span-1">
-        <img 
-          src="/headshot.jpg" 
-          alt="Rudy Galan, professional operator and systems builder in San Antonio, Texas" 
-          class="w-48 h-48 rounded-full object-cover border-2 border-skin-line bg-skin-card shadow-sm sm:w-full sm:h-auto sm:aspect-square sm:rounded-lg"
+        <img
+          src="/headshot.jpg"
+          alt="Rudy Galan in San Antonio, Texas"
+          class="h-48 w-48 rounded-full border-2 border-border object-cover shadow-sm sm:aspect-square sm:h-auto sm:w-full sm:rounded-lg"
         />
       </div>
-      <div class="sm:col-span-2 flex flex-col justify-center">
-        <h3 class="text-xl font-semibold text-skin-base mb-2">Meet the Operator</h3>
-        <p class="text-sm leading-relaxed text-skin-base opacity-90">
-          Over a decade in high-volume hospitality funded 150+ credits in STEM — biology, physics, and economics — plus my own investing. Curiosity and an internet connection funded the rest. I'm building toward project management in large-scale energy infrastructure — the physical backbone the next economy will actually run on.
+      <div class="flex flex-col justify-center sm:col-span-2">
+        <h2 class="mb-2 text-xl font-semibold">Who's writing this</h2>
+        <p class="text-sm leading-relaxed opacity-90">
+          I'm a bartender, not a credentialed insider. I left school on purpose
+          and treat real projects as the curriculum: my own portfolio, real
+          estate deals, this site, and a year of poker. I'm pursuing the CAPM,
+          Oracle Primavera P6, and the Series 65, building toward owner's rep
+          work in energy and infrastructure and a market-analysis practice of my
+          own.
         </p>
-        <p class="text-sm mt-3">
-          <LinkButton href="/about" class="text-skin-accent font-medium hover:underline inline-flex items-center gap-1">
-            Read the full brief
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </LinkButton>
+        <p class="mt-3 text-sm">
+          <a
+            href="/about"
+            class="font-medium text-accent underline decoration-dashed underline-offset-4 hover:decoration-solid"
+          >
+            The full story &rarr;
+          </a>
         </p>
       </div>
     </section>
-
   </main>
 
   <Footer />

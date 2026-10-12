@@ -56,10 +56,10 @@ const structuredData = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    
+
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 
@@ -130,6 +130,14 @@ const structuredData = {
     }
 
     <ClientRouter />
+
+    <!-- beehiiv attribution: records the first-touch source (referrer, UTMs) so
+         subscribers who land on one page and sign up on another stay attributed.
+         Lives in <head> so it runs once per visit, not on every page transition. -->
+    <script
+      is:inline
+      async
+      src="https://subscribe-forms.beehiiv.com/attribution.js"></script>
 
     <script is:inline>
       (function () {
