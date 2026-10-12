@@ -170,29 +170,29 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
   <main id="main-content" class="mx-auto w-full max-w-3xl px-4 pb-16">
     <!-- ================= HERO ================= -->
     <section class="pt-10 pb-10">
-      <p class="text-accent mb-4 font-mono text-xs tracking-[0.2em] uppercase">
+      <p class="mb-4 font-mono text-xs tracking-[0.2em] text-accent uppercase">
         eXp Referral Division
       </p>
       <h1 class="text-3xl leading-tight font-semibold sm:text-5xl">
         I don't sell real estate. I connect you with someone who will.
       </h1>
-      <p class="text-foreground/75 mt-4 max-w-xl text-base sm:text-lg">
-        Buying, selling, or investing — tell me what's going on and I'll
-        match you with a licensed partner agent built for it. No cost to
-        you, no obligation.
+      <p class="mt-4 max-w-xl text-base text-foreground/75 sm:text-lg">
+        Buying, selling, or investing — tell me what's going on and I'll match
+        you with a licensed partner agent built for it. No cost to you, no
+        obligation.
       </p>
 
       <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
         <a
           href="#capture"
-          class="bg-accent text-background focus-visible:outline-accent inline-block px-5 py-3 text-sm font-medium transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2"
+          class="inline-block bg-accent px-5 py-3 text-sm font-medium text-background transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           Tell me what's going on
         </a>
 
         <a
           href={CAPTURE.browseUrl}
-          class="text-foreground/70 hover:text-foreground focus-visible:outline-accent text-sm underline underline-offset-4 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2"
+          class="text-sm text-foreground/70 underline underline-offset-4 transition-colors hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           Or just browse San Antonio listings &rarr;
         </a>
@@ -203,27 +203,25 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
         <div class="grid grid-cols-3 gap-2 sm:gap-3">
           {
             CAPTURE.channels.map(c => (
-              <div class="border-border border p-3 text-center">
+              <div class="border border-border p-3 text-center">
                 <p class="font-mono text-[11px] tracking-wide uppercase opacity-70 sm:text-xs">
                   {c.label}
                 </p>
-                <p class="mt-1 text-[10px] opacity-50 sm:text-xs">
-                  {c.detail}
-                </p>
+                <p class="mt-1 text-[10px] opacity-50 sm:text-xs">{c.detail}</p>
               </div>
             ))
           }
         </div>
 
         <p
-          class="text-foreground/40 py-2 text-center font-mono text-[11px] sm:text-xs"
+          class="py-2 text-center font-mono text-[11px] text-foreground/40 sm:text-xs"
           aria-hidden="true"
         >
           ↓ everything lands in one place ↓
         </p>
 
-        <div class="border-accent border-2 p-4 text-center">
-          <p class="text-accent font-mono text-xs tracking-wide uppercase">
+        <div class="border-2 border-accent p-4 text-center">
+          <p class="font-mono text-xs tracking-wide text-accent uppercase">
             {CAPTURE.name}
           </p>
           <p class="mt-1 text-sm opacity-80">
@@ -232,17 +230,17 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
         </div>
 
         <p
-          class="text-foreground/40 py-2 text-center font-mono text-[11px] sm:text-xs"
+          class="py-2 text-center font-mono text-[11px] text-foreground/40 sm:text-xs"
           aria-hidden="true"
         >
           ↓
         </p>
 
-        <div class="border-border border p-4 text-center">
+        <div class="border border-border p-4 text-center">
           <p class="font-mono text-xs tracking-wide uppercase opacity-70">
             Licensed partner agent
           </p>
-          <p class="text-foreground/70 mt-1 text-sm">
+          <p class="mt-1 text-sm text-foreground/70">
             Runs the transaction, market by market
           </p>
         </div>
@@ -250,20 +248,20 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
     </section>
 
     <!-- ================= HOW IT WORKS ================= -->
-    <section class="border-border border-t py-14">
+    <section class="border-t border-border py-14">
       <h2 class="text-2xl font-semibold sm:text-3xl">How it works</h2>
       <ol class="mt-8 space-y-0">
         {
           CAPTURE.steps.map((step, i) => (
             <li class="step grid grid-cols-[2.5rem_1fr] gap-x-4 pb-8 last:pb-0">
               <div class="step-rail">
-                <span class="text-accent font-mono text-sm font-semibold">
+                <span class="font-mono text-sm font-semibold text-accent">
                   {String(i + 1).padStart(2, "0")}
                 </span>
               </div>
               <div class="pt-0.5">
                 <h3 class="text-lg font-medium">{step.title}</h3>
-                <p class="text-foreground/70 mt-1 text-sm sm:text-base">
+                <p class="mt-1 text-sm text-foreground/70 sm:text-base">
                   {step.body}
                 </p>
               </div>
@@ -274,35 +272,40 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
     </section>
 
     <!-- ================= THE FORM (capture point) ================= -->
-    <section id="capture" class="border-border scroll-mt-8 border-t py-14">
-      <h2 class="text-2xl font-semibold sm:text-3xl">Tell me what's going on</h2>
-      <p class="text-foreground/70 mt-2 text-sm sm:text-base">
-        Required fields are marked with an asterisk. The rest is optional —
-        give me what you've got.
+    <section id="capture" class="scroll-mt-8 border-t border-border py-14">
+      <h2 class="text-2xl font-semibold sm:text-3xl">
+        Tell me what's going on
+      </h2>
+      <p class="mt-2 text-sm text-foreground/70 sm:text-base">
+        Required fields are marked with an asterisk. The rest is optional — give
+        me what you've got.
       </p>
 
       <!-- Success state -->
       <div
         id="form-success"
-        class="border-accent mt-8 hidden border p-6"
+        class="mt-8 hidden border border-accent p-6"
         tabindex="-1"
       >
-        <p class="text-accent font-mono text-xs tracking-widest uppercase">
+        <p class="font-mono text-xs tracking-widest text-accent uppercase">
           Got it
         </p>
         <h3 class="mt-2 text-xl font-medium">
           I'll follow up within {CAPTURE.responseWindow}.
         </h3>
-        <p class="text-foreground/75 mt-2 text-sm">
+        <p class="mt-2 text-sm text-foreground/75">
           If it's urgent, email me directly at{" "}
-          <a href={`mailto:${CAPTURE.contactEmail}`} class="text-accent underline">
+          <a
+            href={`mailto:${CAPTURE.contactEmail}`}
+            class="text-accent underline"
+          >
             {CAPTURE.contactEmail}
           </a>.
         </p>
         <button
           id="send-another"
           type="button"
-          class="border-border focus-visible:outline-accent mt-5 border px-4 py-2 text-sm transition-colors hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2"
+          class="mt-5 border border-border px-4 py-2 text-sm transition-colors hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           Send another
         </button>
@@ -312,32 +315,56 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
         <!-- Honeypot -->
         <div class="hp" aria-hidden="true">
           <label for="company">Company</label>
-          <input id="company" type="text" name="company" tabindex="-1" autocomplete="off" />
+          <input
+            id="company"
+            type="text"
+            name="company"
+            tabindex="-1"
+            autocomplete="off"
+          />
         </div>
 
         <!-- ---------- Who's filling this out ---------- -->
         <fieldset>
-          <legend class="text-foreground/60 mb-5 font-mono text-xs tracking-[0.2em] uppercase">
+          <legend
+            class="mb-5 font-mono text-xs tracking-[0.2em] text-foreground/60 uppercase"
+          >
             Your info
           </legend>
 
           <div class="grid gap-5 sm:grid-cols-2">
             <div class="field sm:col-span-2">
               <label for="contact_name">Your name *</label>
-              <input id="contact_name" name="contact_name" type="text" required autocomplete="name" />
+              <input
+                id="contact_name"
+                name="contact_name"
+                type="text"
+                required
+                autocomplete="name"
+              />
             </div>
 
             <div class="field">
               <label for="contact_phone">Your phone</label>
-              <input id="contact_phone" name="contact_phone" type="tel" autocomplete="tel" />
+              <input
+                id="contact_phone"
+                name="contact_phone"
+                type="tel"
+                autocomplete="tel"
+              />
             </div>
 
             <div class="field">
               <label for="contact_email">Your email</label>
-              <input id="contact_email" name="contact_email" type="email" autocomplete="email" />
+              <input
+                id="contact_email"
+                name="contact_email"
+                type="email"
+                autocomplete="email"
+              />
             </div>
 
-            <p class="text-foreground/60 -mt-2 text-xs sm:col-span-2">
+            <p class="-mt-2 text-xs text-foreground/60 sm:col-span-2">
               Give me at least one — phone or email.
             </p>
           </div>
@@ -345,7 +372,9 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
 
         <!-- ---------- Who this is about ---------- -->
         <fieldset>
-          <legend class="text-foreground/60 mb-5 font-mono text-xs tracking-[0.2em] uppercase">
+          <legend
+            class="mb-5 font-mono text-xs tracking-[0.2em] text-foreground/60 uppercase"
+          >
             Who's this about?
           </legend>
 
@@ -360,7 +389,10 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
             </label>
           </div>
 
-          <div id="someone-else-fields" class="mt-5 hidden grid gap-5 sm:grid-cols-2">
+          <div
+            id="someone-else-fields"
+            class="mt-5 grid hidden gap-5 sm:grid-cols-2"
+          >
             <div class="field sm:col-span-2">
               <label for="prospect_name">Their name *</label>
               <input id="prospect_name" name="prospect_name" type="text" />
@@ -373,7 +405,7 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
               <label for="prospect_email">Their email</label>
               <input id="prospect_email" name="prospect_email" type="email" />
             </div>
-            <p class="text-foreground/60 -mt-2 text-xs sm:col-span-2">
+            <p class="-mt-2 text-xs text-foreground/60 sm:col-span-2">
               Give me at least one — their phone or email.
             </p>
           </div>
@@ -381,7 +413,9 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
 
         <!-- ---------- The details ---------- -->
         <fieldset>
-          <legend class="text-foreground/60 mb-5 font-mono text-xs tracking-[0.2em] uppercase">
+          <legend
+            class="mb-5 font-mono text-xs tracking-[0.2em] text-foreground/60 uppercase"
+          >
             The details
           </legend>
 
@@ -396,7 +430,12 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
 
             <div class="field" id="field-market">
               <label for="market">Which market?</label>
-              <input id="market" name="market" type="text" placeholder={`e.g. ${CAPTURE.primaryMarket}`} />
+              <input
+                id="market"
+                name="market"
+                type="text"
+                placeholder={`e.g. ${CAPTURE.primaryMarket}`}
+              />
             </div>
 
             <div class="field">
@@ -425,21 +464,33 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
 
             <div class="field sm:col-span-2">
               <label for="notes">Anything else I should know?</label>
-              <textarea id="notes" name="notes" rows="4" placeholder="Best time to reach you, what you're working with, anything that'll save us both time."></textarea>
+              <textarea
+                id="notes"
+                name="notes"
+                rows="4"
+                placeholder="Best time to reach you, what you're working with, anything that'll save us both time."
+              ></textarea>
             </div>
           </div>
         </fieldset>
 
         <!-- ---------- Off-market / Track B (shown only when goal = off-market) ---------- -->
         <fieldset id="offmarket-fieldset" class="hidden">
-          <legend class="text-foreground/60 mb-5 font-mono text-xs tracking-[0.2em] uppercase">
+          <legend
+            class="mb-5 font-mono text-xs tracking-[0.2em] text-foreground/60 uppercase"
+          >
             The property
           </legend>
 
           <div class="grid gap-5 sm:grid-cols-2">
             <div class="field sm:col-span-2">
               <label for="property_address">Property address *</label>
-              <input id="property_address" name="property_address" type="text" autocomplete="street-address" />
+              <input
+                id="property_address"
+                name="property_address"
+                type="text"
+                autocomplete="street-address"
+              />
             </div>
 
             <div class="field">
@@ -457,8 +508,12 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
               <label for="deal_fork">What matters more?</label>
               <select id="deal_fork" name="deal_fork">
                 <option value="">Pick one</option>
-                <option value="Top dollar, willing to wait">Top dollar, willing to wait</option>
-                <option value="Fast and certain, condition as-is">Fast and certain, as-is</option>
+                <option value="Top dollar, willing to wait"
+                  >Top dollar, willing to wait</option
+                >
+                <option value="Fast and certain, condition as-is"
+                  >Fast and certain, as-is</option
+                >
                 <option value="Not sure yet">Not sure yet</option>
               </select>
             </div>
@@ -472,18 +527,29 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
           </label>
         </fieldset>
 
-        <input type="hidden" id="traffic_source" name="traffic_source" value="" />
+        <input
+          type="hidden"
+          id="traffic_source"
+          name="traffic_source"
+          value=""
+        />
 
         <div>
           <button
             id="submit-btn"
             type="submit"
-            class="bg-accent text-background focus-visible:outline-accent px-6 py-3 text-sm font-medium transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-50"
+            class="bg-accent px-6 py-3 text-sm font-medium text-background transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:opacity-50"
           >
             Send it to {CAPTURE.name.split(" ")[0]}
           </button>
 
-          <p id="form-status" class="mt-4 text-sm" role="status" aria-live="polite"></p>
+          <p
+            id="form-status"
+            class="mt-4 text-sm"
+            role="status"
+            aria-live="polite"
+          >
+          </p>
         </div>
       </form>
 
@@ -493,40 +559,42 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
            weight comes from layout, not invented content. -->
       <a
         href={CAPTURE.browseUrl}
-        class="browse-card border-border hover:border-accent focus-visible:outline-accent mt-10 flex items-center justify-between gap-4 border p-5 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 sm:p-6"
+        class="browse-card mt-10 flex items-center justify-between gap-4 border border-border p-5 transition-colors hover:border-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:p-6"
       >
         <div>
           <p
-            class="text-foreground/60 font-mono text-[11px] tracking-[0.2em] uppercase"
+            class="font-mono text-[11px] tracking-[0.2em] text-foreground/60 uppercase"
           >
             Not ready to talk yet
           </p>
           <p class="mt-2 text-lg font-medium sm:text-xl">
             Browse San Antonio listings
           </p>
-          <p class="text-foreground/70 mt-1 text-sm">
+          <p class="mt-1 text-sm text-foreground/70">
             Active listings, straight from the MLS. No form, no phone call.
           </p>
         </div>
         <span
-          class="browse-arrow text-accent shrink-0 text-2xl transition-transform"
+          class="browse-arrow shrink-0 text-2xl text-accent transition-transform"
           aria-hidden="true">&rarr;</span
         >
       </a>
     </section>
 
     <!-- ================= FAQ ================= -->
-    <section class="border-border border-t py-14">
+    <section class="border-t border-border py-14">
       <h2 class="text-2xl font-semibold sm:text-3xl">Questions</h2>
-      <div class="border-border mt-6 border-t">
+      <div class="mt-6 border-t border-border">
         {
           CAPTURE.faqs.map(item => (
-            <details class="faq border-border border-b">
+            <details class="faq border-b border-border">
               <summary>
                 <span>{item.q}</span>
                 <span class="faq-icon" aria-hidden="true" />
               </summary>
-              <p class="text-foreground/75 pb-5 text-sm sm:text-base">{item.a}</p>
+              <p class="pb-5 text-sm text-foreground/75 sm:text-base">
+                {item.a}
+              </p>
             </details>
           ))
         }
@@ -534,15 +602,19 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
     </section>
 
     <!-- ================= DISCLOSURES ================= -->
-    <section class="border-border border-t py-12">
-      <h2 class="text-foreground/60 font-mono text-xs tracking-[0.2em] uppercase">
+    <section class="border-t border-border py-12">
+      <h2
+        class="font-mono text-xs tracking-[0.2em] text-foreground/60 uppercase"
+      >
         Disclosures
       </h2>
-      <ul class="text-foreground/70 mt-4 space-y-2 text-sm">
+      <ul class="mt-4 space-y-2 text-sm text-foreground/70">
         {
           CAPTURE.disclosures.map(d => (
             <li class="grid grid-cols-[1rem_1fr] gap-2">
-              <span class="text-accent" aria-hidden="true">&mdash;</span>
+              <span class="text-accent" aria-hidden="true">
+                &mdash;
+              </span>
               {d.href ? (
                 <a
                   href={d.href}
@@ -716,11 +788,13 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
   }
 </style>
 
-<script define:vars={{
-  endpoint: CAPTURE.formEndpoint,
-  accessKey: CAPTURE.web3formsKey,
-  sourceMap: CAPTURE.sourceMap,
-}}>
+<script
+  define:vars={{
+    endpoint: CAPTURE.formEndpoint,
+    accessKey: CAPTURE.web3formsKey,
+    sourceMap: CAPTURE.sourceMap,
+  }}
+>
   const form = document.getElementById("capture-form");
   const statusEl = document.getElementById("form-status");
   const submitBtn = document.getElementById("submit-btn");
@@ -756,7 +830,8 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
   // Sheet webhook — writes each submission into the referral-ledger PIPELINE
   // tab, in parallel with the Web3Forms email. Fire-and-forget by design:
   // a Sheet hiccup should never block the visitor's confirmation screen.
-  const sheetWebhookUrl = "https://script.google.com/macros/s/AKfycbxHUYFVQXFJFPrZVnOhtpxGbw0Bltlz2NR5TElY-fPYfQ_pOcstka2ozFRpZKrCTuBt/exec";
+  const sheetWebhookUrl =
+    "https://script.google.com/macros/s/AKfycbxHUYFVQXFJFPrZVnOhtpxGbw0Bltlz2NR5TElY-fPYfQ_pOcstka2ozFRpZKrCTuBt/exec";
   const sheetWebhookSecret = "Ilovebigbooty23";
 
   // ---- Pre-fill "how'd you hear about me" + hidden traffic source from ?src= ----
@@ -794,7 +869,9 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
   };
 
   const clearInvalid = () => {
-    form.querySelectorAll('[aria-invalid="true"]').forEach(el => el.removeAttribute("aria-invalid"));
+    form
+      .querySelectorAll('[aria-invalid="true"]')
+      .forEach(el => el.removeAttribute("aria-invalid"));
   };
 
   const flagInvalid = el => {
@@ -825,7 +902,10 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
       const firstBad = form.querySelector(":invalid");
       if (firstBad) {
         flagInvalid(firstBad);
-        setStatus(firstBad.validationMessage || "Check the highlighted field.", "error");
+        setStatus(
+          firstBad.validationMessage || "Check the highlighted field.",
+          "error"
+        );
       }
       return;
     }
@@ -867,7 +947,10 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
     }
 
     if (!endpoint || !accessKey || accessKey.startsWith("REPLACE_")) {
-      setStatus("This form isn't connected yet. Add your Web3Forms access key in referral.astro.", "error");
+      setStatus(
+        "This form isn't connected yet. Add your Web3Forms access key in referral.astro.",
+        "error"
+      );
       return;
     }
 
@@ -908,7 +991,10 @@ const pageDescription = `Buying, selling, or investing in real estate? Tell ${CA
       successPanel.scrollIntoView({ behavior: "smooth", block: "center" });
       successPanel.focus();
     } catch {
-      setStatus("That didn't go through. Try again, or email me directly.", "error");
+      setStatus(
+        "That didn't go through. Try again, or email me directly.",
+        "error"
+      );
       submitBtn.disabled = false;
       submitBtn.textContent = originalLabel;
     }

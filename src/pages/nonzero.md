@@ -19,7 +19,6 @@ So for 2027 I'm using poker to learn expected value, probability, and how to dec
 
 [Read the full story, including the numbers behind the bet →](/posts/the-nonzero-year)
 
-
 ## The rules
 
 1. Leave at 3 buy-ins down in any cash session.
@@ -34,6 +33,10 @@ So for 2027 I'm using poker to learn expected value, probability, and how to dec
 10. Tilted = done.
 
 **The money:** $20,000 ÷ 12 = $1,666.67 a month. Unused money rolls forward. A bad month can't borrow from the next one. When a month's money is gone, I stop until the 1st.
+
+## The ledger
+
+Every session is logged in the [live ledger](/nonzero/ledger): buy-in, cash-out, a grade for the decision, and the monthly budget with rollover.
 
 ## Get the monthly results
 

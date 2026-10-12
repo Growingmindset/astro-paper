@@ -168,7 +168,10 @@ export const products: Product[] = [
   },
 ];
 
-export const lineMeta: Record<ProductLine, { heading: string; title: string; blurb: string }> = {
+export const lineMeta: Record<
+  ProductLine,
+  { heading: string; title: string; blurb: string }
+> = {
   "line-01": {
     heading: "Line 01",
     title: "Motivational",

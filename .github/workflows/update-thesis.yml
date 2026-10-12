@@ -2,7 +2,7 @@ name: Update Macro Thesis Table
 
 on:
   schedule:
-    - cron: '0 13 16 * *'
+    - cron: "0 13 16 * *"
   workflow_dispatch:
 
 permissions:
@@ -18,8 +18,8 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
-          
+          python-version: "3.x"
+
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip

@@ -6,7 +6,7 @@ import ProductCard from "../components/ProductCard.astro";
 import { products, lineMeta, type ProductLine } from "../data/products";
 
 const byLine = (line: ProductLine) =>
-  products.filter((p) => p.line === line && p.published);
+  products.filter(p => p.line === line && p.published);
 
 const line01 = byLine("line-01");
 const line02 = byLine("line-02");
@@ -17,81 +17,142 @@ const essentials = byLine("essentials");
   <Header activeNav="shop" />
   <main id="main-content" class="mx-auto max-w-4xl px-4 py-12">
     <div class="mb-6 text-center">
-      <h1 class="text-3xl font-bold uppercase tracking-[0.15em] text-skin-base">RISK ON SUPPLY</h1>
-      <p class="mt-2 text-sm text-skin-base opacity-75">Built for training. Made when ordered.</p>
-      <p class="mt-2 text-xs text-skin-base opacity-60">
-        From the writer behind <a href="/newsletter" class="underline decoration-dashed underline-offset-4">Base Rate</a>
-        and <a href="/nonzero" class="underline decoration-dashed underline-offset-4">Mr. Nonzero</a>.
+      <h1 class="text-skin-base text-3xl font-bold tracking-[0.15em] uppercase">
+        RISK ON SUPPLY
+      </h1>
+      <p class="text-skin-base mt-2 text-sm opacity-75">
+        Built for training. Made when ordered.
+      </p>
+      <p class="text-skin-base mt-2 text-xs opacity-60">
+        From the writer behind <a
+          href="/newsletter"
+          class="underline decoration-dashed underline-offset-4">Base Rate</a
+        >
+        and <a
+          href="/nonzero"
+          class="underline decoration-dashed underline-offset-4">Mr. Nonzero</a
+        >.
       </p>
     </div>
 
-    <div class="mb-8 mx-auto max-w-2xl text-center text-sm text-skin-base opacity-80 leading-relaxed">
+    <div
+      class="text-skin-base mx-auto mb-8 max-w-2xl text-center text-sm leading-relaxed opacity-80"
+    >
       <p>
-        Every trader knows the feeling. Risk on: you're in, you're pushing, you're betting on yourself.
-        Risk off: you play it safe, you sit on the sidelines. We only make gear for one mode.
+        Every trader knows the feeling. Risk on: you're in, you're pushing,
+        you're betting on yourself. Risk off: you play it safe, you sit on the
+        sidelines. We only make gear for one mode.
       </p>
       <p class="mt-3">
-        Same mindset that gets you to hit a new max in the gym is the same mindset that gets you to
-        bet on yourself everywhere else. No hedging. No sitting out. Just showing up and putting in the work.
+        Same mindset that gets you to hit a new max in the gym is the same
+        mindset that gets you to bet on yourself everywhere else. No hedging. No
+        sitting out. Just showing up and putting in the work.
       </p>
     </div>
 
-    <nav class="mb-12 flex flex-wrap items-center justify-center gap-3" aria-label="Shop sections">
-      {line01.length > 0 && (
-        <a href="#line-01" class="rounded-full border border-skin-line px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-skin-base opacity-70 transition-opacity duration-200 hover:opacity-100">
-          {lineMeta["line-01"].heading}
-        </a>
-      )}
-      {line02.length > 0 && (
-        <a href="#line-02" class="rounded-full border border-skin-line px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-skin-base opacity-70 transition-opacity duration-200 hover:opacity-100">
-          {lineMeta["line-02"].heading}
-        </a>
-      )}
-      {essentials.length > 0 && (
-        <a href="#essentials" class="rounded-full border border-skin-line px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-skin-base opacity-70 transition-opacity duration-200 hover:opacity-100">
-          {lineMeta.essentials.heading}
-        </a>
-      )}
+    <nav
+      class="mb-12 flex flex-wrap items-center justify-center gap-3"
+      aria-label="Shop sections"
+    >
+      {
+        line01.length > 0 && (
+          <a
+            href="#line-01"
+            class="border-skin-line text-skin-base rounded-full border px-4 py-1.5 text-xs font-bold tracking-wide uppercase opacity-70 transition-opacity duration-200 hover:opacity-100"
+          >
+            {lineMeta["line-01"].heading}
+          </a>
+        )
+      }
+      {
+        line02.length > 0 && (
+          <a
+            href="#line-02"
+            class="border-skin-line text-skin-base rounded-full border px-4 py-1.5 text-xs font-bold tracking-wide uppercase opacity-70 transition-opacity duration-200 hover:opacity-100"
+          >
+            {lineMeta["line-02"].heading}
+          </a>
+        )
+      }
+      {
+        essentials.length > 0 && (
+          <a
+            href="#essentials"
+            class="border-skin-line text-skin-base rounded-full border px-4 py-1.5 text-xs font-bold tracking-wide uppercase opacity-70 transition-opacity duration-200 hover:opacity-100"
+          >
+            {lineMeta.essentials.heading}
+          </a>
+        )
+      }
     </nav>
 
-    {line01.length > 0 && (
-      <section id="line-01" class="mb-16 scroll-mt-24">
-        <div class="mb-6 text-center">
-          <p class="text-xs uppercase tracking-[0.2em] text-skin-base opacity-50">{lineMeta["line-01"].heading}</p>
-          <h2 class="text-xl font-bold uppercase tracking-wide text-skin-base">{lineMeta["line-01"].title}</h2>
-          <p class="mt-1 text-xs text-skin-base opacity-60">{lineMeta["line-01"].blurb}</p>
-        </div>
-        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {line01.map((product) => <ProductCard product={product} />)}
-        </div>
-      </section>
-    )}
+    {
+      line01.length > 0 && (
+        <section id="line-01" class="mb-16 scroll-mt-24">
+          <div class="mb-6 text-center">
+            <p class="text-skin-base text-xs tracking-[0.2em] uppercase opacity-50">
+              {lineMeta["line-01"].heading}
+            </p>
+            <h2 class="text-skin-base text-xl font-bold tracking-wide uppercase">
+              {lineMeta["line-01"].title}
+            </h2>
+            <p class="text-skin-base mt-1 text-xs opacity-60">
+              {lineMeta["line-01"].blurb}
+            </p>
+          </div>
+          <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            {line01.map(product => (
+              <ProductCard product={product} />
+            ))}
+          </div>
+        </section>
+      )
+    }
 
-    {line02.length > 0 && (
-      <section id="line-02" class="mb-16 scroll-mt-24">
-        <div class="mb-6 text-center">
-          <p class="text-xs uppercase italic tracking-[0.2em] text-skin-base opacity-50">{lineMeta["line-02"].heading}</p>
-          <h2 class="text-xl font-light italic tracking-wide text-skin-base" style="font-family: 'Bodoni Moda', serif;">{lineMeta["line-02"].title}</h2>
-          <p class="mt-1 text-xs text-skin-base opacity-60">{lineMeta["line-02"].blurb}</p>
-        </div>
-        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {line02.map((product) => <ProductCard product={product} />)}
-        </div>
-      </section>
-    )}
+    {
+      line02.length > 0 && (
+        <section id="line-02" class="mb-16 scroll-mt-24">
+          <div class="mb-6 text-center">
+            <p class="text-skin-base text-xs tracking-[0.2em] uppercase italic opacity-50">
+              {lineMeta["line-02"].heading}
+            </p>
+            <h2
+              class="text-skin-base text-xl font-light tracking-wide italic"
+              style="font-family: 'Bodoni Moda', serif;"
+            >
+              {lineMeta["line-02"].title}
+            </h2>
+            <p class="text-skin-base mt-1 text-xs opacity-60">
+              {lineMeta["line-02"].blurb}
+            </p>
+          </div>
+          <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            {line02.map(product => (
+              <ProductCard product={product} />
+            ))}
+          </div>
+        </section>
+      )
+    }
 
-    {essentials.length > 0 && (
-      <section id="essentials" class="mb-16 scroll-mt-24">
-        <div class="mb-6 text-center">
-          <p class="text-xs uppercase tracking-[0.2em] text-skin-base opacity-50">{lineMeta.essentials.heading}</p>
-        </div>
-        <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
-          {essentials.map((product) => <ProductCard product={product} compact />)}
-        </div>
-      </section>
-    )}
+    {
+      essentials.length > 0 && (
+        <section id="essentials" class="mb-16 scroll-mt-24">
+          <div class="mb-6 text-center">
+            <p class="text-skin-base text-xs tracking-[0.2em] uppercase opacity-50">
+              {lineMeta.essentials.heading}
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+            {essentials.map(product => (
+              <ProductCard product={product} compact />
+            ))}
+          </div>
+        </section>
+      )
+    }
 
-    <div class="mt-4 text-center text-xs text-skin-base opacity-50 space-x-3">
+    <div class="text-skin-base mt-4 space-x-3 text-center text-xs opacity-50">
       <a href="/terms" class="hover:underline">Terms</a>
       <span>·</span>
       <a href="/returns" class="hover:underline">Returns</a>

@@ -4,6 +4,7 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Breadcrumb from "@/components/Breadcrumb.astro";
 import BaseRateSignup from "@/components/BaseRateSignup.astro";
+import LatestIssues from "@/components/LatestIssues.astro";
 import { BASE_RATE, SITE } from "@/config";
 
 const sections = [
@@ -58,6 +59,10 @@ const sections = [
         }
       </ol>
     </section>
+
+    <div class="mt-12">
+      <LatestIssues limit={5} heading="Recent issues" />
+    </div>
 
     <section class="mt-12 border-t border-dashed border-border pt-10">
       <h2 class="text-2xl font-semibold tracking-wide">The track record</h2>
