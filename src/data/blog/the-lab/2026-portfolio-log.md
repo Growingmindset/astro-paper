@@ -56,7 +56,7 @@ Same idea as Base Rate: start from how often things usually work, size for being
 | :--- | :--- | :--- | :--- |
 | **ORCL** | Technology (Cloud)          | **Buy** (07/28/2026) 10 sh @ $116.11 avg | Same thesis as the 07/24 buy |
 | **SWVXX** | Cash Equivalent            | **Sell** (07/27/2026) 1,400 sh @ $1.00 | Needed liquidity|
-| **ORCL** | Technology (Cloud)          | **Buy** (07/24/2026) 10 sh @ $120.16 | Its everywhere. It'll be here in 10 years. Its cheap. |
+| **ORCL** | Technology (Cloud)          | **Buy** (07/24/2026) 10 sh @ $120.16 | It's everywhere. It'll be here in 10 years. It's cheap. |
 | **CRSR** | Technology (Hardware)       | **Buy** (07/24/2026) 100 sh @ $10.14 | Potential next rotation, cheap|
 | **SWVXX** | Cash Equivalent            | **Buy** (07/10/2026) 18,346 sh @ $1.00 | Money should always be working|
 | **MSFT** | Technology (Software)       | **Buy** (06/25/2026) 4 sh @ $352.40 avg | Cheap relative to its assets |
