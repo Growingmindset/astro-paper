@@ -7,7 +7,10 @@ export interface ProductVariant {
   price?: number;
 }
 
-export type ProductLine = "line-01" | "line-02" | "essentials";
+export type ProductLine = "capital" | "essentials" | "physical";
+
+/** Order the sections appear on /shop. */
+export const lineOrder: ProductLine[] = ["capital", "essentials", "physical"];
 
 export interface Product {
   id: string;
@@ -20,50 +23,16 @@ export interface Product {
 }
 
 export const products: Product[] = [
-  // ---------- LINE 01 — MOTIVATIONAL ----------
-  {
-    id: "all-in-no-stop-loss",
-    line: "line-01",
-    name: "All In, No Stop Loss",
-    description:
-      "A hazard label maxed out at 4-4-4. Not reckless: the right risk at the right time, sized so you can play again tomorrow. Small πφ on the chest, the full label on the back.",
-    price: 29.99,
-    published: true,
-    variants: [
-      {
-        label: "Tee",
-        image: "/shop/all-in-no-stop-loss.webp",
-        alt: "All In, No Stop Loss tee, black, front and back",
-        stripeUrl: "https://buy.stripe.com/aFa6oGfvH8iB7hp5y42oE03",
-      },
-    ],
-  },
-  {
-    id: "ggg-sups",
-    line: "line-01",
-    name: "Good Girls Get Sups",
-    description:
-      "Good girls get sups. Everyone else gets excuses. Muscle-tee cut for the ones who put the work in first.",
-    price: 29.99,
-    published: true,
-    variants: [
-      {
-        label: "Muscle Tee",
-        image: "/shop/good-girls-get-sups.webp",
-        alt: "Good Girls Get Sups muscle tee, black",
-        stripeUrl: "https://buy.stripe.com/4gM00idnzcyR45dbWs2oE08",
-      },
-    ],
-  },
+  // Listed in display order within each line.
 
-  // ---------- LINE 02 — INTELLECTUAL ----------
+  // ---------- RISK ON / CAPITAL ----------
   {
     id: "highest-and-best",
-    line: "line-02",
-    name: "Highest and Best",
+    line: "capital",
+    name: "Highest and Best Tee",
     description:
-      "The appraiser's test for any asset, applied to yourself: legally permissible, physically possible, financially feasible, maximally productive. RISK ON allocation mark on the front, the full test on the back.",
-    price: 34.99,
+      "The appraiser's four-part test for any asset, applied to yourself: legally permissible, physically possible, financially feasible, maximally productive. Allocation mark on the front, the full test on the back.",
+    price: 38,
     published: true,
     variants: [
       {
@@ -75,18 +44,18 @@ export const products: Product[] = [
       {
         label: "Front",
         image: "/shop/highest-and-best-front.webp",
-        alt: "Highest and Best tee, charcoal, front with RISK ON allocation protocol mark",
+        alt: "Highest and Best tee, charcoal, front allocation mark",
         stripeUrl: "",
       },
     ],
   },
   {
     id: "vsyo-voda",
-    line: "line-02",
-    name: "Vsyo Voda",
+    line: "capital",
+    name: "Vsyo Voda Tee",
     description:
-      "Everything is water: chaos finding its calm. Thin-line graphic tee for the ones who think as hard as they train.",
-    price: 29.99,
+      "Everything is water. Volatile on the left, calm on the right: chaotic systems settle, markets included. Thin-line print on black.",
+    price: 32,
     published: true,
     variants: [
       {
@@ -104,8 +73,8 @@ export const products: Product[] = [
     line: "essentials",
     name: "Risk On Crewneck",
     description:
-      "Garment-dyed crewneck with a small embroidered RISK ON wordmark. Pick your color at checkout.",
-    price: 54.99,
+      "Garment-dyed crewneck with a small embroidered RISK ON wordmark. Bone or slate; pick color and size at checkout.",
+    price: 58,
     published: true,
     variants: [
       {
@@ -127,8 +96,8 @@ export const products: Product[] = [
     line: "essentials",
     name: "Risk On Trucker Cap",
     description:
-      "All black, mesh back, embroidered wordmark up front. The cap for whichever mode you're in.",
-    price: 29.99,
+      "All black, mesh back, embroidered wordmark. The everyday cap.",
+    price: 34,
     published: true,
     variants: [
       {
@@ -150,8 +119,8 @@ export const products: Product[] = [
     line: "essentials",
     name: "πφ Signature Cap",
     description:
-      "Fitted cap with the πφ mark up front and your name stitched on the side, shown with RUDY G. Add the name you want at checkout.",
-    price: 29.99,
+      "Fitted cap with the πφ mark up front and your name stitched on the side (shown: RUDY G). Enter your name at checkout.",
+    price: 38,
     published: true,
     variants: [
       {
@@ -169,25 +138,61 @@ export const products: Product[] = [
     ],
   },
   {
-    id: "inverted-dad-hat",
+    id: "flipped-dad-hat",
     line: "essentials",
-    name: "Risk On, Flipped",
+    name: "Risk On Flipped Dad Hat",
     description:
-      "RISK ON stitched upside down. Read it one way, read it the other. Unstructured dad hat in spruce, adjustable strap.",
-    price: 29.99,
+      "RISK ON stitched upside down. Read it one way, read it the other. Unstructured spruce dad hat, adjustable strap.",
+    price: 32,
     published: true,
     variants: [
       {
         label: "Front",
         image: "/shop/inverted-dad-hat-front.webp",
-        alt: "Risk On dad hat, spruce green, wordmark upside down, front",
+        alt: "Risk On flipped dad hat, spruce, front",
         stripeUrl: "",
       },
       {
         label: "Side",
         image: "/shop/inverted-dad-hat-side.webp",
-        alt: "Risk On dad hat, spruce green, wordmark upside down, side",
+        alt: "Risk On flipped dad hat, spruce, side",
         stripeUrl: "",
+      },
+    ],
+  },
+
+  // ---------- RISK ON / PHYSICAL ----------
+  {
+    id: "all-in-no-stop-loss",
+    line: "physical",
+    name: "All In, No Stop Loss Tee",
+    description:
+      "A hazard label maxed out at 4-4-4. Not reckless: the right risk at the right time, sized so you can play again tomorrow. Small πφ on the chest, full label on the back.",
+    price: 32,
+    published: true,
+    variants: [
+      {
+        label: "Tee",
+        image: "/shop/all-in-no-stop-loss.webp",
+        alt: "All In, No Stop Loss tee, black, front and back",
+        stripeUrl: "https://buy.stripe.com/aFa6oGfvH8iB7hp5y42oE03",
+      },
+    ],
+  },
+  {
+    id: "ggg-sups",
+    line: "physical",
+    name: "Good Girls Get Sups Muscle Tee",
+    description:
+      "Good girls get sups. Everyone else gets excuses. Muscle-tee cut for the ones who put the work in first.",
+    price: 30,
+    published: true,
+    variants: [
+      {
+        label: "Muscle Tee",
+        image: "/shop/good-girls-get-sups.webp",
+        alt: "Good Girls Get Sups muscle tee, black",
+        stripeUrl: "https://buy.stripe.com/4gM00idnzcyR45dbWs2oE08",
       },
     ],
   },
@@ -197,19 +202,19 @@ export const lineMeta: Record<
   ProductLine,
   { heading: string; title: string; blurb: string }
 > = {
-  "line-01": {
-    heading: "Line 01",
-    title: "Motivational",
-    blurb: "Bold statements for the ones who bet on themselves.",
-  },
-  "line-02": {
-    heading: "Line 02",
-    title: "Intellectual",
-    blurb: "Markets, philosophy, and the laws underneath both.",
+  capital: {
+    heading: "Risk On / Capital",
+    title: "Capital",
+    blurb: "Markets, appraisal, and the laws underneath both.",
   },
   essentials: {
     heading: "Essentials",
     title: "Essentials",
-    blurb: "",
+    blurb: "The mark, for every day.",
+  },
+  physical: {
+    heading: "Risk On / Physical",
+    title: "Physical",
+    blurb: "For the gym. Bet on yourself, then put the work in.",
   },
 };

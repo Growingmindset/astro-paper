@@ -3,14 +3,15 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ProductCard from "../components/ProductCard.astro";
-import { products, lineMeta, type ProductLine } from "../data/products";
+import { products, lineMeta, lineOrder } from "../data/products";
 
-const byLine = (line: ProductLine) =>
-  products.filter(p => p.line === line && p.published);
-
-const line01 = byLine("line-01");
-const line02 = byLine("line-02");
-const essentials = byLine("essentials");
+const sections = lineOrder
+  .map(line => ({
+    line,
+    meta: lineMeta[line],
+    items: products.filter(p => p.line === line && p.published),
+  }))
+  .filter(section => section.items.length > 0);
 ---
 
 <Layout title="Shop | RISK ON">
@@ -54,101 +55,35 @@ const essentials = byLine("essentials");
       aria-label="Shop sections"
     >
       {
-        line01.length > 0 && (
+        sections.map(({ line, meta }) => (
           <a
-            href="#line-01"
+            href={`#${line}`}
             class="border-skin-line text-skin-base rounded-full border px-4 py-1.5 text-xs font-bold tracking-wide uppercase opacity-70 transition-opacity duration-200 hover:opacity-100"
           >
-            {lineMeta["line-01"].heading}
+            {meta.heading}
           </a>
-        )
-      }
-      {
-        line02.length > 0 && (
-          <a
-            href="#line-02"
-            class="border-skin-line text-skin-base rounded-full border px-4 py-1.5 text-xs font-bold tracking-wide uppercase opacity-70 transition-opacity duration-200 hover:opacity-100"
-          >
-            {lineMeta["line-02"].heading}
-          </a>
-        )
-      }
-      {
-        essentials.length > 0 && (
-          <a
-            href="#essentials"
-            class="border-skin-line text-skin-base rounded-full border px-4 py-1.5 text-xs font-bold tracking-wide uppercase opacity-70 transition-opacity duration-200 hover:opacity-100"
-          >
-            {lineMeta.essentials.heading}
-          </a>
-        )
+        ))
       }
     </nav>
 
     {
-      line01.length > 0 && (
-        <section id="line-01" class="mb-16 scroll-mt-24">
+      sections.map(({ line, meta, items }) => (
+        <section id={line} class="mb-16 scroll-mt-24">
           <div class="mb-6 text-center">
-            <p class="text-skin-base text-xs tracking-[0.2em] uppercase opacity-50">
-              {lineMeta["line-01"].heading}
-            </p>
             <h2 class="text-skin-base text-xl font-bold tracking-wide uppercase">
-              {lineMeta["line-01"].title}
+              {meta.heading}
             </h2>
-            <p class="text-skin-base mt-1 text-xs opacity-60">
-              {lineMeta["line-01"].blurb}
-            </p>
+            {meta.blurb && (
+              <p class="text-skin-base mt-1 text-xs opacity-60">{meta.blurb}</p>
+            )}
           </div>
           <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {line01.map(product => (
+            {items.map(product => (
               <ProductCard product={product} />
             ))}
           </div>
         </section>
-      )
-    }
-
-    {
-      line02.length > 0 && (
-        <section id="line-02" class="mb-16 scroll-mt-24">
-          <div class="mb-6 text-center">
-            <p class="text-skin-base text-xs tracking-[0.2em] uppercase italic opacity-50">
-              {lineMeta["line-02"].heading}
-            </p>
-            <h2
-              class="text-skin-base text-xl font-light tracking-wide italic"
-              style="font-family: 'Bodoni Moda', serif;"
-            >
-              {lineMeta["line-02"].title}
-            </h2>
-            <p class="text-skin-base mt-1 text-xs opacity-60">
-              {lineMeta["line-02"].blurb}
-            </p>
-          </div>
-          <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {line02.map(product => (
-              <ProductCard product={product} />
-            ))}
-          </div>
-        </section>
-      )
-    }
-
-    {
-      essentials.length > 0 && (
-        <section id="essentials" class="mb-16 scroll-mt-24">
-          <div class="mb-6 text-center">
-            <p class="text-skin-base text-xs tracking-[0.2em] uppercase opacity-50">
-              {lineMeta.essentials.heading}
-            </p>
-          </div>
-          <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
-            {essentials.map(product => (
-              <ProductCard product={product} compact />
-            ))}
-          </div>
-        </section>
-      )
+      ))
     }
 
     <div class="text-skin-base mt-4 space-x-3 text-center text-xs opacity-50">
