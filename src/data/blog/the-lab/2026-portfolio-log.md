@@ -1,6 +1,6 @@
 ---
 title: "Financial Architecture: 2026 Portfolio & Market Thesis"
-description: "Every 2026 trade with the reasoning, plus a macro dashboard that refreshes monthly. Weekly commentary lives in Base Rate."
+description: "Every 2026 trade with the reasoning, plus the macro metrics I watch and why. Weekly commentary lives in Base Rate."
 pubDatetime: 2026-05-19T00:00:00Z
 tags:
   - lab
@@ -19,29 +19,21 @@ This page is the receipts for [Base Rate](/newsletter). The newsletter is the we
 
 ---
 
-## Macro dashboard
+## Metrics I'm keeping a close eye on
 
-*Last updated: <!-- AUTO-DATE -->07.17.2026<!-- /AUTO-DATE -->. Refreshes monthly.*
+These are the gauges that set my posture. I don't publish the readings here. The current numbers and what moved go out in each [Base Rate](/newsletter) issue.
 
-<div style="width: 100%; overflow-x: auto;">
+| Metric | What it tells me | What I'm watching for |
+| :--- | :--- | :--- |
+| **ISM Manufacturing PMI** | Leads payrolls and earnings | Whether it holds above 50 (expansion) or rolls over |
+| **ISM New Orders** | Telegraphs growth 3 to 6 months out | Any break below 50, which would be my first warning |
+| **ISM Prices Paid** | My currency-debasement signal | Readings above 60, which tend to push capital toward dollar hedges like gold and silver |
+| **Fed funds rate** | The price of money for everything else | The direction of the next move, not the level |
+| **CPI** | Whether inflation is easing or re-accelerating | A turn in direction, since it drives the Fed |
+| **Nonfarm payrolls** | Whether the job market is cooling | Weakness that persists, not one soft month |
+| **Corrugated box prices (PPI)** | My physical-demand check: goods ship in boxes | Rising prices as confirmation that real product is moving |
 
-<!-- AUTO-TABLE-START -->
-
-| Metric | Prior Read | Current Read | Delta | Status | Implication |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| ✍️ **ISM Manufacturing PMI** | 53.3 | 55.6 | +2.3 pts | Expansion (Bullish) | Accelerating Momentum |
-| ✍️ **ISM New Orders** | 56.0 | 56.7 | +0.7 pts | **Leading Expansion** | Telegraphs Forward Growth 3-6M |
-| ✍️ **ISM Prices Paid** | 73.0 | 71.1 | -1.9 pts | **Currency Debasement** | Capital Rotates to Dollar Hedges |
-| ⚡ **Fed Funds Target Rate** | 3.63% | 3.63% | +0.00% | Falling/Stable | Stable Baseline |
-| ⚡ **CPI (Inflation)** | 4.17% | 3.46% | -0.71% | Falling/Stable | Monitoring Shift |
-| ⚡ **Total Nonfarm Payrolls** | 129.00k | 57.00k | -72.00k | Falling/Stable | Monitoring Shift |
-| ⚡ **PPI: Corrugated Boxes** | 366.92 | 375.49 | +2.34% | Rising | Monitoring Shift |
-
-<!-- AUTO-TABLE-END -->
-
-</div>
-
-**How I read it.** The ISM Manufacturing PMI leads payrolls and earnings. Above 50 means expansion, and New Orders above 50 telegraphs growth 3 to 6 months out. Prices Paid above 60 is my currency-debasement signal, which tends to push capital toward dollar hedges like gold and silver. The corrugated box index is my physical-demand check: goods ship in boxes, so if box demand is up, the economy is moving real product. ✍️ rows are entered by hand each month (ISM data is licensed). ⚡ rows pull from FRED automatically.
+**If these turn, my posture changes first and the positions follow.**
 
 ---
 
@@ -52,7 +44,7 @@ This page is the receipts for [Base Rate](/newsletter). The newsletter is the we
 - **A small speculative sleeve.** A position like CRSR is sized so a total loss is survivable. That is the asymmetric bet, and it stays small.
 - **Income against what I own.** Selling long-dated calls on INTC collects premium while I stay long, and it lowers my cost basis.
 - **Idle cash should work, but never force a buy.** Cash sits in a money-market fund until there is a setup with a real margin of safety.
-- **Let the macro set the posture.** ISM above 50 and a strong midterm Q4 backdrop mean I stay deployed. If the dashboard turns, the posture changes first and the positions follow.
+- **Let the macro set the posture.** ISM above 50 and a strong midterm Q4 backdrop mean I stay deployed. If the watchlist turns, the posture changes first and the positions follow.
 
 Same idea as Base Rate: start from how often things usually work, size for being wrong, and write the reasoning down before the result.
 
