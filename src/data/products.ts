@@ -2,6 +2,7 @@ export interface ProductVariant {
   label: string;
   image: string;
   alt: string;
+  /** Stripe Payment Link. Leave empty to show "Coming soon". */
   stripeUrl: string;
   price?: number;
 }
@@ -21,36 +22,19 @@ export interface Product {
 export const products: Product[] = [
   // ---------- LINE 01 — MOTIVATIONAL ----------
   {
-    id: "hit-maxes-evade-taxes",
-    line: "line-01",
-    name: "Hit Maxes, Evade Taxes",
-    description:
-      "For the ones who chase PRs and dodge W-2s. Soft, heavyweight cotton blend built to survive leg day and everything after.",
-    price: 29.99,
-    published: true,
-    variants: [
-      {
-        label: "Tee",
-        image: "/shop/hit-maxes-evade-taxes.png",
-        alt: "Hit Maxes, Evade Taxes Tee",
-        stripeUrl: "https://buy.stripe.com/4gMbJ01ER6atbxF6C82oE00",
-      },
-    ],
-  },
-  {
     id: "all-in-no-stop-loss",
     line: "line-01",
     name: "All In, No Stop Loss",
     description:
-      "Take the right risk at the right time. Full conviction when the odds are on your side, sized so you can play again tomorrow. For people who bet on themselves.",
+      "A hazard label maxed out at 4-4-4. Not reckless: the right risk at the right time, sized so you can play again tomorrow. Small πφ on the chest, the full label on the back.",
     price: 29.99,
     published: true,
     variants: [
       {
         label: "Tee",
-        image: "/shop/nostoploss-mockup.png",
-        alt: "All In, No Stop Loss Tee",
-        stripeUrl: "https://buy.stripe.com/5kQbJ0gzLbuN0T13pW2oE01",
+        image: "/shop/all-in-no-stop-loss.webp",
+        alt: "All In, No Stop Loss tee, black, front and back",
+        stripeUrl: "https://buy.stripe.com/aFa6oGfvH8iB7hp5y42oE03",
       },
     ],
   },
@@ -59,110 +43,151 @@ export const products: Product[] = [
     line: "line-01",
     name: "Good Girls Get Sups",
     description:
-      "Good girls get sups — everyone else gets excuses. Racerback and muscle-tee cuts built for the ones who put in the work first.",
+      "Good girls get sups. Everyone else gets excuses. Muscle-tee cut for the ones who put the work in first.",
     price: 29.99,
     published: true,
     variants: [
       {
         label: "Muscle Tee",
-        image: "/shop/ggg-sups-muscle-tee.png",
-        alt: "Good Girls Get Sups Muscle Tee",
+        image: "/shop/good-girls-get-sups.webp",
+        alt: "Good Girls Get Sups muscle tee, black",
         stripeUrl: "https://buy.stripe.com/4gM00idnzcyR45dbWs2oE08",
-      },
-      {
-        label: "Racerback",
-        image: "/shop/ggg-sups-racerback.png",
-        alt: "Good Girls Get Sups Racerback",
-        stripeUrl: "https://buy.stripe.com/fZu9AS6Zb6atdFN1hO2oE07",
-      },
-    ],
-  },
-  {
-    id: "warren-buffett-tank",
-    line: "line-01",
-    name: "Warren Buffett Tank",
-    description:
-      "Value investing for your body — patience compounds in the gym the same way it compounds in the market. Sleeveless, unapologetic, built for the long game.",
-    price: 29.99,
-    published: true,
-    variants: [
-      {
-        label: "Tank",
-        image: "/shop/warren-buffett-tank.png",
-        alt: "Warren Buffett Tank",
-        stripeUrl: "https://buy.stripe.com/cNi8wO1ER0Q9fNV9Ok2oE06",
       },
     ],
   },
 
   // ---------- LINE 02 — INTELLECTUAL ----------
   {
+    id: "highest-and-best",
+    line: "line-02",
+    name: "Highest and Best",
+    description:
+      "The appraiser's test for any asset, applied to yourself: legally permissible, physically possible, financially feasible, maximally productive. RISK ON allocation mark on the front, the full test on the back.",
+    price: 34.99,
+    published: true,
+    variants: [
+      {
+        label: "Back",
+        image: "/shop/highest-and-best-back.webp",
+        alt: "Highest and Best tee, charcoal, back print",
+        stripeUrl: "",
+      },
+      {
+        label: "Front",
+        image: "/shop/highest-and-best-front.webp",
+        alt: "Highest and Best tee, charcoal, front with RISK ON allocation protocol mark",
+        stripeUrl: "",
+      },
+    ],
+  },
+  {
     id: "vsyo-voda",
     line: "line-02",
     name: "Vsyo Voda",
     description:
-      "Everything is water — chaos finding its calm. Thin-line graphic tee for the ones who think as hard as they train.",
+      "Everything is water: chaos finding its calm. Thin-line graphic tee for the ones who think as hard as they train.",
     price: 29.99,
     published: true,
     variants: [
       {
         label: "Tee",
-        image: "/shop/vsyo-voda-front.png",
-        alt: "Vsyo Voda Tee",
+        image: "/shop/vsyo-voda.webp",
+        alt: "Vsyo Voda tee, black",
         stripeUrl: "https://buy.stripe.com/4gMcN4cjvgP7atBgcI2oE02",
-      },
-    ],
-  },
-  {
-    id: "maximum-exposure",
-    line: "line-02",
-    name: "Maximum Exposure",
-    description:
-      "Every category maxed out — risk, intensity, discipline. Hazard-label graphic tee for the ones who never dial it back.",
-    price: 29.99,
-    published: true,
-    variants: [
-      {
-        label: "Black",
-        image: "/shop/NFPA_BLACK.png",
-        alt: "Maximum Exposure Tee, black",
-        stripeUrl: "https://buy.stripe.com/aFa6oGfvH8iB7hp5y42oE03",
       },
     ],
   },
 
   // ---------- ESSENTIALS ----------
   {
+    id: "risk-on-crewneck",
+    line: "essentials",
+    name: "Risk On Crewneck",
+    description:
+      "Garment-dyed crewneck with a small embroidered RISK ON wordmark. Pick your color at checkout.",
+    price: 54.99,
+    published: true,
+    variants: [
+      {
+        label: "Bone",
+        image: "/shop/crewneck-bone.webp",
+        alt: "Risk On crewneck, bone",
+        stripeUrl: "",
+      },
+      {
+        label: "Slate",
+        image: "/shop/crewneck-slate.webp",
+        alt: "Risk On crewneck, slate",
+        stripeUrl: "",
+      },
+    ],
+  },
+  {
     id: "trucker-cap",
     line: "essentials",
     name: "Risk On Trucker Cap",
     description:
-      "Structured five-panel, mesh back, embroidered mark up front. The cap for whichever mode you're in.",
+      "All black, mesh back, embroidered wordmark up front. The cap for whichever mode you're in.",
     price: 29.99,
     published: true,
     variants: [
       {
-        label: "One size",
-        image: "/shop/risk-on-trucker-cap.png",
-        alt: "Risk On Trucker Cap",
+        label: "Front",
+        image: "/shop/trucker-black-front.webp",
+        alt: "Risk On trucker cap, black, front",
+        stripeUrl: "https://buy.stripe.com/bJeeVcgzL8iBdFNaSo2oE05",
+      },
+      {
+        label: "Side",
+        image: "/shop/trucker-black-side.webp",
+        alt: "Risk On trucker cap, black, side",
         stripeUrl: "https://buy.stripe.com/bJeeVcgzL8iBdFNaSo2oE05",
       },
     ],
   },
   {
-    id: "logo-hat",
+    id: "pi-phi-cap",
     line: "essentials",
-    name: "Risk On Logo Hat",
+    name: "πφ Signature Cap",
     description:
-      "Curved brim, embroidered wordmark, adjustable strap. This one's personalized — we embroider your own name on the back, shown here with 'Rudy G.' as an example. Just include the name you want at checkout.",
+      "Fitted cap with the πφ mark up front and your name stitched on the side, shown with RUDY G. Add the name you want at checkout.",
     price: 29.99,
     published: true,
     variants: [
       {
-        label: "One size",
-        image: "/shop/risk-on-logo-hat.png",
-        alt: "Risk On Logo Hat",
+        label: "Front",
+        image: "/shop/pi-phi-cap-front.webp",
+        alt: "πφ signature cap, navy, front",
         stripeUrl: "https://buy.stripe.com/8x2fZgerD0Q9atBgcI2oE04",
+      },
+      {
+        label: "Side",
+        image: "/shop/pi-phi-cap-side.webp",
+        alt: "πφ signature cap, navy, side with RUDY G stitched",
+        stripeUrl: "https://buy.stripe.com/8x2fZgerD0Q9atBgcI2oE04",
+      },
+    ],
+  },
+  {
+    id: "inverted-dad-hat",
+    line: "essentials",
+    name: "Risk On, Flipped",
+    description:
+      "RISK ON stitched upside down. Read it one way, read it the other. Unstructured dad hat in spruce, adjustable strap.",
+    price: 29.99,
+    published: true,
+    variants: [
+      {
+        label: "Front",
+        image: "/shop/inverted-dad-hat-front.webp",
+        alt: "Risk On dad hat, spruce green, wordmark upside down, front",
+        stripeUrl: "",
+      },
+      {
+        label: "Side",
+        image: "/shop/inverted-dad-hat-side.webp",
+        alt: "Risk On dad hat, spruce green, wordmark upside down, side",
+        stripeUrl: "",
       },
     ],
   },
