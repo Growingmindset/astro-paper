@@ -2,8 +2,9 @@ name: Update Latest Base Rate Issues
 
 on:
   schedule:
-    # Sunday 6pm and Monday 9am Central (UTC), after the Sunday send
-    - cron: "0 23 * * 0"
+    # Base Rate sends Sunday 6pm Central. Run Sunday ~8-9pm Central and
+    # Monday 9am Central (times in UTC) so the new issue is always caught.
+    - cron: "0 2 * * 1"
     - cron: "0 14 * * 1"
   workflow_dispatch:
 
