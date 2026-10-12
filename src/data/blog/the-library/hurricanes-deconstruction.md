@@ -9,6 +9,7 @@ tags:
   - deconstructions
   - audio-audit
 description: "Extracting the core philosophies and cognitive frameworks from Hurricanes."
+archived: true
 ---
 
 # Hurricanes: A Memoir

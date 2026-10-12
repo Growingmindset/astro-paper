@@ -11,6 +11,7 @@ tags:
   - human-mechanics
   - narrative-architecture
 description: "Part I of the Cognitive Supply Chain teardown: how dark money, modular coalitions, and narrative engineering manufacture public compliance."
+archived: true
 ---
 *This is Part I of **The Cognitive Supply Chain** series—a mechanical breakdown of manufactured consensus. [Read Part II here (Link coming soon)].*
 

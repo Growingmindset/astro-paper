@@ -11,6 +11,7 @@ tags:
   - antifragile
   - transmissions
 description: "The ocean doesn’t care if you fight it. Preparation turns its force into your strength. Learn to see the ocean’s perspective — it’s the only way."
+archived: true
 ---
 
 Take advantage of the days off by becoming stronger for the days on.
