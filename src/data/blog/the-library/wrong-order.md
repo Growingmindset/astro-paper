@@ -25,7 +25,7 @@ Not a salary. Cash flow you can move with effort in the same week you apply it.
 
 This is the unglamorous part and it's the part everyone wants to skip. A 12% return on $4,000 is $480. Nobody's life changes at $480. The math only starts working when the number you're feeding into it is large enough to compound against — and for most people the fastest route to a bigger number isn't a better return, it's a bigger shovel.
 
-Bartending is a good shovel because output tracks effort at a resolution most jobs don't allow. So is a trade. So is anything commissioned, anything tipped, anything where you can decide on a Tuesday to work harder and see it on Friday. I've run freelance personal training since 2013 for the same reason: a second line that doesn't ask a manager for permission.
+Bartending is a good shovel because output tracks effort at a resolution most jobs don't allow. So is a trade. So is anything commissioned, anything tipped, anything where you can decide on a Tuesday to work harder and see it on Friday.
 
 ### The half of Layer 1 nobody counts
 
@@ -37,7 +37,7 @@ Then there's the side people really don't count. If you work tipped or commissio
 
 Roughly $7,000 a year, produced entirely by training consistently and cooking your own food — before a single dollar of it is invested.
 
-That's why I published [Atreides Revenge](/posts/atreides-revenge) — a free 5-day strength and power program, warm-ups, lifts, and conditioning laid out day by day. Free PDF, no upsell, because it's the training I already do and there's no reason to charge for it. It isn't a bonus section on a wealth article. It's the machine that generates the surplus everything below this line depends on.
+That's why I published [Atreides Revenge](/atreides-revenge) — a free 5-day strength and power program, warm-ups, lifts, and conditioning laid out day by day. Free PDF, no upsell, because it's the training I already do and there's no reason to charge for it. It isn't a bonus section on a wealth article. It's the machine that generates the surplus everything below this line depends on.
 
 You are the asset in Layer 1. Maintain it accordingly.
 
@@ -51,7 +51,7 @@ That's the thesis. It isn't clever and it isn't supposed to be. It's the floor, 
 
 This step does two things simultaneously. First, it builds the financial discipline and the habit — automating this before lifestyle inflation can absorb it is the only version that actually works long-term. Second, and this is the part most people miss: **the portfolio you build here eventually becomes your down payment.** The house in Layer 3 doesn't appear out of nowhere. It comes out of years of compounding in Layer 2. You're not choosing between investing and owning property — you're using one to fund the other.
 
-If you want to go beyond the floor, the honest advice is to read other people's *reasoning* rather than their results. Anyone can post a green screenshot. I share mine every Sunday in [Base Rate](/newsletter): what I bought or sold, the thesis behind it, and what I got wrong, sent before the result is known so it can be checked rather than backfilled afterward. The rules behind it are in [How I Invest](/posts/how-i-invest/). Take ideas from it, argue with it, or ignore it entirely. I'm not trying to be exciting and I'm not trying to lose money.
+If you want to go beyond the floor, the honest advice is to read other people's *reasoning* rather than their results. Anyone can post a green screenshot. The rules I follow are in [How I Invest](/how-i-invest). Take ideas from it, argue with it, or ignore it entirely. I'm not trying to be exciting and I'm not trying to lose money.
 
 **Nothing here is investment advice.** I'm an independent investor publishing what I do with my own money. You're responsible for what you do with yours.
 
@@ -81,7 +81,7 @@ If you're not — genuinely not — skip it. Don't buy a house to complete a fra
 
 Most people try to run 3, then figure out 1 and 2 later. Or they do 2 in theory and skip to 3 before the backbone is real. The order isn't a preference — it's the mechanic.
 
-I'm building this in public, including the parts that don't work. [The Lab](/posts) is where the active builds live. [The Library](/library) holds the finished thinking.
+I'm building this in public, including the parts that don't work.
 
 ---
 

@@ -14,9 +14,7 @@ description: "A free 5-day powerbuilding program that blends heavy top sets, spe
 archived: true
 ---
 
-Atreides Powerbuilding is the upgrade to [Atreides Revenge](/posts/atreides-revenge). Same philosophy: get strong, stay fast, keep the engine running. Tighter structure, clearer intensity rules, and no prescribed weights, so anyone can run it at their own level. Build power, maintain or grow muscle--all during a cut. Strength transfers to power even when there's a drought. 
-
-## Table of contents
+Atreides Powerbuilding is the upgrade to [Atreides Revenge](/atreides-revenge). Same philosophy: get strong, stay fast, keep the engine running. Tighter structure, clearer intensity rules, and no prescribed weights, so anyone can run it at their own level. Build power, maintain or grow muscle--all during a cut. Strength transfers to power even when there's a drought. 
 
 ## How It Works
 

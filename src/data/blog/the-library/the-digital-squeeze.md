@@ -10,6 +10,7 @@ tags:
   - economics
   - deconstructions
 description: "Breaking down the microeconomics of the video game industry's shift to digital-only formats and what it means for consumer rights."
+archived: true
 ---
 
 <iframe 

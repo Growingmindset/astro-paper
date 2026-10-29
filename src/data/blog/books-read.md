@@ -17,8 +17,8 @@ draft: true
 
 | Date Read | Title | Author | Rating | One-Liner Summary | Link |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| May 2026 | Deep Work | Cal Newport | 9/10 | Prioritizing focus as a competitive advantage in a distracted economy. | [Deconstruction](/posts/deep-work-deconstruction) |
-| May 2026 | Hurricanes | Rick Ross | [?] | [Insert Summary] | [Deconstruction](/posts/hurricanes-deconstruction) |
+| May 2026 | Deep Work | Cal Newport | 9/10 | Prioritizing focus as a competitive advantage in a distracted economy. | [Deconstruction](/deep-work-deconstruction) |
+| May 2026 | Hurricanes | Rick Ross | [?] | [Insert Summary] | [Deconstruction](/hurricanes-deconstruction) |
 
 ---
 

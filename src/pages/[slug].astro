@@ -1,0 +1,94 @@
+---
+import { render } from "astro:content";
+import Page from "@/layouts/Page.astro";
+import Subscribe from "@/components/Subscribe.astro";
+import { SITE } from "@/config";
+import {
+  formatMonthYear,
+  getPublishedPosts,
+  getSlug,
+  isFinancePost,
+  smartQuotes,
+  type Post,
+} from "@/utils/posts";
+
+export async function getStaticPaths() {
+  const posts = await getPublishedPosts();
+  return posts.map(post => ({
+    params: { slug: getSlug(post) },
+    props: { post },
+  }));
+}
+
+type Props = { post: Post };
+
+const { post } = Astro.props;
+const { title, description, pubDatetime, modDatetime, canonicalURL, archived } =
+  post.data;
+const { Content } = await render(post);
+const displayTitle = smartQuotes(title);
+
+let ogImage: string | undefined;
+if (typeof post.data.ogImage === "string") ogImage = post.data.ogImage;
+else if (post.data.ogImage?.src) ogImage = post.data.ogImage.src;
+else if (SITE.dynamicOgImage) ogImage = `/og/${getSlug(post)}.png`;
+---
+
+<Page
+  title={`${displayTitle} | ${SITE.title}`}
+  description={description}
+  ogImage={ogImage}
+  canonicalURL={canonicalURL}
+  pubDatetime={pubDatetime}
+  modDatetime={modDatetime}
+  article
+>
+  <article>
+    <h1 class="page-title">{displayTitle}</h1>
+    <p class="page-meta">
+      <time datetime={pubDatetime.toISOString()}>{formatMonthYear(post)}</time>
+    </p>
+    {
+      archived && (
+        <p class="archived-note">
+          From the archive. Kept up as a record, no longer updated.
+        </p>
+      )
+    }
+
+    <div class="essay-body">
+      <Content />
+    </div>
+
+    {
+      isFinancePost(post) && (
+        <p class="disclosure">
+          This is my own thinking about my own money, published for education.
+          It isn’t investment, tax, or legal advice, and I’m not a registered
+          investment adviser.
+        </p>
+      )
+    }
+  </article>
+
+  <div class="essay-end">
+    {
+      archived ? (
+        <p>
+          <a class="text-link" href="/archive">
+            Back to the archive
+          </a>
+        </p>
+      ) : (
+        <>
+          <Subscribe />
+          <p class="after-list">
+            <a class="text-link" href="/">
+              All essays
+            </a>
+          </p>
+        </>
+      )
+    }
+  </div>
+</Page>

@@ -9,6 +9,7 @@ tags:
   - transmissions
   - human-systems
 description: "Why high-level execution requires separating emotional empathy from baseline operational standards."
+archived: true
 ---
 Standards. Seems like nobody wants to be held to one these days. Tell someone, “This is the standard I hold you to, and I won’t accept less,” and they act like it’s a personal attack. But standards are respect. I expect you to be X because I believe in my gut you’re capable of it. When you don’t, you’re robbing yourself—and me, if I’m the one expecting it. Word salad? 🥗 Yeah, maybe. It’s how I roll.
 

@@ -101,7 +101,7 @@ The downside is capped at $20,000. The upside is open.
 
 ## Follow along
 
-The rules and links to every platform are at [rudygalan.com/nonzero](/nonzero), and every session goes into the [live ledger](/nonzero/ledger). The numbers, my best and worst decision, and one lesson that carried over to life land in the first Base Rate issue after each month closes. It's free, and it goes out every Sunday. The signup is at the bottom of this page.
+The rules, the ledger, and links to every platform are at [rudygalan.com/nonzero](/nonzero). Every session gets logged within 24 hours. After each month closes, the numbers, my best and worst decision, and one lesson that carried over to life go out by email. The signup is at the bottom of this page.
 
 ---
 

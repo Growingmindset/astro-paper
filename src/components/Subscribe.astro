@@ -1,0 +1,29 @@
+---
+import { NEWSLETTER } from "@/config";
+
+type Props = {
+  heading?: string;
+  note?: string;
+};
+
+const {
+  heading = "Get new essays by email.",
+  note = "Plus the monthly Nonzero ledger once the poker year starts. No schedule, nothing else.",
+} = Astro.props;
+---
+
+<section class="subscribe" aria-labelledby="subscribe-heading">
+  <p id="subscribe-heading">{heading}</p>
+  <p class="subscribe-note">{note}</p>
+  <div class="subscribe-form">
+    <!-- beehiiv swaps this script for its signup form. Use one per page. -->
+    <script
+      is:inline
+      async
+      src="https://subscribe-forms.beehiiv.com/v3/loader.js"
+      data-beehiiv-form={NEWSLETTER.formId}></script>
+    <noscript>
+      <a class="text-link" href={NEWSLETTER.subscribeUrl}>Subscribe here</a>
+    </noscript>
+  </div>
+</section>

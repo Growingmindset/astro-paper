@@ -12,6 +12,7 @@ tags:
   - trading
   - transmissions
 description: "An analysis of the divergence between all-time index highs and decaying market breadth, structural macro shifts, and key tactical setups to watch."
+archived: true
 ---
 
 The market just wrapped up one of the longest winning streaks in decades while breadth quietly deteriorated beneath the surface. We kept printing all-time highs even as more stocks declined than advanced—a negative divergence we haven’t seen structurally since 1996.
