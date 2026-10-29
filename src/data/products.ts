@@ -19,6 +19,8 @@ export interface Product {
   description: string;
   price: number;
   published: boolean;
+  /** When set, the piece shows as "Coming" with this date and no Buy link. */
+  comingSoon?: string;
   variants: ProductVariant[];
 }
 
@@ -56,7 +58,7 @@ export const products: Product[] = [
     description:
       "Everything is water. Volatile on the left, calm on the right: chaotic systems settle, markets included. Thin-line print on black.",
     price: 32,
-    published: true,
+    published: false,
     variants: [
       {
         label: "Tee",
@@ -121,7 +123,7 @@ export const products: Product[] = [
     description:
       "Fitted cap with the πφ mark up front and your name stitched on the side (shown: RUDY G). Enter your name at checkout.",
     price: 38,
-    published: true,
+    published: false,
     variants: [
       {
         label: "Front",
@@ -144,7 +146,7 @@ export const products: Product[] = [
     description:
       "RISK ON stitched upside down. Read it one way, read it the other. Unstructured spruce dad hat, adjustable strap.",
     price: 32,
-    published: true,
+    published: false,
     variants: [
       {
         label: "Front",
@@ -163,13 +165,13 @@ export const products: Product[] = [
 
   // ---------- RISK ON / PHYSICAL ----------
   {
-    id: "all-in-no-stop-loss",
+    id: "all-in-hazard-label",
     line: "physical",
-    name: "All In, No Stop Loss Tee",
+    name: "Hazard Label Tee (retired)",
     description:
       "A hazard label maxed out at 4-4-4. Not reckless: the right risk at the right time, sized so you can play again tomorrow. Small πφ on the chest, full label on the back.",
     price: 32,
-    published: true,
+    published: false,
     variants: [
       {
         label: "Tee",
@@ -186,13 +188,107 @@ export const products: Product[] = [
     description:
       "Good girls get sups. Everyone else gets excuses. Muscle-tee cut for the ones who put the work in first.",
     price: 30,
-    published: true,
+    published: false,
     variants: [
       {
         label: "Muscle Tee",
         image: "/shop/good-girls-get-sups.webp",
         alt: "Good Girls Get Sups muscle tee, black",
         stripeUrl: "https://buy.stripe.com/cNi14m5V742l8lt4u02oE0g",
+      },
+    ],
+  },
+
+  // ---------- THE 2026-27 LINE: COMING SOON ----------
+  // Swap comingSoon for a real Stripe link (and a real photo) as each one
+  // goes live.
+  {
+    id: "all-in-original",
+    line: "physical",
+    name: "All In, No Stop Loss Tee",
+    description:
+      "The flagship. ALL IN across the chest, NO STOP LOSS in red underneath. The πφ mark and RISK ON wordmark on the back. Black.",
+    price: 34,
+    published: true,
+    comingSoon: "November 2026",
+    variants: [
+      {
+        label: "Tee",
+        image: "/shop/all-in-original.webp",
+        alt: "All In, No Stop Loss tee, black, front and back",
+        stripeUrl: "",
+      },
+    ],
+  },
+  {
+    id: "risk-on-hoodie",
+    line: "essentials",
+    name: "Risk On Hoodie",
+    description:
+      "Heavyweight black hoodie. Small embroidered RISK ON on the chest, πφ mark at the back of the neck.",
+    price: 68,
+    published: true,
+    comingSoon: "December 2026",
+    variants: [
+      {
+        label: "Hoodie",
+        image: "/shop/risk-on-hoodie.webp",
+        alt: "Design preview of the Risk On hoodie, black",
+        stripeUrl: "",
+      },
+    ],
+  },
+  {
+    id: "grade-the-decision",
+    line: "capital",
+    name: "Grade the Decision Tee",
+    description:
+      "Rule 8 of the poker year. Forest green, small πφ on the chest, and on the back in serif: Grade the decision, not the result. NONZERO 2027 underneath.",
+    price: 34,
+    published: true,
+    comingSoon: "January 2027",
+    variants: [
+      {
+        label: "Tee",
+        image: "/shop/grade-the-decision.webp",
+        alt: "Design preview of the Grade the Decision tee, forest green",
+        stripeUrl: "",
+      },
+    ],
+  },
+  {
+    id: "we-will-judge-you",
+    line: "physical",
+    name: "We Will Judge You Tee",
+    description:
+      "For the gym. Washed black, boxy fit, small πφ on the front, WE WILL JUDGE YOU. across the back.",
+    price: 36,
+    published: true,
+    comingSoon: "February 2027",
+    variants: [
+      {
+        label: "Tee",
+        image: "/shop/we-will-judge-you.webp",
+        alt: "Design preview of the We Will Judge You tee, washed black",
+        stripeUrl: "",
+      },
+    ],
+  },
+  {
+    id: "final-ledger",
+    line: "capital",
+    name: "Final Ledger Tee",
+    description:
+      "Limited. The real result of the poker year printed on the back: Nonzero, 2027. 12 months. $20,000 cap. Result. Sold for 30 days, then retired.",
+    price: 38,
+    published: true,
+    comingSoon: "January 2028",
+    variants: [
+      {
+        label: "Tee",
+        image: "/shop/final-ledger.webp",
+        alt: "Design preview of the Final Ledger tee, black",
+        stripeUrl: "",
       },
     ],
   },

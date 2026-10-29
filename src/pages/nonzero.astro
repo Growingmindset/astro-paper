@@ -6,7 +6,8 @@ import { products } from "@/data/products";
 import { getLedger, money, TOTAL } from "@/utils/ledger";
 
 const ledger = getLedger();
-const shirts = products.filter(p => p.published);
+const live = products.filter(p => p.published && !p.comingSoon);
+const coming = products.filter(p => p.published && p.comingSoon);
 ---
 
 <Page
@@ -174,7 +175,7 @@ const shirts = products.filter(p => p.published);
   </div>
   <ul class="shirts">
     {
-      shirts.map(item => {
+      live.map(item => {
         const variant = item.variants[0];
         return (
           <li class="shirt">
@@ -195,6 +196,35 @@ const shirts = products.filter(p => p.published);
                 Buy
               </a>
             </p>
+          </li>
+        );
+      })
+    }
+  </ul>
+
+  <h3 class="shop-subhead">Coming next</h3>
+  <p class="shirt-meta">
+    The line for the poker year, released one piece at a time.
+  </p>
+  <ul class="shirts">
+    {
+      coming.map(item => {
+        const variant = item.variants[0];
+        return (
+          <li class="shirt">
+            <img
+              src={variant.image}
+              alt={variant.alt}
+              width="400"
+              height="400"
+              loading="lazy"
+              decoding="async"
+            />
+            <p class="shirt-name">{item.name}</p>
+            <p class="shirt-meta">
+              ${item.price}, coming {item.comingSoon}
+            </p>
+            <p class="shirt-desc">{item.description}</p>
           </li>
         );
       })

@@ -573,6 +573,17 @@ html[data-theme="dark"] {
   color: var(--quiet);
   font-size: 0.9375rem;
 }
+.shirt-desc {
+  margin-top: 0.35rem;
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+.shop-subhead {
+  margin-top: 3rem;
+  margin-bottom: 0.25rem;
+  font-size: 1.08em;
+  font-weight: 600;
+}
 
 .handles {
   list-style: none;
