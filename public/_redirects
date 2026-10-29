@@ -1,3 +1,7 @@
+# Cloudflare Pages redirects. First match wins, so specific rules go first.
+# Rule of the site: once a URL is public, it never breaks.
+
+# --- Referral short links (printed cards, NFC tags, bios) -------------------
 /ig      /txhouse?src=ig      302
 /x       /txhouse?src=x       302
 /fb      /txhouse?src=fb      302
@@ -5,32 +9,49 @@
 /tap     /txhouse?src=nfc     302
 /r       /txhouse?src=ref     302
 /homes   https://exprealty.com/@rudygalan   302
-/referral   /txhouse   301
-/referral/  /txhouse   301
-# Retired page: keep any shared links alive
-/workout-partner   /   302
-/workout-partner/  /   302
+/referral    /txhouse   301
+/referral/   /txhouse   301
 
-# Portfolio log became How I Invest (trades now live in Base Rate)
-/posts/2026-portfolio-log    /posts/how-i-invest   301
-/posts/2026-portfolio-log/   /posts/how-i-invest   301
-
-# Lab and Library were merged into Writing
-/posts      /writing  301
-/posts/     /writing  301
-/library    /writing  301
-/library/   /writing  301
-
-# Tracked short links. beehiiv's attribution script records the UTMs, so
-# the dashboard shows which channel actually converts. Use these in bios/posts.
-/br         /newsletter?utm_source=direct&utm_medium=shortlink   302
-/br/ig      /newsletter?utm_source=instagram&utm_medium=social   302
-/br/x       /newsletter?utm_source=x&utm_medium=social           302
-/br/yt      /newsletter?utm_source=youtube&utm_medium=social     302
-/br/tt      /newsletter?utm_source=tiktok&utm_medium=social      302
-/br/li      /newsletter?utm_source=linkedin&utm_medium=social    302
+# --- Nonzero short links ----------------------------------------------------
 /nz         /nonzero?utm_source=direct&utm_medium=shortlink      302
 /nz/ig      /nonzero?utm_source=instagram&utm_medium=social      302
 /nz/x       /nonzero?utm_source=x&utm_medium=social              302
 /nz/yt      /nonzero?utm_source=youtube&utm_medium=social        302
 /nz/tt      /nonzero?utm_source=tiktok&utm_medium=social         302
+/nonzero/ledger     /nonzero#ledger   301
+/nonzero/ledger/    /nonzero#ledger   301
+
+# --- Retired sections (October 2026 consolidation) --------------------------
+# Base Rate was folded into the one email list on the home page.
+/newsletter    /   301
+/newsletter/   /   301
+/br            /   302
+/br/*          /   302
+# Writing, the Lab and the Library became the front page.
+/writing    /   301
+/writing/   /   301
+/library    /   301
+/library/   /   301
+/search     /   301
+/search/    /   301
+/tags       /   301
+/tags/*     /   301
+/links      /   301
+/links/     /   301
+# The shop moved onto the Nonzero page; Work moved onto About.
+/shop       /nonzero#shop   301
+/shop/      /nonzero#shop   301
+/work       /about          301
+/work/      /about          301
+/workout-partner    /   302
+/workout-partner/   /   302
+
+# --- Posts moved from /posts/<slug> to /<slug> ------------------------------
+/posts/2026-portfolio-log     /how-i-invest   301
+/posts/2026-portfolio-log/    /how-i-invest   301
+/posts/the-library/*          /:splat         301
+/posts/the-lab/the-archive/*  /:splat         301
+/posts/the-lab/*              /:splat         301
+/posts       /   301
+/posts/      /   301
+/posts/*     /:splat   301

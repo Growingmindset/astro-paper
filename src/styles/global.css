@@ -1,31 +1,56 @@
 @import "tailwindcss";
+@import "@fontsource-variable/newsreader/opsz.css";
+@import "@fontsource-variable/newsreader/opsz-italic.css";
 @import "./typography.css";
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
+/*
+  One typeface, one accent.
+  Newsreader was drawn for long-form reading on screens; its optical sizes
+  tighten automatically for headlines and open up for body text.
+  The accent is poker-table felt: the only color on the site, used for links.
+*/
 :root,
 html[data-theme="light"] {
-  --background: #fdfdfd;
-  --foreground: #282728;
-  --accent: #000000; /* Pure Black */
-  --muted: #e6e6e6;
-  --border: #ece9e9;
+  --paper: #ffffff;
+  --ink: #1a1b1d;
+  --quiet: #66686c;
+  --rule: #e4e4e1;
+  --felt: #1d5b44;
+  --felt-strong: #123d2d;
+
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --accent: var(--felt);
+  --muted: #f1f1ee;
+  --border: var(--rule);
+  color-scheme: light;
 }
 
 html[data-theme="dark"] {
-  --background: #212737;
-  --foreground: #eaedf3;
-  --accent: #ffffff; /* Pure White */
-  --muted: #343f60;
-  --border: #ab4b08;
+  --paper: #141718;
+  --ink: #e6e4df;
+  --quiet: #9c9ea1;
+  --rule: #2c3133;
+  --felt: #8ccaa9;
+  --felt-strong: #b5e0c8;
+
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --accent: var(--felt);
+  --muted: #1f2425;
+  --border: var(--rule);
+  color-scheme: dark;
 }
 
 @theme inline {
-  --font-sans:
-    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-heading: "Space Grotesk", sans-serif;
-  --font-mono: "IBM Plex Mono", monospace;
-  --font-app: var(--font-sans);
+  --font-serif: "Newsreader Variable", Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-serif);
+  --font-heading: var(--font-serif);
+  --font-mono:
+    ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --font-app: var(--font-serif);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -37,36 +62,39 @@ html[data-theme="dark"] {
 @layer base {
   * {
     @apply border-border outline-accent/75;
-    scrollbar-width: auto;
-    scrollbar-color: var(--color-muted) transparent;
   }
   html {
-    @apply overflow-y-scroll scroll-smooth;
+    @apply overflow-y-scroll;
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
   }
   body {
-    @apply flex min-h-svh flex-col bg-background font-sans text-foreground selection:bg-accent/75 selection:text-background;
+    @apply flex min-h-svh flex-col bg-background text-foreground;
+    font-family: var(--font-serif);
+    font-optical-sizing: auto;
+    font-size: clamp(1.0625rem, 0.97rem + 0.45vw, 1.1875rem);
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
   }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  .font-bold,
-  .site-title {
-    font-family: var(--font-heading) !important;
-    letter-spacing: -0.025em;
+  ::selection {
+    background: color-mix(in srgb, var(--felt) 22%, transparent);
   }
   code,
   pre,
   kbd,
   samp,
   .font-mono {
-    font-family: var(--font-mono) !important;
+    font-family: var(--font-mono);
+    font-size: 0.875em;
   }
   a,
-  button {
-    @apply outline-offset-1 outline-accent focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-dashed;
+  button,
+  summary,
+  input,
+  select,
+  textarea {
+    @apply outline-offset-2 focus-visible:outline-2;
   }
   button:not(:disabled),
   [role="button"]:not(:disabled) {
@@ -74,20 +102,503 @@ html[data-theme="dark"] {
   }
 }
 
+/* Kept for the referral and shop policy pages, which still use it. */
 @utility max-w-app {
   @apply max-w-3xl;
 }
-
 @utility app-layout {
   @apply mx-auto w-full max-w-app px-4;
 }
 
-.active-nav {
-  @apply underline decoration-wavy decoration-2 underline-offset-8;
+:target {
+  scroll-margin-block: 1.5rem;
 }
 
-/* Source: https://piccalil.li/blog/a-more-modern-css-reset/ */
-/* Anything that has been anchored to should have extra scroll margin */
-:target {
-  scroll-margin-block: 1rem;
+/* ------------------------------------------------------------------
+   The page frame: one column, left aligned, about 65 characters wide.
+   ------------------------------------------------------------------ */
+
+.frame {
+  width: 100%;
+  max-width: 37rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.site-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-block: 2.25rem 0;
+}
+.site-name {
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: -0.005em;
+}
+.site-nav {
+  display: flex;
+  gap: 1.25rem;
+}
+.site-nav a {
+  color: var(--quiet);
+  text-decoration: none;
+}
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--ink);
+}
+
+.site-main {
+  padding-block: 4rem 3rem;
+  flex: 1 0 auto;
+}
+@media (min-width: 40rem) {
+  .site-main {
+    padding-block: 5.5rem 4rem;
+  }
+}
+
+.site-footer {
+  padding-bottom: 2.5rem;
+  color: var(--quiet);
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+.site-footer a {
+  color: var(--quiet);
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-underline-offset: 0.2em;
+}
+.site-footer a:hover {
+  color: var(--ink);
+  text-decoration-color: currentColor;
+}
+.footer-inner {
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+}
+.footer-row + .footer-row {
+  margin-top: 0.75rem;
+}
+/* TREC rules 531.18 and 531.20 require these two links on the home page at
+   12pt or larger when the short "TREC" labels are used. 1rem = 12pt.
+   Don't shrink this. */
+.trec-links {
+  font-size: 1rem;
+}
+
+/* ------------------------------------------------------------------
+   Shared text styles
+   ------------------------------------------------------------------ */
+
+.text-link {
+  color: var(--felt);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+.text-link:hover {
+  color: var(--felt-strong);
+  text-decoration-thickness: 2px;
+}
+
+.page-title {
+  font-size: clamp(2rem, 1.6rem + 1.6vw, 2.625rem);
+  line-height: 1.12;
+  font-weight: 500;
+  letter-spacing: -0.012em;
+  text-wrap: balance;
+}
+.page-meta {
+  margin-top: 0.75rem;
+  color: var(--quiet);
+  font-size: 0.9375rem;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-weight: 600;
+  margin-top: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+/* The one loud thing on the site: the opening statement on the home page. */
+.lede {
+  font-size: clamp(1.5rem, 1.15rem + 1.5vw, 2.05rem);
+  line-height: 1.28;
+  font-weight: 400;
+  letter-spacing: -0.012em;
+  text-wrap: pretty;
+}
+.lede-follow {
+  margin-top: 1.25rem;
+  color: var(--quiet);
+}
+
+/* ------------------------------------------------------------------
+   The essay list
+   ------------------------------------------------------------------ */
+
+.year-group {
+  margin-top: 1.75rem;
+}
+.year-label {
+  color: var(--quiet);
+  font-size: 0.9375rem;
+  font-variant-numeric: tabular-nums oldstyle-nums;
+  margin-bottom: 0.25rem;
+}
+.essay-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.essay-list li {
+  padding-block: 0.3rem;
+}
+.essay-list a {
+  color: var(--ink);
+  text-decoration: none;
+  background-image: linear-gradient(var(--felt), var(--felt));
+  background-size: 0 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+}
+.essay-list a:hover {
+  color: var(--felt);
+  background-size: 100% 1px;
+}
+.after-list {
+  margin-top: 2.5rem;
+  color: var(--quiet);
+}
+.essay-list .item-note {
+  display: block;
+  color: var(--quiet);
+  font-size: 0.9375rem;
+  line-height: 1.45;
+}
+@media (min-width: 62rem) {
+  /* The year hangs in the margin, like a running index. */
+  .year-group {
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    align-items: baseline;
+    margin-left: -4rem;
+  }
+  .year-label {
+    margin-bottom: 0;
+    padding-top: 0.3rem;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Essay body
+   ------------------------------------------------------------------ */
+
+.essay-body {
+  margin-top: 2.75rem;
+  overflow-wrap: break-word;
+}
+.essay-body > * + * {
+  margin-top: 1.15em;
+}
+.essay-body h1 {
+  /* Some posts repeat their title as an H1; the page already shows it. */
+  display: none;
+}
+.essay-body h2 {
+  font-size: 1.3em;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: -0.008em;
+  margin-top: 2.2em;
+}
+.essay-body h3 {
+  font-size: 1.08em;
+  line-height: 1.3;
+  font-weight: 600;
+  margin-top: 1.9em;
+}
+.essay-body h4,
+.essay-body h5,
+.essay-body h6 {
+  font-weight: 600;
+  margin-top: 1.6em;
+}
+.essay-body h2 + *,
+.essay-body h3 + *,
+.essay-body h4 + * {
+  margin-top: 0.55em;
+}
+.essay-body a {
+  color: var(--felt);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+.essay-body a:hover {
+  color: var(--felt-strong);
+  text-decoration-thickness: 2px;
+}
+.essay-body strong {
+  font-weight: 600;
+}
+.essay-body ul,
+.essay-body ol {
+  padding-left: 1.4em;
+}
+.essay-body ul {
+  list-style: disc;
+}
+.essay-body ol {
+  list-style: decimal;
+}
+.essay-body li + li {
+  margin-top: 0.4em;
+}
+.essay-body li::marker {
+  color: var(--quiet);
+}
+.essay-body blockquote {
+  margin-left: 0;
+  padding-left: 1.1em;
+  border-left: 2px solid var(--felt);
+  font-style: italic;
+}
+.essay-body hr {
+  border: 0;
+  height: 1px;
+  background: var(--rule);
+  margin-block: 2.5em;
+  width: 33%;
+}
+.essay-body img,
+.essay-body video,
+.essay-body iframe {
+  max-width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+.essay-body iframe {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+.essay-body figure figcaption {
+  color: var(--quiet);
+  font-size: 0.875em;
+  margin-top: 0.5em;
+}
+.essay-body .table-wrap,
+.essay-body table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+}
+.essay-body table {
+  border-collapse: collapse;
+  font-size: 0.875em;
+  line-height: 1.45;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+.essay-body th,
+.essay-body td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.45em 1em 0.45em 0;
+  border-bottom: 1px solid var(--rule);
+}
+.essay-body th {
+  font-weight: 600;
+}
+.essay-body code {
+  background: var(--muted);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+.essay-body pre {
+  background: var(--muted);
+  padding: 1em;
+  overflow-x: auto;
+  border-radius: 3px;
+  line-height: 1.45;
+}
+.essay-body pre code {
+  background: none;
+  padding: 0;
+}
+.essay-body details summary {
+  cursor: pointer;
+  color: var(--quiet);
+}
+
+.essay-end {
+  margin-top: 3.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--rule);
+}
+.disclosure {
+  margin-top: 2.5rem;
+  color: var(--quiet);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.archived-note {
+  margin-top: 1.75rem;
+  color: var(--quiet);
+  font-size: 0.9375rem;
+  font-style: italic;
+}
+
+/* ------------------------------------------------------------------
+   Email signup
+   ------------------------------------------------------------------ */
+
+.subscribe p {
+  margin: 0;
+}
+.subscribe .subscribe-note {
+  color: var(--quiet);
+  font-size: 0.9375rem;
+}
+.subscribe-form {
+  margin-top: 0.85rem;
+  min-height: 4.5rem;
+}
+
+/* ------------------------------------------------------------------
+   Nonzero: ledger and shirts
+   ------------------------------------------------------------------ */
+
+.prose-block > * + * {
+  margin-top: 1.1em;
+}
+.prose-block ol,
+.prose-block ul {
+  padding-left: 1.4em;
+}
+.prose-block ol {
+  list-style: decimal;
+}
+.prose-block ul {
+  list-style: disc;
+}
+.prose-block li + li {
+  margin-top: 0.35em;
+}
+.prose-block li::marker {
+  color: var(--quiet);
+}
+
+.figures {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem 1.5rem;
+  margin-top: 1.25rem;
+}
+@media (min-width: 34rem) {
+  .figures {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+.figure dt {
+  color: var(--quiet);
+  font-size: 0.875rem;
+}
+.figure dd {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+.ledger-table {
+  width: 100%;
+  margin-top: 1.25rem;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+.ledger-table th,
+.ledger-table td {
+  text-align: right;
+  padding: 0.4rem 0 0.4rem 0.75rem;
+  border-bottom: 1px solid var(--rule);
+  white-space: nowrap;
+}
+.ledger-table th:first-child,
+.ledger-table td:first-child {
+  text-align: left;
+  padding-left: 0;
+}
+.ledger-table th {
+  font-weight: 600;
+}
+.ledger-table td.is-future {
+  color: var(--quiet);
+}
+.table-scroll {
+  overflow-x: auto;
+}
+
+.shirts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem 1.25rem;
+  margin-top: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+.shirt img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: var(--muted);
+  border-radius: 2px;
+}
+.shirt-name {
+  margin-top: 0.6rem;
+  line-height: 1.3;
+}
+.shirt-meta {
+  color: var(--quiet);
+  font-size: 0.9375rem;
+}
+
+.handles {
+  list-style: none;
+  padding: 0;
+}
+.handles li + li {
+  margin-top: 0.25rem;
+}
+.handles span {
+  display: inline-block;
+  min-width: 6.5rem;
+  color: var(--quiet);
+}
+
+.portrait {
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 2.25rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .essay-list a {
+    transition:
+      background-size 0.25s ease,
+      color 0.15s ease;
+  }
 }

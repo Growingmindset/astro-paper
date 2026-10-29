@@ -21,9 +21,9 @@ supersededBy: atreides-powerbuilding
 
 ## About This Program
 
-12+ years coaching movement — from personal training focused on sports performance and physical therapy, to pulling everything I've learned into one structured system. This 5-day split is built for real life: efficient sessions, real progression, nothing wasted.
+Years of lifting and studying how the body trains, pulled into one structured system. This 5-day split is built for real life: efficient sessions, real progression, nothing wasted.
 
-Built for intermediate-advanced lifters or ambitious beginners, any age. I'm not coaching anymore, but I didn't want the knowledge to go to waste — so if it's live, I'm running it myself.
+Built for intermediate-advanced lifters or ambitious beginners, any age. I didn't want the knowledge to go to waste, so if it's live, I'm running it myself.
 
 ## How It Works
 
@@ -43,7 +43,7 @@ Train at your own risk — I'm not responsible for injuries.
 
 <a href="/downloads/atreides-revenge.pdf" download class="btn-download">📄 Download the Printable PDF</a>
 
-<p style="font-size: 0.9rem; opacity: 0.85; margin-top: 1rem;">This program is retired. My current one is <a href="/posts/atreides-powerbuilding">Atreides Powerbuilding</a>.</p>
+<p style="font-size: 0.9rem; opacity: 0.85; margin-top: 1rem;">This program is retired. My current one is <a href="/atreides-powerbuilding">Atreides Powerbuilding</a>.</p>
 
 </div>
 
@@ -215,7 +215,7 @@ Everything above is free — no email gate, no paywall.
 
 If it's worth something to you and you want to throw a few bucks back my way, the highest-impact move is grabbing a shirt from the Risk On shop. It funds more programs like this one, and π φ hits different under a barbell.
 
-<a href="/shop/" class="btn-shop">Shop Risk On →</a>
+<a href="/nonzero#shop" class="btn-shop">Shop Risk On</a>
 
 
 </div>

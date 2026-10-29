@@ -1,0 +1,216 @@
+---
+import Page from "@/layouts/Page.astro";
+import Subscribe from "@/components/Subscribe.astro";
+import { NONZERO, SITE } from "@/config";
+import { products } from "@/data/products";
+import { getLedger, money, TOTAL } from "@/utils/ledger";
+
+const ledger = getLedger();
+const shirts = products.filter(p => p.published);
+---
+
+<Page
+  title={`Nonzero | ${SITE.title}`}
+  description="Twelve months of poker in 2027 with a hard $20,000 cap and a public ledger. A year-long test of deciding under pressure."
+>
+  <h1 class="page-title">Nonzero</h1>
+  <p class="page-meta">
+    Twelve months of poker in 2027. A $20,000 cap. Every dollar on the record.
+  </p>
+
+  <div class="prose-block essay-body">
+    <p>
+      In 2020 I lost $17,000 in the stock market. Then I learned to invest
+      properly and rebuilt. This year I had $20,000 set aside to buy a car in
+      cash, and I decided a year of decisions would be worth more than the car.
+    </p>
+    <p>
+      So in 2027 I’m using poker to learn expected value, probability, and how
+      to decide under pressure. I’m a bartender, not a pro, and I’m starting
+      with almost no experience. The downside is capped at $20,000. The upside
+      is whatever I become by the end of it.
+    </p>
+    <p>
+      Winning means getting measurably better at making decisions, on and off
+      the table. The money is tracked honestly, but it isn’t the scorecard. The
+      full reasoning is in <a href="/the-nonzero-year">The Nonzero Year</a>.
+    </p>
+
+    <h2>The rules</h2>
+    <ol>
+      <li>Leave at three buy-ins down in any cash session.</li>
+      <li>No alcohol at the table.</li>
+      <li>
+        No sessions after a late bar shift or on under six hours of sleep.
+      </li>
+      <li>Sessions are six hours, max.</li>
+      <li>
+        Never add money beyond the monthly budget. Never borrow from next month.
+      </li>
+      <li>
+        Winnings are swept out when I leave the table and never go back into the
+        bankroll.
+      </li>
+      <li>
+        Every session gets logged within 24 hours, including the ones that hurt.
+      </li>
+      <li>Grade the decision, not the result.</li>
+      <li>No real-money online poker.</li>
+      <li>Tilted means done.</li>
+    </ol>
+    <p>
+      The money works out to $1,666.67 a month. Unused money rolls forward. A
+      bad month can’t borrow from the next one. When a month’s money is gone, I
+      stop until the first.
+    </p>
+
+    <h2 id="ledger">The ledger</h2>
+  </div>
+
+  <dl class="figures">
+    <div class="figure">
+      <dt>Net result</dt>
+      <dd>{money(ledger.net)}</dd>
+    </div>
+    <div class="figure">
+      <dt>Budget used</dt>
+      <dd>{money(ledger.budgetUsed)}</dd>
+    </div>
+    <div class="figure">
+      <dt>Left of $20,000</dt>
+      <dd>{money(TOTAL - ledger.budgetUsed)}</dd>
+    </div>
+    <div class="figure">
+      <dt>Sessions</dt>
+      <dd>{ledger.sessions.length}</dd>
+    </div>
+  </dl>
+
+  {
+    ledger.hasData ? (
+      <>
+        <div class="table-scroll">
+          <table class="ledger-table">
+            <caption class="sr-only">Results by month</caption>
+            <thead>
+              <tr>
+                <th scope="col">Month</th>
+                <th scope="col">Sessions</th>
+                <th scope="col">Net</th>
+                <th scope="col">Left to spend</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ledger.months.map(m => (
+                <tr>
+                  <td>{m.name}</td>
+                  <td>{m.sessions}</td>
+                  <td>{money(m.net)}</td>
+                  <td>{money(m.left)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div class="table-scroll">
+          <table class="ledger-table">
+            <caption class="sr-only">Every session</caption>
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Game</th>
+                <th scope="col">Net</th>
+                <th scope="col">Decision grade</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ledger.sessions.map(s => (
+                <tr title={s.note}>
+                  <td>{s.date}</td>
+                  <td>{s.game}</td>
+                  <td>{money(s.net)}</td>
+                  <td>{s.grade}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </>
+    ) : (
+      <p class="after-list">
+        The ledger opens January 1, 2027. Budget used counts losses only,
+        because winnings are swept out and never recycled.
+      </p>
+    )
+  }
+
+  <div class="prose-block essay-body">
+    <h2>Follow along</h2>
+    <p>
+      Day-to-day sessions, reviews, and the money go on social as Mr. Nonzero.
+    </p>
+  </div>
+  <ul class="handles">
+    {
+      NONZERO.handles.map(h => (
+        <li>
+          <span>{h.name}</span>
+          <a class="text-link" href={h.href} rel="me">
+            {h.handle}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+
+  <div class="prose-block essay-body">
+    <h2 id="shop">Risk On</h2>
+    <p>
+      Risk on is a market term: you’re in, and you’re betting on yourself. The
+      skill isn’t always being in. It’s knowing when the odds are on your side
+      and sizing the bet so you can play again tomorrow. Made to order and
+      shipped by Printful.
+    </p>
+  </div>
+  <ul class="shirts">
+    {
+      shirts.map(item => {
+        const variant = item.variants[0];
+        return (
+          <li class="shirt">
+            <a href={variant.stripeUrl} rel="noopener">
+              <img
+                src={variant.image}
+                alt={variant.alt}
+                width="400"
+                height="400"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p class="shirt-name">{item.name}</p>
+            <p class="shirt-meta">
+              ${item.price}{" "}
+              <a class="text-link" href={variant.stripeUrl} rel="noopener">
+                Buy
+              </a>
+            </p>
+          </li>
+        );
+      })
+    }
+  </ul>
+  <p class="disclosure">
+    <a class="text-link" href="/shipping">Shipping</a>,
+    <a class="text-link" href="/returns">returns</a>,
+    <a class="text-link" href="/terms">terms</a>, and
+    <a class="text-link" href="/privacy">privacy</a>.
+  </p>
+
+  <div class="essay-end">
+    <Subscribe
+      heading="Get the monthly ledger by email."
+      note="The monthly ledger, my best and worst decision, and one lesson that carried over to life. New essays go to the same list."
+    />
+  </div>
+</Page>

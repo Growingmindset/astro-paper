@@ -1,0 +1,93 @@
+---
+import Page from "@/layouts/Page.astro";
+import { CONTACT, SITE } from "@/config";
+---
+
+<Page
+  title={`About | ${SITE.title}`}
+  description="Rudy Galan: a San Antonio bartender since 2012, writing about money, risk, and decisions, and working toward owner’s rep work in energy and infrastructure."
+>
+  <img
+    class="portrait"
+    src="/headshot.jpg?v=3"
+    alt="Rudy Galan"
+    width="272"
+    height="272"
+  />
+  <h1 class="page-title">About</h1>
+
+  <div class="prose-block essay-body">
+    <p>
+      I’m Rudy Galan. I’ve worked high-volume hotel bars in San Antonio since
+      2012, across seven-plus properties. The mechanics of the job are simple.
+      The room is the education: every night is a long, live read on how people
+      talk, negotiate, and decide.
+    </p>
+    <p>
+      I took 150-plus college credits across biology, physics, and economics,
+      then stopped on purpose. I’d rather learn by doing real projects where the
+      results can be checked. In 2020 I lost $17,000 in the stock market, and
+      that loss is why I learned to invest properly.
+    </p>
+    <p>
+      The thread through everything here is one question: how do you make good
+      decisions when you can’t know how they’ll turn out?
+    </p>
+
+    <h2>What I’m working toward</h2>
+    <p>
+      Owner’s rep and project management work in energy, data centers, and
+      large-scale infrastructure. An owner’s rep has one job: protect the
+      owner’s money, schedule, and interests when everyone else on the project
+      has their own. I’m studying for the CAPM and Oracle Primavera P6.
+    </p>
+    <p>How I’d work on your project:</p>
+    <ul>
+      <li>
+        <strong>Start from the base rate.</strong> How do projects like this usually
+        go over budget and late? Plan for that, not the brochure.
+      </li>
+      <li>
+        <strong>Every dollar has a line.</strong> Budget, contingency, and change
+        orders tracked in the open, not reconciled at the end.
+      </li>
+      <li>
+        <strong>Grade decisions, not outcomes.</strong> Write down why we chose what
+        we chose, so the next call is better whether or not this one got lucky.
+      </li>
+      <li>
+        <strong>Say the hard thing early.</strong> Bad news gets cheaper the sooner
+        the owner hears it.
+      </li>
+    </ul>
+
+    <h2>Everything else</h2>
+    <p>
+      In 2027 I’m spending a capped $20,000 on a year of poker, with a public
+      ledger, to get better at deciding under pressure. That’s <a
+        href="/nonzero">Nonzero</a
+      >. The Risk On shirts live on the same page.
+    </p>
+    <p>
+      I hold an active Texas real estate license in eXp Realty’s referral
+      division. I don’t list or show homes. If you’re buying or selling, I’ll
+      connect you with an agent I’d trust with my own money, and that agent’s
+      brokerage pays me a referral fee when it closes. <a href="/txhouse"
+        >Start here</a
+      > if that’s you.
+    </p>
+    <p>
+      I lift, cook most of what I eat, and keep a small circle. The training
+      programs I’ve published are in the <a href="/archive">archive</a>.
+    </p>
+
+    <h2>Get in touch</h2>
+    <p>
+      Email is best: <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>. If
+      you own, fund, or run projects and want someone in your corner, or you
+      want to compare notes, write to me. I’m also on <a href={CONTACT.linkedin}
+        >LinkedIn</a
+      > and <a href={CONTACT.x}>X</a>.
+    </p>
+  </div>
+</Page>

@@ -1,23 +1,14 @@
 export const SITE = {
   website: "https://rudygalan.com/",
   author: "Rudy Galan",
-  profile: "https://rudygalan.com/",
-  desc: "Markets, risk, and decisions. Weekly analysis, a public poker year, and the projects I run, with every call on the record.",
+  profile: "https://rudygalan.com/about",
   title: "Rudy Galan",
-  // TODO: replace public/astropaper-og.jpg with your own 1200x630 fallback card
-  ogImage: "og-portal.png",
-  lightAndDarkMode: true,
-  postPerIndex: 4,
-  postPerPage: 50,
-  scheduledPostMargin: 15 * 60 * 1000,
-  showArchives: true,
-  showBackButton: true,
-  editPost: {
-    enabled: false,
-    text: "Edit page",
-    url: "https://github.com/Growingmindset/astro-paper/edit/main/",
-  },
+  desc: "Essays by Rudy Galan on money, risk, and how people decide when they can't know how it turns out.",
+  // Fallback social card for pages without their own. Generated at build time
+  // from src/utils/og-templates/site.js.
+  ogImage: "og.png",
   dynamicOgImage: true,
+  scheduledPostMargin: 15 * 60 * 1000,
   dir: "ltr",
   lang: "en",
   timezone: "America/Chicago",
@@ -28,53 +19,51 @@ export const LOCALE = {
   langTag: ["en-US"],
 } as const;
 
-export const LOGO_IMAGE = {
-  enable: false,
-  svg: true,
-  width: 216,
-  height: 46,
+export const CONTACT = {
+  email: "growingstateofmind@gmail.com",
+  x: "https://x.com/rudygalan",
+  linkedin: "https://www.linkedin.com/in/rudy-galan-89262a40b/",
 };
 
-export const SOCIALS = [
-  {
-    name: "X",
-    href: "https://x.com/rudygalan",
-    linkTitle: `${SITE.title} on X`,
-    active: true,
-  },
-  {
-    name: "Instagram",
-    href: "https://instagram.com/rudyg_1",
-    linkTitle: `${SITE.title} on Instagram`,
-    active: true,
-  },
-
-  {
-    name: "Mail",
-    href: "mailto:growingstateofmind@gmail.com",
-    linkTitle: `Send an email to ${SITE.title}`,
-    active: true,
-  },
-];
-
+// The only two pages in the top bar. Everything else is one click from the
+// home page or the footer.
 export const navLinks = [
-  { href: "/newsletter", linkText: "Base Rate", active: true },
-  { href: "/nonzero", linkText: "Nonzero", active: true },
-  { href: "/writing", linkText: "Writing", active: true },
-  { href: "/work", linkText: "Work", active: true },
-  { href: "/about", linkText: "About", active: true },
+  { href: "/nonzero", linkText: "Nonzero" },
+  { href: "/about", linkText: "About" },
 ];
 
-// Base Rate newsletter (beehiiv).
-// formId is the data-beehiiv-form value from the beehiiv embed code
-// (beehiiv > Grow > Subscribe forms > your form > Get embed code).
-export const BASE_RATE = {
-  name: "Base Rate",
-  url: "https://rudygalan.beehiiv.com",
-  subscribeUrl: "https://rudygalan.beehiiv.com/subscribe",
+// One email list for everything: new essays, plus the monthly Nonzero ledger
+// once the poker year starts. It runs on beehiiv because that form is the one
+// already wired into this site.
+//
+// To switch providers later, change this block and src/components/Subscribe.astro.
+// In beehiiv, rename the publication from "Base Rate" to "Rudy Galan" so the
+// confirmation emails match the site (Settings > Publication).
+export const NEWSLETTER = {
   formId: "1372f0fc-9eea-41d4-b184-c7e355342850",
-  // Set to true only if the beehiiv form itself shows a title/description,
-  // so the site card doesn't repeat it. The form is currently email-only.
-  formShowsOwnCopy: false,
-  cadence: "Every Sunday",
+  subscribeUrl: "https://rudygalan.beehiiv.com/subscribe",
+};
+
+// Mr. Nonzero: the 2027 poker year. Handles live here so the page and the
+// footer never drift apart.
+export const NONZERO = {
+  domain: "mrnonzero.com",
+  handles: [
+    {
+      name: "Instagram",
+      handle: "@mr.nonzero",
+      href: "https://instagram.com/mr.nonzero",
+    },
+    {
+      name: "TikTok",
+      handle: "@mrnonzero",
+      href: "https://www.tiktok.com/@mrnonzero",
+    },
+    {
+      name: "YouTube",
+      handle: "@mr.nonzero",
+      href: "https://www.youtube.com/@mr.nonzero",
+    },
+    { name: "X", handle: "@mr_nonzero", href: "https://x.com/mr_nonzero" },
+  ],
 };

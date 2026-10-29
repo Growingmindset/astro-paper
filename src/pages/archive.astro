@@ -1,53 +1,41 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import Header from "@/components/Header.astro";
-import Footer from "@/components/Footer.astro";
-import Card from "@/components/Card.astro";
-import { getCollection } from "astro:content";
-import getSortedPosts from "@/utils/getSortedPosts";
+import Page from "@/layouts/Page.astro";
 import { SITE } from "@/config";
+import {
+  getArchived,
+  getPostUrl,
+  groupByYear,
+  smartQuotes,
+} from "@/utils/posts";
 
-// Only posts marked `archived: true` in their frontmatter
-const posts = await getCollection("blog", ({ data }) => !data.draft);
-const archivedPosts = getSortedPosts(posts).filter(post => post.data.archived);
+const years = groupByYear(await getArchived());
 ---
 
-<Layout title={`The Archive | ${SITE.title}`}>
-  <Header />
+<Page
+  title={`Archive | ${SITE.title}`}
+  description="Older notes, market logs, and retired training programs by Rudy Galan."
+>
+  <h1 class="page-title">Archive</h1>
+  <p class="lede-follow">
+    Notes, market logs, book teardowns, and training programs I’ve retired. They
+    stay up as a record of what I thought at the time. The essays are on the <a
+      class="text-link"
+      href="/">front page</a
+    >.
+  </p>
 
-  <main id="main-content" class="app-layout">
-    <section
-      class="border-b border-dashed border-border pt-8 pb-10 text-center"
-    >
-      <h1 class="mb-4 text-3xl font-bold tracking-wider sm:text-4xl">
-        The Archive
-      </h1>
-      <p class="text-skin-base mx-auto max-w-2xl leading-relaxed opacity-90">
-        Retired programs and closed cycles. Kept public as a record of what
-        changed and why.
-      </p>
-    </section>
-
-    {
-      archivedPosts.length > 0 ? (
-        <section class="mx-auto max-w-4xl pt-8 pb-16">
-          <ul class="list-none ps-0">
-            {archivedPosts.map(post => (
-              <Card {...post} />
-            ))}
-          </ul>
-        </section>
-      ) : (
-        <p class="py-16 text-center opacity-70">
-          Nothing archived yet. Retired posts will show up here.
-        </p>
-      )
-    }
-
-    <p class="pb-16 text-center text-sm">
-      <a href="/writing" class="text-accent underline">Back to Writing</a>
-    </p>
-  </main>
-
-  <Footer />
-</Layout>
+  {
+    years.map(({ year, posts }) => (
+      <section class="year-group" aria-label={`Archived posts from ${year}`}>
+        <p class="year-label">{year}</p>
+        <ul class="essay-list">
+          {posts.map(post => (
+            <li>
+              <a href={getPostUrl(post)}>{smartQuotes(post.data.title)}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+</Page>

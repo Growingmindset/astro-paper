@@ -1,6 +1,6 @@
 ---
 title: "How I Invest: The Approach and What I Watch"
-description: "The rules I invest by and the macro metrics I watch. The trades themselves go out every Sunday in Base Rate."
+description: "The rules I invest by and the macro metrics I watch."
 pubDatetime: 2026-05-19T00:00:00Z
 modDatetime: 2026-10-11T00:00:00Z
 tags:
@@ -9,19 +9,20 @@ tags:
 featured: true
 draft: false
 postSlug: "how-i-invest"
+archived: true
 ---
 
 # How I Invest
 
 **Objective:** Beat the S&P 500 with a concentrated set of high-conviction positions.
 
-This page is the approach: the rules I invest by and the metrics I watch. The trades themselves, with the date, price, and why, go out every Sunday in [Base Rate](/newsletter), and the archive keeps every issue dated, misses included. This is not investment advice. See the [full disclosure](/newsletter#disclosure).
+This page is the approach: the rules I invest by and the metrics I watch. I don't publish individual trades here. This is not investment advice.
 
 ---
 
 ## Metrics I'm keeping a close eye on
 
-These are the gauges that set my posture. I don't publish the readings here. The current numbers and what moved go out in each [Base Rate](/newsletter) issue.
+These are the gauges that set my posture.
 
 | Metric | What it tells me | What I'm watching for |
 | :--- | :--- | :--- |
@@ -46,6 +47,5 @@ These are the gauges that set my posture. I don't publish the readings here. The
 - **Idle cash should work, but never force a buy.** Cash sits in a money-market fund until there is a setup with a real margin of safety.
 - **Let the macro set the posture.** When the watchlist says expansion, I stay deployed. If it turns, the posture changes first and the positions follow.
 
-Same idea as Base Rate: start from how often things usually work, size for being wrong, and write the reasoning down before the result.
+The idea underneath all of it: start from how often things usually work, size for being wrong, and write the reasoning down before the result.
 
-**Where the trades are:** every buy, sell, and hold is in the "What I changed" section of [Base Rate](/newsletter), sent before the result is known.
